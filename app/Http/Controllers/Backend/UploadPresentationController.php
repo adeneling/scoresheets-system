@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Backend;
 
-use Symfony\Component\HttpFoundation\File\UploadedFile;
+//use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Support\Facades\File;
+use Illuminate\Http\UploadedFile;
 use Input;
 use Image;
 
@@ -84,7 +85,7 @@ class UploadPresentationController extends Controller
             'presentation_file' => 'max:10240',
         ]);
 
-        $user->update($request->all());
+        
 
         if ($request->hasFile('presentation_file')) {
             // menambil cover yang diupload berikut ekstensinya
@@ -93,25 +94,27 @@ class UploadPresentationController extends Controller
             $extension = $upload_file->getClientOriginalExtension();
             // membuat nama file random dengan extension
             $filename = str_random(10) . '.' . $extension;
-            $destinationPath = 'img';
+            $destinationPath = public_path() . DIRECTORY_SEPARATOR . 'files';
+
             // memindahkan file ke folder public/img
             $upload_file->move($destinationPath, $filename);
             // hapus cover lama, jika ada
+            return $destinationPath;
             if ($user->presentation_file) {
                 $old_file = $user->presentation_file;
-                $filepath = public_path() . DIRECTORY_SEPARATOR . 'img'. DIRECTORY_SEPARATOR . $user->presentation_file;
+                $filepath = public_path() . DIRECTORY_SEPARATOR . 'files'. DIRECTORY_SEPARATOR . $user->presentation_file;
                 try {
                     File::delete($filepath);
                 } catch (FileNotFoundException $e) {
                 // File sudah dihapus/tidak ada
                 }
             }
-        $user->presentation_file = $filename;
-        $user->save();
-    }
-
-        \Flash::success('Data uploaded');
-        return redirect('/home');
+            $user->presentation_file = $filename;
+            $user->save();
+        }
+        
+        //\Flash::success('Data uploaded');
+        //return redirect('/home');
     }
     /*public function update(Request $request, $id)
     {
@@ -124,8 +127,8 @@ class UploadPresentationController extends Controller
         $data = $request->only('presentation_file');
 
         if ($request->hasFile('presentation_file')) {
-            $data['presentation_file'] = $this->savePhoto($request->file('presentation_file'));
-            if ($user->presentation_file !== '') $this->deletePhoto($user->presentation_file);
+            $user->presentation_file = $this->saveFile($request->file('presentation_file'));
+            if ($user->presentation_file !== '') $this->deleteFile($user->presentation_file);
         }
 
         $user->update($data);
@@ -134,14 +137,14 @@ class UploadPresentationController extends Controller
         return redirect('/home');
     }
 
-    protected function savePhoto(UploadedFile $file)
+    protected function saveFile(UploadedFile $file)
     {
         $fileName = str_random(40) . '.' . $file->guessClientExtension();
         $destinationPath = public_path() . DIRECTORY_SEPARATOR . 'files';
         $file->move($destinationPath, $fileName);
         return $fileName;
     }
-    public function deletePhoto($filename)
+    public function deleteFile($filename)
     {
         $path = public_path() . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . $filename;
         return File::delete($path);
