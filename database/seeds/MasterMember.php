@@ -12,9 +12,22 @@ class MasterMember extends Seeder
     public function run()
     {
         App\MasterMember::create([
+        	'category_id' => '1',
 		    'nik' => '11012410',
+		    'name' => 'Agus Sari',
+		    'unit_type' => 'grapari',
+		    'unit_name' => 'Sun Plasa',
+		    'no_telp' => '6285275304288',
+		    'gender' => 'Female',
+		    'room_code' => '1',
+		    'region' => 'Sumbagut',
+		    'area' => 1,
 	        'email' => 'saribmj.90@gmail.com',
+	        'size_poloshirt' => 'S',
 		]);
+
+
+		
 		App\MasterMember::create([
 		    'nik' => '14011448',
 	        'email' => 'mooranye@gmail.com',

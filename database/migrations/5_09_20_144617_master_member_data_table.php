@@ -15,8 +15,19 @@ class MasterMemberDataTable extends Migration
     {
         Schema::create('master-member', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('category_id')->unsigned()->nullable();
+            $table->foreign('category_id')->references('id')->on('category');
             $table->string('nik');
+            $table->string('name')->nullable();
+            $table->string('unit_type')->nullable();
+            $table->string('unit_name')->nullable();
+            $table->string('no_telp')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('room_code')->nullable();
+            $table->string('region')->nullable();
+            $table->integer('area')->nullable();
             $table->string('email');
+            $table->string('size_poloshirt')->nullable();
             $table->timestamps();
         });
     }

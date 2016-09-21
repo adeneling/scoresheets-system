@@ -8,7 +8,7 @@ use App\User;
 use App\Role;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Mail;
 class CheckingController extends Controller
 {
     /**
@@ -45,7 +45,8 @@ class CheckingController extends Controller
         ]);
         $name = $request->input('name');
         $nik = $request->input('nik');
-        $email = $request->input('email');        
+        $email = $request->input('email');
+        $password = str_random(8);       
         if (MasterMember::where('nik',$nik)->where('email',$email)->exists()) {
             if(User::where('email',$email)->exists()){
                 return redirect('/')->with('status', 'Anda sudah melakukan pendaftaran, silahkan login');
@@ -56,9 +57,16 @@ class CheckingController extends Controller
                 $user->nik = $nik;
                 $user->email = $email;
                 $user->checking = 1;
-                $user->password = bcrypt('member');
+                $user->password = bcrypt($password);
                 $user->save();
                 $user->attachRole($memberRole);
+                /* KIRIM EMAIL */
+                $mail = array( 'email' => $email, 'password' => $password);
+                Mail::send('mails.mail', $mail, function($message) use ($mail) {
+                    $message->to('maulanayusupp@gmail.com');
+                    $message->subject('User Account - Scoresheets');
+                });
+                /* MESSAGE SUCCESS */
                 return redirect('/')->with('status', 'Data cocok, silahkan cek email anda untuk login');                           
             }
             

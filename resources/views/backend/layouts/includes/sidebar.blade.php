@@ -4,9 +4,8 @@
     <ul class="nav side-menu">
       <li><a href="{{ url('home') }}"><i class="fa fa-home"></i> Home</a></li>
       @role('member')
-        <li><a href="{{ url('profile') }}"><i class="fa fa-user"></i> Profile</a></li>
-        <li><a href="{{ url('profile') }}"><i class="fa fa-upload"></i> Upload Presentation</a></li>
-        <li><a href="{{ route('registration.edit', encrypt(Auth::user()->id ))}}"><i class="fa fa-child"></i> Registration</a></li>
+        <li><a href="{{ route('profile.show', encrypt(Auth::user()->id ))}}"><i class="fa fa-user"></i> Profile</a></li>
+        <li><a href="{{ route('profile.edit', encrypt(Auth::user()->id ))}}"><i class="fa fa-upload"></i> Upload Presentation</a></li>
       @endrole
       @role('jury')
         <li><a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a></li>
