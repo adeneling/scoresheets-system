@@ -3,8 +3,7 @@
     <h3>Navigation</h3>
     <ul class="nav side-menu">
       <li><a href="{{ url('home') }}"><i class="fa fa-home"></i> Home</a></li>
-      @role('member')
-        <li><a href="{{ route('profile.show', encrypt(Auth::user()->id ))}}"><i class="fa fa-user"></i> Profile</a></li>
+      @role('participant')
         <li><a href="{{ route('upload.edit', encrypt(Auth::user()->id ))}}"><i class="fa fa-upload"></i> Upload Presentation</a></li>
       @endrole
       @role('jury')

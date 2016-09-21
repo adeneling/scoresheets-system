@@ -13,7 +13,7 @@ class MasterMemberDataTable extends Migration
      */
     public function up()
     {
-        Schema::create('master-member', function (Blueprint $table) {
+        Schema::create('master-data', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on('category');
@@ -42,7 +42,7 @@ class MasterMemberDataTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('master-member');
+        Schema::dropIfExists('master-data');
     }
 }
 

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
-use App\MasterMember;
+use App\MasterData;
 use App\User;
 use App\Role;
 use App\Http\Requests;
@@ -47,7 +47,7 @@ class CheckingController extends Controller
         $nik = $request->input('nik');
         $email = $request->input('email');
         $password = str_random(8);       
-        if (MasterMember::where('nik',$nik)->where('email',$email)->exists()) {
+        if (MasterData::where('nik',$nik)->where('email',$email)->exists()) {
             if(User::where('email',$email)->exists()){
                 return redirect('/')->with('status', 'Anda sudah melakukan pendaftaran, silahkan login');
             }else{

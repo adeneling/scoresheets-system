@@ -23,10 +23,10 @@ class UsersSeeder extends Seeder
 		$juryRole->display_name = "Jury";
 		$juryRole->save();
 		// Membuat role member
-		$memberRole = new Role();
-		$memberRole->name = "member";
-		$memberRole->display_name = "Member";
-		$memberRole->save();
+		$participantRole = new Role();
+		$participantRole->name = "participant";
+		$participantRole->display_name = "participant";
+		$participantRole->save();
 		// Membuat role guest
 		$guestRole = new Role();
 		$guestRole->name = "guest";
@@ -49,22 +49,22 @@ class UsersSeeder extends Seeder
 		$admin->attachRole($juryRole);
 		// Membuat sample member
 		for ($i=0; $i <12 ; $i++) { 
-			$member = new User();
-			$member->name = "Participant - ".$i;
-			$member->email = 'member'. $i .'@gmail.com';
-			$member->category_id = 2;
-			$member->area = 1;
-			$member->region = 'Bandung';
-			$member->password = bcrypt('ss');
-			$member->save();
-			$member->attachRole($memberRole);
+			$participant = new User();
+			$participant->name = "Participant - ".$i;
+			$participant->email = 'participant'. $i .'@gmail.com';
+			$participant->category_id = 2;
+			$participant->area = 1;
+			$participant->region = 'Bandung';
+			$participant->password = bcrypt('ss');
+			$participant->save();
+			$participant->attachRole($participantRole);
 		}		
 		// Membuat sample guest
-		$member = new User();
-		$member->name = "Guest";
-		$member->email = 'guest@gmail.com';
-		$member->password = bcrypt('ss');
-		$member->save();
-		$member->attachRole($guestRole);
+		$guest = new User();
+		$guest->name = "Guest";
+		$guest->email = 'guest@gmail.com';
+		$guest->password = bcrypt('ss');
+		$guest->save();
+		$guest->attachRole($guestRole);
     }
 }

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class MasterMember extends Seeder
+class MasterData extends Seeder
 {
 /**
 * Run the database seeds.
@@ -16,7 +16,7 @@ public function run()
     room_code = integer
     area = integer
     */
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 1,
     'nik' => '11012410',
     'name' => 'Agus Sari',
@@ -36,7 +36,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 1,
     'nik' => '14011448',
     'name' => 'Raja Gries Sheilla Moren',
@@ -56,7 +56,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 1,
     'nik' => '15009514',
     'name' => 'Shena Giantasya',
@@ -76,7 +76,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 1,
     'nik' => '15009857',
     'name' => 'Yani Dewi Erinesari',
@@ -96,7 +96,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 1,
     'nik' => '12009738',
     'name' => 'Sayu Putu Okoningrum Loestiani',
@@ -116,7 +116,7 @@ public function run()
     'birthday' => '',
     'join_date' => '',
     ]);
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 1,
     'nik' => '14010236',
     'name' => 'Andi Lana Andayani',
@@ -136,7 +136,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 2,
     'nik' => '15009059',
     'name' => 'Novita Sari',
@@ -156,7 +156,7 @@ public function run()
     'birthday' => '',
     'join_date' => '',
     ]);
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 2,
     'nik' => '15008395',
     'name' => 'Silvia Ardita',
@@ -176,7 +176,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 2,
     'nik' => '15011707',
     'name' => 'Nindya Devi Mentari',
@@ -196,7 +196,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 2,
     'nik' => '15010301',
     'name' => 'Anggita Primanti Esthiningtyas',
@@ -216,7 +216,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 2,
     'nik' => '15011645',
     'name' => 'Futih',
@@ -236,7 +236,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 2,
     'nik' => '13008704',
     'name' => 'Rina Puspita Sari',
@@ -256,7 +256,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 7,
     'nik' => '14008185',
     'name' => 'Ni Made Diah Septiarini Putri',
@@ -276,7 +276,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 7,
     'nik' => '16009100',
     'name' => 'Dewanti Pratiwi Asyari',
@@ -296,7 +296,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 11,
     'nik' => '68210',
     'name' => 'Elvitrika Shanty',
@@ -316,7 +316,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 11,
     'nik' => '80215',
     'name' => 'Emira Intan Emmyr Moeis',
@@ -336,7 +336,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 11,
     'nik' => '78234',
     'name' => 'Sri Wulandari',
@@ -356,7 +356,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 11,
     'nik' => '79161',
     'name' => 'Dewi M. Sari',
@@ -376,7 +376,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 11,
     'nik' => '78253',
     'name' => 'Ervina Lesmonowati',
@@ -396,7 +396,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 11,
     'nik' => '70258',
     'name' => 'Alfiani Mansyur',
@@ -416,7 +416,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 3,
     'nik' => '16009908',
     'name' => 'Novi Eldiarti Simatupang',
@@ -436,7 +436,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 3,
     'nik' => '11009802',
     'name' => 'Novita Putri',
@@ -456,7 +456,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 3,
     'nik' => '15010234',
     'name' => 'Siri Nurhasanah',
@@ -476,7 +476,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 3,
     'nik' => '16009615',
     'name' => 'Lia Marliana',
@@ -496,7 +496,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 3,
     'nik' => '10092697',
     'name' => 'Astri Mega T',
@@ -516,7 +516,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 3,
     'nik' => '11009560',
     'name' => 'Haslinda Hasan',
@@ -536,7 +536,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 4,
     'nik' => '09011778',
     'name' => 'Rizki Ivo Deswita',
@@ -556,7 +556,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 4,
     'nik' => '14008314',
     'name' => 'Margahayu',
@@ -576,7 +576,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 4,
     'nik' => '14013219',
     'name' => 'Fitri Kasanti',
@@ -596,7 +596,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 4,
     'nik' => '15006312',
     'name' => 'Nur Irma Santi',
@@ -616,7 +616,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 4,
     'nik' => '14008306',
     'name' => 'Nurhalima',
@@ -636,7 +636,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '7406',
     'name' => 'Fanny Prima',
@@ -656,7 +656,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '10009790',
     'name' => 'Fitriani',
@@ -676,7 +676,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '10012233',
     'name' => 'Ully Maemuna',
@@ -696,7 +696,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '13009197',
     'name' => 'Selli Karlinawati',
@@ -716,7 +716,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '13009491',
     'name' => 'Hernita Gurusinga',
@@ -736,7 +736,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 8,
     'nik' => '15009036',
     'name' => 'Josephine Sarti Kanan',
@@ -756,7 +756,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 13,
     'nik' => '73273',
     'name' => 'Laili Asnia',
@@ -776,7 +776,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 13,
     'nik' => '70273',
     'name' => 'Hetty Haryatiningsih',
@@ -796,7 +796,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 13,
     'nik' => '80035',
     'name' => 'Herni Damayani',
@@ -816,7 +816,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 13,
     'nik' => '86003',
     'name' => 'Dewi Anggraeny',
@@ -836,7 +836,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 13,
     'nik' => '70020',
     'name' => 'Idhawati Kusumaningtyas',
@@ -856,7 +856,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 1,
     'nik' => '15011544',
     'name' => 'Ardy Putra',
@@ -876,7 +876,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 1,
     'nik' => '14009965',
     'name' => 'Heryansa',
@@ -896,7 +896,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 2,
     'nik' => '13010804',
     'name' => 'M. Arief Syahputra Harahap',
@@ -916,7 +916,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 2,
     'nik' => '13010539',
     'name' => 'Imam Nurdiansyah',
@@ -936,7 +936,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 7,
     'nik' => '11011904',
     'name' => 'Erwin Casanova Sembiring',
@@ -956,7 +956,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 7,
     'nik' => '12008332',
     'name' => 'Calvin',
@@ -976,7 +976,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 7,
     'nik' => '12009187',
     'name' => 'Pipih Septiana',
@@ -996,7 +996,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 7,
     'nik' => '14009843',
     'name' => 'Delly Indrawan',
@@ -1016,7 +1016,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 7,
     'nik' => '15010600',
     'name' => 'Rizky Romadhon Wicaksono',
@@ -1036,7 +1036,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 7,
     'nik' => '15009314',
     'name' => 'Gede Kusna Wira Kusuma',
@@ -1056,7 +1056,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 11,
     'nik' => '82249',
     'name' => 'Sutresno',
@@ -1076,7 +1076,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 11,
     'nik' => '72337',
     'name' => 'Rezekinta',
@@ -1096,7 +1096,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 3,
     'nik' => '15009728',
     'name' => 'Josef Kusuma Rahardjo',
@@ -1116,7 +1116,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 2,
     'nik' => '13011589',
     'name' => 'Primantho Roy',
@@ -1136,7 +1136,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 4,
     'nik' => '14011451',
     'name' => 'Hendra Putra Hutagaol',
@@ -1156,7 +1156,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 4,
     'nik' => '13011630',
     'name' => 'Riski Jianur',
@@ -1176,7 +1176,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 4,
     'nik' => '15011613',
     'name' => 'Irfan Supriadi',
@@ -1196,7 +1196,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '003735',
     'name' => 'Katon Sukmono',
@@ -1216,7 +1216,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '15008351',
     'name' => 'Rollowe Sembiring',
@@ -1236,7 +1236,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '002347',
     'name' => 'Hendra',
@@ -1256,7 +1256,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '001740',
     'name' => 'Arif Sri Nurcahyo',
@@ -1276,7 +1276,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '001741',
     'name' => 'Bayu Prihatnolo',
@@ -1296,7 +1296,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '13008064',
     'name' => 'Erick Maranthona',
@@ -1316,7 +1316,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '11009432',
     'name' => 'Andrio Taulinno',
@@ -1336,7 +1336,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 9,
     'nik' => '10012516',
     'name' => 'Yohanes Apriandi Sianipar',
@@ -1356,7 +1356,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 8,
     'nik' => '13009733',
     'name' => 'Asep Muldani',
@@ -1376,7 +1376,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 8,
     'nik' => '12010148',
     'name' => 'Bobby Varyne Fernando',
@@ -1396,7 +1396,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 8,
     'nik' => '15008727',
     'name' => 'Reza Cahyaningrat',
@@ -1416,7 +1416,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 8,
     'nik' => '14010262',
     'name' => 'Ahmad Ramdan',
@@ -1436,7 +1436,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 8,
     'nik' => '10010154',
     'name' => 'M Irfan Marzuki',
@@ -1456,7 +1456,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 8,
     'nik' => '14012536',
     'name' => 'Mashuda R Luxmono',
@@ -1476,7 +1476,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 8,
     'nik' => '15009496',
     'name' => 'Heyder Paskah B Rombe',
@@ -1496,7 +1496,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 13,
     'nik' => '71300',
     'name' => 'Joni F. Sinaga',
@@ -1516,7 +1516,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 8,
     'nik' => '13008065',
     'name' => 'Ramos',
@@ -1536,7 +1536,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 8,
     'nik' => '14012962',
     'name' => 'Doddy Fahreza',
@@ -1556,7 +1556,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 13,
     'nik' => '69236',
     'name' => 'Daniel E. Saputro',
@@ -1576,7 +1576,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 13,
     'nik' => '74069',
     'name' => 'Eduardo Situmorang',
@@ -1596,7 +1596,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 10,
     'nik' => '13009331',
     'name' => 'Nixsi Erica Munte',
@@ -1616,7 +1616,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 10,
     'nik' => '14010329',
     'name' => 'Pitri Rantawati',
@@ -1636,7 +1636,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 10,
     'nik' => '15009481',
     'name' => 'Putri Elvirasari',
@@ -1656,7 +1656,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 10,
     'nik' => '14011511',
     'name' => 'Jesyca M. B. Wawolumaya',
@@ -1676,7 +1676,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 10,
     'nik' => '14010071',
     'name' => 'Dewi Ayu Mulyasari',
@@ -1696,7 +1696,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 12,
     'nik' => '16000588',
     'name' => 'Malasari Apriyanti',
@@ -1716,7 +1716,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 12,
     'nik' => '10010534',
     'name' => 'Cindy Nastasia',
@@ -1736,7 +1736,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 12,
     'nik' => '13011386',
     'name' => 'Nur Kartika Prihatini',
@@ -1756,7 +1756,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 6,
     'nik' => '13008058',
     'name' => 'Inganita Pinem',
@@ -1776,7 +1776,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 6,
     'nik' => '11011798',
     'name' => 'Monalisa Simanjuntak',
@@ -1796,7 +1796,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 6,
     'nik' => '08009174',
     'name' => 'Machillah',
@@ -1816,7 +1816,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 6,
     'nik' => '13010341',
     'name' => 'Siti Asyiah',
@@ -1836,7 +1836,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 6,
     'nik' => '10011212',
     'name' => 'Triwulandari',
@@ -1856,7 +1856,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 14,
     'nik' => '001690',
     'name' => 'Cici Kemala Sari Lubis',
@@ -1876,7 +1876,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 14,
     'nik' => '002827',
     'name' => 'Indra Wahyuningsih',
@@ -1896,7 +1896,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 14,
     'nik' => '001756',
     'name' => 'Wuri Endah Lestari',
@@ -1916,7 +1916,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 5,
     'nik' => '12009764',
     'name' => 'Wulan Sari Romadona',
@@ -1936,7 +1936,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 10,
     'nik' => '13010211',
     'name' => 'Randi Andaru Putra',
@@ -1956,7 +1956,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 10,
     'nik' => '12010327',
     'name' => 'Januar Putra',
@@ -1976,7 +1976,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 10,
     'nik' => '14013222',
     'name' => 'Putu Anata Hary Sandy',
@@ -1996,7 +1996,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 12,
     'nik' => '15008921',
     'name' => 'Nofirman Antoni',
@@ -2016,7 +2016,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 12,
     'nik' => '13009065',
     'name' => 'Muhammad Syamsudin',
@@ -2036,7 +2036,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 12,
     'nik' => '16008685',
     'name' => 'Bayu Iwan Sugiyarto',
@@ -2056,7 +2056,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 12,
     'nik' => '14008211',
     'name' => 'Mario Kelly Wenno',
@@ -2076,7 +2076,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 12,
     'nik' => '13011066',
     'name' => 'Muhammad Syuhri',
@@ -2096,7 +2096,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 6,
     'nik' => '08010970',
     'name' => 'Sandi Hadiat',
@@ -2116,7 +2116,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 6,
     'nik' => '005386',
     'name' => 'Taofan',
@@ -2136,7 +2136,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 6,
     'nik' => '15008213',
     'name' => 'Adriansyah',
@@ -2156,7 +2156,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 14,
     'nik' => '001675',
     'name' => 'Erwin Mangara Pasaribu',
@@ -2176,7 +2176,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 14,
     'nik' => '10010232',
     'name' => 'Indra Gunawan',
@@ -2196,7 +2196,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 14,
     'nik' => '11012628',
     'name' => 'Sigit Astiarso Nugroho',
@@ -2216,7 +2216,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 14,
     'nik' => '10011428',
     'name' => 'Andi Irfan Kf',
@@ -2236,7 +2236,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 14,
     'nik' => '10010377',
     'name' => 'Haeruddin',
@@ -2256,7 +2256,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 14,
     'nik' => '09010575',
     'name' => 'Aries Anggoro',
@@ -2276,7 +2276,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 5,
     'nik' => '14011222',
     'name' => 'Yogi Dhony Saputro',
@@ -2296,7 +2296,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 5,
     'nik' => '15008061',
     'name' => 'Galang Mandala Putra',
@@ -2316,7 +2316,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 5,
     'nik' => '14012708',
     'name' => 'Andhika Dwi Putra',
@@ -2336,7 +2336,7 @@ public function run()
 
 
 
-    App\MasterMember::create([
+    App\MasterData::create([
     'category_id' => 5,
     'nik' => '14013580',
     'name' => 'Putera Mahesa Kusumawardhana',

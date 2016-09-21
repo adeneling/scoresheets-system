@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
-use App\MasterMember;
+use App\MasterData;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +16,7 @@ class MasterDataController extends Controller
      */
     public function index()
     {
-        $masterData = MasterMember::orderBy('created_at','desc')->get();
+        $masterData = MasterData::orderBy('created_at','desc')->get();
         return view('backend.pages.master-data.index',compact('masterData'));
     }
 
@@ -57,7 +57,7 @@ class MasterDataController extends Controller
             'join_date' => 'required',*/
 
         ]);
-        MasterMember::create($request->all());
+        MasterData::create($request->all());
         \Flash::success('Master member data: ' . $request->get('name') .  ' Added.');
         return redirect('master-data');
     }
@@ -81,7 +81,7 @@ class MasterDataController extends Controller
      */
     public function edit($id)
     {
-        $masterData = MasterMember::findOrFail(decrypt($id));
+        $masterData = MasterData::findOrFail(decrypt($id));
         return view('backend.pages.master-data.edit', compact('masterData'));
     }
 
@@ -94,7 +94,7 @@ class MasterDataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $masterData = MasterMember::findOrFail($id);
+        $masterData = MasterData::findOrFail($id);
         $this->validate($request, [
             /*'category_id' => 'required',
             'nik' => 'required',
@@ -126,8 +126,8 @@ class MasterDataController extends Controller
      */
     public function destroy($id)
     {
-        $masterData = MasterMember::find($id);
-        MasterMember::find($id)->delete();
+        $masterData = MasterData::find($id);
+        MasterData::find($id)->delete();
         \Flash::success('Master member data ID: '. $masterData->nik .' Deleted.');
         return redirect('master-data');
     }

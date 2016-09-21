@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
-
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +16,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::orderBy('created_at','desc')->get();
+        return view('backend.pages.users.index', compact('users'));
     }
 
     /**
@@ -26,7 +27,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.pages.users.create');
     }
 
     /**
@@ -37,7 +38,24 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required',
+            'nik' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+            'role' => 'required',
+
+        ]);
+        $user = new User();
+        $user->name = $request->input('name');
+        $user->nik = $request->input('nik');
+        $user->email = $request->input('email');
+        $user->checking = 1;
+        $user->password = bcrypt($request->input('password'));
+        $user->attachRole($request->input('role'));
+        $user->save();
+        \Flash::success('New account with Email: ' . $request->get('name') .  ' Added.');
+        return redirect('users');
     }
 
     /**
@@ -59,7 +77,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::findOrFail(decrypt($id));
+        return view('backend.pages.users.edit', compact('user'));
     }
 
     /**
@@ -71,7 +90,17 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+        $this->validate($request, [
+            'name' => 'required',
+            'nik' => 'required',
+            'email' => 'required',
+        ]);
+        $user->password = bcrypt($request->input('password'));
+        $user->attachRole($request->input('role'));
+        $user->save();
+        \Flash::success('ID with email: '. $user->id . ' Edited.');
+        return redirect('users');
     }
 
     /**
@@ -82,6 +111,9 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        User::find($id)->delete();
+        \Flash::success('E-Mail: '. $user->email .' Deleted.');
+        return redirect('users');
     }
 }

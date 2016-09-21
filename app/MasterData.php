@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MasterMember extends Model
+class MasterData extends Model
 {
-    protected $table = 'master-member';
+    protected $table = 'master-data';
     
     protected $fillable = [
         'category_id',
