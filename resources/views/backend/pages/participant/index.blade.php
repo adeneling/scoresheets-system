@@ -6,7 +6,7 @@
 @section('content')
 <!-- page content -->
 <div class="row">
-	<div class="col-md-12 col-sm-12 col-xs-12">
+	<div class="col-md-12">
 		<div class="x_panel">
 			<div class="x_content">
 				<!-- start form for validation -->
@@ -34,7 +34,7 @@
 <div class="clearfix"></div>
 
 <div class="row">
-	<div class="col-md-12 col-sm-12 col-xs-12">
+	<div class="col-md-12">
 		<div class="x_panel">
 			<div class="x_title">
 				<h2>@yield('title')</h2>
@@ -47,13 +47,13 @@
 						<div class="profile_img">
 							<div id="crop-avatar">
 								<!-- Current avatar -->
-								<img class="img-responsive avatar-view" src="{{ asset('backend/images/picture.jpg') }}" alt="Avatar" title="Participant">
+								<img class="img-responsive avatar-view" src="{{ asset('backend/images/picture.png') }}" alt="Avatar" title="Participant">
 							</div>
 						</div>
 						<center><h5>{{ $participant->name }}</h5></center>
 						<ul class="list-unstyled user_data">
-							<li><center>{{ $participant->area }}</center></li>
-							<li><center>{{ $participant->region }}</center></li>
+							<li><center>Area: {{ $participant->area }}</center></li>
+							<li><center>Region: {{ $participant->region }}</center></li>
 						</ul>
 					</div>
 				</a>
