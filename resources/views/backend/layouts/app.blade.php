@@ -31,7 +31,7 @@
             <div class="navbar nav_title" style="border: 0;">
               <a href="{{ url('home') }}" class="site_title">
                 <i class="fa fa-desktop"></i> 
-                <span>SCORE<font color="red">SHEETS</font></span>
+                <span>BEST<font color="red">CS</font></span>
               </a>
             </div>
 
