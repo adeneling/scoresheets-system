@@ -27,7 +27,7 @@ class MasterDataController extends Controller
      */
     public function create()
     {
-        return view('backend.pages.category.create');
+        return view('backend.pages.master-data.create');
     }
 
     /**
@@ -39,21 +39,27 @@ class MasterDataController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
+            /*'category_id' => 'required',
+            'nik' => 'required',
+            'email' => 'required',
             'name' => 'required',
-            'parent_category' => 'required',
-            // 'description' => 'required',
-            // 'presentation_material' => 'required',
-            // 'communication_skill' => 'required',
-            // 'achievement' => 'required',
-            // 'personal_value' => 'required',
-            // 'customer_care_knowledge' => 'required',
-            // 'solution_skill' => 'required',
-            // 'inspirational_story' => 'required',
+            'unit_type' => 'required',
+            'unit_name' => 'required',
+            'no_telp' => 'required',
+            'gender' => 'required',
+            'room_code' => 'required',
+            'region' => 'required',
+            'area' => 'required',
+            'email' => 'required',
+            'size_poloshirt' => 'required',
+            'birth_place' => 'required',
+            'birthday' => 'required',
+            'join_date' => 'required',*/
 
         ]);
-        Category::create($request->all());
-        \Flash::success('Category name: ' . $request->get('name') .  ' Added.');
-        return redirect('category');
+        MasterMember::create($request->all());
+        \Flash::success('Master member data: ' . $request->get('name') .  ' Added.');
+        return redirect('master-data');
     }
 
     /**
@@ -75,8 +81,8 @@ class MasterDataController extends Controller
      */
     public function edit($id)
     {
-        $category = Category::findOrFail(decrypt($id));
-        return view('backend.pages.category.edit', compact('category'));
+        $masterData = MasterMember::findOrFail(decrypt($id));
+        return view('backend.pages.master-data.edit', compact('masterData'));
     }
 
     /**
@@ -88,22 +94,28 @@ class MasterDataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $category = Category::findOrFail($id);
+        $masterData = MasterMember::findOrFail($id);
         $this->validate($request, [
+            /*'category_id' => 'required',
+            'nik' => 'required',
+            'email' => 'required',
             'name' => 'required',
-            // 'parent_category' => 'required',
-            // 'description' => 'required',
-            // 'presentation_material' => 'required',
-            // 'communication_skill' => 'required',
-            // 'achievement' => 'required',
-            // 'personal_value' => 'required',
-            // 'customer_care_knowledge' => 'required',
-            // 'solution_skill' => 'required',
-            // 'inspirational_story' => 'required',
+            'unit_type' => 'required',
+            'unit_name' => 'required',
+            'no_telp' => 'required',
+            'gender' => 'required',
+            'room_code' => 'required',
+            'region' => 'required',
+            'area' => 'required',
+            'email' => 'required',
+            'size_poloshirt' => 'required',
+            'birth_place' => 'required',
+            'birthday' => 'required',
+            'join_date' => 'required',*/
         ]);
-        $category->update($request->all());
-        \Flash::success('Category ID: '. $category->id . ' Edited.');
-        return redirect('category');
+        $masterData->update($request->all());
+        \Flash::success('Master member data ID: '. $masterData->id . ' Edited.');
+        return redirect('master-data');
     }
 
     /**
@@ -114,9 +126,9 @@ class MasterDataController extends Controller
      */
     public function destroy($id)
     {
-        $category = Category::find($id);
-        Category::find($id)->delete();
-        \Flash::success('Category ID: '. $category->id .' Deleted.');
-        return redirect('category');
+        $masterData = MasterMember::find($id);
+        MasterMember::find($id)->delete();
+        \Flash::success('Master member data ID: '. $masterData->nik .' Deleted.');
+        return redirect('master-data');
     }
 }

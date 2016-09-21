@@ -8,8 +8,8 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>Master Data Member</h2>
-				<a href="{{ url('master-data/create') }}" class="btn btn-primary pull-right"> New Master Data</a>
+				<h2>Master data member</h2>
+				<a href="{{ url('master-data/create') }}" class="btn btn-primary pull-right"> New master data</a>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">

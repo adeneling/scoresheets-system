@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title')Edit Category
+@section('title')Edit master data
 @stop
 
 @section('content')
@@ -13,9 +13,9 @@
 			</div>
 			<div class="x_content">
 				<!-- start form for validation -->
-				{!! Form::model($category, ['route' => ['category.update', $category],'method' =>'put','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
+				{!! Form::model($masterData, ['route' => ['master-data.update', $masterData],'method' =>'put','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
         			{!! csrf_field() !!}
-					@include('backend.pages.category._form')
+					@include('backend.pages.master-data._form')
 				{!! Form::close() !!}
 			</div>
 		</div>

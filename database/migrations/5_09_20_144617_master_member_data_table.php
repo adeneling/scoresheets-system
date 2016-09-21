@@ -23,11 +23,14 @@ class MasterMemberDataTable extends Migration
             $table->string('unit_name')->nullable();
             $table->string('no_telp')->nullable();
             $table->string('gender')->nullable();
-            $table->string('room_code')->nullable();
+            $table->integer('room_code')->nullable();
             $table->string('region')->nullable();
             $table->integer('area')->nullable();
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('size_poloshirt')->nullable();
+            $table->string('birth_place')->nullable();
+            $table->string('birthday')->nullable();
+            $table->string('join_date')->nullable();
             $table->timestamps();
         });
     }
