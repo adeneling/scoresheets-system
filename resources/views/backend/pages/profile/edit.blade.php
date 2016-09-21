@@ -13,9 +13,9 @@
 			</div>
 			<div class="x_content">
 				<!-- start form for validation -->
-				{!! Form::model($user, ['route' => ['registration.update', $user],'method' =>'put','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
+				{!! Form::model($user, ['route' => ['profile.update', $user],'method' =>'put','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
 				{{ csrf_field() }}
-					@include('backend.pages.registration._form')
+					@include('backend.pages.profile._form')
 				{!! Form::close() !!}
 			</div>
 		</div>

@@ -1,6 +1,6 @@
-@extends('layouts.master')
+@extends('backend.layouts.app')
 
-@section('title')Verifikasi Order
+@section('title')Presentation File
 @stop
 
 @section('content')
@@ -13,9 +13,9 @@
 			</div>
 			<div class="x_content">
 				<!-- start form for validation -->
-				{!! Form::model($order, ['route' => ['order.update', $order],'method' =>'put','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
-        			{!! csrf_field() !!}
-					@include('pages.kelola-order._form')
+				{!! Form::model($user, ['route' => ['upload.update', $user],'method' =>'put','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
+				{{ csrf_field() }}
+					@include('backend.pages.upload._form')
 				{!! Form::close() !!}
 			</div>
 		</div>

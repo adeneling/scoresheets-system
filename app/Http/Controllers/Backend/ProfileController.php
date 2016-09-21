@@ -64,7 +64,6 @@ class ProfileController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail(decrypt($id));
-
         return view('backend.pages.profile.edit', compact('user'));
     }
 

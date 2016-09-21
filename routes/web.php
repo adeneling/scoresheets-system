@@ -16,14 +16,23 @@ Route::group(['namespace' => 'Frontend'], function(){
 });
 /* BACKEND */
 Route::group(['namespace' => 'Backend'], function(){
+	/* AUTHENTICATION */
 	Auth::routes();
-	Route::get('/home', 'HomeController@index');
+	Route::get('/home', 'HomeController@index');	
+	/* UPLOAD PRESENTATOIN */
+	Route::resource('upload', 'UploadPresentationController');
+	/* CHECK NIK AND EMAIL */
 	Route::resource('checking', 'CheckingController');
+	/* PROFILE */
 	Route::resource('profile', 'ProfileController');
-	Route::resource('registration', 'RegistrationController');
+	/* SCORESHEETS */
 	Route::resource('scoresheets', 'ScoresheetsController');
+	/* SESSION */
 	Route::resource('session', 'SessionController');
+	/* CATEGORY */
 	Route::resource('category', 'CategoryController');
+	/* MASTER DATA */
 	Route::resource('master-data', 'MasterDataController');
+	/* USERS */
 	Route::resource('users', 'UsersController');
 });
