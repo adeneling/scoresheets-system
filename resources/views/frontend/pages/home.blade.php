@@ -55,10 +55,7 @@
                                             <h1>SCORESHEETS<font color="red">SYSTEM</font></h1>
                                         </div>
                                         <div class="item">
-                                            <h1>SCORESHEETS<font color="red">SYSTEM</font></h1>
-                                        </div>
-                                        <div class="item">
-                                            <h1>SCORESHEETS<font color="red">SYSTEM</font></h1>
+                                            <h1>BEST<font color="red">CS</font></h1>
                                         </div>
                                     </div>                        
                                 </div>
