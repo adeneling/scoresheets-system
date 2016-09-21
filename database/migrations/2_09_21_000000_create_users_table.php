@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('work_location')->nullable();
             $table->string('city')->nullable();
             $table->string('area')->nullable();
+            $table->string('region')->nullable();
             $table->string('job_function')->nullable();
             $table->string('mobile_phone')->nullable();
             $table->string('bank_account')->nullable();

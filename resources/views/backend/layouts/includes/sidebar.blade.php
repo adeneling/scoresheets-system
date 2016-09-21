@@ -8,6 +8,7 @@
         <li><a href="{{ route('upload.edit', encrypt(Auth::user()->id ))}}"><i class="fa fa-upload"></i> Upload Presentation</a></li>
       @endrole
       @role('jury')
+        <li><a href="{{ url('participant') }}"><i class="fa fa-user-md"></i> Participant</a></li>
         <li><a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a></li>
         <li><a href="{{ url('session') }}"><i class="fa fa-bookmark-o"></i> Session</a></li>
       @endrole

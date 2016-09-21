@@ -16,6 +16,9 @@ class User extends Authenticatable
      *
      * @var array
      */
+
+    protected $table = 'users';
+
     protected $fillable = [
         'nik',
         'name',
@@ -29,6 +32,7 @@ class User extends Authenticatable
         'work_location',
         'city',
         'area',
+        'region',
         'job_function',
         'mobile_phone',
         'bank_account',
@@ -53,6 +57,6 @@ class User extends Authenticatable
     ];
 
     public function category() {
-        return $this->hasOne('App\Category', 'category_id');
+        return $this->belongsTo('App\Category', 'category_id');
     }
 }

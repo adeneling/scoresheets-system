@@ -25,6 +25,8 @@ Route::group(['namespace' => 'Backend'], function(){
 	Route::resource('checking', 'CheckingController');
 	/* PROFILE */
 	Route::resource('profile', 'ProfileController');
+	/* PARTICIPANT */
+	Route::resource('participant', 'ParticipantController');
 	/* SCORESHEETS */
 	Route::resource('scoresheets', 'ScoresheetsController');
 	/* SESSION */

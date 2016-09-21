@@ -48,12 +48,17 @@ class UsersSeeder extends Seeder
 		$admin->save();
 		$admin->attachRole($juryRole);
 		// Membuat sample member
-		$member = new User();
-		$member->name = "Member";
-		$member->email = 'member@gmail.com';
-		$member->password = bcrypt('ss');
-		$member->save();
-		$member->attachRole($memberRole);
+		for ($i=0; $i <12 ; $i++) { 
+			$member = new User();
+			$member->name = "Participant - ".$i;
+			$member->email = 'member'. $i .'@gmail.com';
+			$member->category_id = 2;
+			$member->area = 1;
+			$member->region = 'Bandung';
+			$member->password = bcrypt('ss');
+			$member->save();
+			$member->attachRole($memberRole);
+		}		
 		// Membuat sample guest
 		$member = new User();
 		$member->name = "Guest";
