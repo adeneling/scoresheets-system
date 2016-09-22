@@ -2,14 +2,13 @@
 
 use Illuminate\Database\Seeder;
 
-class SessionSeeder extends Seeder
+class SessionDataSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      *
      * @return void
      */
-
     public function run()
     {
         App\Session::create([

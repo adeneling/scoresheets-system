@@ -18,6 +18,6 @@ class DatabaseSeeder extends Seeder
         /* MASTER DATA - PARTICIPANT */
         $this->call(MasterData::class);
         /* SESSION */
-        $this->call(SessionSeeder::class);
+        $this->call(SessionDataSeeder::class);
     }
 }
