@@ -9,7 +9,7 @@
 		<div class="x_panel">
 			<div class="x_title">
 				<h2>Scoresheets</h2>
-				<a href="{{ url('category/create') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
+				<a href="{{ url('participant') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
