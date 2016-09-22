@@ -15,6 +15,8 @@
       @role('admin')
         <li><a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a></li>
         <li><a href="{{ url('session') }}"><i class="fa fa-bookmark-o"></i> Session</a></li>
+        <li><a href="{{ url('unit-score') }}"><i class="fa fa-align-center"></i> Unit Score</a></li>
+        <li><a href="{{ url('unit-category') }}"><i class="fa fa-list-ul"></i> Unit Category</a></li>
         <li><a href="{{ url('category') }}"><i class="fa fa-tags"></i> Category</a></li>
         <li><a href="{{ url('master-data') }}"><i class="fa fa-star"></i> Master Data</a></li>
         <li><a href="{{ url('users') }}"><i class="fa fa-users"></i> Users</a></li>
