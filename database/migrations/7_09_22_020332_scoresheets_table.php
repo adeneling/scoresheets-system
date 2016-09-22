@@ -18,6 +18,8 @@ class ScoresheetsTable extends Migration
             /*PARTICIPANT*/
             $table->integer('participant_id')->unsigned()->nullable();
             $table->foreign('participant_id')->references('id')->on('users');
+            $table->string('participant_name')->nullable();
+            $table->integer('participant_area')->nullable();
             /*JURY*/
             $table->integer('jury_id')->unsigned()->nullable();
             $table->foreign('jury_id')->references('id')->on('users');

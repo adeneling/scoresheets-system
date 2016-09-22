@@ -10,6 +10,8 @@ class Scoresheet extends Model
     
     protected $fillable = [
     	'participant_id',
+        'participant_name',
+        'participant_area',
     	'jury_id',
     	'category_id',
     	'room_id',
@@ -27,4 +29,7 @@ class Scoresheet extends Model
     	'coeficient_score',
     	'total_coeficient_score',
     ];
+    public function category() {
+        return $this->belongsTo('App\Category', 'category_id');
+    }
 }

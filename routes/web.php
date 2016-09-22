@@ -28,6 +28,7 @@ Route::group(['namespace' => 'Backend'], function(){
 	/* PARTICIPANT */
 	Route::resource('participant', 'ParticipantController');
 	/* SCORESHEETS */
+	Route::resource('scoresheets-category', 'ScoresheetsCategoryController');
 	Route::resource('scoresheets', 'ScoresheetsController');
 	/* SESSION */
 	Route::resource('session', 'SessionController');

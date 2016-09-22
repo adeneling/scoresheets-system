@@ -119,6 +119,8 @@ class ScoresheetsController extends Controller
         /*REQUEST*/
         $scoresheet = new Scoresheet();
         $scoresheet->participant_id = $request->input('participant_id');
+        $scoresheet->participant_name = $request->input('participant_name');
+        $scoresheet->participant_area = $request->input('participant_area');
         $scoresheet->jury_id = $request->input('jury_id');
         $scoresheet->category_id = $request->input('category_id');
         $scoresheet->room_id = $request->input('room_id');

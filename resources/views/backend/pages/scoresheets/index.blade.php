@@ -17,8 +17,10 @@
 					<thead>
 						<tr>
 							<th>No</th>
-
-							<th width="20%">Aksi</th>
+							<th>Name</th>
+							<th>Category</th>
+							<th>Final Score</th>
+							<th width="30%">Aksi</th>
 						</tr>
 					</thead>
 
@@ -27,11 +29,14 @@
                 		@foreach($scoresheets as $scoresheet)
 						<tr>
 							<td>{{ $no++ }}</td>
-
+							<td>{{ $scoresheet->participant_name }}</td>
+							<td>{{ $scoresheet->category_id }}</td>
+							<td>{{ $scoresheet->total_coeficient_score }}</td>
 							<td>
 								<center>
 									{!! Form::model($scoresheet, ['route' => ['scoresheets.destroy', $scoresheet], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
-	                                <a href = "{{ route('scoresheets.show', encrypt($scoresheet->id))}}" class="btn btn-primary">Lihat</a> | 
+	                                <a href = "{{ route('scoresheets.show', encrypt($scoresheet->id))}}" class="btn btn-primary">Check</a> | 
+	                                <a href = "{{ route('scoresheets.edit', encrypt($scoresheet->participant_id))}}" class="btn btn-warning">Edit Score</a> | 
 	                                <button type="submit" class="btn btn-danger">Delete</button>
 	                                {!! Form::close()!!}
 									

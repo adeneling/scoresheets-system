@@ -25,4 +25,7 @@ class Category extends Model
     public function user() {
         return $this->hasMany('App\User', 'category_id');
     }
+    public function scoresheet() {
+        return $this->hasMany('App\Scoresheet', 'category_id');
+    }
 }

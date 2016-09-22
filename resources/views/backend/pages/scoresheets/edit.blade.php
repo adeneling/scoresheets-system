@@ -23,7 +23,7 @@
 					<h3>{{ $participant->name }}</h3>
 
 					<ul class="list-unstyled user_data">
-						<li>Presentation: {{ $participant->presentation_file }}</li>
+						<li><a href="#" class="btn btn-danger">Presentation file</a></li>
 						<li>City: {{ $participant->city }}</li>
 						<li>Category: {{ $participant->category->name }}</li>
 						<li>Area: {{ $participant->area }}</li>

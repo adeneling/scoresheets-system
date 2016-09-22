@@ -51,7 +51,7 @@ class CheckingController extends Controller
             if(User::where('email',$email)->exists()){
                 return redirect('/')->with('status', 'Anda sudah melakukan pendaftaran, silahkan login');
             }else{
-                $memberRole = Role::where('name', 'member')->first();            
+                $memberRole = Role::where('name', 'participant')->first();            
                 $user = new User();
                 $user->name = $name;
                 $user->nik = $nik;
@@ -67,7 +67,7 @@ class CheckingController extends Controller
                     $message->subject('User Account - Scoresheets');
                 });
                 /* MESSAGE SUCCESS */
-                return redirect('/')->with('status', 'Data cocok, silahkan cek email anda untuk login');                           
+                return redirect('/')->with('status', 'Data sesuai, silahkan cek email anda untuk login');                           
             }
             
         }else{

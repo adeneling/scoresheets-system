@@ -1,4 +1,6 @@
 {!! Form::hidden('participant_id', $participant->id) !!}
+{!! Form::hidden('participant_name', $participant->name) !!}
+{!! Form::hidden('participant_area', $participant->area) !!}
 {!! Form::hidden('jury_id', Auth::user()->id) !!}
 {!! Form::hidden('category_id', $participant->category_id) !!}
 
@@ -127,7 +129,7 @@
 
 <div class="form-group">
 	<center>
-        <button type="submit" class="btn btn-danger">{{ isset($masterData) ? 'Edit Data' : 'Scoring' }}</button> 
+        <button type="submit" class="btn btn-primary">{{ isset($masterData) ? 'Edit Data' : 'Scoring' }}</button> 
         @if(isset($masterData)) | 
             <a href="{{ url('master-data') }}" class="btn btn-primary">Kembali</a>
         @endif
