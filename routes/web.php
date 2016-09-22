@@ -38,4 +38,8 @@ Route::group(['namespace' => 'Backend'], function(){
 	Route::resource('master-data', 'MasterDataController');
 	/* USERS */
 	Route::resource('users', 'UsersController');
+	/*UNIT MODULE */
+	Route::resource('unit-score', 'UnitScoreController');
+	Route::resource('unit-category', 'UnitCategoryController');
+	Route::resource('unit-category-parent', 'UnitCategoryParentController');
 });

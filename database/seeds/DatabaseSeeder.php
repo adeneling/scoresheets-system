@@ -19,5 +19,11 @@ class DatabaseSeeder extends Seeder
         $this->call(MasterData::class);
         /* SESSION */
         $this->call(SessionDataSeeder::class);
+        /* UNIT CATEGORY PARENT */
+        $this->call(UnitCategoryParentSeeder::class);
+        /* UNIT CATEGORY */
+        $this->call(UnitCategorySeeder::class);
+        /* UNIT SCORE */
+        $this->call(UnitScoreSeeder::class);
     }
 }
