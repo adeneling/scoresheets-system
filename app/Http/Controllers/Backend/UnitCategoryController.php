@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
-
+use App\UnitCategory;
+use App\UnitCategoryParent;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +17,9 @@ class UnitCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $unitCategory = UnitCategory::all();
+        $unitCategoryParent = UnitCategoryParent::all();
+        return view('backend.pages.unit-category.index',compact('unitCategory','unitCategoryParent'));
     }
 
     /**
