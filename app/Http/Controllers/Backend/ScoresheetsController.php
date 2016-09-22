@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
-
+use App\Scoresheet;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -15,8 +15,9 @@ class ScoresheetsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        
+    {   
+        $scoresheets = Scoresheet::all();
+        return view('backend.pages.scoresheets.index',compact('scoresheets'));
     }
 
     /**

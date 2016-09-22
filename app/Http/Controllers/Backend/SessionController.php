@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
-
+use App\Session;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -16,7 +16,8 @@ class SessionController extends Controller
      */
     public function index()
     {
-        //
+        $sessions = Session::all();
+        return view('backend.pages.sessions.index', compact('sessions'));
     }
 
     /**

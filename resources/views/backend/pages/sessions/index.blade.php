@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title')Scoresheets
+@section('title')Sessions
 @stop
 
 @section('content')
@@ -8,8 +8,8 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>Scoresheets</h2>
-				<a href="{{ url('category/create') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
+				<h2>Sessions</h2>
+				<a href="{{ url('category/create') }}" class="btn btn-primary pull-right"> New Sessions</a>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -24,14 +24,14 @@
 
 					<tbody>
 						<?php $no = 1; ?>
-                		@foreach($scoresheets as $scoresheet)
+                		@foreach($sessions as $session)
 						<tr>
 							<td>{{ $no++ }}</td>
 
 							<td>
 								<center>
-									{!! Form::model($scoresheet, ['route' => ['scoresheets.destroy', $scoresheet], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
-	                                <a href = "{{ route('scoresheets.show', encrypt($scoresheet->id))}}" class="btn btn-primary">Lihat</a> | 
+									{!! Form::model($session, ['route' => ['scoresheets.destroy', $session], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
+	                                <a href = "{{ route('scoresheets.show', encrypt($session->id))}}" class="btn btn-primary">Lihat</a> | 
 	                                <button type="submit" class="btn btn-danger">Delete</button>
 	                                {!! Form::close()!!}
 									
