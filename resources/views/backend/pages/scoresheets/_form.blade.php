@@ -1,59 +1,124 @@
-<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Name</label>
+{!! Form::hidden('participant_id', $participant->id) !!}
+{!! Form::hidden('jury_id', Auth::user()->id) !!}
+{!! Form::hidden('category_id', $participant->category_id) !!}
+
+<div class="form-group{{ $errors->has('room_id') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Room</label>
     <div class="col-md-4">
-        {!! Form::text('name', null, ['class'=>'form-control','placeholder'=>'Enter your name']) !!}
+        {!! Form::text('room_id', null, ['class'=>'form-control','placeholder'=>'Room']) !!}
     </div>
-    @if($errors->has('name'))
+    @if($errors->has('room_id'))
         <span class="help-block">
-            <strong>{{ $errors->first('name') }}</strong>
+            <strong>{{ $errors->first('room_id') }}</strong>
         </span>
     @endif
 </div>
 
-<div class="form-group{{ $errors->has('nik') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">NIK</label>
+<div class="form-group{{ $errors->has('notes') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Notes</label>
+    <div class="col-md-6">
+        {!! Form::textarea('notes', null, ['class'=>'form-control','placeholder'=>'Notes','rows'=>'4']) !!}
+    </div>
+    @if($errors->has('notes'))
+        <span class="help-block">
+            <strong>{{ $errors->first('notes') }}</strong>
+        </span>
+    @endif
+</div>
+
+<div class="form-group{{ $errors->has('session_id') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Session</label>
+    <div class="col-md-4">
+        {!!Form::select('session_id', [''=>'']+App\Session::pluck('name','id')->all(), null, ['class'=>'select2_single form-control']) !!}
+    </div>
+    @if($errors->has('session_id'))
+        <span class="help-block">
+            <strong>{{ $errors->first('session_id') }}</strong>
+        </span>
+    @endif
+</div>
+
+
+<div class="form-group{{ $errors->has('presentation_material') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Presentation Material</label>
     <div class="col-md-2">
-        {!! Form::text('nik', null, ['class'=>'form-control','placeholder'=>'NIK']) !!}
+        {!!Form::select('presentation_material', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </div>
-    @if($errors->has('nik'))
+    @if($errors->has('presentation_material'))
         <span class="help-block">
-            <strong>{{ $errors->first('nik') }}</strong>
+            <strong>{{ $errors->first('presentation_material') }}</strong>
         </span>
     @endif
 </div>
 
-<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">E-Mail</label>
-    <div class="col-md-4">
-        {!! Form::text('email', null, ['class'=>'form-control','placeholder'=>'E-Mail']) !!}
+<div class="form-group{{ $errors->has('communication_skill') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Communication Skill</label>
+    <div class="col-md-2">
+        {!!Form::select('communication_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </div>
-    @if($errors->has('email'))
+    @if($errors->has('communication_skill'))
         <span class="help-block">
-            <strong>{{ $errors->first('email') }}</strong>
+            <strong>{{ $errors->first('communication_skill') }}</strong>
         </span>
     @endif
 </div>
 
-<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Password</label>
-    <div class="col-md-4">
-        {!! Form::password('password', ['class'=>'form-control','placeholder'=>'Enter your password']) !!}
+<div class="form-group{{ $errors->has('achievement') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Achievement</label>
+    <div class="col-md-2">
+        {!!Form::select('achievement', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </div>
-    @if($errors->has('password'))
+    @if($errors->has('achievement'))
         <span class="help-block">
-            <strong>{{ $errors->first('password') }}</strong>
+            <strong>{{ $errors->first('achievement') }}</strong>
         </span>
     @endif
 </div>
 
-<div class="form-group{{ $errors->has('role') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Role</label>
-    <div class="col-md-4">
-        {!!Form::select('role', [''=>'']+App\Role::pluck('name','id')->all(), null, ['class'=>'select2_single form-control']) !!}
+<div class="form-group{{ $errors->has('personal_value') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Personal Value</label>
+    <div class="col-md-2">
+        {!!Form::select('personal_value', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </div>
-    @if($errors->has('role'))
+    @if($errors->has('personal_value'))
         <span class="help-block">
-            <strong>{{ $errors->first('role') }}</strong>
+            <strong>{{ $errors->first('personal_value') }}</strong>
+        </span>
+    @endif
+</div>
+
+<div class="form-group{{ $errors->has('customer_care_knowledge') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Customer Care Knowledge</label>
+    <div class="col-md-2">
+        {!!Form::select('customer_care_knowledge', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+    </div>
+    @if($errors->has('customer_care_knowledge'))
+        <span class="help-block">
+            <strong>{{ $errors->first('customer_care_knowledge') }}</strong>
+        </span>
+    @endif
+</div>
+
+<div class="form-group{{ $errors->has('solution_skill') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Solution Skill</label>
+    <div class="col-md-2">
+        {!!Form::select('solution_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+    </div>
+    @if($errors->has('solution_skill'))
+        <span class="help-block">
+            <strong>{{ $errors->first('solution_skill') }}</strong>
+        </span>
+    @endif
+</div>
+
+<div class="form-group{{ $errors->has('inspirational_story') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Inspirational Story</label>
+    <div class="col-md-2">
+        {!!Form::select('inspirational_story', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+    </div>
+    @if($errors->has('inspirational_story'))
+        <span class="help-block">
+            <strong>{{ $errors->first('inspirational_story') }}</strong>
         </span>
     @endif
 </div>
@@ -62,7 +127,7 @@
 
 <div class="form-group">
 	<center>
-        <button type="submit" class="btn btn-danger">{{ isset($masterData) ? 'Edit Data' : 'Create' }}</button> 
+        <button type="submit" class="btn btn-danger">{{ isset($masterData) ? 'Edit Data' : 'Scoring' }}</button> 
         @if(isset($masterData)) | 
             <a href="{{ url('master-data') }}" class="btn btn-primary">Kembali</a>
         @endif

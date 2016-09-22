@@ -20,10 +20,14 @@
 							<img class="img-responsive avatar-view" src="{{ asset('backend/images/picture.png') }}" alt="Avatar" title="Change the avatar">
 						</div>
 					</div>
-					<center><h3>{{ $participant->name }}</h3></center>
+					<h3>{{ $participant->name }}</h3>
 
 					<ul class="list-unstyled user_data">
-						<li><i class="fa fa-map-marker user-profile-icon"></i> San Francisco, California, USA</li>
+						<li>Presentation: {{ $participant->presentation_file }}</li>
+						<li>City: {{ $participant->city }}</li>
+						<li>Category: {{ $participant->category->name }}</li>
+						<li>Area: {{ $participant->area }}</li>
+						<li>Region: {{ $participant->region }}</li>
 					</ul>
 					<br />
 				</div>
@@ -31,18 +35,12 @@
 
 					<div class="profile_title">
 						<div class="col-md-6">
-							<h2>User Activity Report</h2>
-						</div>
-						<div class="col-md-6">
-							<div id="reportrange" class="pull-right" style="margin-top: 5px; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #E6E9ED">
-								<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-								<span>Scoring</span> <b class="caret"></b>
-							</div>
+							<h2>@yield('title') - {{ $participant->name }}</h2>
 						</div>
 					</div>
 					<div class="x_content">
 						<!-- start form for validation -->
-						{!! Form::model($participant, ['route' => ['users.update', $participant],'method' =>'put','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
+						{!! Form::model($participant, ['route' => ['scoresheets.update', $participant],'method' =>'put','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
 		        			{!! csrf_field() !!}
 							@include('backend.pages.scoresheets._form')
 						{!! Form::close() !!}
