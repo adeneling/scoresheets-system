@@ -36,7 +36,7 @@
 								<center>
 									{!! Form::model($scoresheet, ['route' => ['scoresheets.destroy', $scoresheet], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
 	                                <a href = "{{ route('scoresheets.show', encrypt($scoresheet->id))}}" class="btn btn-primary">Check</a> | 
-	                                <a href = "{{ route('scoresheets.edit', encrypt($scoresheet->participant_id))}}" class="btn btn-warning">Edit Score</a> | 
+	                                <a href = "{{ route('scoresheets.edit', encrypt($scoresheet->id))}}" class="btn btn-warning">Edit Score</a> | 
 	                                <button type="submit" class="btn btn-danger">Delete</button>
 	                                {!! Form::close()!!}
 									

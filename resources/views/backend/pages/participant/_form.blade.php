@@ -1,8 +1,8 @@
-{!! Form::hidden('participant_id', $scoresheet->user->id) !!}
-{!! Form::hidden('participant_name', $scoresheet->user->name) !!}
-{!! Form::hidden('participant_area', $scoresheet->user->area) !!}
+{!! Form::hidden('participant_id', $participant->id) !!}
+{!! Form::hidden('participant_name', $participant->name) !!}
+{!! Form::hidden('participant_area', $participant->area) !!}
 {!! Form::hidden('jury_id', Auth::user()->id) !!}
-{!! Form::hidden('category_id', $scoresheet->user->category_id) !!}
+{!! Form::hidden('category_id', $participant->category_id) !!}
 
 <div class="form-group{{ $errors->has('room_id') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">Room</label>
@@ -131,7 +131,7 @@
 	<center>
         <button type="submit" class="btn btn-primary">{{ isset($masterData) ? 'Edit Data' : 'Scoring' }}</button> 
         @if(isset($masterData)) | 
-            <a href="{{ url('scoresheets') }}" class="btn btn-primary">Kembali</a>
+            <a href="{{ url('master-data') }}" class="btn btn-primary">Kembali</a>
         @endif
     </center>
 </div>

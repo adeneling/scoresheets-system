@@ -59,4 +59,7 @@ class User extends Authenticatable
     public function category() {
         return $this->belongsTo('App\Category', 'category_id');
     }
+    public function scoresheet() {
+        return $this->hasOne('App\Scoresheet', 'participant_id');
+    }
 }

@@ -52,7 +52,8 @@ class ScoresheetsController extends Controller
      */
     public function show($id)
     {
-        //
+        $scoresheet = Scoresheet::findOrFail(decrypt($id));
+        return view('backend.pages.scoresheets.show', compact('scoresheet'));
     }
 
     /**
@@ -63,8 +64,8 @@ class ScoresheetsController extends Controller
      */
     public function edit($id)
     {
-        $participant = User::findOrFail(decrypt($id));
-        return view('backend.pages.scoresheets.edit', compact('participant'));
+        $scoresheet = Scoresheet::findOrFail(decrypt($id));
+        return view('backend.pages.scoresheets.edit', compact('scoresheet'));
     }
 
     /**
@@ -117,7 +118,7 @@ class ScoresheetsController extends Controller
         ;
         $total_coeficient_score = $total_score / $coeficient_score;
         /*REQUEST*/
-        $scoresheet = new Scoresheet();
+        $scoresheet = Scoresheet::findOrFail($id);
         $scoresheet->participant_id = $request->input('participant_id');
         $scoresheet->participant_name = $request->input('participant_name');
         $scoresheet->participant_area = $request->input('participant_area');
