@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
 use App\Scoresheet;
+use App\User;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -60,7 +61,8 @@ class ScoresheetsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $participant = User::findOrFail(decrypt($id));
+        return view('backend.pages.scoresheets.edit', compact('participant'));
     }
 
     /**

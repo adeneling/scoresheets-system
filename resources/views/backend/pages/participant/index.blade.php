@@ -42,7 +42,7 @@
 			</div>
 			<div class="x_content">
 				@foreach($participants->user as $participant)
-				<a href="#">
+				<a href="{{ route('scoresheets.edit', encrypt($participant->id))}}">
 					<div class="col-md-2 col-sm-2 col-xs-12 profile_left">
 						<div class="profile_img">
 							<div id="crop-avatar">

@@ -9,39 +9,35 @@
 		<div class="x_panel">
 			<div class="x_title">
 				<h2>Sessions</h2>
-				<a href="{{ url('category/create') }}" class="btn btn-primary pull-right"> New Sessions</a>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
-				<table id="datatable" class="table table-striped table-bordered">
-					<thead>
-						<tr>
-							<th>No</th>
 
-							<th width="20%">Aksi</th>
-						</tr>
-					</thead>
-
-					<tbody>
+				<div class="x_content">
+					<ul class="list-unstyled timeline">
 						<?php $no = 1; ?>
                 		@foreach($sessions as $session)
-						<tr>
-							<td>{{ $no++ }}</td>
-
-							<td>
-								<center>
-									{!! Form::model($session, ['route' => ['scoresheets.destroy', $session], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
-	                                <a href = "{{ route('scoresheets.show', encrypt($session->id))}}" class="btn btn-primary">Lihat</a> | 
-	                                <button type="submit" class="btn btn-danger">Delete</button>
-	                                {!! Form::close()!!}
-									
-								</center>
-							</td>
-						</tr>
+							<li>
+								<div class="block">
+									<div class="tags">
+										<a href="#" class="tag">
+											<span>Session - {{ $no++ }}</span>
+										</a>
+									</div>
+									<div class="block_content">
+										<h2 class="title">
+											<a>{{ $session->name }}</a>
+										</h2>
+										<p class="excerpt">-</a>
+										</p>
+									</div>
+								</div>
+							</li>
 						@endforeach
-					</tbody>
-				</table>
-			</div>
+					</ul>
+                </div>
+              </div>
+            </div>
 		</div>
 	</div>
 </div>
