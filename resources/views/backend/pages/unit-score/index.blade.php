@@ -52,6 +52,8 @@
 									<br>
 									{{ $top->type }}
 									<br>
+									Area {{ $top->area }}
+									<br>
 									{{ $top->total_score }}
 								</h5>
 							</center>
