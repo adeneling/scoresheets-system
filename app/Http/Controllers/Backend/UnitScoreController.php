@@ -68,7 +68,7 @@ class UnitScoreController extends Controller
 
 
 
-        return view('backend.pages.unit-score.index',compact('unitScore','tops','topCategory'));
+        //return view('backend.pages.unit-score.index',compact('unitScore','tops','topCategory'));
     }
 
     /**

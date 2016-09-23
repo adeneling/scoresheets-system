@@ -151,6 +151,9 @@ class ScoresheetsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $scoresheet = Scoresheet::find($id);
+        Scoresheet::find($id)->delete();
+        \Flash::success('Scoresheet ID: '. $scoresheet->id .' Deleted.');
+        return redirect('scoresheets');
     }
 }
