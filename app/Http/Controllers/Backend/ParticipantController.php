@@ -66,6 +66,8 @@ class ParticipantController extends Controller
     public function edit($id)
     {
         $participant = User::findOrFail(decrypt($id));
+        //$category = Category::where('id', $request->input('category_id') )->first();
+        //return $category;
         return view('backend.pages.participant.edit', compact('participant'));
     }
 
@@ -92,6 +94,7 @@ class ParticipantController extends Controller
         $inspirational_story = $request->input('inspirational_story');
         /*CALCULATE*/
         $category = Category::where('id', $request->input('category_id') )->first();
+        
         $presentation_material_result = $presentation_material * $category->presentation_material;
         $communication_skill_result = $communication_skill * $category->communication_skill;
         $achievement_result = $achievement * $category->achievement;
@@ -142,7 +145,7 @@ class ParticipantController extends Controller
         $scoresheet->total_coeficient_score = $total_coeficient_score;
         $scoresheet->save();
         \Flash::success('Success');
-        return redirect('/scoresheets');
+        return redirect('scoresheets');
     }
 
     /**

@@ -2,7 +2,7 @@
 {!! Form::hidden('participant_name', $scoresheet->user->name) !!}
 {!! Form::hidden('participant_area', $scoresheet->user->area) !!}
 {!! Form::hidden('jury_id', Auth::user()->id) !!}
-{!! Form::hidden('category_id', $scoresheet->user->category_id) !!}
+{!! Form::hidden('category_id', $scoresheet->user->category_id ) !!}
 
 <div class="form-group{{ $errors->has('room_id') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">Room</label>
