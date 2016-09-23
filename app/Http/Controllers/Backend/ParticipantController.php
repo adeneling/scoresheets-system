@@ -79,7 +79,8 @@ class ParticipantController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-
+            'room_id' => 'required',
+            'session_id' => 'required',
         ]);
         /* SCORESHEET */
         $presentation_material = $request->input('presentation_material');
