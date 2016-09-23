@@ -40,6 +40,19 @@ class UsersSeeder extends Seeder
 		$admin->password = bcrypt('ss');
 		$admin->save();
 		$admin->attachRole($adminRole);
+
+		$admin = new User();
+		$admin->name = 'Admin - 1';
+		$admin->email = 'admin01@bestcsawards.com';
+		$admin->password = bcrypt('admin01');
+		$admin->save();
+		$admin->attachRole($adminRole);
+		$admin = new User();
+		$admin->name = 'Admin - 2';
+		$admin->email = 'admin02@bestcsawards.com';
+		$admin->password = bcrypt('admin02');
+		$admin->save();
+		$admin->attachRole($adminRole);
 		// Membuat sample jury
 		$admin = new User();
 		$admin->name = 'Andri Wibawanto';
@@ -47,6 +60,20 @@ class UsersSeeder extends Seeder
 		$admin->password = bcrypt('ss');
 		$admin->save();
 		$admin->attachRole($juryRole);
+
+		$admin = new User();
+		$admin->name = 'Juri - 1';
+		$admin->email = 'juri01@bestcsawards.com';
+		$admin->password = bcrypt('juri01');
+		$admin->save();
+		$admin->attachRole($juryRole);
+		$admin = new User();
+		$admin->name = 'Juri - 2';
+		$admin->email = 'juri02@bestcsawards.com';
+		$admin->password = bcrypt('juri02');
+		$admin->save();
+		$admin->attachRole($juryRole);
+
 		// Membuat sample member
 		$participant = new User();
 		$participant->name = 'Agus Sari';

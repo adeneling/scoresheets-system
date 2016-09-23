@@ -18,10 +18,33 @@ class UnitScoreController extends Controller
      */
     public function index(Request $request)
     {
+        /* all unit */
         $unitScore = UnitScore::orderBy('created_at','desc')->get();
-        $tops = UnitScore::orderBy('total_score','desc')->take(3)->get();
+
+        /* top 3 from each category */
         $q = $request->get('q');
         $topCategory = UnitScore::where('category_id', $q)->orderBy('total_score','desc')->take(3)->get();
+
+        /* top from each category*/
+        $topCategory1 = UnitScore::where('category_id', 1)->orderBy('total_score','desc')->take(3)->get();
+        $topCategory2 = UnitScore::where('category_id', 2)->orderBy('total_score','desc')->take(3)->get();
+        $topCategory3 = UnitScore::where('category_id', 3)->orderBy('total_score','desc')->take(3)->get();
+        $topCategory4 = UnitScore::where('category_id', 4)->orderBy('total_score','desc')->take(3)->get();
+        $topCategory5 = UnitScore::where('category_id', 5)->orderBy('total_score','desc')->take(3)->get();
+        $topCategory6 = UnitScore::where('category_id', 6)->orderBy('total_score','desc')->take(3)->get();
+        $topCategory7 = UnitScore::where('category_id', 7)->orderBy('total_score','desc')->take(3)->get();
+        $topCategory8 = UnitScore::where('category_id', 8)->orderBy('total_score','desc')->take(3)->get();
+        $topCategory9 = UnitScore::where('category_id', 9)->orderBy('total_score','desc')->take(3)->get();
+        $topCategory10 = UnitScore::where('category_id', 10)->orderBy('total_score','desc')->take(3)->get();
+        $topCategory11 = UnitScore::where('category_id', 11)->orderBy('total_score','desc')->take(3)->get();
+
+        /* all data from unit score for each area */
+        $area1 = UnitScore::where('area', 1)->get();
+        $area2 = UnitScore::where('area', 2)->get();
+        $area3 = UnitScore::where('area', 3)->get();
+        $area4 = UnitScore::where('area', 4)->get();
+
+        //return $area2;
         return view('backend.pages.unit-score.index',compact('unitScore','tops','topCategory'));
     }
 

@@ -13,8 +13,8 @@
 				<!-- start form for validation -->
 				{!! Form::open( ['url' =>'unit-score','method' =>'get','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
 					<div class="form-group{{ $errors->has('q') ? ' has-error' : '' }}">
-					    <label class="control-label col-md-2">Unit Category</label>
-					    <div class="col-md-4">
+					    <label class="control-label col-md-2">Best Unit Category</label>
+					    <div class="col-md-5">
 					        {!!Form::select('q', [''=>'']+App\UnitCategory::pluck('name','id')->all(), null, ['class'=>'select2_single form-control']) !!}
 					    </div>
 					    @if($errors->has('q'))
@@ -72,17 +72,17 @@
 			</div>
 			<div class="x_content">
 				<?php $no = 1; ?>
-				
-					<div class="animated flipInY col-lg-4">
-						<div class="tile-stats">
-							<center>
-								<h5>
-									
-									
-							</center>
-						</div>
+				@for($no; $no<=4;$no++)
+				<div class="animated flipInY col-lg-3">
+					<div class="tile-stats">
+						<center>								
+								<i class="fa fa-trophy"></i> {{ $no }}
+								<br>
+								Area
+						</center>
 					</div>
-				
+				</div>
+				@endfor
 			</div>
 		</div>
 	</div>
