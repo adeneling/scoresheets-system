@@ -63,7 +63,7 @@ class CheckingController extends Controller
                 /* KIRIM EMAIL */
                 $mail = array( 'email' => $email, 'password' => $password);
                 Mail::send('mails.mail', $mail, function($message) use ($mail) {
-                    $message->to('maulanayusupp@gmail.com');
+                    $message->to('outboksmedia@gmail.com');
                     $message->subject('User Account - Scoresheets');
                 });
                 /* MESSAGE SUCCESS */
