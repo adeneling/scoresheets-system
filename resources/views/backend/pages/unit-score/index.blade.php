@@ -8,6 +8,31 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
+				<h2>Top 3</h2>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content">
+				<?php $no = 1; ?>
+				@foreach($tops as $top)
+					<div class="animated flipInY col-lg-4">
+						<div class="tile-stats">
+							<div class="icon"><i class="fa fa-trophy"></i> {{ $no++ }}
+							</div>
+							<h3>{{ $top->unitCategory->name }}</h3>
+							<h3>{{ $top->type }}</h3>
+							<h3>{{ $top->total_score }}</h3>
+						</div>
+					</div>
+				@endforeach
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<div class="x_panel">
+			<div class="x_title">
 				<h2>Unit Score</h2>
 				<a href="{{ url('unit-score/create') }}" class="btn btn-primary pull-right"> New Score</a>
 				<div class="clearfix"></div>

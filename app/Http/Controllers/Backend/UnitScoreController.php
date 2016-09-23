@@ -19,7 +19,8 @@ class UnitScoreController extends Controller
     public function index()
     {
         $unitScore = UnitScore::orderBy('created_at','desc')->get();
-        return view('backend.pages.unit-score.index',compact('unitScore'));
+        $tops = UnitScore::orderBy('total_score','desc')->take(3)->get();
+        return view('backend.pages.unit-score.index',compact('unitScore','tops'));
     }
 
     /**
