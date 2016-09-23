@@ -49,7 +49,7 @@
 <div class="form-group{{ $errors->has('total_score') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">Score</label>
     <div class="col-md-2">
-        {!! Form::number('total_score', null, ['class'=>'form-control','placeholder'=>'Score']) !!}
+        {!! Form::number('total_score', null, ['class'=>'form-control','placeholder'=>'Score','step'=>'any']) !!}
     </div>
     @if($errors->has('total_score'))
         <span class="help-block">

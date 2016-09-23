@@ -8,7 +8,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>Top 3</h2>
+				<h2>Top 3 from call category</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -29,12 +29,64 @@
 	</div>
 </div>
 
+<!-- page content -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="x_panel">
+			<div class="x_content">
+				<!-- start form for validation -->
+				{!! Form::open( ['url' =>'unit-score','method' =>'get','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
+					<div class="form-group{{ $errors->has('q') ? ' has-error' : '' }}">
+					    <label class="control-label col-md-2">Unit Category</label>
+					    <div class="col-md-4">
+					        {!!Form::select('q', [''=>'']+App\UnitCategory::pluck('name','id')->all(), null, ['class'=>'select2_single form-control']) !!}
+					    </div>
+					    @if($errors->has('q'))
+					        <span class="help-block">
+					            <strong>{{ $errors->first('q') }}</strong>
+					        </span>
+					    @endif
+					    <div class="col-md-4">
+					    	<button type="submit" class="btn btn-danger"> Find </button> 
+					    </div>
+					</div>
+				{!! Form::close() !!}
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="row">
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>Unit Score</h2>
-				<a href="{{ url('unit-score/create') }}" class="btn btn-primary pull-right"> New Score</a>
+				<h2>Top 3</h2>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content">
+				<?php $no = 1; ?>
+				@foreach($topCategory as $top)
+					<div class="animated flipInY col-lg-4">
+						<div class="tile-stats">
+							<div class="icon"><i class="fa fa-trophy"></i> {{ $no++ }}
+							</div>
+							<h3>{{ $top->unitCategory->name }}</h3>
+							<h3>{{ $top->type }}</h3>
+							<h3>{{ $top->total_score }}</h3>
+						</div>
+					</div>
+				@endforeach
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<div class="x_panel">
+			<div class="x_title">
+				<h2>List all unit score</h2>
+				<a href="{{ url('unit-score/create') }}" class="btn btn-primary pull-right"> New unit</a>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">

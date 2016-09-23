@@ -16,11 +16,13 @@ class UnitScoreController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $unitScore = UnitScore::orderBy('created_at','desc')->get();
         $tops = UnitScore::orderBy('total_score','desc')->take(3)->get();
-        return view('backend.pages.unit-score.index',compact('unitScore','tops'));
+        $q = $request->get('q');
+        $topCategory = UnitScore::where('category_id', $q)->orderBy('total_score','desc')->take(3)->get();
+        return view('backend.pages.unit-score.index',compact('unitScore','tops','topCategory'));
     }
 
     /**
