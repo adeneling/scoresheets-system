@@ -44,7 +44,30 @@ class UnitScoreController extends Controller
         $area3 = UnitScore::where('area', 3)->get();
         $area4 = UnitScore::where('area', 4)->get();
 
-        //return $area2;
+        $nilaiArea1;
+        $nilaiArea2;
+        $nilaiArea3;
+        $nilaiArea4;
+        $tempNilaiArea1;
+        $tempNilaiArea2;
+        $tempNilaiArea3;
+        $tempNilaiArea4;
+
+        /*foreach ($area1 as $dataArea1) {
+            if ($dataArea1->total_score >= $topCategory1[1]->total_score) {
+                $tempNilaiArea1 = 3;
+            }elseif ($dataArea1 >= $topCategory1[2]->total_score && $dataArea1 < $topCategory1[1]->total_score) {
+                $tempNilaiArea1 = 2;
+            }elseif($dataArea1 >= $topCategory1[3]->total_score && $dataArea1 < $topCategory1[3]->total_score){
+                $tempNilaiArea1 = 1;
+            }elseif ($dataArea1 < $topCategory1[3]->total_score) {
+                $tempNilaiArea1 = 0;
+            }
+        }*/
+        
+
+
+
         return view('backend.pages.unit-score.index',compact('unitScore','tops','topCategory'));
     }
 

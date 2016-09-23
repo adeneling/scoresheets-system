@@ -75,6 +75,17 @@ class UsersSeeder extends Seeder
 		$admin->attachRole($juryRole);
 
 		// Membuat participant
+		
+		// Membuat sample guest
+		$guest = new User();
+		$guest->name = "Guest";
+		$guest->email = 'guest@gmail.com';
+		$guest->password = bcrypt('ss');
+		$guest->save();
+		$guest->attachRole($guestRole);
+
+
+		/* demo */
 		$participant = new User();
 		$participant->name = 'Agus Sari';
 		$participant->nik = '11012410';
@@ -85,12 +96,386 @@ class UsersSeeder extends Seeder
 		$participant->password = bcrypt('participant');
 		$participant->save();
 		$participant->attachRole($participantRole);
-		// Membuat sample guest
-		$guest = new User();
-		$guest->name = "Guest";
-		$guest->email = 'guest@gmail.com';
-		$guest->password = bcrypt('ss');
-		$guest->save();
-		$guest->attachRole($guestRole);
+
+
+		$participant = new User();
+		$participant->name = 'Raja Gries Sheilla Moren';
+		$participant->nik = '14011448';
+		$participant->email = 'me1@localhost';
+		$participant->category_id = 1;
+		$participant->area = 1;
+		$participant->region = 'Sumbagteng';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+
+		$participant = new User();
+		$participant->name = 'Shena Giantasya';
+		$participant->nik = '15009514';
+		$participant->email = 'me2@localhost';
+		$participant->category_id = 1;
+		$participant->area = 2;
+		$participant->region = 'Jabar';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+
+
+		$participant = new User();
+		$participant->name = 'Yani Dewi Erinesari';
+		$participant->nik = '15009857';
+		$participant->email = 'me3@localhost';
+		$participant->category_id = 1;
+		$participant->area = 3;
+		$participant->region = 'Jateng';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+
+
+		$participant = new User();
+		$participant->name = 'Sayu Putu Okoningrum Loestiani';
+		$participant->nik = '12009738';
+		$participant->email = 'me4@localhost';
+		$participant->category_id = 1;
+		$participant->area = 3;
+		$participant->region = 'BaliNusra';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+
+		$participant = new User();
+		$participant->name = 'Andi Lana Andayani';
+		$participant->nik = '14010236';
+		$participant->email = 'me5@localhost';
+		$participant->category_id = 1;
+		$participant->area = 4;
+		$participant->region = 'Sulawesi';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+
+		$participant = new User();
+		$participant->name = 'Ardy Putra';
+		$participant->nik = '15011544';
+		$participant->email = 'me6@localhost';
+		$participant->category_id = 1;
+		$participant->area = 2;
+		$participant->region = 'West Jakarta';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+		$participant = new User();
+		$participant->name = 'Heryansa';
+		$participant->nik = '14009965';
+		$participant->email = 'me7@localhost';
+		$participant->category_id = 1;
+		$participant->area = 4;
+		$participant->region = 'Kalimantan';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+
+
+
+
+		$participant = new User();
+		$participant->name = 'Novita Sari';
+		$participant->nik = '15009059';
+		$participant->email = 'me8@localhost';
+		$participant->category_id = 2;
+		$participant->area = 1;
+		$participant->region = 'Sumbagut';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+
+		$participant = new User();
+		$participant->name = 'Silvia Ardita';
+		$participant->nik = '15008395';
+		$participant->email = 'me9@localhost';
+		$participant->category_id = 2;
+		$participant->area = 2;
+		$participant->region = 'West Jakarta';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+
+		$participant = new User();
+		$participant->name = 'Nindya Devi Mentari';
+		$participant->nik = '15011707';
+		$participant->email = 'me10@localhost';
+		$participant->category_id = 2;
+		$participant->area = 2;
+		$participant->region = 'Jabar';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+		$participant = new User();
+		$participant->name = 'Anggita Primanti Esthiningtyas';
+		$participant->nik = '15010301';
+		$participant->email = 'me11@localhost';
+		$participant->category_id = 2;
+		$participant->area = 3;
+		$participant->region = 'Jateng';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+		$participant = new User();
+		$participant->name = 'Futih';
+		$participant->nik = '15011645';
+		$participant->email = 'me12@localhost';
+		$participant->category_id = 2;
+		$participant->area = 3;
+		$participant->region = 'Jatim';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+		$participant = new User();
+		$participant->name = 'Rina Puspita Sari';
+		$participant->nik = '13008704';
+		$participant->email = 'me13@localhost';
+		$participant->category_id = 2;
+		$participant->area = 4;
+		$participant->region = 'Kalimantan';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+		$participant = new User();
+		$participant->name = 'M. Arief Syahputra Harahap';
+		$participant->nik = '13010804';
+		$participant->email = 'me14@localhost';
+		$participant->category_id = 2;
+		$participant->area = 1;
+		$participant->region = 'Sumbagut';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+		$participant = new User();
+		$participant->name = 'Imam Nurdiansah';
+		$participant->nik = '13010539';
+		$participant->email = 'me15@localhost';
+		$participant->category_id = 2;
+		$participant->area = 4;
+		$participant->region = 'Kalimantan';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+
+
+
+
+		$participant = new User();
+		$participant->name = 'Novi Eldiarti Simatupang';
+		$participant->nik = '16009908';
+		$participant->email = 'me16@localhost';
+		$participant->category_id = 3;
+		$participant->area = 1;
+		$participant->region = 'Sumbagut';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+		$participant = new User();
+		$participant->name = 'Novita Putri';
+		$participant->nik = '11009802';
+		$participant->email = 'me17@localhost';
+		$participant->category_id = 3;
+		$participant->area = 1;
+		$participant->region = 'Sumbagut';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Siti Nurhasanah';
+		$participant->nik = '15010234';
+		$participant->email = 'me18@localhost';
+		$participant->category_id = 3;
+		$participant->area = 2;
+		$participant->region = 'Jabar';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Lia Marliana';
+		$participant->nik = '16009615';
+		$participant->email = 'me19@localhost';
+		$participant->category_id = 3;
+		$participant->area = 2;
+		$participant->region = 'Jabar';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Astri Mega T';
+		$participant->nik = '10092697';
+		$participant->email = 'me20@localhost';
+		$participant->category_id = 3;
+		$participant->area = 3;
+		$participant->region = 'Jatim';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Haslinda Hasan';
+		$participant->nik = '11009560';
+		$participant->email = 'me21@localhost';
+		$participant->category_id = 3;
+		$participant->area = 4;
+		$participant->region = 'Sulawesi';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Josef Kusuma Rahardjo';
+		$participant->nik = '15009728';
+		$participant->email = 'me22@localhost';
+		$participant->category_id = 3;
+		$participant->area = 3;
+		$participant->region = 'Jatim';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+		$participant = new User();
+		$participant->name = 'Primantho Roy';
+		$participant->nik = '13011589';
+		$participant->email = 'me23@localhost';
+		$participant->category_id = 3;
+		$participant->area = 4;
+		$participant->region = 'Sulawesi';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+
+
+
+
+
+		$participant = new User();
+		$participant->name = 'Rizki Ivo Deswita';
+		$participant->nik = '09011778';
+		$participant->email = 'me24@localhost';
+		$participant->category_id = 4;
+		$participant->area = 1;
+		$participant->region = 'Sumbagut';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Margahayu';
+		$participant->nik = '14008314';
+		$participant->email = 'me25@localhost';
+		$participant->category_id = 4;
+		$participant->area = 3;
+		$participant->region = 'Jatim';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Fitri Kasanti';
+		$participant->nik = '14013219';
+		$participant->email = 'me26@localhost';
+		$participant->category_id = 4;
+		$participant->area = 3;
+		$participant->region = 'Jatim';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Nur Irma Santi';
+		$participant->nik = '15006312';
+		$participant->email = 'me27@localhost';
+		$participant->category_id = 4;
+		$participant->area = 4;
+		$participant->region = 'Sulawesi';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Nurhalima';
+		$participant->nik = '14008306';
+		$participant->email = 'me28@localhost';
+		$participant->category_id = 4;
+		$participant->area = 4;
+		$participant->region = 'Sulawesi';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Hendra Putra Hutagaol';
+		$participant->nik = '14011451';
+		$participant->email = 'me29@localhost';
+		$participant->category_id = 4;
+		$participant->area = 1;
+		$participant->region = 'Sumbagut';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Riski Jianur';
+		$participant->nik = '13011630';
+		$participant->email = 'me30@localhost';
+		$participant->category_id = 4;
+		$participant->area = 2;
+		$participant->region = 'Jabar';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
+
+		$participant = new User();
+		$participant->name = 'Irfan Supriyadi';
+		$participant->nik = '15011613';
+		$participant->email = 'me31@localhost';
+		$participant->category_id = 4;
+		$participant->area = 2;
+		$participant->region = 'Jabar';
+		$participant->password = bcrypt('participant');
+		$participant->save();
+		$participant->attachRole($participantRole);
     }
 }
