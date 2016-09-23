@@ -74,7 +74,7 @@ class UsersSeeder extends Seeder
 		$admin->save();
 		$admin->attachRole($juryRole);
 
-		// Membuat sample member
+		// Membuat participant
 		$participant = new User();
 		$participant->name = 'Agus Sari';
 		$participant->nik = '11012410';
@@ -82,7 +82,7 @@ class UsersSeeder extends Seeder
 		$participant->category_id = 1;
 		$participant->area = 1;
 		$participant->region = 'Sumbagut';
-		$participant->password = bcrypt('ss');
+		$participant->password = bcrypt('participant');
 		$participant->save();
 		$participant->attachRole($participantRole);
 		// Membuat sample guest
