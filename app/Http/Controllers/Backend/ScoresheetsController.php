@@ -90,7 +90,7 @@ class ScoresheetsController extends Controller
         $solution_skill = $request->input('solution_skill');
         $inspirational_story = $request->input('inspirational_story');
         /*CALCULATE*/
-        $category = Category::findOrFail($request->input('category_id'));
+        $category = Category::where('id', $request->input('category_id') )->first();
         $presentation_material_result = $presentation_material * $category->presentation_material;
         $communication_skill_result = $communication_skill * $category->communication_skill;
         $achievement_result = $achievement * $category->achievement;
