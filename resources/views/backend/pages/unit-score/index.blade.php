@@ -16,11 +16,17 @@
 				@foreach($tops as $top)
 					<div class="animated flipInY col-lg-4">
 						<div class="tile-stats">
-							<div class="icon"><i class="fa fa-trophy"></i> {{ $no++ }}
-							</div>
-							<h3>{{ $top->unitCategory->name }}</h3>
-							<h3>{{ $top->type }}</h3>
-							<h3>{{ $top->total_score }}</h3>
+							<center>
+								<h5>
+									<i class="fa fa-trophy"></i> {{ $no++ }}
+									<br>
+									{{ $top->unitCategory->name }}
+									<br>
+									{{ $top->type }}
+									<br>
+									{{ $top->total_score }}
+								</h5>
+							</center>
 						</div>
 					</div>
 				@endforeach
@@ -68,11 +74,17 @@
 				@foreach($topCategory as $top)
 					<div class="animated flipInY col-lg-4">
 						<div class="tile-stats">
-							<div class="icon"><i class="fa fa-trophy"></i> {{ $no++ }}
-							</div>
-							<h3>{{ $top->unitCategory->name }}</h3>
-							<h3>{{ $top->type }}</h3>
-							<h3>{{ $top->total_score }}</h3>
+							<center>
+								<h5>
+									<i class="fa fa-trophy"></i> {{ $no++ }}
+									<br>
+									{{ $top->unitCategory->name }}
+									<br>
+									{{ $top->type }}
+									<br>
+									{{ $top->total_score }}
+								</h5>
+							</center>
 						</div>
 					</div>
 				@endforeach
