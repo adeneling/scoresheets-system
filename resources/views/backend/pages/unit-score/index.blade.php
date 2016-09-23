@@ -4,36 +4,6 @@
 @stop
 
 @section('content')
-<div class="row">
-	<div class="col-md-12 col-sm-12 col-xs-12">
-		<div class="x_panel">
-			<div class="x_title">
-				<h2>Top 3 from all category</h2>
-				<div class="clearfix"></div>
-			</div>
-			<div class="x_content">
-				<?php $no = 1; ?>
-				@foreach($tops as $top)
-					<div class="animated flipInY col-lg-4">
-						<div class="tile-stats">
-							<center>
-								<h5>
-									<i class="fa fa-trophy"></i> {{ $no++ }}
-									<br>
-									{{ $top->unitCategory->name }}
-									<br>
-									{{ $top->type }}
-									<br>
-									{{ $top->total_score }}
-								</h5>
-							</center>
-						</div>
-					</div>
-				@endforeach
-			</div>
-		</div>
-	</div>
-</div>
 
 <!-- page content -->
 <div class="row">
@@ -88,6 +58,31 @@
 						</div>
 					</div>
 				@endforeach
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12 col-sm-12 col-xs-12">
+		<div class="x_panel">
+			<div class="x_title">
+				<h2>Winner for the Best Area</h2>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content">
+				<?php $no = 1; ?>
+				
+					<div class="animated flipInY col-lg-4">
+						<div class="tile-stats">
+							<center>
+								<h5>
+									
+									
+							</center>
+						</div>
+					</div>
+				
 			</div>
 		</div>
 	</div>

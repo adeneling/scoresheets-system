@@ -42,23 +42,22 @@ class UsersSeeder extends Seeder
 		$admin->attachRole($adminRole);
 		// Membuat sample jury
 		$admin = new User();
-		$admin->name = 'Jury SS';
+		$admin->name = 'Andri Wibawanto';
 		$admin->email = 'jury@gmail.com';
 		$admin->password = bcrypt('ss');
 		$admin->save();
 		$admin->attachRole($juryRole);
 		// Membuat sample member
-		for ($i=0; $i <12 ; $i++) { 
-			$participant = new User();
-			$participant->name = "Participant - ".$i;
-			$participant->email = 'participant'. $i .'@gmail.com';
-			$participant->category_id = 2;
-			$participant->area = 1;
-			$participant->region = 'Bandung';
-			$participant->password = bcrypt('ss');
-			$participant->save();
-			$participant->attachRole($participantRole);
-		}		
+		$participant = new User();
+		$participant->name = 'Agus Sari';
+		$participant->nik = '11012410';
+		$participant->email = 'saribmj.90@gmail.com';
+		$participant->category_id = 1;
+		$participant->area = 1;
+		$participant->region = 'Sumbagut';
+		$participant->password = bcrypt('ss');
+		$participant->save();
+		$participant->attachRole($participantRole);
 		// Membuat sample guest
 		$guest = new User();
 		$guest->name = "Guest";
