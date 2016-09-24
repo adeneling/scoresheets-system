@@ -30,16 +30,25 @@ class ScoresheetsTable extends Migration
             $table->integer('session_id')->unsigned()->nullable();
             $table->foreign('session_id')->references('id')->on('sessions');
             /*other fields*/
-            $table->integer('room_id');
-            $table->string('notes');
-            $table->date('time');
             $table->integer('presentation_material');
+            $table->string('presentation_material_note')->nullable();
             $table->integer('communication_skill');
+            $table->string('communication_skill_note')->nullable();
             $table->integer('achievement');
+            $table->string('achievement_note')->nullable();
             $table->integer('personal_value');
+            $table->string('personal_value_note')->nullable();
             $table->integer('customer_care_knowledge');
+            $table->string('customer_care_knowledge_note')->nullable();
             $table->integer('solution_skill');
+            $table->string('solution_skill_note')->nullable();
             $table->integer('inspirational_story');
+            $table->string('inspirational_story_note')->nullable();
+            $table->integer('leadership')->nullable();
+            $table->string('leadership_note')->nullable();
+            $table->string('notes')->nullable();
+            $table->integer('room_id')->nullable();          
+            $table->date('time')->nullable();
             $table->integer('total_score');
             $table->integer('coeficient_score');
             $table->decimal('total_coeficient_score');

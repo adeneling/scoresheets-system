@@ -32,6 +32,8 @@
     <link href="{{ asset('backend/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
     <!-- Custom Theme Style -->
     <link href="{{ asset('backend/build/css/custom.min.css') }}" rel="stylesheet">
+    <!-- Sweetalert -->
+    <link href="{{ asset('backend/sweetalert/sweetalert.css') }}" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -140,9 +142,11 @@
     <script src="{{ asset('backend/vendors/switchery/dist/switchery.min.js') }}"></script>
     <!-- Select2 -->
     <script src="{{ asset('backend/vendors/select2/dist/js/select2.full.min.js') }}"></script>
+    <!-- Sweetalert -->
+    <script src="{{ asset('backend/vendors/select2/dist/js/select2.full.min.js') }}"></script>
     
     <!-- Custom Theme Scripts -->
-    <script src="{{ asset('backend/build/js/custom.min.js') }}"></script>
+    <script src="{{ asset('backend/sweetalert/sweetalert.min.js') }}"></script>
 
     <!-- Select2 -->
     <script>
@@ -203,8 +207,12 @@
           };
         }();
 
-        $('#datatable').dataTable();
-
+        //$('#datatable').dataTable();
+        $('#datatable').dataTable({
+          "aLengthMenu": [[10, 50, 75, 100, -1], [10, 50, 75, 100,"All"]],
+          "iDisplayLength": 100
+        });
+        
         $('#datatable-keytable').DataTable({
           keys: true
         });
@@ -241,5 +249,29 @@
       });
     </script>
     <!-- /Datatables -->
+    {{-- Sweetalert --}}
+    <script>
+    $(document).ready(function () {
+      $(document.body).on('click', '.js-submit-confirm', function (event) {
+        event.preventDefault()
+        var $form = $(this).closest('form')
+        var $el = $(this)
+        var text = $el.data('confirm-message') ? $el.data('confirm-message') : 'Are you sure want to delete data'
+        swal({
+          title: 'Are you sure?',
+          text: text,
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#DD6B55',
+          confirmButtonText: 'Yes',
+          cancelButtonText: 'Cancel',
+          closeOnConfirm: true
+        },
+        function () {
+          $form.submit()
+        })
+      })
+    })
+    </script>
   </body>
 </html>

@@ -14,16 +14,13 @@
 					<div class="form-group{{ $errors->has('q') ? ' has-error' : '' }}">
 					    <label class="control-label col-md-1">Category</label>
 					    <div class="col-md-4">
-					        {!!Form::select('q', [''=>'']+App\Category::pluck('name','id')->all(), null, ['class'=>'select2_single form-control']) !!}
+					        {!!Form::select('q', [''=>'']+App\Category::pluck('name','id')->all(), null, ['onchange'=>'this.form.submit()','class'=>'select2_single form-control']) !!}
 					    </div>
 					    @if($errors->has('q'))
 					        <span class="help-block">
 					            <strong>{{ $errors->first('q') }}</strong>
 					        </span>
 					    @endif
-					    <div class="col-md-4">
-					    	<button type="submit" class="btn btn-danger"> Find </button> 
-					    </div>
 					</div>
 				{!! Form::close() !!}
 			</div>

@@ -42,7 +42,7 @@ class User extends Authenticatable
         'notes',
         'presentation_file',
         'qrfield',
-        'checking',
+        'judged',
         'has_checked_in',
         'activated',
     ];

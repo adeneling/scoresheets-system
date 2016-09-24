@@ -14,16 +14,13 @@
 					<div class="form-group{{ $errors->has('q') ? ' has-error' : '' }}">
 					    <label class="control-label col-md-1">Category</label>
 					    <div class="col-md-4">
-					        {!!Form::select('q', [''=>'']+App\Category::pluck('name','id')->all(), null, ['class'=>'select2_single form-control']) !!}
+					        {!!Form::select('q', [''=>'']+App\Category::pluck('name','id')->all(), null, ['onchange'=>'this.form.submit()','class'=>'select2_single form-control']) !!}
 					    </div>
 					    @if($errors->has('q'))
 					        <span class="help-block">
 					            <strong>{{ $errors->first('q') }}</strong>
 					        </span>
 					    @endif
-					    <div class="col-md-4">
-					    	<button type="submit" class="btn btn-danger"> Find </button> 
-					    </div>
 					</div>
 				{!! Form::close() !!}
 			</div>
@@ -37,13 +34,13 @@
 	<div class="col-md-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>@yield('title')</h2>
+				<h2>@yield('title') - {{ isset($category) ? $category->name : '-' }}</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
-				@foreach($participants->user as $participant)
+				@foreach($participants as $participant)
 				<a href="{{ route('participant.edit', encrypt($participant->id))}}">
-					<div class="col-md-2">
+					<div class="col-md-3">
 						<center>
 							<img class="img-responsive" src="{{ asset('backend/images/picture.png') }}" alt="Avatar" title="Participant">
 						</center>

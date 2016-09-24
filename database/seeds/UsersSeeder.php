@@ -92,6 +92,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'saribmj.90@gmail.com';
 		$participant->category_id = 1;
 		$participant->area = 1;
+		$participant->judged = 0;
 		$participant->region = 'Sumbagut';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -104,6 +105,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me1@localhost';
 		$participant->category_id = 1;
 		$participant->area = 1;
+		$participant->judged = 0;
 		$participant->region = 'Sumbagteng';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -117,6 +119,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me2@localhost';
 		$participant->category_id = 1;
 		$participant->area = 2;
+		$participant->judged = 0;
 		$participant->region = 'Jabar';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -131,6 +134,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me3@localhost';
 		$participant->category_id = 1;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jateng';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -145,6 +149,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me4@localhost';
 		$participant->category_id = 1;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'BaliNusra';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -158,6 +163,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me5@localhost';
 		$participant->category_id = 1;
 		$participant->area = 4;
+		$participant->judged = 0;
 		$participant->region = 'Sulawesi';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -171,6 +177,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me6@localhost';
 		$participant->category_id = 1;
 		$participant->area = 2;
+		$participant->judged = 0;
 		$participant->region = 'West Jakarta';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -183,6 +190,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me7@localhost';
 		$participant->category_id = 1;
 		$participant->area = 4;
+		$participant->judged = 0;
 		$participant->region = 'Kalimantan';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -199,6 +207,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me8@localhost';
 		$participant->category_id = 2;
 		$participant->area = 1;
+		$participant->judged = 0;
 		$participant->region = 'Sumbagut';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -212,6 +221,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me9@localhost';
 		$participant->category_id = 2;
 		$participant->area = 2;
+		$participant->judged = 0;
 		$participant->region = 'West Jakarta';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -225,6 +235,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me10@localhost';
 		$participant->category_id = 2;
 		$participant->area = 2;
+		$participant->judged = 0;
 		$participant->region = 'Jabar';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -237,6 +248,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me11@localhost';
 		$participant->category_id = 2;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jateng';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -249,6 +261,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me12@localhost';
 		$participant->category_id = 2;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -261,6 +274,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me13@localhost';
 		$participant->category_id = 2;
 		$participant->area = 4;
+		$participant->judged = 0;
 		$participant->region = 'Kalimantan';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -273,6 +287,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me14@localhost';
 		$participant->category_id = 2;
 		$participant->area = 1;
+		$participant->judged = 0;
 		$participant->region = 'Sumbagut';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -285,6 +300,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me15@localhost';
 		$participant->category_id = 2;
 		$participant->area = 4;
+		$participant->judged = 0;
 		$participant->region = 'Kalimantan';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -301,6 +317,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me16@localhost';
 		$participant->category_id = 3;
 		$participant->area = 1;
+		$participant->judged = 0;
 		$participant->region = 'Sumbagut';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -313,6 +330,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me17@localhost';
 		$participant->category_id = 3;
 		$participant->area = 1;
+		$participant->judged = 0;
 		$participant->region = 'Sumbagut';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -324,6 +342,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me18@localhost';
 		$participant->category_id = 3;
 		$participant->area = 2;
+		$participant->judged = 0;
 		$participant->region = 'Jabar';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -346,6 +365,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me20@localhost';
 		$participant->category_id = 3;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -357,6 +377,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me21@localhost';
 		$participant->category_id = 3;
 		$participant->area = 4;
+		$participant->judged = 0;
 		$participant->region = 'Sulawesi';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -368,6 +389,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me22@localhost';
 		$participant->category_id = 3;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -380,6 +402,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me23@localhost';
 		$participant->category_id = 3;
 		$participant->area = 4;
+		$participant->judged = 0;
 		$participant->region = 'Sulawesi';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -396,6 +419,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me24@localhost';
 		$participant->category_id = 4;
 		$participant->area = 1;
+		$participant->judged = 0;
 		$participant->region = 'Sumbagut';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -407,6 +431,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me25@localhost';
 		$participant->category_id = 4;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -418,6 +443,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me26@localhost';
 		$participant->category_id = 4;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -429,6 +455,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me27@localhost';
 		$participant->category_id = 4;
 		$participant->area = 4;
+		$participant->judged = 0;
 		$participant->region = 'Sulawesi';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -440,6 +467,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me28@localhost';
 		$participant->category_id = 4;
 		$participant->area = 4;
+		$participant->judged = 0;
 		$participant->region = 'Sulawesi';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -451,6 +479,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me29@localhost';
 		$participant->category_id = 4;
 		$participant->area = 1;
+		$participant->judged = 0;
 		$participant->region = 'Sumbagut';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -462,6 +491,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me30@localhost';
 		$participant->category_id = 4;
 		$participant->area = 2;
+		$participant->judged = 0;
 		$participant->region = 'Jabar';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -473,6 +503,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me31@localhost';
 		$participant->category_id = 4;
 		$participant->area = 2;
+		$participant->judged = 0;
 		$participant->region = 'Jabar';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -487,6 +518,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me32@localhost';
 		$participant->category_id = 5;
 		$participant->area = 1;
+		$participant->judged = 0;
 		$participant->region = 'Sumbagut';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -498,6 +530,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me33@localhost';
 		$participant->category_id = 5;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -509,6 +542,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me34@localhost';
 		$participant->category_id = 5;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -520,6 +554,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me35@localhost';
 		$participant->category_id = 6;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -531,6 +566,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me36@localhost';
 		$participant->category_id = 6;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -542,6 +578,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me37@localhost';
 		$participant->category_id = 7;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -553,6 +590,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me38@localhost';
 		$participant->category_id = 8;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -564,6 +602,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me39@localhost';
 		$participant->category_id = 9;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -574,6 +613,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me40@localhost';
 		$participant->category_id = 9;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -585,6 +625,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me41@localhost';
 		$participant->category_id = 10;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -595,6 +636,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me42@localhost';
 		$participant->category_id = 10;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -606,6 +648,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me43@localhost';
 		$participant->category_id = 11;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -616,6 +659,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me44@localhost';
 		$participant->category_id = 11;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -627,6 +671,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me45@localhost';
 		$participant->category_id = 12;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -637,6 +682,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me46@localhost';
 		$participant->category_id = 12;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -648,6 +694,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me47@localhost';
 		$participant->category_id = 13;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -658,6 +705,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me48@localhost';
 		$participant->category_id = 13;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -669,6 +717,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me49@localhost';
 		$participant->category_id = 14;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();
@@ -679,6 +728,7 @@ class UsersSeeder extends Seeder
 		$participant->email = 'me50@localhost';
 		$participant->category_id = 14;
 		$participant->area = 3;
+		$participant->judged = 0;
 		$participant->region = 'Jatim';
 		$participant->password = bcrypt('participant');
 		$participant->save();

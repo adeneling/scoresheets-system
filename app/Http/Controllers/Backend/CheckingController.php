@@ -56,7 +56,7 @@ class CheckingController extends Controller
                 $user->name = $name;
                 $user->nik = $nik;
                 $user->email = $email;
-                $user->checking = 1;
+                $user->activated = 1;
                 $user->password = bcrypt($password);
                 $user->save();
                 $user->attachRole($memberRole);

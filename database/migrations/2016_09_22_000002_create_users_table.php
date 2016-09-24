@@ -36,10 +36,9 @@ class CreateUsersTable extends Migration
             $table->string('notes')->nullable();
             $table->string('presentation_file')->nullable();
             $table->string('qrfield')->nullable();
-            $table->boolean('checking')->nullable();
-            $table->boolean('has_checked_in')->nullable();
+            $table->boolean('judged')->nullable();
+            $table->boolean('has_checked_in')->nullable();            
             $table->boolean('activated')->nullable();
-
             /* FOREIGN KEY */
             $table->integer('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on('category');

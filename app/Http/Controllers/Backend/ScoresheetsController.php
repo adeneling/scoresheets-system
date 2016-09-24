@@ -78,10 +78,9 @@ class ScoresheetsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            'room_id' => 'required',
-            'session_id' => 'required',
+            
         ]);
-        /* SCORESHEET */
+        /* scoresheet */
         $presentation_material = $request->input('presentation_material');
         $communication_skill = $request->input('communication_skill');
         $achievement = $request->input('achievement');
@@ -89,16 +88,18 @@ class ScoresheetsController extends Controller
         $customer_care_knowledge = $request->input('customer_care_knowledge');
         $solution_skill = $request->input('solution_skill');
         $inspirational_story = $request->input('inspirational_story');
-        /*CALCULATE*/
-        $category = Category::where('id', $request->input('category_id') )->first();
-        $presentation_material_result = $presentation_material * $category->presentation_material;
-        $communication_skill_result = $communication_skill * $category->communication_skill;
-        $achievement_result = $achievement * $category->achievement;
-        $personal_value_result = $personal_value * $category->personal_value;
-        $customer_care_knowledge_result = $customer_care_knowledge * $category->customer_care_knowledge;
+        $leadership = $request->input('leadership');        
+        /* calculate with formula */
+        $category = Category::where('id', $request->input('category_id') )->first();        
+        $presentation_material_result = $presentation_material * $category->presentation_material / 100;
+        $communication_skill_result = $communication_skill * $category->communication_skill / 100;
+        $achievement_result = $achievement * $category->achievement / 100;
+        $personal_value_result = $personal_value * $category->personal_value / 100;
+        $customer_care_knowledge_result = $customer_care_knowledge * $category->customer_care_knowledge / 100;
         $solution_skill_result = $solution_skill * $category->solution_skill;
-        $inspirational_story_result = $inspirational_story * $category->inspirational_story;
-        /* RESULT */
+        $inspirational_story_result = $inspirational_story * $category->inspirational_story / 100;
+        $leadership_result = $leadership * $category->leadership / 100;
+        /* result */
         $total_score = 
             $presentation_material_result + 
             $communication_skill_result + 
@@ -106,7 +107,8 @@ class ScoresheetsController extends Controller
             $personal_value_result + 
             $customer_care_knowledge_result +
             $solution_skill_result +
-            $inspirational_story_result
+            $inspirational_story_result +
+            $leadership_result
         ;
         $coeficient_score =  
             $presentation_material + 
@@ -115,9 +117,11 @@ class ScoresheetsController extends Controller
             $personal_value + 
             $customer_care_knowledge +
             $solution_skill +
-            $inspirational_story
+            $inspirational_story +
+            $leadership
         ;
-        $total_coeficient_score = $total_score / $coeficient_score;
+        //$total_coeficient_score = $total_score / $coeficient_score;
+        $total_coeficient_score = $total_score;
         /*REQUEST*/
         $scoresheet = Scoresheet::findOrFail($id);
         $scoresheet->participant_id = $request->input('participant_id');
@@ -129,6 +133,16 @@ class ScoresheetsController extends Controller
         $scoresheet->notes = $request->input('notes');
         $scoresheet->session_id = $request->input('session_id');
         $scoresheet->time = Carbon::now();
+        /* note */
+        $scoresheet->presentation_material_note = $request->input('presentation_material_note');
+        $scoresheet->communication_skill_note = $request->input('communication_skill_note');
+        $scoresheet->achievement_note = $request->input('achievement_note');
+        $scoresheet->personal_value_note = $request->input('personal_value_note');
+        $scoresheet->customer_care_knowledge_note = $request->input('customer_care_knowledge_note');
+        $scoresheet->solution_skill_note = $request->input('solution_skill_note');
+        $scoresheet->inspirational_story_note = $request->input('inspirational_story_note');
+        $scoresheet->leadership_note = $request->input('leadership_note');
+        /* calculate result */
         $scoresheet->presentation_material = $presentation_material;
         $scoresheet->communication_skill = $communication_skill;
         $scoresheet->achievement = $achievement;
@@ -140,6 +154,10 @@ class ScoresheetsController extends Controller
         $scoresheet->coeficient_score = $coeficient_score;
         $scoresheet->total_coeficient_score = $total_coeficient_score;
         $scoresheet->save();
+        /* user judged */
+        $user = User::where('id', $request->input('participant_id') )->first();
+        $user->judged = 1;
+        $user->save();
         \Flash::success('Success');
         return redirect('/scoresheets');
     }
@@ -153,6 +171,9 @@ class ScoresheetsController extends Controller
     public function destroy($id)
     {
         $scoresheet = Scoresheet::find($id);
+        $user = User::where('id', $scoresheet->participant_id)->first();
+        $user->judged = 0;
+        $user->save();
         Scoresheet::find($id)->delete();
         \Flash::success('Scoresheet ID: '. $scoresheet->id .' Deleted.');
         return redirect('scoresheets');

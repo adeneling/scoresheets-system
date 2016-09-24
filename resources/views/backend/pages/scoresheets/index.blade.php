@@ -1,4 +1,4 @@
-@extends('backend.layouts.app')
+ @extends('backend.layouts.app')
 
 @section('title')Scoresheets
 @stop
@@ -37,7 +37,7 @@
 									{!! Form::model($scoresheet, ['route' => ['scoresheets.destroy', $scoresheet], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
 	                                <a href = "{{ route('scoresheets.show', encrypt($scoresheet->id))}}" class="btn btn-primary">Check</a> | 
 	                                <a href = "{{ route('scoresheets.edit', encrypt($scoresheet->id))}}" class="btn btn-warning">Edit Score</a> | 
-	                                <button type="submit" class="btn btn-danger">Delete</button>
+	                                <button type="submit" class="btn btn-danger js-submit-confirm">Delete</button>
 	                                {!! Form::close()!!}
 									
 								</center>

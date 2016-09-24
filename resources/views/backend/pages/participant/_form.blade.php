@@ -12,7 +12,7 @@
         <h4>Presentation Material</h4>
         Content Compliance, Layout Design, Attractiveness, Innovative
     </td>
-    <td>{{ $participant->category->presentation_material }}% </td>
+    <td><h4>{{ $participant->category->presentation_material }}%</h4></td>
     <td>
         {!!Form::select('presentation_material', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </td>
@@ -25,7 +25,7 @@
         <h4>Communication Skill</h4>
         Friendly, Attitude, Self-Confident, Body Language, Eye Contact
     </td>
-    <td>{{ $participant->category->communication_skill }}% </td>
+    <td><h4>{{ $participant->category->communication_skill }}%</h4></td>
     <td>
         {!!Form::select('communication_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </td>
@@ -41,7 +41,7 @@
         <h4>Achievement</h4>
         Personal achievement in Region or Area
     </td>
-    <td>{{ $participant->category->achievement }}% </td>
+    <td><h4>{{ $participant->category->achievement }}%</h4></td>
     <td>
         {!!Form::select('achievement', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </td>
@@ -54,7 +54,7 @@
         <h4>Personal Value</h4>
         Integrity, Respect, Enthusiasm, Loyalty, Totality
     </td>
-    <td>{{ $participant->category->personal_value }}% </td>
+    <td><h4>{{ $participant->category->personal_value }}%</h4></td>
     <td>
         {!!Form::select('personal_value', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </td>
@@ -71,7 +71,7 @@
         Jury Internal: 5 Core Process, Custmer Type-Service Differentition, Operation Excellence<br>
         Jury External: Basic Customer Care Knowledge
     </td>
-    <td>{{ $participant->category->customer_care_knowledge }}% </td>
+    <td><h4>{{ $participant->category->customer_care_knowledge }}%</h4></td>
     <td>
         {!!Form::select('customer_care_knowledge', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </td>
@@ -87,7 +87,7 @@
         <h4>Solution Skill</h4>
         Customer Need Identification, Customer Handling, Problem Solving, Decision Skill, Innovation
     </td>
-    <td>{{ $participant->category->solution_skill }}% </td>
+    <td><h4>{{ $participant->category->solution_skill }}%</h4></td>
     <td>
         {!!Form::select('solution_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </td>
@@ -100,7 +100,7 @@
         <h4>Inspirational Story</h4>
         How to handle operational issue with inspirational solution
     </td>
-    <td>{{ $participant->category->inspirational_story }}% </td>
+    <td><h4>{{ $participant->category->inspirational_story }}%</h4></td>
     <td>
         {!!Form::select('inspirational_story', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </td>
@@ -115,7 +115,7 @@
     <td>
         <h4>Leadership</h4>
     </td>
-    <td>{{ $participant->category->leadership }}%</td>
+    <td><h4>{{ $participant->category->leadership }}%</h4></td>
     <td>
         {!!Form::select('leadership', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
     </td>
@@ -141,8 +141,8 @@
 <tr>
     <th colspan="4">
         <center>
-            <button type="submit" class="btn btn-primary">{{ isset($masterData) ? 'Edit Data' : 'Scoring' }}</button> 
-            @if(isset($masterData)) | 
+            <button type="submit" class="btn btn-primary">{{ isset($participant) ? 'Edit Data' : 'Scoring' }}</button> 
+            @if(isset($participant)) | 
             <a href="{{ url('master-data') }}" class="btn btn-primary">Kembali</a>
             @endif
         </center>
