@@ -141,7 +141,7 @@
 <tr>
     <th colspan="4">
         <center>
-            <button type="submit" class="btn btn-primary">{{ isset($participant) ? 'Edit Data' : 'Scoring' }}</button> 
+            <button type="submit" class="btn btn-primary">{{ isset($participant) ? 'Scoring' : 'Scoring' }}</button> 
             @if(isset($participant)) | 
             <a href="{{ url('master-data') }}" class="btn btn-primary">Kembali</a>
             @endif
