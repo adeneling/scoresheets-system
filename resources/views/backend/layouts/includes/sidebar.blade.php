@@ -8,14 +8,12 @@
       @endrole
       @role('jury')
         <li><a href="{{ url('participant') }}"><i class="fa fa-user-md"></i> Participant</a></li>
-        <li><a href="{{ url('scoresheets-category') }}"><i class="fa fa-bar-chart"></i> Scoresheets (Category)</a></li>
-        <li><a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets (All)</a></li>
+        <li><a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a></li>
         <li><a href="{{ url('session') }}"><i class="fa fa-bookmark-o"></i> Session</a></li>
       @endrole
       @role('admin')
         <li><a href="{{ url('participant') }}"><i class="fa fa-user-md"></i> Participant</a></li>
-        <li><a href="{{ url('scoresheets-category') }}"><i class="fa fa-bar-chart"></i> Scoresheets (Category)</a></li>
-        <li><a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets (All)</a></li>
+        <li><a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a></li>
         <li><a href="{{ url('session') }}"><i class="fa fa-bookmark-o"></i> Session</a></li>
         
         <li><a href="{{ url('unit-score') }}"><i class="fa fa-align-center"></i> Unit Score</a></li>

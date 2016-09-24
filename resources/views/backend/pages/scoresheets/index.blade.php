@@ -4,11 +4,37 @@
 @stop
 
 @section('content')
+<!-- page content -->
+<div class="row">
+	<div class="col-md-12">
+		<div class="x_panel">
+			<div class="x_content">
+				<!-- start form for validation -->
+				{!! Form::open( ['url' =>'scoresheets','method' =>'get','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
+					<div class="form-group{{ $errors->has('q') ? ' has-error' : '' }}">
+					    <label class="control-label col-md-1">Category</label>
+					    <div class="col-md-4">
+					        {!!Form::select('q', [''=>'']+App\Category::pluck('name','id')->all(), null, ['onchange'=>'this.form.submit()','class'=>'select2_single form-control']) !!}
+					    </div>
+					    @if($errors->has('q'))
+					        <span class="help-block">
+					            <strong>{{ $errors->first('q') }}</strong>
+					        </span>
+					    @endif
+					</div>
+				{!! Form::close() !!}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+
 <div class="row">
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>Scoresheets</h2>
+				<h2>Scoresheets {{ isset($category) ? '- '. $category->name : '-' }}</h2>
 				<a href="{{ url('participant') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
 				<div class="clearfix"></div>
 			</div>
