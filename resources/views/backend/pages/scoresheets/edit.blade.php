@@ -18,12 +18,12 @@
 							<!-- Current avatar -->
 							<img class="img-responsive avatar-view" src="{{ asset('backend/images/picture.png') }}" alt="Avatar" title="Change the avatar">
 						</div>
+						<h3><center>{{ $scoresheet->user->name }}</center></h3>
+						<center><a href="#" class="btn btn-danger" target="_blank">Presentation file</a></center>
 					</div>
 				</div>
 				<div class="col-md-2">
-					<h3><center>{{ $scoresheet->user->name }}</center></h3>
 					<ul class="list-unstyled user_data">
-						<li><center><a href="#" class="btn btn-danger" target="_blank">Presentation file</a></center></li>
 						<li>City: {{ $scoresheet->user->city }}</li>
 						<li>Category: {{ $scoresheet->user->category->name }}</li>
 					</ul>
