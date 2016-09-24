@@ -16,7 +16,7 @@
 					@foreach($unitCategoryParent as $unit)
 					<div class="animated flipInY col-lg-6">
 						<div class="tile-stats">
-							<div class="icon"><i class="fa fa-certificate"></i>
+							<div class="icon"><i class="fa fa-trophy"></i>
 							</div>
 							<div class="count">{{ $unit->name }}</div>
 							<h3>Winner</h3>
