@@ -160,7 +160,7 @@ class UnitScoreSeeder extends Seeder
 		    'notes' => 'RATA-RATA',
 	    ]);
 	    App\UnitScore::create([
-		    'category_id' => 11,
+		    'category_id' => 2,
 		    'type' => 'GRAPARI',
 		    'area' => 3,
 		    'location' => 'SUMBAGUT',
@@ -168,7 +168,7 @@ class UnitScoreSeeder extends Seeder
 		    'notes' => 'RATA-RATA',
 	    ]);
 	    App\UnitScore::create([
-		    'category_id' => 11,
+		    'category_id' => 6,
 		    'type' => 'GRAPARI',
 		    'area' => 1,
 		    'location' => 'SUMBAGUT',
@@ -176,7 +176,7 @@ class UnitScoreSeeder extends Seeder
 		    'notes' => '-',
 	    ]);
 	    App\UnitScore::create([
-		    'category_id' => 11,
+		    'category_id' => 7,
 		    'type' => 'GRAPARI',
 		    'area' => 4,
 		    'location' => 'SUMBAGUT',

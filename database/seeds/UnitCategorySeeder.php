@@ -52,12 +52,7 @@ class UnitCategorySeeder extends Seeder
 		    'coeficient' => 30,
 	    ]);
 	    App\UnitCategory::create([
-		    'parent_id' => 3,
-		    'name' => 'BEST NAME COLLECTION',
-		    'coeficient' => 100,
-	    ]);
-	    App\UnitCategory::create([
-		    'parent_id' => 3,
+		    'parent_id' => 2,
 		    'name' => 'BEST BILLING COLLECTION',
 		    'coeficient' => 100,
 	    ]);

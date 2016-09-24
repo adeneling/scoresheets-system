@@ -14,12 +14,12 @@
 			<div class="x_content">
 				<div class="row">
 					@foreach($unitCategoryParent as $unit)
-					<div class="animated flipInY col-lg-4">
+					<div class="animated flipInY col-lg-6">
 						<div class="tile-stats">
 							<div class="icon"><i class="fa fa-certificate"></i>
 							</div>
 							<div class="count">{{ $unit->name }}</div>
-							<h3>Parent Category</h3>
+							<h3>Winner</h3>
 						</div>
 					</div>
 					@endforeach
