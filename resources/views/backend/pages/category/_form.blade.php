@@ -118,6 +118,18 @@
     @endif
 </div>
 
+<div class="form-group{{ $errors->has('leadership') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Leadership</label>
+    <div class="col-md-1">
+        {!! Form::number('leadership', null, ['class'=>'form-control']) !!}
+    </div>
+    @if($errors->has('leadership'))
+        <span class="help-block">
+            <strong>{{ $errors->first('leadership') }}</strong>
+        </span>
+    @endif
+</div>
+
 <hr>
 
 <div class="form-group">

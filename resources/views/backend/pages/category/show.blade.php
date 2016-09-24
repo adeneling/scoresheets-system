@@ -92,6 +92,14 @@
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="form-group">
+                        <label class="control-label col-md-3">Leadership</label>
+                        <div class="col-md-5">
+                            {{ $category->leadership }} %
+                        </div>
+                    </div>
+                </div>
                 <hr>
                 <div class="row">
                     <div class="form-group">
