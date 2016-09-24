@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Backend;
 
-//use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\UploadedFile;
 use Input;
@@ -79,13 +78,14 @@ class UploadPresentationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id);
+        
 
         $this->validate($request, [
-            'presentation_file' => 'max:10240',
+            //'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            //'presentation_file' => 'max:2048',
         ]);
 
-        
+        $user = User::findOrFail($id);
 
         if ($request->hasFile('presentation_file')) {
             // menambil cover yang diupload berikut ekstensinya
@@ -99,7 +99,6 @@ class UploadPresentationController extends Controller
             // memindahkan file ke folder public/img
             $upload_file->move($destinationPath, $filename);
             // hapus cover lama, jika ada
-            return $destinationPath;
             if ($user->presentation_file) {
                 $old_file = $user->presentation_file;
                 $filepath = public_path() . DIRECTORY_SEPARATOR . 'files'. DIRECTORY_SEPARATOR . $user->presentation_file;
@@ -113,43 +112,9 @@ class UploadPresentationController extends Controller
             $user->save();
         }
         
-        //\Flash::success('Data uploaded');
-        //return redirect('/home');
-    }
-    /*public function update(Request $request, $id)
-    {
-        $user = User::findOrFail($id);
-
-        $this->validate($request, [
-            'presentation_file' => 'max:10240',
-        ]);
-
-        $data = $request->only('presentation_file');
-
-        if ($request->hasFile('presentation_file')) {
-            $user->presentation_file = $this->saveFile($request->file('presentation_file'));
-            if ($user->presentation_file !== '') $this->deleteFile($user->presentation_file);
-        }
-
-        $user->update($data);
-
         \Flash::success('Data uploaded');
         return redirect('/home');
     }
-
-    protected function saveFile(UploadedFile $file)
-    {
-        $fileName = str_random(40) . '.' . $file->guessClientExtension();
-        $destinationPath = public_path() . DIRECTORY_SEPARATOR . 'files';
-        $file->move($destinationPath, $fileName);
-        return $fileName;
-    }
-    public function deleteFile($filename)
-    {
-        $path = public_path() . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR . $filename;
-        return File::delete($path);
-    }*/
-
 
     /**
      * Remove the specified resource from storage.

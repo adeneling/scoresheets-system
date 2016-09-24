@@ -1,7 +1,7 @@
 <div class="form-group{{ $errors->has('presentation_file') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">File Presentasi</label>
     <div class="col-md-2">
-        {!! Form::file('presentation_file', null, ['class'=>'form-control']) !!}
+        {!! Form::file('presentation_file') !!}
     </div>
     @if (isset($user) && $user->presentation_file)
     <p>

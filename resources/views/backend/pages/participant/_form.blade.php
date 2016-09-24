@@ -4,134 +4,147 @@
 {!! Form::hidden('jury_id', Auth::user()->id) !!}
 {!! Form::hidden('category_id', $participant->category_id) !!}
 
-<div class="form-group{{ $errors->has('room_id') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Room</label>
-    <div class="col-md-4">
-        {!! Form::text('room_id', null, ['class'=>'form-control','placeholder'=>'Room']) !!}
-    </div>
-    @if($errors->has('room_id'))
-        <span class="help-block">
-            <strong>{{ $errors->first('room_id') }}</strong>
-        </span>
-    @endif
-</div>
-
-<div class="form-group{{ $errors->has('notes') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Notes</label>
-    <div class="col-md-6">
-        {!! Form::textarea('notes', null, ['class'=>'form-control','placeholder'=>'Notes','rows'=>'4']) !!}
-    </div>
-    @if($errors->has('notes'))
-        <span class="help-block">
-            <strong>{{ $errors->first('notes') }}</strong>
-        </span>
-    @endif
-</div>
-
-<div class="form-group{{ $errors->has('session_id') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Session</label>
-    <div class="col-md-4">
-        {!!Form::select('session_id', [''=>'']+App\Session::pluck('name','id')->all(), null, ['class'=>'select2_single form-control']) !!}
-    </div>
-    @if($errors->has('session_id'))
-        <span class="help-block">
-            <strong>{{ $errors->first('session_id') }}</strong>
-        </span>
-    @endif
-</div>
-
-
-<div class="form-group{{ $errors->has('presentation_material') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Presentation Material</label>
-    <div class="col-md-2">
+<tr>
+    <th colspan="4" class="red"><font color="white">DECK AND DELIVERY ({{ $participant->category->presentation_material + $participant->category->communication_skill }}%)</font></th>
+</tr>
+<tr>
+    <td>
+        <h4>Presentation Material</h4>
+        Content Compliance, Layout Design, Attractiveness, Innovative
+    </td>
+    <td>{{ $participant->category->presentation_material }}% </td>
+    <td>
         {!!Form::select('presentation_material', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
-    </div>
-    @if($errors->has('presentation_material'))
-        <span class="help-block">
-            <strong>{{ $errors->first('presentation_material') }}</strong>
-        </span>
-    @endif
-</div>
-
-<div class="form-group{{ $errors->has('communication_skill') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Communication Skill</label>
-    <div class="col-md-2">
+    </td>
+    <td>
+        {!! Form::text('presentation_material_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
+    </td>
+</tr>
+<tr>
+    <td>
+        <h4>Communication Skill</h4>
+        Friendly, Attitude, Self-Confident, Body Language, Eye Contact
+    </td>
+    <td>{{ $participant->category->communication_skill }}% </td>
+    <td>
         {!!Form::select('communication_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
-    </div>
-    @if($errors->has('communication_skill'))
-        <span class="help-block">
-            <strong>{{ $errors->first('communication_skill') }}</strong>
-        </span>
-    @endif
-</div>
-
-<div class="form-group{{ $errors->has('achievement') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Achievement</label>
-    <div class="col-md-2">
+    </td>
+    <td>
+        {!! Form::text('communication_skill_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
+    </td>
+</tr>
+<tr>
+    <th colspan="4" class="red"><font color="white">SELF DRIVER ({{ $participant->category->achievement + $participant->category->personal_value }}%)</font></th>
+</tr>
+<tr>
+    <td>
+        <h4>Achievement</h4>
+        Personal achievement in Region or Area
+    </td>
+    <td>{{ $participant->category->achievement }}% </td>
+    <td>
         {!!Form::select('achievement', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
-    </div>
-    @if($errors->has('achievement'))
-        <span class="help-block">
-            <strong>{{ $errors->first('achievement') }}</strong>
-        </span>
-    @endif
-</div>
-
-<div class="form-group{{ $errors->has('personal_value') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Personal Value</label>
-    <div class="col-md-2">
+    </td>
+    <td>
+        {!! Form::text('achievement_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
+    </td>
+</tr>
+<tr>
+    <td>
+        <h4>Personal Value</h4>
+        Integrity, Respect, Enthusiasm, Loyalty, Totality
+    </td>
+    <td>{{ $participant->category->personal_value }}% </td>
+    <td>
         {!!Form::select('personal_value', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
-    </div>
-    @if($errors->has('personal_value'))
-        <span class="help-block">
-            <strong>{{ $errors->first('personal_value') }}</strong>
-        </span>
-    @endif
-</div>
-
-<div class="form-group{{ $errors->has('customer_care_knowledge') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Customer Care Knowledge</label>
-    <div class="col-md-2">
+    </td>
+    <td>
+        {!! Form::text('personal_value_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
+    </td>
+</tr>
+<tr>
+    <th colspan="4" class="red"><font color="white">KNOW HOW ({{ $participant->category->customer_care_knowledge }}%)</font></th>
+</tr>
+<tr>
+    <td>
+        <h4>Customer Care Knowledge</h4>
+        Jury Internal: 5 Core Process, Custmer Type-Service Differentition, Operation Excellence<br>
+        Jury External: Basic Customer Care Knowledge
+    </td>
+    <td>{{ $participant->category->customer_care_knowledge }}% </td>
+    <td>
         {!!Form::select('customer_care_knowledge', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
-    </div>
-    @if($errors->has('customer_care_knowledge'))
-        <span class="help-block">
-            <strong>{{ $errors->first('customer_care_knowledge') }}</strong>
-        </span>
-    @endif
-</div>
-
-<div class="form-group{{ $errors->has('solution_skill') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Solution Skill</label>
-    <div class="col-md-2">
+    </td>
+    <td>
+        {!! Form::text('customer_care_knowledge_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
+    </td>
+</tr>
+<tr>
+    <th colspan="4" class="red"><font color="white">ACTUALIZATION ({{ $participant->category->solution_skill +  $participant->category->inspirational_story }}%)</font></th>
+</tr>
+<tr>
+    <td>
+        <h4>Solution Skill</h4>
+        Customer Need Identification, Customer Handling, Problem Solving, Decision Skill, Innovation
+    </td>
+    <td>{{ $participant->category->solution_skill }}% </td>
+    <td>
         {!!Form::select('solution_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
-    </div>
-    @if($errors->has('solution_skill'))
-        <span class="help-block">
-            <strong>{{ $errors->first('solution_skill') }}</strong>
-        </span>
-    @endif
-</div>
-
-<div class="form-group{{ $errors->has('inspirational_story') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Inspirational Story</label>
-    <div class="col-md-2">
+    </td>
+    <td>
+        {!! Form::text('solution_skill_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
+    </td>
+</tr>
+<tr>
+    <td>
+        <h4>Inspirational Story</h4>
+        How to handle operational issue with inspirational solution
+    </td>
+    <td>{{ $participant->category->inspirational_story }}% </td>
+    <td>
         {!!Form::select('inspirational_story', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
-    </div>
-    @if($errors->has('inspirational_story'))
-        <span class="help-block">
-            <strong>{{ $errors->first('inspirational_story') }}</strong>
-        </span>
-    @endif
-</div>
-
-<hr>
-
-<div class="form-group">
-    <center>
-        <button type="submit" class="btn btn-primary">{{ isset($masterData) ? 'Edit Data' : 'Scoring' }}</button> 
-        @if(isset($masterData)) | 
+    </td>
+    <td>
+        {!! Form::text('inspirational_story_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
+    </td>
+</tr>
+<tr>
+    <th colspan="4" class="red"><font color="white">TEAM LEADER AND SUPERVISOR CATEGORY ONLY ({{ $participant->category->leadership }}%)</font></th>
+</tr>
+<tr>
+    <td>
+        <h4>Leadership</h4>
+    </td>
+    <td>{{ $participant->category->leadership }}%</td>
+    <td>
+        {!!Form::select('leadership', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+    </td>
+    <td>
+        {!! Form::text('leadership_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
+    </td>
+</tr>
+<tr>
+    <td colspan="4">
+        <div class="form-group{{ $errors->has('notes') ? ' has-error' : '' }}">
+            <label class="control-label col-md-1">Notes</label>
+            <div class="col-md-11">
+                {!! Form::textarea('notes', null, ['class'=>'form-control','placeholder'=>'Jury Note','rows'=>'4']) !!}
+            </div>
+            @if($errors->has('notes'))
+            <span class="help-block">
+                <strong>{{ $errors->first('notes') }}</strong>
+            </span>
+            @endif
+        </div>
+    </td>
+</tr>
+<tr>
+    <th colspan="4">
+        <center>
+            <button type="submit" class="btn btn-primary">{{ isset($masterData) ? 'Edit Data' : 'Scoring' }}</button> 
+            @if(isset($masterData)) | 
             <a href="{{ url('master-data') }}" class="btn btn-primary">Kembali</a>
-        @endif
-    </center>
-</div>
+            @endif
+        </center>
+    </th>
+</tr>

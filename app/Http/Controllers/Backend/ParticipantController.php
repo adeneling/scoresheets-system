@@ -66,8 +66,6 @@ class ParticipantController extends Controller
     public function edit($id)
     {
         $participant = User::findOrFail(decrypt($id));
-        //$category = Category::where('id', $request->input('category_id') )->first();
-        //return $category;
         return view('backend.pages.participant.edit', compact('participant'));
     }
 
@@ -92,9 +90,9 @@ class ParticipantController extends Controller
         $customer_care_knowledge = $request->input('customer_care_knowledge');
         $solution_skill = $request->input('solution_skill');
         $inspirational_story = $request->input('inspirational_story');
-        /*CALCULATE*/
-        $category = Category::where('id', $request->input('category_id') )->first();
         
+        /* CALCULATE WITH FORMULA */
+        $category = Category::where('id', $request->input('category_id') )->first();        
         $presentation_material_result = $presentation_material * $category->presentation_material;
         $communication_skill_result = $communication_skill * $category->communication_skill;
         $achievement_result = $achievement * $category->achievement;

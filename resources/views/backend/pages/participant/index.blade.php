@@ -43,13 +43,10 @@
 			<div class="x_content">
 				@foreach($participants->user as $participant)
 				<a href="{{ route('participant.edit', encrypt($participant->id))}}">
-					<div class="col-md-2 col-sm-2 col-xs-12 profile_left">
-						<div class="profile_img">
-							<div id="crop-avatar">
-								<!-- Current avatar -->
-								<img class="img-responsive avatar-view" src="{{ asset('backend/images/picture.png') }}" alt="Avatar" title="Participant">
-							</div>
-						</div>
+					<div class="col-md-2">
+						<center>
+							<img class="img-responsive" src="{{ asset('backend/images/picture.png') }}" alt="Avatar" title="Participant">
+						</center>
 						<center><h5>{{ $participant->name }}</h5></center>
 						<ul class="list-unstyled user_data">
 							<li><center>Area: {{ $participant->area }}</center></li>

@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+    .grey {
+      background-color: rgba(128,128,128,.25);
+    }
+    .red {
+      background-color: #DF2D3C;
+    }
+    .blue {
+      background-color: rgba(0,0,255,.25);
+    }
+    </style>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -26,7 +37,7 @@
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
-        <div class="col-md-3 left_col">
+        <div class="col-md-3 left_col ">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
               <a href="{{ url('home') }}" class="site_title">
