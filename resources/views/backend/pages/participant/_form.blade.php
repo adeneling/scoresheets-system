@@ -143,7 +143,7 @@
         <center>
             <button type="submit" class="btn btn-primary">{{ isset($participant) ? 'Scoring' : 'Scoring' }}</button> 
             @if(isset($participant)) | 
-            <a href="{{ url('master-data') }}" class="btn btn-primary">Kembali</a>
+            <a href="{{ url('master-data') }}" class="btn btn-danger">Back</a>
             @endif
         </center>
     </th>
