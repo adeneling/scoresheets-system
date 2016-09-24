@@ -14,17 +14,14 @@
 				{!! Form::open( ['url' =>'unit-score','method' =>'get','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
 					<div class="form-group{{ $errors->has('q') ? ' has-error' : '' }}">
 					    <label class="control-label col-md-2">Best Unit Category</label>
-					    <div class="col-md-5">
-					        {!!Form::select('q', [''=>'']+App\UnitCategory::pluck('name','id')->all(), null, ['class'=>'select2_single form-control']) !!}
+					    <div class="col-md-6">
+					        {!!Form::select('q', [''=>'']+App\UnitCategory::pluck('name','id')->all(), null, ['onchange'=>'this.form.submit()','class'=>'select2_single form-control']) !!}
 					    </div>
 					    @if($errors->has('q'))
 					        <span class="help-block">
 					            <strong>{{ $errors->first('q') }}</strong>
 					        </span>
 					    @endif
-					    <div class="col-md-4">
-					    	<button type="submit" class="btn btn-danger"> Find </button> 
-					    </div>
 					</div>
 				{!! Form::close() !!}
 			</div>

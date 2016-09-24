@@ -73,14 +73,6 @@
 						</div>
 						<div class="row">
 							<div class="form-group">
-								<label class="control-label col-md-3">Notes</label>
-								<div class="col-md-4">
-									{{ $scoresheet->notes }}
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="form-group">
 								<label class="control-label col-md-3">Session</label>
 								<div class="col-md-4">
 
@@ -90,64 +82,104 @@
 						<div class="row">
 							<div class="form-group">
 								<label class="control-label col-md-3">Presentation Material</label>
-								<div class="col-md-4">
+								<div class="col-md-1">
 									{{ $scoresheet->presentation_material }}
+								</div>
+								<label class="control-label col-md-1">Note</label>
+								<div class="col-md-4">
+									{{ $scoresheet->presentation_material_note }}
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="form-group">
 								<label class="control-label col-md-3">Communication Skill</label>
-								<div class="col-md-4">
+								<div class="col-md-1">
 									{{ $scoresheet->communication_skill }}
+								</div>
+								<label class="control-label col-md-1">Note</label>
+								<div class="col-md-4">
+									{{ $scoresheet->communication_skill_note }}
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="form-group">
 								<label class="control-label col-md-3">Achievement</label>
-								<div class="col-md-4">
+								<div class="col-md-1">
 									{{ $scoresheet->achievement }}
+								</div>
+								<label class="control-label col-md-1">Note</label>
+								<div class="col-md-4">
+									{{ $scoresheet->achievement_note }}
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="form-group">
 								<label class="control-label col-md-3">Personal Value</label>
-								<div class="col-md-4">
+								<div class="col-md-1">
 									{{ $scoresheet->personal_value }}
+								</div>
+								<label class="control-label col-md-1">Note</label>
+								<div class="col-md-4">
+									{{ $scoresheet->personal_value_note }}
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="form-group">
 								<label class="control-label col-md-3">Customer Care Knowledge</label>
-								<div class="col-md-4">
+								<div class="col-md-1">
 									{{ $scoresheet->customer_care_knowledge }}
+								</div>
+								<label class="control-label col-md-1">Note</label>
+								<div class="col-md-4">
+									{{ $scoresheet->customer_care_knowledge_note }}
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="form-group">
 								<label class="control-label col-md-3">Solution Skill</label>
-								<div class="col-md-4">
+								<div class="col-md-1">
 									{{ $scoresheet->solution_skill }}
+								</div>
+								<label class="control-label col-md-1">Note</label>
+								<div class="col-md-4">
+									{{ $scoresheet->solution_skill_note }}
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="form-group">
 								<label class="control-label col-md-3">Inspirational Story</label>
-								<div class="col-md-4">
+								<div class="col-md-1">
 									{{ $scoresheet->inspirational_story }}
+								</div>
+								<label class="control-label col-md-1">Note</label>
+								<div class="col-md-4">
+									{{ $scoresheet->inspirational_story_note }}
 								</div>
 							</div>
 						</div>
 						<div class="row">
 							<div class="form-group">
 								<label class="control-label col-md-3">Leadership</label>
-								<div class="col-md-4">
+								<div class="col-md-1">
 									{{ $scoresheet->leadership }}
+								</div>
+								<label class="control-label col-md-1">Note</label>
+								<div class="col-md-4">
+									{{ $scoresheet->leadership_note }}
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group">
+								<label class="control-label col-md-3">Notes</label>
+								<div class="col-md-4">
+									{{ $scoresheet->notes }}
 								</div>
 							</div>
 						</div>
@@ -181,6 +213,7 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="row">
 							<div class="form-group">
 								<center>
