@@ -17,6 +17,9 @@
         <li class= {{ Request::is('scoresheets') || Request::is('scoresheets/*') ? 'active' : '' }}>
           <a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a>
         </li>
+        <li class= {{ Request::is('session') || Request::is('session/*') ? 'active' : '' }}>
+          <a href="{{ url('session') }}"><i class="fa fa-bookmark-o"></i> Session</a>
+        </li>
       @endrole
       @role('admin')
         <li class= {{ Request::is('participant') || Request::is('participant/*') ? 'active' : '' }}>
@@ -25,6 +28,9 @@
         <li class= {{ Request::is('scoresheets') || Request::is('scoresheets/*') ? 'active' : '' }}>
           <a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a>
         </li>
+        <li class= {{ Request::is('session') || Request::is('session/*') ? 'active' : '' }}>
+          <a href="{{ url('session') }}"><i class="fa fa-bookmark-o"></i> Session</a>
+        </li>        
         <li class= {{ Request::is('unit-score') || Request::is('unit-score/*') ? 'active' : '' }}>
           <a href="{{ url('unit-score') }}"><i class="fa fa-align-center"></i> Unit Score</a>
         </li>

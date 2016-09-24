@@ -34,7 +34,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>Scoresheets {{ isset($category) ? '- '. $category->name : '-' }}</h2>
+				<h2><font color="red">Scoresheets {{ isset($category) ? '- '. $category->name : '-' }}</font></h2>
 				<a href="{{ url('participant') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
 				<div class="clearfix"></div>
 			</div>
