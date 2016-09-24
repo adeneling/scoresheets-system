@@ -22,10 +22,8 @@ class ScoresheetsController extends Controller
         $q = $request->get('q');
         if (isset($q)) {
             $category = Category::where('id',$q)->first();
-        }
-        
+        }        
         $scoresheets = Scoresheet::where('category_id', 'LIKE', '%'.$q.'%')->orderBy('created_at','desc')->get();
-
         return view('backend.pages.scoresheets.index', compact('scoresheets', 'q', 'category'));
     }
 
