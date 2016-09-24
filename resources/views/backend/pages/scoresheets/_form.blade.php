@@ -141,9 +141,9 @@
 <tr>
     <th colspan="4">
         <center>
-            <button type="submit" class="btn btn-primary">{{ isset($scoresheet) ? 'Edit Data' : 'Scoring' }}</button> 
+            <button type="submit" class="btn btn-danger">{{ isset($scoresheet) ? 'SUBMIT' : 'SUBMIT' }}</button> 
             @if(isset($scoresheet)) | 
-            <a href="{{ url('scoresheets') }}" class="btn btn-danger">Back</a>
+                <a href="{{ url('scoresheets') }}" class="btn btn-warning">Back</a>
             @endif
         </center>
     </th>

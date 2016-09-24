@@ -27,7 +27,7 @@
 						<li>City: {{ $scoresheet->user->city }}</li>
 						<li>Category: {{ $scoresheet->user->category->name }}</li>
 					</ul>
-					<br />
+					<br/>
 				</div>
 				<div class="col-md-2">
 					<ul class="list-unstyled user_data">

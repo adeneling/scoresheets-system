@@ -45,6 +45,7 @@
 							<th>No</th>
 							<th>Name</th>
 							<th>Category</th>
+							<th>Area</th>
 							<th>Final Score</th>
 							<th width="30%">Aksi</th>
 						</tr>
@@ -56,7 +57,8 @@
 						<tr>
 							<td>{{ $no++ }}</td>
 							<td>{{ $scoresheet->participant_name }}</td>
-							<td>{{ $scoresheet->category_id }}</td>
+							<td>{{ $scoresheet->category->name }}</td>
+							<td>{{ $scoresheet->user->area }}</td>
 							<td>{{ $scoresheet->total_coeficient_score }}</td>
 							<td>
 								<center>
