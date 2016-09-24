@@ -141,10 +141,7 @@
 <tr>
     <th colspan="4">
         <center>
-            <button type="submit" class="btn btn-primary">{{ isset($participant) ? 'Scoring' : 'Scoring' }}</button> 
-            @if(isset($participant)) | 
-            <a href="{{ url('participant') }}" class="btn btn-danger">Back</a>
-            @endif
+            <button type="submit" class="btn btn-danger">{{ isset($participant) ? 'SUBMIT' : 'SUBMIT' }}</button> 
         </center>
     </th>
 </tr>

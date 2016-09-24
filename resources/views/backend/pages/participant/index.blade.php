@@ -34,7 +34,7 @@
 	<div class="col-md-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>@yield('title') {{ isset($category) ? '- ' . $category->name : '-' }}</h2>
+				<h2><font color="red">Participant {{ isset($category) ? '- '. $category->name : '-' }}</font></h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
