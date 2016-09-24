@@ -14,7 +14,7 @@
     </td>
     <td><h4>{{ $participant->category->presentation_material }}%</h4></td>
     <td>
-        {!!Form::select('presentation_material', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+        {!!Form::select('presentation_material', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
     </td>
     <td>
         {!! Form::text('presentation_material_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
@@ -27,7 +27,7 @@
     </td>
     <td><h4>{{ $participant->category->communication_skill }}%</h4></td>
     <td>
-        {!!Form::select('communication_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+        {!!Form::select('communication_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
     </td>
     <td>
         {!! Form::text('communication_skill_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
@@ -43,7 +43,7 @@
     </td>
     <td><h4>{{ $participant->category->achievement }}%</h4></td>
     <td>
-        {!!Form::select('achievement', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+        {!!Form::select('achievement', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
     </td>
     <td>
         {!! Form::text('achievement_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
@@ -56,7 +56,7 @@
     </td>
     <td><h4>{{ $participant->category->personal_value }}%</h4></td>
     <td>
-        {!!Form::select('personal_value', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+        {!!Form::select('personal_value', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
     </td>
     <td>
         {!! Form::text('personal_value_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
@@ -73,7 +73,7 @@
     </td>
     <td><h4>{{ $participant->category->customer_care_knowledge }}%</h4></td>
     <td>
-        {!!Form::select('customer_care_knowledge', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+        {!!Form::select('customer_care_knowledge', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
     </td>
     <td>
         {!! Form::text('customer_care_knowledge_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
@@ -89,7 +89,7 @@
     </td>
     <td><h4>{{ $participant->category->solution_skill }}%</h4></td>
     <td>
-        {!!Form::select('solution_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+        {!!Form::select('solution_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
     </td>
     <td>
         {!! Form::text('solution_skill_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
@@ -102,7 +102,7 @@
     </td>
     <td><h4>{{ $participant->category->inspirational_story }}%</h4></td>
     <td>
-        {!!Form::select('inspirational_story', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+        {!!Form::select('inspirational_story', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
     </td>
     <td>
         {!! Form::text('inspirational_story_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
@@ -117,7 +117,7 @@
     </td>
     <td><h4>{{ $participant->category->leadership }}%</h4></td>
     <td>
-        {!!Form::select('leadership', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'select2_single form-control']) !!}
+        {!!Form::select('leadership', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
     </td>
     <td>
         {!! Form::text('leadership_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
