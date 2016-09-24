@@ -34,7 +34,7 @@
 								<center>
 									{!! Form::model($data, ['route' => ['master-data.destroy', $data], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
 	                                <a href = "{{ route('master-data.edit', encrypt($data->id))}}" class="btn btn-warning">Edit</a> | 
-	                                <button type="submit" class="btn btn-danger">Delete</button>
+	                                <button type="submit" class="btn btn-danger js-submit-confirm">Delete</button>
 	                                {!! Form::close()!!}
 									
 								</center>

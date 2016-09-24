@@ -126,7 +126,7 @@
 								<center>
 									{!! Form::model($unit, ['route' => ['unit-score.destroy', $unit], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
 	                                <a href = "{{ route('unit-score.edit', encrypt($unit->id))}}" class="btn btn-warning">Edit Score</a> | 
-	                                <button type="submit" class="btn btn-danger">Delete</button>
+	                                <button type="submit" class="btn btn-danger js-submit-confirm">Delete</button>
 	                                {!! Form::close()!!}
 									
 								</center>

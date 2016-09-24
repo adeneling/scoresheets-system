@@ -41,7 +41,7 @@
 									{!! Form::model($category, ['route' => ['category.destroy', $category], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
 	                                <a href = "{{ route('category.show', encrypt($category->id))}}" class="btn btn-primary">Check</a> | 
 	                                <a href = "{{ route('category.edit', encrypt($category->id))}}" class="btn btn-warning">Edit</a> | 
-	                                <button type="submit" class="btn btn-danger">Delete</button>
+	                                <button type="submit" class="btn btn-danger js-submit-confirm">Delete</button>
 	                                {!! Form::close()!!}
 									
 								</center>

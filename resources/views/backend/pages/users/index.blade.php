@@ -35,7 +35,7 @@
 									{!! Form::model($user, ['route' => ['users.destroy', $user], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
 	                                <a href = "{{ route('users.show', encrypt($user->id))}}" class="btn btn-primary">Show</a> | 
 	                                <a href = "{{ route('users.edit', encrypt($user->id))}}" class="btn btn-warning">Edit</a> | 
-	                                <button type="submit" class="btn btn-danger">Delete</button>
+	                                <button type="submit" class="btn btn-danger js-submit-confirm">Delete</button>
 	                                {!! Form::close()!!}
 									
 								</center>
