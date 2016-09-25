@@ -1046,6 +1046,38 @@ class UnitScoreSeeder extends Seeder
 		    'total_score' => 80,
 		    'notes' => 'BAGUS DALAM SERVICE',
 	    ]);
+	    App\UnitScore::create([
+		    'category_id' => 10,
+		    'type' => 'GRAPARI',
+		    'area' => 1,
+		    'location' => 'JABODETABEK',
+		    'total_score' => 80,
+		    'notes' => 'BAGUS DALAM SERVICE',
+	    ]);
+	    App\UnitScore::create([
+		    'category_id' => 10,
+		    'type' => 'GRAPARI',
+		    'area' => 2,
+		    'location' => 'JABODETABEK',
+		    'total_score' => 90,
+		    'notes' => 'BAGUS DALAM SERVICE',
+	    ]);
+	    App\UnitScore::create([
+		    'category_id' => 10,
+		    'type' => 'GRAPARI',
+		    'area' => 3,
+		    'location' => 'JABODETABEK',
+		    'total_score' => 80,
+		    'notes' => 'BAGUS DALAM SERVICE',
+	    ]);
+	    App\UnitScore::create([
+		    'category_id' => 10,
+		    'type' => 'GRAPARI',
+		    'area' => 4,
+		    'location' => 'JABODETABEK',
+		    'total_score' => 80,
+		    'notes' => 'BAGUS DALAM SERVICE',
+	    ]);
 
     }
 }
