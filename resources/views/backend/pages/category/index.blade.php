@@ -18,15 +18,8 @@
 						<tr>
 							<th>No</th>
 							<th width="20%">Name</th>
-							<th>PreMat</th>
-							<th>ComSk</th>
-							<th>Achiev</th>
-							<th>PerVal</th>
-							<th>CS-K</th>
-							<th>SolSkill</th>
-							<th>InspirStory</th>
-							<th>Leadership</th>
-							<th>Aksi</th>
+							<th>Detail</th>
+							<th width="25%">Aksi</th>
 						</tr>
 					</thead>
 
@@ -34,16 +27,18 @@
 						<?php $no = 1; ?>
                 		@foreach($categories as $category)
 						<tr>
-							<td>{{ $no++ }}</td>
-							<td>{{ $category->name }}</td>
-							<td>{{ $category->presentation_material }}%</td>
-							<td>{{ $category->communication_skill }}%</td>
-							<td>{{ $category->achievement }}%</td>
-							<td>{{ $category->personal_value }}%</td>
-							<td>{{ $category->customer_care_knowledge }}%</td>
-							<td>{{ $category->solution_skill }}%</td>
-							<td>{{ $category->inspirational_story }}%</td>
-							<td>{{ $category->leadership }}%</td>
+							<td width="5%">{{ $no++ }}</td>
+							<td width="25%">{{ $category->name }}</td>
+							<td>
+								Presentation Material: {{ $category->presentation_material }}%<br>
+								Communication Skill: {{ $category->communication_skill }}%<br>
+								Achievement: {{ $category->achievement }}%<br>
+								Personal Value: {{ $category->personal_value }}%<br>
+								Customer Care Knowledge: {{ $category->customer_care_knowledge }}%<br>
+								Solution Skill: {{ $category->solution_skill }}%<br>
+								Inspirational Story: {{ $category->inspirational_story }}%<br>
+								Leadership: {{ $category->leadership }}%
+							</td>
 							<td>
 								<center>
 									{!! Form::model($category, ['route' => ['category.destroy', $category], 'method' => 'delete', 'class' => 'form-inline'] ) !!}

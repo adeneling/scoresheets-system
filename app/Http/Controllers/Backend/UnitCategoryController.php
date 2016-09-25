@@ -18,7 +18,7 @@ class UnitCategoryController extends Controller
     public function index()
     {
         $unitCategory = UnitCategory::all();
-        $unitCategoryParent = UnitCategoryParent::all();
+        $unitCategoryParent = UnitCategoryParent::take(2)->get();
         return view('backend.pages.unit-category.index',compact('unitCategory','unitCategoryParent'));
     }
 

@@ -17,5 +17,8 @@ class UnitCategoryParentSeeder extends Seeder
 	    App\UnitCategoryParent::create([
 		    'name' => 'CALL CENTER',
 	    ]);
+        App\UnitCategoryParent::create([
+            'name' => 'COLLECTION',
+        ]);
     }
 }
