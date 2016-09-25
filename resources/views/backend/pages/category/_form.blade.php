@@ -10,6 +10,20 @@
     @endif
 </div>
 
+<div class="form-group{{ $errors->has('tier') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Tier</label>
+    <div class="col-md-1">
+        {!!Form::select('tier', ['1'=>'1','2'=>'2','3'=>'3'], null, ['class'=>'form-control']) !!}
+    </div>
+    @if($errors->has('tier'))
+        <span class="help-block">
+            <strong>{{ $errors->first('tier') }}</strong>
+        </span>
+    @endif
+</div>
+
+
+
 <div class="form-group{{ $errors->has('parent_category') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">Parent Category</label>
     <div class="col-md-4">

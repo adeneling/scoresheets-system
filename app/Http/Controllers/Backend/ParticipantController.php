@@ -163,7 +163,7 @@ class ParticipantController extends Controller
         $user = User::where('id', $request->input('participant_id') )->first();
         $user->judged = 1;
         $user->save();
-        \Flash::success('Success');
+        \Flash::success($request->input('participant_name') . ' Scored');
         return redirect('scoresheets');
     }
 

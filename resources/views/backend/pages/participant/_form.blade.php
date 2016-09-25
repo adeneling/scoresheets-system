@@ -108,21 +108,23 @@
         {!! Form::text('inspirational_story_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
     </td>
 </tr>
-<tr>
-    <th colspan="4" class="red"><font color="white">TEAM LEADER AND SUPERVISOR CATEGORY ONLY ({{ $participant->category->leadership }}%)</font></th>
-</tr>
-<tr>
-    <td>
-        <h4>Leadership</h4>
-    </td>
-    <td><h4>{{ $participant->category->leadership }}%</h4></td>
-    <td>
-        {!!Form::select('leadership', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
-    </td>
-    <td>
-        {!! Form::text('leadership_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
-    </td>
-</tr>
+@if($participant->category->tier == 3)
+    <tr>
+        <th colspan="4" class="red"><font color="white">TEAM LEADER AND SUPERVISOR CATEGORY ONLY ({{ $participant->category->leadership }}%)</font></th>
+    </tr>
+    <tr>
+        <td>
+            <h4>Leadership</h4>
+        </td>
+        <td><h4>{{ $participant->category->leadership }}%</h4></td>
+        <td>
+            {!!Form::select('leadership', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
+        </td>
+        <td>
+            {!! Form::text('leadership_note', null, ['class'=>'form-control','placeholder'=>'']) !!}
+        </td>
+    </tr>
+@endif
 <tr>
     <td colspan="4">
         <div class="form-group{{ $errors->has('notes') ? ' has-error' : '' }}">

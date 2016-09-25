@@ -11,6 +11,7 @@ class UnitCategorySeeder extends Seeder
      */
     public function run()
     {
+    	/* CATEGORY PARENT 1 */
         App\UnitCategory::create([
 		    'parent_id' => 1,
 		    'name' => 'BEST GRAPARI',
@@ -27,10 +28,17 @@ class UnitCategorySeeder extends Seeder
 		    'coeficient' => 20,
 	    ]);
 	    App\UnitCategory::create([
-		    'parent_id' => 2,
+		    'parent_id' => 1,
 		    'name' => 'BEST CALL CENTER INBOUND',
-		    'coeficient' => 40,
+		    'coeficient' => 10,
 	    ]);
+	    App\UnitCategory::create([
+		    'parent_id' => 1,
+		    'name' => 'BEST BACK END SUPPORT',
+		    'coeficient' => 10,
+	    ]);
+	    
+	    /* CATEGORY PARENT 2 */
 	    App\UnitCategory::create([
 		    'parent_id' => 2,
 		    'name' => 'BEST CALL CENTER OUTBOUND',
@@ -56,10 +64,6 @@ class UnitCategorySeeder extends Seeder
 		    'name' => 'BEST BILLING COLLECTION',
 		    'coeficient' => 100,
 	    ]);
-	    App\UnitCategory::create([
-		    'parent_id' => 1,
-		    'name' => 'BEST BACK END SUPPORT',
-		    'coeficient' => 10,
-	    ]);
+	    
     }
 }

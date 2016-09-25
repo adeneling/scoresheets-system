@@ -15,17 +15,18 @@ class CategoryTable extends Migration
     {
         Schema::create('category', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->string('parent_category');
-            $table->string('description');
-            $table->integer('presentation_material');
-            $table->integer('communication_skill');
-            $table->integer('achievement');
-            $table->integer('personal_value');
-            $table->integer('customer_care_knowledge');
-            $table->integer('solution_skill');
-            $table->integer('inspirational_story');
+            $table->string('name')->nullable();
+            $table->string('parent_category')->nullable();
+            $table->string('description')->nullable();
+            $table->integer('presentation_material')->nullable();
+            $table->integer('communication_skill')->nullable();
+            $table->integer('achievement')->nullable();
+            $table->integer('personal_value')->nullable();
+            $table->integer('customer_care_knowledge')->nullable();
+            $table->integer('solution_skill')->nullable();
+            $table->integer('inspirational_story')->nullable();
             $table->integer('leadership')->nullable();
+            $table->integer('tier')->nullable();
             $table->timestamps();
         });
     }

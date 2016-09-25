@@ -20,6 +20,7 @@ class Category extends Model
         'solution_skill', 
         'inspirational_story',
         'leadership',
+        'tier',
     ];
 
     public function user() {
