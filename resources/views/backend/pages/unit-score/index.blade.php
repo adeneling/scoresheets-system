@@ -63,29 +63,254 @@
 </div>
 
 <div class="row">
-	<div class="col-md-12 col-sm-12 col-xs-12">
+	<div class="col-md-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>Winner for the Best Area</h2>
+				<h2>WALK IN</h2>
+				<ul class="nav navbar-right panel_toolbox">
+					<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+				</ul>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
-				<?php $no = 1; ?>
-				@for($no; $no<=4;$no++)
-				<div class="animated flipInY col-lg-3">
+				<div class="animated flipInY col-lg-12">
 					<div class="tile-stats">
 						<center>								
-								<i class="fa fa-trophy"></i> {{ $no }}
-								<br>
-								Area
+								<h1>{{ $walkInWinnerName . ' IS THE WINNER - ' . $walkInWinnerResultValue . '% COEFFICIENT'}}</h1>
 						</center>
 					</div>
 				</div>
-				@endfor
+				<table class="table">
+					<thead>
+						<tr>
+							<th width="40%">Category</th>
+							<th>AREA 1</th>
+							<th>AREA 2</th>
+							<th>AREA 3</th>
+							<th>AREA 4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="red"><font color="white">BEST GRAPARI 30%</font></th>
+							<td>{{ $nilaiCategori1[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori1[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori1[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori1[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST SERVICE DIFFERENTIATION CE ACROSS CHANNEL 20%</font></th>
+							<td>{{ $nilaiCategori2[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori2[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori2[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori2[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST GRAPARI MITRA 30%</font></th>
+							<td>{{ $nilaiCategori3[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori3[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori3[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori3[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST FRONT OFFICE SUPPORT 10%</font></th>
+							<td>{{ $nilaiCategori4[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori4[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori4[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori4[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST BACK END SUPPORT 10%</font></th>
+							<td>{{ $nilaiCategori5[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori5[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori5[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori5[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
 </div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="x_panel">
+			<div class="x_title">
+				<h2>CALL CENTER</h2>
+				<ul class="nav navbar-right panel_toolbox">
+					<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content">
+				<div class="animated flipInY col-lg-12">
+					<div class="tile-stats">
+						<center>								
+								<h1>{{ $callCenterWinnerName . ' IS THE WINNER - ' . $callCenterWinnerResultValue . '% COEFFICIENT'}}</h1>
+						</center>
+					</div>
+				</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th width="40%">Category</th>
+							<th>AREA 1</th>
+							<th>AREA 2</th>
+							<th>AREA 3</th>
+							<th>AREA 4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="red"><font color="white">BEST CALL CENTER OUTBOUND 30%</font></th>
+							<td>{{ $nilaiCategori6[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori6[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori6[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori6[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST CALL CENTER INBOUND 40%</font></th>
+							<td>{{ $nilaiCategori7[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori7[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori7[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori7[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST COMPLAINT HANDLING 15%</font></th>
+							<td>{{ $nilaiCategori8[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori8[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori8[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori8[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST TRAINER 15%</font></th>
+							<td>{{ $nilaiCategori9[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori9[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori9[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori9[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="x_panel">
+			<div class="x_title">
+				<h2>BEST AREA</h2>
+				<ul class="nav navbar-right panel_toolbox">
+					<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content">
+				<div class="animated flipInY col-lg-12">
+					<div class="tile-stats">
+						<center>								
+								<h1>{{ $bestAreaWinnerName . ' IS THE WINNER - ' . $bestAreaWinnerResultValue . '% COEFFICIENT'}}</h1>
+						</center>
+					</div>
+				</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th width="40%">Category</th>
+							<th>BOBOT</th>
+							<th>AREA 1</th>
+							<th>AREA 2</th>
+							<th>AREA 3</th>
+							<th>AREA 4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="red"><font color="white">BEST GRAPARI</font></th>
+							<td rowspan="5"><center>70%</center></td>
+							<td>{{ $nilaiCategori1[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori1[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori1[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori1[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST SERVICE DIFFERENTIATION CE ACROSS CHANNEL</font></th>
+							<td>{{ $nilaiCategori2[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori2[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori2[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori2[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST GRAPARI MITRA</font></th>
+							<td>{{ $nilaiCategori3[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori3[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori3[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori3[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST CALL CENTER OUTBOUND</font></th>
+							<td>{{ $nilaiCategori6[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori6[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori6[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori6[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST CALL CENTER INBOUND</font></th>
+							<td>{{ $nilaiCategori7[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori7[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori7[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori7[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+
+
+						<tr>
+							<th class="red"><font color="white">BEST FRONT OFFICE SUPPORT</font></th>
+							<td rowspan="3"><center>15%</center></td>
+							<td>{{ $nilaiCategori4[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori4[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori4[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori4[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST COMPLAINT HANDLING</font></th>
+							<td>{{ $nilaiCategori8[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori8[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori8[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori8[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr>
+							<th class="red"><font color="white">BEST TRAINER</font></th>
+							<td>{{ $nilaiCategori9[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori9[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori9[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori9[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+
+						<tr>
+							<th class="red"><font color="white">BEST BACK END SUPPORT</font></th>
+							<td><center>10%</center></td>
+							<td>{{ $nilaiCategori5[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori5[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori5[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori5[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						
+						
+						<tr>
+							<th class="red"><font color="white">BEST BILLING COLLECTION</font></th>
+							<td><center>5%</center></td>
+							<td>{{ $nilaiCategori10[0]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori10[1]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori10[2]==1 ? 'JUARA 1' : ''}}</td>
+							<td>{{ $nilaiCategori10[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 <div class="row">
 	<div class="col-md-12 col-sm-12 col-xs-12">

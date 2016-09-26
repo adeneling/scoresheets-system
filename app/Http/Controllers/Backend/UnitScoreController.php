@@ -100,12 +100,17 @@ class UnitScoreController extends Controller
         $cat1Area3 = UnitScore::where('area', 3)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
         $cat1Area4 = UnitScore::where('area', 4)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
         try {
-            if ($cat1Area1->total_score >= $topCategory1->total_score) {
-                $tempNilaiArea1 = 1;
-            }elseif ($cat1Area1->total_score < $topCategory1->total_score) {
+            if (isset($cat1Area1)) {
+                if ($cat1Area1->total_score >= $topCategory1->total_score) {
+                    $tempNilaiArea1 = 1;
+                }elseif ($cat1Area1->total_score < $topCategory1->total_score) {
+                    $tempNilaiArea1 = 0;
+                }
+            }else{
                 $tempNilaiArea1 = 0;
             }
             $nilaiCategori1[0] = $tempNilaiArea1;
+            
 
 
             if ($cat1Area2->total_score >= $topCategory1->total_score) {
@@ -1030,7 +1035,7 @@ class UnitScoreController extends Controller
             $bestAreaWinnerName = "AREA 4";
         }
 
-        echo "WALK IN ";
+        /*echo "WALK IN ";
         echo "<br>";
         print_r($nilaiCategori1);
         echo "<br>";
@@ -1105,7 +1110,7 @@ class UnitScoreController extends Controller
         print_r($bestAreaResult);
         echo "<br>";
         echo $bestAreaWinnerName . " IS THE WINNER - ". $bestAreaWinnerResultValue . "% VALUE";
-        echo "<br>";      
+        echo "<br>";   */   
         
 
         $data = array(
@@ -1119,6 +1124,7 @@ class UnitScoreController extends Controller
             'nilaiCategori7' => $nilaiCategori7,
             'nilaiCategori8' => $nilaiCategori8,
             'nilaiCategori9' => $nilaiCategori9,
+            'nilaiCategori10' => $nilaiCategori10,
             /* walk in result */
             'walkInWinnerResult' => $walkInWinnerResult,
             'walkInWinnerName' => $walkInWinnerName,
@@ -1134,9 +1140,28 @@ class UnitScoreController extends Controller
             'bestAreaTier4Value' => $bestAreaTier4Value,
             'bestAreaResult' => $bestAreaResult,
             'bestAreaWinnerResultValue' => $bestAreaWinnerResultValue,
-            'bestAreaWinnerName' => $bestAreaWinnerName,
+            'bestAreaWinnerName' => $bestAreaWinnerName
         );
-        //return view('backend.pages.unit-score.index',compact('unitScore','tops','topCategory', 'data'));
+        return view('backend.pages.unit-score.index',
+            compact(
+                'unitScore',
+                'tops',
+                'topCategory',
+                'nilaiCategori1',
+                'nilaiCategori2',
+                'nilaiCategori3',
+                'nilaiCategori4',
+                'nilaiCategori5',
+                'nilaiCategori6',
+                'nilaiCategori7',
+                'nilaiCategori8',
+                'nilaiCategori9',
+                'nilaiCategori10',
+                'walkInWinnerResult','walkInWinnerName','walkInWinnerResultValue',
+                'callCenterWinnerResult','callCenterWinnerName','callCenterWinnerResultValue',
+                'bestAreaTier1Value','bestAreaTier2Value','bestAreaTier3Value','bestAreaTier4Value','bestAreaResult','bestAreaWinnerResultValue','bestAreaWinnerName'
+            )
+        );
     }
 
     /**
