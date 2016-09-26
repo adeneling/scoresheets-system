@@ -15,11 +15,28 @@ Route::group(['namespace' => 'Frontend'], function(){
 	Route::get('/', 'HomeController@index');
 	Route::get('bestcs/login', 'FrontendController@login');
 });
+/* PARTICIPANT */
+Route::group(['namespace' => 'Participant'], function(){
+	/* BEST CS */
+	Route::resource('bestcs/', 'ParticipantPageController');
+	/* ITINERARY */
+	Route::get('bestcs/itinerary', 'ParticipantPageController@itinerary');
+	/* PROFILE */
+	Route::get('bestcs/profile', 'ParticipantPageController@profile');
+	/* SCHEDULES */
+	Route::get('bestcs/schedules', 'ParticipantPageController@schedules');
+	/* DO DONT */
+	Route::get('bestcs/dodonts', 'ParticipantPageController@dodonts');
+	/* FEEDBACK */
+	Route::get('bestcs/feedback', 'ParticipantPageController@feedback');
+	/* UPLOAD FILE */
+	Route::get('bestcs/upload-file', 'ParticipantPageController@uploadFile');
+});
 /* BACKEND */
 Route::group(['namespace' => 'Backend'], function(){
 	/* AUTHENTICATION */
 	Auth::routes();
-	Route::get('/home', 'HomeController@index');	
+	Route::get('home', 'HomeController@index');	
 	/* UPLOAD PRESENTATOIN */
 	Route::resource('upload', 'UploadPresentationController');
 	/* CHECK NIK AND EMAIL */

@@ -106,42 +106,51 @@ class UnitScoreController extends Controller
                 }elseif ($cat1Area1->total_score < $topCategory1->total_score) {
                     $tempNilaiArea1 = 0;
                 }
+                $nilaiCategori1[0] = $tempNilaiArea1;
             }else{
                 $tempNilaiArea1 = 0;
             }
-            $nilaiCategori1[0] = $tempNilaiArea1;            
 
-            if (isset($cat1Area2)) {
+            if ($nilaiCategori1[0] == 1) {
+                $nilaiCategori1[1] = 0;
+                $nilaiCategori1[2] = 0;
+                $nilaiCategori1[3] = 0;
+            }elseif (isset($cat1Area2)) {
                 if ($cat1Area2->total_score >= $topCategory1->total_score) {
                     $tempNilaiArea2 = 1;
                 }elseif ($cat1Area2->total_score < $topCategory1->total_score) {
                     $tempNilaiArea2 = 0;
                 }
+                $nilaiCategori1[1] = $tempNilaiArea2;
             }else{
                 $tempNilaiArea1 = 0;
             }
-            $nilaiCategori1[1] = $tempNilaiArea2;
 
-            if (isset($cat1Area3)) {
+            if ($nilaiCategori1[1] == 1) {
+                $nilaiCategori1[2] = 0;
+                $nilaiCategori1[3] = 0;
+            }elseif (isset($cat1Area3)) {
                 if ($cat1Area3->total_score >= $topCategory1->total_score) {
                     $tempNilaiArea3 = 1;
                 }elseif ($cat1Area3->total_score < $topCategory1->total_score) {
                     $tempNilaiArea3 = 0;
                 }
+                $nilaiCategori1[2] = $tempNilaiArea3;
             }else{
                  $tempNilaiArea3 = 0;   
             }
-            $nilaiCategori1[2] = $tempNilaiArea3;
-            if (isset($cat1Area4)) {
+            if ($nilaiCategori1[2] == 1) {
+                $nilaiCategori1[3] = 0;
+            }elseif (isset($cat1Area4)) {
                 if ($cat1Area4->total_score >= $topCategory1->total_score) {
                     $tempNilaiArea4 = 1;
                 }elseif ($dataCat1Area4->total_score < $topCategory1->total_score) {
                     $tempNilaiArea4 = 0;   
                 }
+                $nilaiCategori1[3] = $tempNilaiArea4;
             }else{
                 $tempNilaiArea4 = 0;
             }            
-            $nilaiCategori1[3] = $tempNilaiArea4;
         } catch (Exception $e) {
             $nilaiCategori1[0] = 0;
             $nilaiCategori1[1] = 0;

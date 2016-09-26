@@ -1,32 +1,50 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Participant;
 
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use Laratrust\LaratrustFacade as Laratrust;
-class HomeController extends Controller
+
+class ParticipantPageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function profile()
+    {
+        return view('participant.pages.profile');
+    }
+    public function dodonts()
+    {
+        return view('participant.pages.dodonts');
+    }
+    public function schedules()
+    {
+        return view('participant.pages.schedules');
+    }
+    public function feedback()
+    {
+        return view('participant.pages.feedback');
+    }
+    public function itinerary()
+    {
+        return view('participant.pages.itinerary');
+    }
+    public function uploadFile()
+    {
+        return view('participant.pages.upload-file');
+    }
     public function index()
     {
-        if (Laratrust::hasRole('admin') || Laratrust::hasRole('jury')) return $this->adminDashboard();
-        if (Laratrust::hasRole('participant') || Laratrust::hasRole('guest')) return $this->participantDashboard();
-        //return view('backend.pages.home');
-    }
-    protected function adminDashboard()
-    {
-        return view('backend.pages.home');
-    }
-    protected function participantDashboard()
-    {
-        return view('participant.pages.home');
+        //
     }
 
     /**

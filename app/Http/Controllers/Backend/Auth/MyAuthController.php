@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class MyAuthController extends LoginController
 {
-    protected $redirectAfterLogout = '/login';
+    protected $redirectAfterLogout = '/';
 
     public function logout(Request $request)
     {

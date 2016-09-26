@@ -94,7 +94,7 @@
 								    <center><h4> {{ session('status') }} </h4></center>
 								@endif 		
                                 <br><br>
-                                <center><a href="{{ url('login') }}" class="pull-right"><font color="white"><h4>Login</h4></font></a></center>
+                                <center><a href="{{ url('bestcs/login') }}" class="pull-right"><font color="white"><h4>Login</h4></font></a></center>
                                 <button type="submit" id="submit" class="btn btn-primary"><i class="fa fa-check vhm-item"></i> Check</button>
                             </form>
                             <br>
