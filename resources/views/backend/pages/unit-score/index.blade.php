@@ -33,7 +33,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>Top 3</h2>
+				<h2>TOP 3</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -76,7 +76,7 @@
 				<div class="animated flipInY col-lg-12">
 					<div class="tile-stats">
 						<center>								
-								<h1>{{ $walkInWinnerName . ' IS THE WINNER - ' . $walkInWinnerResultValue . '% COEFFICIENT'}}</h1>
+								<h1>{{ $walkInWinnerName . ' IS THE WALK IN WINNER - ' . $walkInWinnerResultValue . '% COEFFICIENT'}}</h1>
 						</center>
 					</div>
 				</div>
@@ -146,7 +146,7 @@
 				<div class="animated flipInY col-lg-12">
 					<div class="tile-stats">
 						<center>								
-								<h1>{{ $callCenterWinnerName . ' IS THE WINNER - ' . $callCenterWinnerResultValue . '% COEFFICIENT'}}</h1>
+								<h1>{{ $callCenterWinnerName . ' IS THE CALL CENTER WINNER - ' . $callCenterWinnerResultValue . '% COEFFICIENT'}}</h1>
 						</center>
 					</div>
 				</div>
@@ -209,7 +209,7 @@
 				<div class="animated flipInY col-lg-12">
 					<div class="tile-stats">
 						<center>								
-								<h1>{{ $bestAreaWinnerName . ' IS THE WINNER - ' . $bestAreaWinnerResultValue . '% COEFFICIENT'}}</h1>
+								<h1>{{ $bestAreaWinnerName . ' IS THE BEST AREA WINNER - ' . $bestAreaWinnerResultValue . '% COEFFICIENT'}}</h1>
 						</center>
 					</div>
 				</div>

@@ -109,31 +109,38 @@ class UnitScoreController extends Controller
             }else{
                 $tempNilaiArea1 = 0;
             }
-            $nilaiCategori1[0] = $tempNilaiArea1;
-            
+            $nilaiCategori1[0] = $tempNilaiArea1;            
 
-
-            if ($cat1Area2->total_score >= $topCategory1->total_score) {
-                $tempNilaiArea2 = 1;
-            }elseif ($cat1Area2->total_score < $topCategory1->total_score) {
-                $tempNilaiArea2 = 0;
+            if (isset($cat1Area2)) {
+                if ($cat1Area2->total_score >= $topCategory1->total_score) {
+                    $tempNilaiArea2 = 1;
+                }elseif ($cat1Area2->total_score < $topCategory1->total_score) {
+                    $tempNilaiArea2 = 0;
+                }
+            }else{
+                $tempNilaiArea1 = 0;
             }
             $nilaiCategori1[1] = $tempNilaiArea2;
 
-
-            if ($cat1Area3->total_score >= $topCategory1->total_score) {
-                $tempNilaiArea3 = 1;
-            }elseif ($cat1Area3->total_score < $topCategory1->total_score) {
-                $tempNilaiArea3 = 0;
+            if (isset($cat1Area3)) {
+                if ($cat1Area3->total_score >= $topCategory1->total_score) {
+                    $tempNilaiArea3 = 1;
+                }elseif ($cat1Area3->total_score < $topCategory1->total_score) {
+                    $tempNilaiArea3 = 0;
+                }
+            }else{
+                 $tempNilaiArea3 = 0;   
             }
             $nilaiCategori1[2] = $tempNilaiArea3;
-
-        
-            if ($cat1Area4->total_score >= $topCategory1->total_score) {
-                $tempNilaiArea4 = 1;
-            }elseif ($dataCat1Area4->total_score < $topCategory1->total_score) {
+            if (isset($cat1Area4)) {
+                if ($cat1Area4->total_score >= $topCategory1->total_score) {
+                    $tempNilaiArea4 = 1;
+                }elseif ($dataCat1Area4->total_score < $topCategory1->total_score) {
+                    $tempNilaiArea4 = 0;   
+                }
+            }else{
                 $tempNilaiArea4 = 0;
-            }
+            }            
             $nilaiCategori1[3] = $tempNilaiArea4;
         } catch (Exception $e) {
             $nilaiCategori1[0] = 0;
@@ -150,32 +157,45 @@ class UnitScoreController extends Controller
         $cat2Area3 = UnitScore::where('area', 3)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
         $cat2Area4 = UnitScore::where('area', 4)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();        
         try {
-            if ($cat2Area1->total_score >= $topCategory2->total_score) {
-                $tempNilaiArea1 = 1;
-            }elseif ($cat2Area1->total_score < $topCategory2->total_score) {
+            if (isset($cat2Area1)) {
+                if ($cat2Area1->total_score >= $topCategory2->total_score) {
+                    $tempNilaiArea1 = 1;
+                }elseif ($cat2Area1->total_score < $topCategory2->total_score) {
+                    $tempNilaiArea1 = 0;
+                }
+            }else{
                 $tempNilaiArea1 = 0;
-            }
+            }            
             $nilaiCategori2[0] = $tempNilaiArea1;
         
-        
-            if ($cat2Area2->total_score >= $topCategory2->total_score) {
-                $tempNilaiArea2 = 1;
-            }elseif ($cat2Area2->total_score < $topCategory2->total_score) {
+            if (isset($cat2Area2)) {
+                if ($cat2Area2->total_score >= $topCategory2->total_score) {
+                    $tempNilaiArea2 = 1;
+                }elseif ($cat2Area2->total_score < $topCategory2->total_score) {
+                    $tempNilaiArea2 = 0;
+                }
+            }else{
                 $tempNilaiArea2 = 0;
             }
             $nilaiCategori2[1] = $tempNilaiArea2;
         
-        
-            if ($cat2Area3->total_score >= $topCategory2->total_score) {
-                $tempNilaiArea3 = 1;
-            }elseif ($cat2Area3->total_score < $topCategory2->total_score) {
+            if (isset($cat2Area3)) {
+                if ($cat2Area3->total_score >= $topCategory2->total_score) {
+                    $tempNilaiArea3 = 1;
+                }elseif ($cat2Area3->total_score < $topCategory2->total_score) {
+                    $tempNilaiArea3 = 0;
+                }
+            }else{
                 $tempNilaiArea3 = 0;
             }
             $nilaiCategori2[2] = $tempNilaiArea3;        
-        
-            if ($cat2Area4->total_score >= $topCategory2->total_score) {
-                $tempNilaiArea4 = 1;
-            }elseif ($cat2Area4->total_score < $topCategory2->total_score) {
+            if (isset($cat2Area4)) {
+                if ($cat2Area4->total_score >= $topCategory2->total_score) {
+                    $tempNilaiArea4 = 1;
+                }elseif ($cat2Area4->total_score < $topCategory2->total_score) {
+                    $tempNilaiArea4 = 0;
+                }
+            }else{
                 $tempNilaiArea4 = 0;
             }
             $nilaiCategori2[3] = $tempNilaiArea4;
@@ -193,33 +213,47 @@ class UnitScoreController extends Controller
         $cat3Area3 = UnitScore::where('area', 3)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();
         $cat3Area4 = UnitScore::where('area', 4)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();        
         try {
-            if ($cat3Area1->total_score >= $topCategory3->total_score) {
-                $tempNilaiArea1 = 1;
-            }elseif ($cat3Area1->total_score < $topCategory3->total_score) {
+            if (isset($cat3Area1)) {
+                if ($cat3Area1->total_score >= $topCategory3->total_score) {
+                    $tempNilaiArea1 = 1;
+                }elseif ($cat3Area1->total_score < $topCategory3->total_score) {
+                    $tempNilaiArea1 = 0;
+                }
+            }else{
                 $tempNilaiArea1 = 0;
             }
+            
             $nilaiCategori3[0] = $tempNilaiArea1;
         
-        
-            if ($cat3Area2->total_score >= $topCategory3->total_score) {
-                $tempNilaiArea2 = 1;
-            }elseif ($cat3Area2->total_score < $topCategory3->total_score) {
+            if (isset($cat3Area2)) {
+                if ($cat3Area2->total_score >= $topCategory3->total_score) {
+                    $tempNilaiArea2 = 1;
+                }elseif ($cat3Area2->total_score < $topCategory3->total_score) {
+                    $tempNilaiArea2 = 0;
+                }
+            }else{
                 $tempNilaiArea2 = 0;
             }
             $nilaiCategori3[1] = $tempNilaiArea2;
         
-        
-            if ($cat3Area3->total_score >= $topCategory3->total_score) {
-                $tempNilaiArea3 = 1;
-            }elseif ($cat3Area3->total_score < $topCategory3->total_score) {
+            if (isset($cat3Area3)) {
+                if ($cat3Area3->total_score >= $topCategory3->total_score) {
+                    $tempNilaiArea3 = 1;
+                }elseif ($cat3Area3->total_score < $topCategory3->total_score) {
+                    $tempNilaiArea3 = 0;
+                }
+            }else{
                 $tempNilaiArea3 = 0;
             }
             $nilaiCategori3[2] = $tempNilaiArea3;
         
-        
-            if ($cat3Area4->total_score >= $topCategory3->total_score) {
-                $tempNilaiArea4 = 1;
-            }elseif ($cat3Area4->total_score < $topCategory3->total_score) {
+            if (isset($cat3Area4)) {
+                if ($cat3Area4->total_score >= $topCategory3->total_score) {
+                    $tempNilaiArea4 = 1;
+                }elseif ($cat3Area4->total_score < $topCategory3->total_score) {
+                    $tempNilaiArea4 = 0;
+                }
+            }else{
                 $tempNilaiArea4 = 0;
             }
             $nilaiCategori3[3] = $tempNilaiArea4;
@@ -237,30 +271,43 @@ class UnitScoreController extends Controller
         $cat4Area3 = UnitScore::where('area', 3)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();
         $cat4Area4 = UnitScore::where('area', 4)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();        
         try {
-            if ($cat4Area1->total_score >= $topCategory4->total_score) {
-                $tempNilaiArea1 = 1;
-            }elseif ($cat4Area1->total_score < $topCategory4->total_score) {
+            if (isset($cat4Area1)) {
+                if ($cat4Area1->total_score >= $topCategory4->total_score) {
+                    $tempNilaiArea1 = 1;
+                }elseif ($cat4Area1->total_score < $topCategory4->total_score) {
+                    $tempNilaiArea1 = 0;
+                }
+            }else{
                 $tempNilaiArea1 = 0;
             }
             $nilaiCategori4[0] = $tempNilaiArea1;        
-        
-            if ($cat4Area2->total_score >= $topCategory4->total_score) {
-                $tempNilaiArea2 = 1;
-            }elseif ($cat4Area2->total_score < $topCategory4->total_score) {
+            if (isset($cat4Area2)) {
+                if ($cat4Area2->total_score >= $topCategory4->total_score) {
+                    $tempNilaiArea2 = 1;
+                }elseif ($cat4Area2->total_score < $topCategory4->total_score) {
+                    $tempNilaiArea2 = 0;
+                }
+            }else{
                 $tempNilaiArea2 = 0;
             }
             $nilaiCategori4[1] = $tempNilaiArea2;        
-        
-            if ($cat4Area3->total_score >= $topCategory4->total_score) {
-                $tempNilaiArea3 = 1;
-            }elseif ($cat4Area3->total_score < $topCategory4->total_score) {
+            if (isset($cat4Area3)) {
+                if ($cat4Area3->total_score >= $topCategory4->total_score) {
+                    $tempNilaiArea3 = 1;
+                }elseif ($cat4Area3->total_score < $topCategory4->total_score) {
+                    $tempNilaiArea3 = 0;
+                }
+            }else{
                 $tempNilaiArea3 = 0;
             }
             $nilaiCategori4[2] = $tempNilaiArea3;        
-        
-            if ($cat4Area4->total_score >= $topCategory4->total_score) {
-                $tempNilaiArea4 = 1;
-            }elseif ($cat4Area4->total_score < $topCategory4->total_score) {
+            if (isset($cat4Area4)) {
+                if ($cat4Area4->total_score >= $topCategory4->total_score) {
+                    $tempNilaiArea4 = 1;
+                }elseif ($cat4Area4->total_score < $topCategory4->total_score) {
+                    $tempNilaiArea4 = 0;
+                }
+            }else{
                 $tempNilaiArea4 = 0;
             }
             $nilaiCategori4[3] = $tempNilaiArea4;
@@ -278,33 +325,46 @@ class UnitScoreController extends Controller
         $cat5Area3 = UnitScore::where('area', 3)->where('category_id', 5)->orderBy('total_score','desc')->take(1)->first();
         $cat5Area4 = UnitScore::where('area', 4)->where('category_id', 5)->orderBy('total_score','desc')->take(1)->first();        
         try {
-            if ($cat5Area1->total_score >= $topCategory5->total_score) {
-                $tempNilaiArea1 = 1;
-            }elseif ($cat5Area1->total_score < $topCategory5->total_score) {
+            if (isset($cat5Area1)) {
+                if ($cat5Area1->total_score >= $topCategory5->total_score) {
+                    $tempNilaiArea1 = 1;
+                }elseif ($cat5Area1->total_score < $topCategory5->total_score) {
+                    $tempNilaiArea1 = 0;
+                }
+            }else{
                 $tempNilaiArea1 = 0;
             }
             $nilaiCategori5[0] = $tempNilaiArea1;
         
-        
-            if ($cat5Area2->total_score >= $topCategory5->total_score) {
-                $tempNilaiArea2 = 1;
-            }elseif ($cat5Area2->total_score < $topCategory5->total_score) {
+            if (isset($cat5Area2)) {
+                if ($cat5Area2->total_score >= $topCategory5->total_score) {
+                    $tempNilaiArea2 = 1;
+                }elseif ($cat5Area2->total_score < $topCategory5->total_score) {
+                    $tempNilaiArea2 = 0;
+                }
+            }else{
                 $tempNilaiArea2 = 0;
             }
             $nilaiCategori5[1] = $tempNilaiArea2;
         
-        
-            if ($cat5Area3->total_score >= $topCategory5->total_score) {
-                $tempNilaiArea3 = 1;
-            }elseif ($cat5Area3->total_score < $topCategory5->total_score) {
+            if (isset($cat5Area3)) {
+                if ($cat5Area3->total_score >= $topCategory5->total_score) {
+                    $tempNilaiArea3 = 1;
+                }elseif ($cat5Area3->total_score < $topCategory5->total_score) {
+                    $tempNilaiArea3 = 0;
+                }
+            }else{
                 $tempNilaiArea3 = 0;
             }
             $nilaiCategori5[2] = $tempNilaiArea3;
         
-        
-            if ($cat5Area4->total_score >= $topCategory5->total_score) {
-                $tempNilaiArea4 = 1;
-            }elseif ($cat5Area4->total_score < $topCategory5->total_score) {
+            if (isset($cat5Area4)) {
+                if ($cat5Area4->total_score >= $topCategory5->total_score) {
+                    $tempNilaiArea4 = 1;
+                }elseif ($cat5Area4->total_score < $topCategory5->total_score) {
+                    $tempNilaiArea4 = 0;
+                }
+            }else{
                 $tempNilaiArea4 = 0;
             }
             $nilaiCategori5[3] = $tempNilaiArea4;
@@ -322,33 +382,46 @@ class UnitScoreController extends Controller
         $cat6Area3 = UnitScore::where('area', 3)->where('category_id', 6)->orderBy('total_score','desc')->take(1)->first();
         $cat6Area4 = UnitScore::where('area', 4)->where('category_id', 6)->orderBy('total_score','desc')->take(1)->first();        
         try {
-            if ($cat6Area1->total_score >= $topCategory6->total_score) {
-                $tempNilaiArea1 = 1;
-            }elseif ($cat6Area1->total_score < $topCategory6->total_score) {
+            if (isset($cat6Area1)) {
+                if ($cat6Area1->total_score >= $topCategory6->total_score) {
+                    $tempNilaiArea1 = 1;
+                }elseif ($cat6Area1->total_score < $topCategory6->total_score) {
+                    $tempNilaiArea1 = 0;
+                }
+            }else{
                 $tempNilaiArea1 = 0;
             }
             $nilaiCategori6[0] = $tempNilaiArea1;
         
-        
-            if ($cat6Area2->total_score >= $topCategory6->total_score) {
-                $tempNilaiArea2 = 1;
-            }elseif ($cat6Area2->total_score < $topCategory6->total_score) {
+            if (isset($cat6Area2)) {
+                if ($cat6Area2->total_score >= $topCategory6->total_score) {
+                    $tempNilaiArea2 = 1;
+                }elseif ($cat6Area2->total_score < $topCategory6->total_score) {
+                    $tempNilaiArea2 = 0;
+                }
+            }else{
                 $tempNilaiArea2 = 0;
             }
             $nilaiCategori6[1] = $tempNilaiArea2;
         
-        
-            if ($cat6Area3->total_score >= $topCategory6->total_score) {
-                $tempNilaiArea3 = 1;
-            }elseif ($cat6Area3->total_score < $topCategory6->total_score) {
+            if (isset($cat6Area3)) {
+                if ($cat6Area3->total_score >= $topCategory6->total_score) {
+                    $tempNilaiArea3 = 1;
+                }elseif ($cat6Area3->total_score < $topCategory6->total_score) {
+                    $tempNilaiArea3 = 0;
+                }
+            }else{
                 $tempNilaiArea3 = 0;
             }
             $nilaiCategori6[2] = $tempNilaiArea3;
         
-        
-            if ($cat6Area4->total_score >= $topCategory6->total_score) {
-                $tempNilaiArea4 = 1;
-            }elseif ($cat6Area4->total_score < $topCategory6->total_score) {
+            if (isset($cat6Area4)) {
+                if ($cat6Area4->total_score >= $topCategory6->total_score) {
+                    $tempNilaiArea4 = 1;
+                }elseif ($cat6Area4->total_score < $topCategory6->total_score) {
+                    $tempNilaiArea4 = 0;
+                }
+            }else{
                 $tempNilaiArea4 = 0;
             }
             $nilaiCategori6[3] = $tempNilaiArea4;
@@ -367,33 +440,46 @@ class UnitScoreController extends Controller
         $cat7Area3 = UnitScore::where('area', 3)->where('category_id', 7)->orderBy('total_score','desc')->take(1)->first();
         $cat7Area4 = UnitScore::where('area', 4)->where('category_id', 7)->orderBy('total_score','desc')->take(1)->first();        
         try {
-            if ($cat7Area1->total_score >= $topCategory7->total_score) {
-                $tempNilaiArea1 = 1;
-            }elseif ($cat7Area1->total_score < $topCategory7->total_score) {
+            if (isset($cat7Area1)) {
+                if ($cat7Area1->total_score >= $topCategory7->total_score) {
+                    $tempNilaiArea1 = 1;
+                }elseif ($cat7Area1->total_score < $topCategory7->total_score) {
+                    $tempNilaiArea1 = 0;
+                }
+            }else{
                 $tempNilaiArea1 = 0;
             }
             $nilaiCategori7[0] = $tempNilaiArea1;
         
-        
-            if ($cat7Area2->total_score >= $topCategory7->total_score) {
-                $tempNilaiArea2 = 1;
-            }elseif ($cat7Area2->total_score < $topCategory7->total_score) {
+            if (isset($cat7Area2)) {
+                if ($cat7Area2->total_score >= $topCategory7->total_score) {
+                    $tempNilaiArea2 = 1;
+                }elseif ($cat7Area2->total_score < $topCategory7->total_score) {
+                    $tempNilaiArea2 = 0;
+                }
+            }else{
                 $tempNilaiArea2 = 0;
             }
             $nilaiCategori7[1] = $tempNilaiArea2;
         
-        
-            if ($cat7Area3->total_score >= $topCategory7->total_score) {
-                $tempNilaiArea3 = 1;
-            }elseif ($cat7Area3->total_score < $topCategory7->total_score) {
+            if (isset($cat7Area3)) {
+                if ($cat7Area3->total_score >= $topCategory7->total_score) {
+                    $tempNilaiArea3 = 1;
+                }elseif ($cat7Area3->total_score < $topCategory7->total_score) {
+                    $tempNilaiArea3 = 0;
+                }
+            }else{
                 $tempNilaiArea3 = 0;
             }
             $nilaiCategori7[2] = $tempNilaiArea3;
         
-        
-            if ($cat7Area4->total_score >= $topCategory7->total_score) {
-                $tempNilaiArea4 = 1;
-            }elseif ($cat7Area4->total_score < $topCategory7->total_score) {
+            if (isset($cat7Area4)) {
+                if ($cat7Area4->total_score >= $topCategory7->total_score) {
+                    $tempNilaiArea4 = 1;
+                }elseif ($cat7Area4->total_score < $topCategory7->total_score) {
+                    $tempNilaiArea4 = 0;
+                }
+            }else{
                 $tempNilaiArea4 = 0;
             }
             $nilaiCategori7[3] = $tempNilaiArea4;
@@ -411,33 +497,46 @@ class UnitScoreController extends Controller
         $cat8Area3 = UnitScore::where('area', 3)->where('category_id', 8)->orderBy('total_score','desc')->take(1)->first();
         $cat8Area4 = UnitScore::where('area', 4)->where('category_id', 8)->orderBy('total_score','desc')->take(1)->first();        
         try {
-            if ($cat8Area1->total_score >= $topCategory8->total_score) {
-                $tempNilaiArea1 = 1;
-            }elseif ($cat8Area1->total_score < $topCategory8->total_score) {
+            if (isset($cat8Area1)) {
+                if ($cat8Area1->total_score >= $topCategory8->total_score) {
+                    $tempNilaiArea1 = 1;
+                }elseif ($cat8Area1->total_score < $topCategory8->total_score) {
+                    $tempNilaiArea1 = 0;
+                }
+            }else{
                 $tempNilaiArea1 = 0;
             }
             $nilaiCategori8[0] = $tempNilaiArea1;
         
-        
-            if ($cat8Area2->total_score >= $topCategory8->total_score) {
-                $tempNilaiArea2 = 1;
-            }elseif ($cat8Area2->total_score < $topCategory8->total_score) {
+            if (isset($cat8Area2)) {
+                if ($cat8Area2->total_score >= $topCategory8->total_score) {
+                    $tempNilaiArea2 = 1;
+                }elseif ($cat8Area2->total_score < $topCategory8->total_score) {
+                    $tempNilaiArea2 = 0;
+                }
+            }else{
                 $tempNilaiArea2 = 0;
             }
             $nilaiCategori8[1] = $tempNilaiArea2;
         
-        
-            if ($cat8Area3->total_score >= $topCategory8->total_score) {
-                $tempNilaiArea3 = 1;
-            }elseif ($cat8Area3->total_score < $topCategory8->total_score) {
+            if (isset($cat8Area3)) {
+                if ($cat8Area3->total_score >= $topCategory8->total_score) {
+                    $tempNilaiArea3 = 1;
+                }elseif ($cat8Area3->total_score < $topCategory8->total_score) {
+                    $tempNilaiArea3 = 0;
+                }
+            }else{
                 $tempNilaiArea3 = 0;
             }
             $nilaiCategori8[2] = $tempNilaiArea3;
         
-        
-            if ($cat8Area4->total_score >= $topCategory8->total_score) {
-                $tempNilaiArea4 = 1;
-            }elseif ($cat8Area4->total_score < $topCategory8->total_score) {
+            if (isset($cat8Area4)) {
+                if ($cat8Area4->total_score >= $topCategory8->total_score) {
+                    $tempNilaiArea4 = 1;
+                }elseif ($cat8Area4->total_score < $topCategory8->total_score) {
+                    $tempNilaiArea4 = 0;
+                }
+            }else{
                 $tempNilaiArea4 = 0;
             }
             $nilaiCategori8[3] = $tempNilaiArea4;
@@ -455,33 +554,46 @@ class UnitScoreController extends Controller
         $cat9Area3 = UnitScore::where('area', 3)->where('category_id', 9)->orderBy('total_score','desc')->take(1)->first();
         $cat9Area4 = UnitScore::where('area', 4)->where('category_id', 9)->orderBy('total_score','desc')->take(1)->first();        
         try {
-            if ($cat9Area1->total_score <= $topCategory9->total_score) {
-                $tempNilaiArea1 = 1;
-            }elseif ($cat9Area1->total_score < $topCategory9->total_score) {
+            if (isset($cat9Area1)) {
+                if ($cat9Area1->total_score <= $topCategory9->total_score) {
+                    $tempNilaiArea1 = 1;
+                }elseif ($cat9Area1->total_score < $topCategory9->total_score) {
+                    $tempNilaiArea1 = 0;
+                }
+            }else{
                 $tempNilaiArea1 = 0;
             }
             $nilaiCategori9[0] = $tempNilaiArea1;
         
-        
-            if ($cat9Area2->total_score >= $topCategory9->total_score) {
-                $tempNilaiArea2 = 1;
-            }elseif ($cat9Area2->total_score < $topCategory9->total_score) {
+            if (isset($cat9Area2)) {
+                if ($cat9Area2->total_score >= $topCategory9->total_score) {
+                    $tempNilaiArea2 = 1;
+                }elseif ($cat9Area2->total_score < $topCategory9->total_score) {
+                    $tempNilaiArea2 = 0;
+                }
+            }else{
                 $tempNilaiArea2 = 0;
             }
             $nilaiCategori9[1] = $tempNilaiArea2;
         
-        
-            if ($cat9Area3->total_score >= $topCategory9->total_score) {
-                $tempNilaiArea3 = 1;
-            }elseif ($cat9Area3->total_score < $topCategory9->total_score) {
+            if (isset($cat9Area3)) {
+                if ($cat9Area3->total_score >= $topCategory9->total_score) {
+                    $tempNilaiArea3 = 1;
+                }elseif ($cat9Area3->total_score < $topCategory9->total_score) {
+                    $tempNilaiArea3 = 0;
+                }
+            }else{
                 $tempNilaiArea3 = 0;
             }
             $nilaiCategori9[2] = $tempNilaiArea3;
         
-        
-            if ($cat9Area4->total_score >= $topCategory9->total_score) {
-                $tempNilaiArea4 = 1;
-            }elseif ($cat9Area4->total_score < $topCategory9->total_score) {
+            if (isset($cat9Area4)) {
+                if ($cat9Area4->total_score >= $topCategory9->total_score) {
+                    $tempNilaiArea4 = 1;
+                }elseif ($cat9Area4->total_score < $topCategory9->total_score) {
+                    $tempNilaiArea4 = 0;
+                }
+            }else{
                 $tempNilaiArea4 = 0;
             }
             $nilaiCategori9[3] = $tempNilaiArea4;
@@ -499,34 +611,46 @@ class UnitScoreController extends Controller
         $cat10Area3 = UnitScore::where('area', 3)->where('category_id', 10)->orderBy('total_score','desc')->take(1)->first();
         $cat10Area4 = UnitScore::where('area', 4)->where('category_id', 10)->orderBy('total_score','desc')->take(1)->first();
         try {
-
-            if ($cat10Area1->total_score <= $topCategory10->total_score) {
-                $tempNilaiArea1 = 1;
-            }elseif ($cat10Area1->total_score < $topCategory10->total_score) {
+            if (isset($cat10Area1)) {
+                if ($cat10Area1->total_score <= $topCategory10->total_score) {
+                    $tempNilaiArea1 = 1;
+                }elseif ($cat10Area1->total_score < $topCategory10->total_score) {
+                    $tempNilaiArea1 = 0;
+                }
+            }else{
                 $tempNilaiArea1 = 0;
             }
             $nilaiCategori10[0] = $tempNilaiArea1;
         
-        
-            if ($cat10Area2->total_score >= $topCategory10->total_score) {
-                $tempNilaiArea2 = 1;
-            }elseif ($cat10Area2->total_score < $topCategory10->total_score) {
+            if (isset($cat10Area2)) {
+                if ($cat10Area2->total_score >= $topCategory10->total_score) {
+                    $tempNilaiArea2 = 1;
+                }elseif ($cat10Area2->total_score < $topCategory10->total_score) {
+                    $tempNilaiArea2 = 0;
+                }
+            }else{
                 $tempNilaiArea2 = 0;
             }
             $nilaiCategori10[1] = $tempNilaiArea2;
         
-        
-            if ($cat10Area3->total_score >= $topCategory10->total_score) {
-                $tempNilaiArea3 = 1;
-            }elseif ($cat10Area3->total_score < $topCategory10->total_score) {
+            if (isset($cat10Area3)) {
+                if ($cat10Area3->total_score >= $topCategory10->total_score) {
+                    $tempNilaiArea3 = 1;
+                }elseif ($cat10Area3->total_score < $topCategory10->total_score) {
+                    $tempNilaiArea3 = 0;
+                }
+            }else{
                 $tempNilaiArea3 = 0;
             }
             $nilaiCategori10[2] = $tempNilaiArea3;
         
-        
-            if ($cat10Area4->total_score >= $topCategory10->total_score) {
-                $tempNilaiArea4 = 1;
-            }elseif ($cat10Area4->total_score < $topCategory10->total_score) {
+            if (isset($cat10Area4)) {
+                if ($cat10Area4->total_score >= $topCategory10->total_score) {
+                    $tempNilaiArea4 = 1;
+                }elseif ($cat10Area4->total_score < $topCategory10->total_score) {
+                    $tempNilaiArea4 = 0;
+                }
+            }else{
                 $tempNilaiArea4 = 0;
             }
             $nilaiCategori10[3] = $tempNilaiArea4;
