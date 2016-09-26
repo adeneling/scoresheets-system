@@ -776,13 +776,15 @@ class UnitScoreController extends Controller
         //return $walkInWinnerResult;
         $walkInWinnerResultValue = max($walkInWinnerResult);
         if (array_search(max($walkInWinnerResult), $walkInWinnerResult) == 0) {
-            $walkInWinnerName = "AREA 1";
+            $walkInWinnerName = 1;
         }elseif (array_search(max($walkInWinnerResult), $walkInWinnerResult) == 1) {
-            $walkInWinnerName = "AREA 2";
+            $walkInWinnerName = 2;
         }elseif (array_search(max($walkInWinnerResult), $walkInWinnerResult) == 2) {
-            $walkInWinnerName = "AREA 3";
+            $walkInWinnerName = 3;
         }elseif (array_search(max($walkInWinnerResult), $walkInWinnerResult) == 3) {
-            $walkInWinnerName = "AREA 4";
+            $walkInWinnerName = 4;
+        }else{
+            $walkInWinnerName = 0;
         }
 
         /* CALL CENTER */
@@ -876,13 +878,15 @@ class UnitScoreController extends Controller
         $callCenterWinnerResult[3] = array_sum($callCenterWinnerArea4);
         $callCenterWinnerResultValue = max($callCenterWinnerResult);
         if (array_search(max($callCenterWinnerResult), $callCenterWinnerResult) == 0) {
-            $callCenterWinnerName = "AREA 1";
+            $callCenterWinnerName = 1;
         }elseif (array_search(max($callCenterWinnerResult), $callCenterWinnerResult) == 1) {
-            $callCenterWinnerName = "AREA 2";
+            $callCenterWinnerName = 2;
         }elseif (array_search(max($callCenterWinnerResult), $callCenterWinnerResult) == 2) {
-            $callCenterWinnerName = "AREA 3";
+            $callCenterWinnerName = 3;
         }elseif (array_search(max($callCenterWinnerResult), $callCenterWinnerResult) == 3) {
-            $callCenterWinnerName = "AREA 4";
+            $callCenterWinnerName = 4;
+        }else{
+            $callCenterWinnerName = 0;
         }
 
         /*BEST AREA*/
@@ -1150,13 +1154,15 @@ class UnitScoreController extends Controller
 
         $bestAreaWinnerResultValue = max($bestAreaResult);
         if (array_search(max($bestAreaResult), $bestAreaResult) == 0) {
-            $bestAreaWinnerName = "AREA 1";
+            $bestAreaWinnerName = 1;
         }elseif (array_search(max($bestAreaResult), $bestAreaResult) == 1) {
-            $bestAreaWinnerName = "AREA 2";
+            $bestAreaWinnerName = 2;
         }elseif (array_search(max($bestAreaResult), $bestAreaResult) == 2) {
-            $bestAreaWinnerName = "AREA 3";
+            $bestAreaWinnerName = 3;
         }elseif (array_search(max($bestAreaResult), $bestAreaResult) == 3) {
-            $bestAreaWinnerName = "AREA 4";
+            $bestAreaWinnerName = 4;
+        }else{
+            $bestAreaWinnerName = 0;
         }
 
         /*echo "WALK IN ";
@@ -1234,8 +1240,7 @@ class UnitScoreController extends Controller
         print_r($bestAreaResult);
         echo "<br>";
         echo $bestAreaWinnerName . " IS THE WINNER - ". $bestAreaWinnerResultValue . "% VALUE";
-        echo "<br>";   */   
-        
+        echo "<br>";   */        
 
         $data = array(
             /* data per rows */

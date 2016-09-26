@@ -75,8 +75,10 @@
 			<div class="x_content">
 				<div class="animated flipInY col-lg-12">
 					<div class="tile-stats">
-						<center>								
-								<h1>{{ $walkInWinnerName . ' IS THE WALK IN WINNER - ' . $walkInWinnerResultValue . '% COEFFICIENT'}}</h1>
+						<center>
+							@if($walkInWinnerResultValue != 0)
+								<h1>{{ 'AREA ' . $walkInWinnerName . ' IS THE WALK IN WINNER - ' . $walkInWinnerResultValue . '% COEFFICIENT'}}</h1>
+							@endif
 						</center>
 					</div>
 				</div>
@@ -145,8 +147,10 @@
 			<div class="x_content">
 				<div class="animated flipInY col-lg-12">
 					<div class="tile-stats">
-						<center>								
-								<h1>{{ $callCenterWinnerName . ' IS THE CALL CENTER WINNER - ' . $callCenterWinnerResultValue . '% COEFFICIENT'}}</h1>
+						<center>
+							@if($callCenterWinnerResultValue != 0)
+								<h1>{{ 'AREA ' . $callCenterWinnerName . ' IS THE CALL CENTER WINNER - ' . $callCenterWinnerResultValue . '% COEFFICIENT'}}</h1>
+							@endif
 						</center>
 					</div>
 				</div>
@@ -208,8 +212,10 @@
 			<div class="x_content">
 				<div class="animated flipInY col-lg-12">
 					<div class="tile-stats">
-						<center>								
-								<h1>{{ $bestAreaWinnerName . ' IS THE BEST AREA WINNER - ' . $bestAreaWinnerResultValue . '% COEFFICIENT'}}</h1>
+						<center>
+							@if($bestAreaWinnerResultValue != 0)
+								<h1>{{ 'AREA ' . $bestAreaWinnerName . ' IS THE BEST AREA WINNER - ' . $bestAreaWinnerResultValue . '% COEFFICIENT'}}</h1>
+							@endif
 						</center>
 					</div>
 				</div>
@@ -303,6 +309,13 @@
 							<td>{{ $nilaiCategori10[1]==1 ? 'JUARA 1' : ''}}</td>
 							<td>{{ $nilaiCategori10[2]==1 ? 'JUARA 1' : ''}}</td>
 							<td>{{ $nilaiCategori10[3]==1 ? 'JUARA 1' : ''}}</td>
+						</tr>
+						<tr >
+							<th colspan="2">TOTAL</th>
+							<th>{{ $bestAreaResult[0] }}</th>
+							<th>{{ $bestAreaResult[1] }}</th>
+							<th>{{ $bestAreaResult[2] }}</th>
+							<th>{{ $bestAreaResult[3] }}</th>
 						</tr>
 					</tbody>
 				</table>

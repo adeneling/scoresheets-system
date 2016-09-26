@@ -13,6 +13,7 @@
 /* FRONTEND */
 Route::group(['namespace' => 'Frontend'], function(){
 	Route::get('/', 'HomeController@index');
+	Route::get('bestcs/login', 'FrontendController@login');
 });
 /* BACKEND */
 Route::group(['namespace' => 'Backend'], function(){
