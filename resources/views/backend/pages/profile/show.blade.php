@@ -20,7 +20,6 @@
                         </div>
                     </div>
                     <h3>{{ $user->name }}</h3>
-
                     <ul class="list-unstyled user_data">
                         <li><i class="fa fa-map-marker user-profile-icon"></i> Location: {{ $user->city }} </li>
                         <li><i class="fa fa-child user-profile-icon"></i> NIK: {{ $user->nik }} </li>
@@ -130,5 +129,6 @@
             </div>
         </div>
     </div>
+</div>
 @endsection
 

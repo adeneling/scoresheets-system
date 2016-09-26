@@ -70,13 +70,6 @@
                         <div class="subscribe ac anim fadeInUp s01 delay-0-8s">
                             <form class="subscription-form clear form-field-wrapper" role="form" method="POST" action="{{ url('/checking') }}">
                                 {{ csrf_field() }}
-                                <input type="text" class="form-control error" name="name" required="required" placeholder="Enter your Name">
-                                @if ($errors->has('name'))
-                                    <span class="help-block">
-                                        <strong><font color="red">{{ $errors->first('name') }}</font></strong>
-                                    </span>
-                                @endif
-                                <br>                                
                                 <input type="text" class="form-control error" name="nik" required="required" placeholder="Enter your NIK">
                                 @if ($errors->has('nik'))
                                     <span class="help-block">

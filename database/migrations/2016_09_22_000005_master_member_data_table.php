@@ -27,6 +27,8 @@ class MasterMemberDataTable extends Migration
             $table->string('region')->nullable();
             $table->integer('area')->nullable();
             $table->string('email')->nullable();
+            $table->string('picture')->nullable();
+            $table->string('selection_date')->nullable();
             $table->string('size_poloshirt')->nullable();
             $table->string('birth_place')->nullable();
             $table->string('birthday')->nullable();

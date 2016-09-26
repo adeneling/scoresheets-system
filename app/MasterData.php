@@ -25,5 +25,6 @@ class MasterData extends Model
         'birth_place',
         'birthday',
         'join_date',
+        'selection_date',
     ];
 }

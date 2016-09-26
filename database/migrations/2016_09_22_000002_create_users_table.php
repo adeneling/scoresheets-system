@@ -21,7 +21,6 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->string('birthday')->nullable();
             $table->string('about_me')->nullable();
-            $table->string('picture')->nullable();
             $table->string('gender')->nullable();
             $table->string('work_location')->nullable();
             $table->string('city')->nullable();
@@ -30,13 +29,15 @@ class CreateUsersTable extends Migration
             $table->string('job_function')->nullable();
             $table->string('mobile_phone')->nullable();
             $table->string('bank_account')->nullable();
+            $table->string('selection_date')->nullable();
             $table->string('twitter')->nullable();
             $table->string('facebook')->nullable();
             $table->string('instagram')->nullable();
             $table->string('notes')->nullable();
             $table->string('presentation_file')->nullable();
             $table->string('qrfield')->nullable();
-            $table->boolean('judged')->nullable();
+            $table->string('picture')->nullable();
+            $table->integer('judged')->nullable();
             $table->boolean('has_checked_in')->nullable();            
             $table->boolean('activated')->nullable();
             /* FOREIGN KEY */

@@ -35,6 +35,7 @@ class User extends Authenticatable
         'region',
         'job_function',
         'mobile_phone',
+        'selection_date',
         'bank_account',
         'twitter',
         'facebook',
@@ -45,6 +46,7 @@ class User extends Authenticatable
         'judged',
         'has_checked_in',
         'activated',
+        'picture',
     ];
 
     /**
