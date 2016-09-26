@@ -275,7 +275,7 @@
 
 <div class="form-group">
 	<center>
-        <button type="submit" class="btn btn-danger">{{ isset($user) ? 'Ubah Data' : 'Daftar'}}</button> 
+        <button type="submit" class="btn btn-danger">{{ isset($user) ? 'Ubah Data' : 'Daftar'}}</button>
         @if(isset($user))
         | <a href="{{ url('/home') }}" class="btn btn-primary">Kembali</a>
         @endif
