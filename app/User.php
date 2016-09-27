@@ -22,7 +22,6 @@ class User extends Authenticatable
     protected $fillable = [
         'nik',
         'name',
-        'birthday',
         'about_me',
         'picture',
         'gender',
@@ -36,8 +35,8 @@ class User extends Authenticatable
         'job_function',
         'mobile_phone',
         'selection_date',
-        'birth_place',
         'birthday',
+        'birth_place',
         'bank_account',
         'twitter',
         'facebook',
@@ -50,7 +49,6 @@ class User extends Authenticatable
         'judged',
         'has_checked_in',
         'activated',
-        'picture',
     ];
 
     /**

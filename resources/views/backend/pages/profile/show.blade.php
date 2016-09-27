@@ -16,7 +16,7 @@
                     <div class="profile_img">
                         <div id="crop-avatar">
                             <!-- Current avatar -->
-                            <img class="img-responsive avatar-view" src="{{ asset('backend/images/picture.png') }}" alt="Avatar" title="Change the avatar">
+                            <img class="img-responsive avatar-view" src="{{ asset('img/' . ($participant->picture != null ? $participant->picture : 'picture.png' )) }}" alt="Avatar" title="Change the avatar">
                         </div>
                     </div>
                     <h3>{{ $user->name }}</h3>
@@ -114,10 +114,6 @@
                                         <tr>
                                             <td>Presentation File</td>
                                             <td>{{ $user->presentation_file }}</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Status</td>
-                                            <td>{{ $user->activated == 1 ? 'active' : 'non-active' }}</td>
                                         </tr>
                                     </tbody>
                                 </table>

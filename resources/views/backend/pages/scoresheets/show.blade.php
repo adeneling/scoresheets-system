@@ -17,13 +17,23 @@
 					<div class="profile_img">
 						<div id="crop-avatar">
 							<!-- Current avatar -->
-							<img class="img-responsive avatar-view" src="{{ asset('backend/images/picture.png') }}" alt="Avatar" title="Change the avatar">
+							<img class="img-responsive avatar-view" src="{{ asset('img/' . ($scoresheet->user->picture != null ? $scoresheet->user->picture : 'picture.png' )) }}" alt="Avatar" title="Change the avatar">
 						</div>
 					</div>
 					<h3>{{ $scoresheet->user->name }}</h3>
 
 					<ul class="list-unstyled user_data">
-						<li><a href="#" class="btn btn-danger">Presentation file</a></li>
+						<li>
+							@if($scoresheet->user->presentation_file != null)
+                                <td>
+                                    <a href="{{ asset('files/'. Auth::user()->presentation_file) }}" class="btn btn-danger" target="_blank">File Presentation</a>
+                                </td>
+                            @else
+                                <td>
+                                    <a href="#" class="btn btn-danger" >Presentasi belum ada</a>
+                                </td>
+                            @endif
+                        </li>
 						<li>City: {{ $scoresheet->user->city }}</li>
 						<li>Category: {{ $scoresheet->user->category->name }}</li>
 						<li>Area: {{ $scoresheet->user->area }}</li>

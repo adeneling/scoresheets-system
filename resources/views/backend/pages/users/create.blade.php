@@ -13,7 +13,7 @@
 			</div>
 			<div class="x_content">
 				<!-- start form for validation -->
-				{!! Form::open(['url' => 'users','class' =>'form-horizontal form-label-left']) !!}
+				{!! Form::open(['url' => 'users','class' =>'form-horizontal form-label-left','files'=> true]) !!}
 				{{ csrf_field() }}
 					@include('backend.pages.users._form')
 				{!! Form::close() !!}

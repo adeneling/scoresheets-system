@@ -20,8 +20,8 @@
                 <label for="radio1">1</label>
             </div>
             <div class="funkyradio-danger">
-                <input type="radio" name="presentation_material" value="2" id="radio3" />
-                <label for="radio3">2</label>
+                <input type="radio" name="presentation_material" value="2" id="radio2" />
+                <label for="radio2">2</label>
             </div>
             <div class="funkyradio-danger">
                 <input type="radio" name="presentation_material" value="3" id="radio3" />

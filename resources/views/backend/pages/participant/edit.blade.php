@@ -16,10 +16,16 @@
 					<div class="profile_img">
 						<div id="crop-avatar">
 							<!-- Current avatar -->
-							<img class="img-responsive avatar-view" src="{{ asset('backend/images/picture.png') }}" alt="Avatar" title="Change the avatar">
+							<img class="img-responsive avatar-view" src="{{ asset('img/' . ($participant->picture != null ? $participant->picture : 'picture.png' )) }}" alt="Avatar" title="Change the avatar">
 						</div>
 						<h3><center>{{ $participant->name }}</center></h3>
-						<center><a href="#" class="btn btn-danger" target="_blank">Presentation file</a></center>
+						<center>
+							@if($participant->presentation_file != null)
+                                <a href="{{ asset('files/'. Auth::user()->presentation_file) }}" class="btn btn-danger" target="_blank">Presentation File</a>
+                            @else
+                                <a href="#" class="btn btn-danger" >Presentasi belum ada</a>
+                            @endif
+                        </center>
 					</div>
 				</div>
 				<div class="col-md-2">

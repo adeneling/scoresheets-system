@@ -13,7 +13,7 @@
 			</div>
 			<div class="x_content">
 				<!-- start form for validation -->
-				{!! Form::model($user, ['route' => ['users.update', $user],'method' =>'put','role'=>'form','class'=>'form-horizontal form-label-left'])!!}
+				{!! Form::model($user, ['route' => ['users.update', $user],'method' =>'put','files'=>true,'role'=>'form','class'=>'form-horizontal form-label-left'])!!}
         			{!! csrf_field() !!}
 					@include('backend.pages.users._form')
 				{!! Form::close() !!}
