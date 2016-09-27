@@ -118,7 +118,7 @@ class UnitScoreController extends Controller
                     $tempNilaiArea2Temp = 0;
                 }                
             }else{
-                $tempNilaiArea1Temp = 0;
+                $tempNilaiArea2Temp = 0;
             }
             $nilaiCategori1[1] = $tempNilaiArea2Temp;
             if (isset($cat1Area3)) {
@@ -141,27 +141,36 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori1[3] = $tempNilaiArea4Temp;
-            if ($nilaiCategori1[0] >= max($nilaiCategori1)) {
-                $nilaiCategori1[0] = 1;
-                $nilaiCategori1[1] = 0;
-                $nilaiCategori1[2] = 0;
-                $nilaiCategori1[3] = 0;
-            }elseif ($nilaiCategori1[1] >= max($nilaiCategori1)) {
-                $nilaiCategori1[0] = 0;
-                $nilaiCategori1[1] = 1;
-                $nilaiCategori1[2] = 0;
-                $nilaiCategori1[3] = 0;
-            }if ($nilaiCategori1[2] >= max($nilaiCategori1)) {
-                $nilaiCategori1[0] = 0;
-                $nilaiCategori1[1] = 0;
-                $nilaiCategori1[2] = 1;
-                $nilaiCategori1[3] = 0;
-            }elseif ($nilaiCategori1[3] >= max($nilaiCategori1)) {
+
+            if ($nilaiCategori1[0] == 0 && $nilaiCategori1[1] == 0 && $nilaiCategori1[2] == 0 && $nilaiCategori1[3] == 0) {
                 $nilaiCategori1[0] = 0;
                 $nilaiCategori1[1] = 0;
                 $nilaiCategori1[2] = 0;
-                $nilaiCategori1[3] = 1;
+                $nilaiCategori1[3] = 0;
+            }else{
+                if ($nilaiCategori1[0] >= max($nilaiCategori1)) {
+                    $nilaiCategori1[0] = 1;
+                    $nilaiCategori1[1] = 0;
+                    $nilaiCategori1[2] = 0;
+                    $nilaiCategori1[3] = 0;
+                }elseif ($nilaiCategori1[1] >= max($nilaiCategori1)) {
+                    $nilaiCategori1[0] = 0;
+                    $nilaiCategori1[1] = 1;
+                    $nilaiCategori1[2] = 0;
+                    $nilaiCategori1[3] = 0;
+                }if ($nilaiCategori1[2] >= max($nilaiCategori1)) {
+                    $nilaiCategori1[0] = 0;
+                    $nilaiCategori1[1] = 0;
+                    $nilaiCategori1[2] = 1;
+                    $nilaiCategori1[3] = 0;
+                }elseif ($nilaiCategori1[3] >= max($nilaiCategori1)) {
+                    $nilaiCategori1[0] = 0;
+                    $nilaiCategori1[1] = 0;
+                    $nilaiCategori1[2] = 0;
+                    $nilaiCategori1[3] = 1;
+                }
             }
+            
             
             
         } catch (Exception $e) {
@@ -221,27 +230,35 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori2[3] = $tempNilaiArea4Temp;
-            if ($nilaiCategori2[0] >= max($nilaiCategori2)) {
-                $nilaiCategori2[0] = 1;
-                $nilaiCategori2[1] = 0;
-                $nilaiCategori2[2] = 0;
-                $nilaiCategori2[3] = 0;
-            }elseif ($nilaiCategori2[1] >= max($nilaiCategori2)) {
-                $nilaiCategori2[0] = 0;
-                $nilaiCategori2[1] = 1;
-                $nilaiCategori2[2] = 0;
-                $nilaiCategori2[3] = 0;
-            }if ($nilaiCategori2[2] >= max($nilaiCategori2)) {
-                $nilaiCategori2[0] = 0;
-                $nilaiCategori2[1] = 0;
-                $nilaiCategori2[2] = 1;
-                $nilaiCategori2[3] = 0;
-            }elseif ($nilaiCategori2[3] >= max($nilaiCategori2)) {
+            if ($nilaiCategori2[0] == 0 && $nilaiCategori2[1] == 0 && $nilaiCategori2[2] == 0 && $nilaiCategori2[3] == 0) {
                 $nilaiCategori2[0] = 0;
                 $nilaiCategori2[1] = 0;
                 $nilaiCategori2[2] = 0;
-                $nilaiCategori2[3] = 1;
+                $nilaiCategori2[3] = 0;
+            }else{
+                if ($nilaiCategori2[0] >= max($nilaiCategori2)) {
+                    $nilaiCategori2[0] = 1;
+                    $nilaiCategori2[1] = 0;
+                    $nilaiCategori2[2] = 0;
+                    $nilaiCategori2[3] = 0;
+                }elseif ($nilaiCategori2[1] >= max($nilaiCategori2)) {
+                    $nilaiCategori2[0] = 0;
+                    $nilaiCategori2[1] = 1;
+                    $nilaiCategori2[2] = 0;
+                    $nilaiCategori2[3] = 0;
+                }if ($nilaiCategori2[2] >= max($nilaiCategori2)) {
+                    $nilaiCategori2[0] = 0;
+                    $nilaiCategori2[1] = 0;
+                    $nilaiCategori2[2] = 1;
+                    $nilaiCategori2[3] = 0;
+                }elseif ($nilaiCategori2[3] >= max($nilaiCategori2)) {
+                    $nilaiCategori2[0] = 0;
+                    $nilaiCategori2[1] = 0;
+                    $nilaiCategori2[2] = 0;
+                    $nilaiCategori2[3] = 1;
+                }
             }
+            
             
         } catch (Exception $e) {
             $nilaiCategori2[0] = 0;
@@ -301,26 +318,33 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori3[3] = $tempNilaiArea4Temp;
-            if ($nilaiCategori3[0] >= max($nilaiCategori3)) {
-                $nilaiCategori3[0] = 1;
-                $nilaiCategori3[1] = 0;
-                $nilaiCategori3[2] = 0;
-                $nilaiCategori3[3] = 0;
-            }elseif ($nilaiCategori3[1] >= max($nilaiCategori3)) {
-                $nilaiCategori3[0] = 0;
-                $nilaiCategori3[1] = 1;
-                $nilaiCategori3[2] = 0;
-                $nilaiCategori3[3] = 0;
-            }if ($nilaiCategori3[2] >= max($nilaiCategori3)) {
-                $nilaiCategori3[0] = 0;
-                $nilaiCategori3[1] = 0;
-                $nilaiCategori3[2] = 1;
-                $nilaiCategori3[3] = 0;
-            }elseif ($nilaiCategori3[3] >= max($nilaiCategori3)) {
+            if ($nilaiCategori3[0] == 0 && $nilaiCategori3[1] == 0 && $nilaiCategori3[2] == 0 && $nilaiCategori3[3] == 0) {
                 $nilaiCategori3[0] = 0;
                 $nilaiCategori3[1] = 0;
                 $nilaiCategori3[2] = 0;
-                $nilaiCategori3[3] = 1;
+                $nilaiCategori3[3] = 0;
+            }else{
+                if ($nilaiCategori3[0] >= max($nilaiCategori3)) {
+                    $nilaiCategori3[0] = 1;
+                    $nilaiCategori3[1] = 0;
+                    $nilaiCategori3[2] = 0;
+                    $nilaiCategori3[3] = 0;
+                }elseif ($nilaiCategori3[1] >= max($nilaiCategori3)) {
+                    $nilaiCategori3[0] = 0;
+                    $nilaiCategori3[1] = 1;
+                    $nilaiCategori3[2] = 0;
+                    $nilaiCategori3[3] = 0;
+                }if ($nilaiCategori3[2] >= max($nilaiCategori3)) {
+                    $nilaiCategori3[0] = 0;
+                    $nilaiCategori3[1] = 0;
+                    $nilaiCategori3[2] = 1;
+                    $nilaiCategori3[3] = 0;
+                }elseif ($nilaiCategori3[3] >= max($nilaiCategori3)) {
+                    $nilaiCategori3[0] = 0;
+                    $nilaiCategori3[1] = 0;
+                    $nilaiCategori3[2] = 0;
+                    $nilaiCategori3[3] = 1;
+                }
             }
             
         } catch (Exception $e) {
@@ -378,26 +402,33 @@ class UnitScoreController extends Controller
             }
             $nilaiCategori4[3] = $tempNilaiArea4Temp;
 
-            if ($nilaiCategori4[0] >= max($nilaiCategori4)) {
-                $nilaiCategori4[0] = 1;
-                $nilaiCategori4[1] = 0;
-                $nilaiCategori4[2] = 0;
-                $nilaiCategori4[3] = 0;
-            }elseif ($nilaiCategori4[1] >= max($nilaiCategori4)) {
-                $nilaiCategori4[0] = 0;
-                $nilaiCategori4[1] = 1;
-                $nilaiCategori4[2] = 0;
-                $nilaiCategori4[3] = 0;
-            }if ($nilaiCategori4[2] >= max($nilaiCategori4)) {
-                $nilaiCategori4[0] = 0;
-                $nilaiCategori4[1] = 0;
-                $nilaiCategori4[2] = 1;
-                $nilaiCategori4[3] = 0;
-            }elseif ($nilaiCategori4[3] >= max($nilaiCategori4)) {
+            if ($nilaiCategori4[0] == 0 && $nilaiCategori4[1] == 0 && $nilaiCategori4[2] == 0 && $nilaiCategori4[3] == 0) {
                 $nilaiCategori4[0] = 0;
                 $nilaiCategori4[1] = 0;
                 $nilaiCategori4[2] = 0;
-                $nilaiCategori4[3] = 1;
+                $nilaiCategori4[3] = 0;
+            }else{
+                if ($nilaiCategori4[0] >= max($nilaiCategori4)) {
+                    $nilaiCategori4[0] = 1;
+                    $nilaiCategori4[1] = 0;
+                    $nilaiCategori4[2] = 0;
+                    $nilaiCategori4[3] = 0;
+                }elseif ($nilaiCategori4[1] >= max($nilaiCategori4)) {
+                    $nilaiCategori4[0] = 0;
+                    $nilaiCategori4[1] = 1;
+                    $nilaiCategori4[2] = 0;
+                    $nilaiCategori4[3] = 0;
+                }if ($nilaiCategori4[2] >= max($nilaiCategori4)) {
+                    $nilaiCategori4[0] = 0;
+                    $nilaiCategori4[1] = 0;
+                    $nilaiCategori4[2] = 1;
+                    $nilaiCategori4[3] = 0;
+                }elseif ($nilaiCategori4[3] >= max($nilaiCategori4)) {
+                    $nilaiCategori4[0] = 0;
+                    $nilaiCategori4[1] = 0;
+                    $nilaiCategori4[2] = 0;
+                    $nilaiCategori4[3] = 1;
+                }
             }
             
         } catch (Exception $e) {
@@ -458,26 +489,33 @@ class UnitScoreController extends Controller
             }
             $nilaiCategori5[3] = $tempNilaiArea4Temp;
 
-            if ($nilaiCategori5[0] >= max($nilaiCategori5)) {
-                $nilaiCategori5[0] = 1;
-                $nilaiCategori5[1] = 0;
-                $nilaiCategori5[2] = 0;
-                $nilaiCategori5[3] = 0;
-            }elseif ($nilaiCategori5[1] >= max($nilaiCategori5)) {
-                $nilaiCategori5[0] = 0;
-                $nilaiCategori5[1] = 1;
-                $nilaiCategori5[2] = 0;
-                $nilaiCategori5[3] = 0;
-            }if ($nilaiCategori5[2] >= max($nilaiCategori5)) {
-                $nilaiCategori5[0] = 0;
-                $nilaiCategori5[1] = 0;
-                $nilaiCategori5[2] = 1;
-                $nilaiCategori5[3] = 0;
-            }elseif ($nilaiCategori5[3] >= max($nilaiCategori5)) {
+            if ($nilaiCategori5[0] == 0 && $nilaiCategori5[1] == 0 && $nilaiCategori5[2] == 0 && $nilaiCategori5[3] == 0) {
                 $nilaiCategori5[0] = 0;
                 $nilaiCategori5[1] = 0;
                 $nilaiCategori5[2] = 0;
-                $nilaiCategori5[3] = 1;
+                $nilaiCategori5[3] = 0;
+            }else{
+                if ($nilaiCategori5[0] >= max($nilaiCategori5)) {
+                    $nilaiCategori5[0] = 1;
+                    $nilaiCategori5[1] = 0;
+                    $nilaiCategori5[2] = 0;
+                    $nilaiCategori5[3] = 0;
+                }elseif ($nilaiCategori5[1] >= max($nilaiCategori5)) {
+                    $nilaiCategori5[0] = 0;
+                    $nilaiCategori5[1] = 1;
+                    $nilaiCategori5[2] = 0;
+                    $nilaiCategori5[3] = 0;
+                }if ($nilaiCategori5[2] >= max($nilaiCategori5)) {
+                    $nilaiCategori5[0] = 0;
+                    $nilaiCategori5[1] = 0;
+                    $nilaiCategori5[2] = 1;
+                    $nilaiCategori5[3] = 0;
+                }elseif ($nilaiCategori5[3] >= max($nilaiCategori5)) {
+                    $nilaiCategori5[0] = 0;
+                    $nilaiCategori5[1] = 0;
+                    $nilaiCategori5[2] = 0;
+                    $nilaiCategori5[3] = 1;
+                }
             }
         } catch (Exception $e) {
             $nilaiCategori5[0] = 0;
@@ -537,26 +575,33 @@ class UnitScoreController extends Controller
             }
             $nilaiCategori6[3] = $tempNilaiArea4Temp;
 
-            if ($nilaiCategori6[0] >= max($nilaiCategori6)) {
-                $nilaiCategori6[0] = 1;
-                $nilaiCategori6[1] = 0;
-                $nilaiCategori6[2] = 0;
-                $nilaiCategori6[3] = 0;
-            }elseif ($nilaiCategori6[1] >= max($nilaiCategori6)) {
-                $nilaiCategori6[0] = 0;
-                $nilaiCategori6[1] = 1;
-                $nilaiCategori6[2] = 0;
-                $nilaiCategori6[3] = 0;
-            }if ($nilaiCategori6[2] >= max($nilaiCategori6)) {
-                $nilaiCategori6[0] = 0;
-                $nilaiCategori6[1] = 0;
-                $nilaiCategori6[2] = 1;
-                $nilaiCategori6[3] = 0;
-            }elseif ($nilaiCategori6[3] >= max($nilaiCategori6)) {
+            if ($nilaiCategori6[0] == 0 && $nilaiCategori6[1] == 0 && $nilaiCategori6[2] == 0 && $nilaiCategori6[3] == 0) {
                 $nilaiCategori6[0] = 0;
                 $nilaiCategori6[1] = 0;
                 $nilaiCategori6[2] = 0;
-                $nilaiCategori6[3] = 1;
+                $nilaiCategori6[3] = 0;
+            }else{
+                if ($nilaiCategori6[0] >= max($nilaiCategori6)) {
+                    $nilaiCategori6[0] = 1;
+                    $nilaiCategori6[1] = 0;
+                    $nilaiCategori6[2] = 0;
+                    $nilaiCategori6[3] = 0;
+                }elseif ($nilaiCategori6[1] >= max($nilaiCategori6)) {
+                    $nilaiCategori6[0] = 0;
+                    $nilaiCategori6[1] = 1;
+                    $nilaiCategori6[2] = 0;
+                    $nilaiCategori6[3] = 0;
+                }if ($nilaiCategori6[2] >= max($nilaiCategori6)) {
+                    $nilaiCategori6[0] = 0;
+                    $nilaiCategori6[1] = 0;
+                    $nilaiCategori6[2] = 1;
+                    $nilaiCategori6[3] = 0;
+                }elseif ($nilaiCategori6[3] >= max($nilaiCategori6)) {
+                    $nilaiCategori6[0] = 0;
+                    $nilaiCategori6[1] = 0;
+                    $nilaiCategori6[2] = 0;
+                    $nilaiCategori6[3] = 1;
+                }
             }
 
         } catch (Exception $e) {
@@ -618,27 +663,35 @@ class UnitScoreController extends Controller
             }
             $nilaiCategori7[3] = $tempNilaiArea4Temp;
 
-            if ($nilaiCategori7[0] >= max($nilaiCategori7)) {
-                $nilaiCategori7[0] = 1;
-                $nilaiCategori7[1] = 0;
-                $nilaiCategori7[2] = 0;
-                $nilaiCategori7[3] = 0;
-            }elseif ($nilaiCategori7[1] >= max($nilaiCategori7)) {
-                $nilaiCategori7[0] = 0;
-                $nilaiCategori7[1] = 1;
-                $nilaiCategori7[2] = 0;
-                $nilaiCategori7[3] = 0;
-            }if ($nilaiCategori7[2] >= max($nilaiCategori7)) {
-                $nilaiCategori7[0] = 0;
-                $nilaiCategori7[1] = 0;
-                $nilaiCategori7[2] = 1;
-                $nilaiCategori7[3] = 0;
-            }elseif ($nilaiCategori7[3] >= max($nilaiCategori7)) {
+            if ($nilaiCategori7[0] == 0 && $nilaiCategori7[1] == 0 && $nilaiCategori7[2] == 0 && $nilaiCategori7[3] == 0) {
                 $nilaiCategori7[0] = 0;
                 $nilaiCategori7[1] = 0;
                 $nilaiCategori7[2] = 0;
-                $nilaiCategori7[3] = 1;
+                $nilaiCategori7[3] = 0;
+            }else{
+                if ($nilaiCategori7[0] >= max($nilaiCategori7)) {
+                    $nilaiCategori7[0] = 1;
+                    $nilaiCategori7[1] = 0;
+                    $nilaiCategori7[2] = 0;
+                    $nilaiCategori7[3] = 0;
+                }elseif ($nilaiCategori7[1] >= max($nilaiCategori7)) {
+                    $nilaiCategori7[0] = 0;
+                    $nilaiCategori7[1] = 1;
+                    $nilaiCategori7[2] = 0;
+                    $nilaiCategori7[3] = 0;
+                }if ($nilaiCategori7[2] >= max($nilaiCategori7)) {
+                    $nilaiCategori7[0] = 0;
+                    $nilaiCategori7[1] = 0;
+                    $nilaiCategori7[2] = 1;
+                    $nilaiCategori7[3] = 0;
+                }elseif ($nilaiCategori7[3] >= max($nilaiCategori7)) {
+                    $nilaiCategori7[0] = 0;
+                    $nilaiCategori7[1] = 0;
+                    $nilaiCategori7[2] = 0;
+                    $nilaiCategori7[3] = 1;
+                }
             }
+            
         } catch (Exception $e) {
             $nilaiCategori7[0] = 0;
             $nilaiCategori7[1] = 0;
@@ -696,26 +749,33 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori8[3] = $tempNilaiArea4Temp;
-            if ($nilaiCategori8[0] >= max($nilaiCategori8)) {
-                $nilaiCategori8[0] = 1;
-                $nilaiCategori8[1] = 0;
-                $nilaiCategori8[2] = 0;
-                $nilaiCategori8[3] = 0;
-            }elseif ($nilaiCategori8[1] >= max($nilaiCategori8)) {
-                $nilaiCategori8[0] = 0;
-                $nilaiCategori8[1] = 1;
-                $nilaiCategori8[2] = 0;
-                $nilaiCategori8[3] = 0;
-            }if ($nilaiCategori8[2] >= max($nilaiCategori8)) {
-                $nilaiCategori8[0] = 0;
-                $nilaiCategori8[1] = 0;
-                $nilaiCategori8[2] = 1;
-                $nilaiCategori8[3] = 0;
-            }elseif ($nilaiCategori8[3] >= max($nilaiCategori8)) {
+            if ($nilaiCategori8[0] == 0 && $nilaiCategori8[1] == 0 && $nilaiCategori8[2] == 0 && $nilaiCategori8[3] == 0) {
                 $nilaiCategori8[0] = 0;
                 $nilaiCategori8[1] = 0;
                 $nilaiCategori8[2] = 0;
-                $nilaiCategori8[3] = 1;
+                $nilaiCategori8[3] = 0;
+            }else{
+                if ($nilaiCategori8[0] >= max($nilaiCategori8)) {
+                    $nilaiCategori8[0] = 1;
+                    $nilaiCategori8[1] = 0;
+                    $nilaiCategori8[2] = 0;
+                    $nilaiCategori8[3] = 0;
+                }elseif ($nilaiCategori8[1] >= max($nilaiCategori8)) {
+                    $nilaiCategori8[0] = 0;
+                    $nilaiCategori8[1] = 1;
+                    $nilaiCategori8[2] = 0;
+                    $nilaiCategori8[3] = 0;
+                }if ($nilaiCategori8[2] >= max($nilaiCategori8)) {
+                    $nilaiCategori8[0] = 0;
+                    $nilaiCategori8[1] = 0;
+                    $nilaiCategori8[2] = 1;
+                    $nilaiCategori8[3] = 0;
+                }elseif ($nilaiCategori8[3] >= max($nilaiCategori8)) {
+                    $nilaiCategori8[0] = 0;
+                    $nilaiCategori8[1] = 0;
+                    $nilaiCategori8[2] = 0;
+                    $nilaiCategori8[3] = 1;
+                }
             }
         } catch (Exception $e) {
             $nilaiCategori8[0] = 0;
@@ -774,26 +834,33 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori9[3] = $tempNilaiArea4Temp;
-            if ($nilaiCategori9[0] >= max($nilaiCategori9)) {
-                $nilaiCategori9[0] = 1;
-                $nilaiCategori9[1] = 0;
-                $nilaiCategori9[2] = 0;
-                $nilaiCategori9[3] = 0;
-            }elseif ($nilaiCategori9[1] >= max($nilaiCategori9)) {
-                $nilaiCategori9[0] = 0;
-                $nilaiCategori9[1] = 1;
-                $nilaiCategori9[2] = 0;
-                $nilaiCategori9[3] = 0;
-            }if ($nilaiCategori9[2] >= max($nilaiCategori9)) {
-                $nilaiCategori9[0] = 0;
-                $nilaiCategori9[1] = 0;
-                $nilaiCategori9[2] = 1;
-                $nilaiCategori9[3] = 0;
-            }elseif ($nilaiCategori9[3] >= max($nilaiCategori9)) {
+            if ($nilaiCategori9[0] == 0 && $nilaiCategori9[1] == 0 && $nilaiCategori9[2] == 0 && $nilaiCategori9[3] == 0) {
                 $nilaiCategori9[0] = 0;
                 $nilaiCategori9[1] = 0;
                 $nilaiCategori9[2] = 0;
-                $nilaiCategori9[3] = 1;
+                $nilaiCategori9[3] = 0;
+            }else{
+                if ($nilaiCategori9[0] >= max($nilaiCategori9)) {
+                    $nilaiCategori9[0] = 1;
+                    $nilaiCategori9[1] = 0;
+                    $nilaiCategori9[2] = 0;
+                    $nilaiCategori9[3] = 0;
+                }elseif ($nilaiCategori9[1] >= max($nilaiCategori9)) {
+                    $nilaiCategori9[0] = 0;
+                    $nilaiCategori9[1] = 1;
+                    $nilaiCategori9[2] = 0;
+                    $nilaiCategori9[3] = 0;
+                }if ($nilaiCategori9[2] >= max($nilaiCategori9)) {
+                    $nilaiCategori9[0] = 0;
+                    $nilaiCategori9[1] = 0;
+                    $nilaiCategori9[2] = 1;
+                    $nilaiCategori9[3] = 0;
+                }elseif ($nilaiCategori9[3] >= max($nilaiCategori9)) {
+                    $nilaiCategori9[0] = 0;
+                    $nilaiCategori9[1] = 0;
+                    $nilaiCategori9[2] = 0;
+                    $nilaiCategori9[3] = 1;
+                }
             }
         } catch (Exception $e) {
             $nilaiCategori9[0] = 0;
@@ -852,26 +919,33 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori10[3] = $tempNilaiArea4Temp;
-            if ($nilaiCategori10[0] >= max($nilaiCategori10)) {
-                $nilaiCategori10[0] = 1;
-                $nilaiCategori10[1] = 0;
-                $nilaiCategori10[2] = 0;
-                $nilaiCategori10[3] = 0;
-            }elseif ($nilaiCategori10[1] >= max($nilaiCategori10)) {
-                $nilaiCategori10[0] = 0;
-                $nilaiCategori10[1] = 1;
-                $nilaiCategori10[2] = 0;
-                $nilaiCategori10[3] = 0;
-            }if ($nilaiCategori10[2] >= max($nilaiCategori10)) {
-                $nilaiCategori10[0] = 0;
-                $nilaiCategori10[1] = 0;
-                $nilaiCategori10[2] = 1;
-                $nilaiCategori10[3] = 0;
-            }elseif ($nilaiCategori10[3] >= max($nilaiCategori10)) {
+            if ($nilaiCategori10[0] == 0 && $nilaiCategori10[1] == 0 && $nilaiCategori10[2] == 0 && $nilaiCategori10[3] == 0) {
                 $nilaiCategori10[0] = 0;
                 $nilaiCategori10[1] = 0;
                 $nilaiCategori10[2] = 0;
-                $nilaiCategori10[3] = 1;
+                $nilaiCategori10[3] = 0;
+            }else{
+                if ($nilaiCategori10[0] >= max($nilaiCategori10)) {
+                    $nilaiCategori10[0] = 1;
+                    $nilaiCategori10[1] = 0;
+                    $nilaiCategori10[2] = 0;
+                    $nilaiCategori10[3] = 0;
+                }elseif ($nilaiCategori10[1] >= max($nilaiCategori10)) {
+                    $nilaiCategori10[0] = 0;
+                    $nilaiCategori10[1] = 1;
+                    $nilaiCategori10[2] = 0;
+                    $nilaiCategori10[3] = 0;
+                }if ($nilaiCategori10[2] >= max($nilaiCategori10)) {
+                    $nilaiCategori10[0] = 0;
+                    $nilaiCategori10[1] = 0;
+                    $nilaiCategori10[2] = 1;
+                    $nilaiCategori10[3] = 0;
+                }elseif ($nilaiCategori10[3] >= max($nilaiCategori10)) {
+                    $nilaiCategori10[0] = 0;
+                    $nilaiCategori10[1] = 0;
+                    $nilaiCategori10[2] = 0;
+                    $nilaiCategori10[3] = 1;
+                }
             }
         } catch (Exception $e) {
             $nilaiCategori10[0] = 0;
@@ -883,27 +957,27 @@ class UnitScoreController extends Controller
         /* WALK IN */
         /* AREA 1*/
         if ($nilaiCategori1[0] == 1) {
-            $walkInWinnerArea1[0] = $cat1Area1->unitCategory->coeficient;
+            $walkInWinnerArea1[0] = isset($cat1Area1->unitCategory->coeficien) ? $cat1Area1->unitCategory->coeficien : 0 ;
         }else{
             $walkInWinnerArea1[0] = 0;
         }
         if ($nilaiCategori2[0] == 1) {
-            $walkInWinnerArea1[1] = $cat2Area1->unitCategory->coeficient;
+            $walkInWinnerArea1[1] = isset($cat2Area1->unitCategory->coeficient) ? $cat2Area1->unitCategory->coeficient : 0 ;
         }else{
             $walkInWinnerArea1[1] = 0;
         }
         if ($nilaiCategori3[0] == 1) {
-            $walkInWinnerArea1[2] = $cat3Area1->unitCategory->coeficient;
+            $walkInWinnerArea1[2] = isset($cat3Area1->unitCategory->coeficient) ? $cat3Area1->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea1[2] = 0;
         }
         if ($nilaiCategori4[0] == 1) {
-            $walkInWinnerArea1[3] = $cat4Area1->unitCategory->coeficient;
+            $walkInWinnerArea1[3] = isset($cat4Area1->unitCategory->coeficient) ? $cat4Area1->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea1[3] = 0;
         }
         if ($nilaiCategori5[0] == 1) {
-            $walkInWinnerArea1[4] = $cat5Area1->unitCategory->coeficient;
+            $walkInWinnerArea1[4] = isset($cat5Area1->unitCategory->coeficient) ? $cat5Area1->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea1[4] = 0;
         }
@@ -911,27 +985,27 @@ class UnitScoreController extends Controller
 
         /* AREA 2*/
         if ($nilaiCategori1[1] == 1) {
-            $walkInWinnerArea2[0] = $cat1Area2->unitCategory->coeficient;
+            $walkInWinnerArea2[0] = isset($cat1Area2->unitCategory->coeficient) ? $cat1Area2->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea2[0] = 0;
         }
         if ($nilaiCategori2[1] == 1) {
-            $walkInWinnerArea2[1] = $cat2Area2->unitCategory->coeficient;
+            $walkInWinnerArea2[1] = isset($cat2Area2->unitCategory->coeficient) ? $cat2Area2->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea2[1] = 0;
         }
         if ($nilaiCategori3[1] == 1) {
-            $walkInWinnerArea2[2] = $cat3Area2->unitCategory->coeficient;
+            $walkInWinnerArea2[2] = isset($cat3Area2->unitCategory->coeficient) ? $cat3Area2->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea2[2] = 0;
         }
         if ($nilaiCategori4[1] == 1) {
-            $walkInWinnerArea2[3] = $cat4Area2->unitCategory->coeficient;
+            $walkInWinnerArea2[3] = isset($cat4Area2->unitCategory->coeficient) ? $cat4Area2->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea2[3] = 0;
         }
         if ($nilaiCategori5[1] == 1) {
-            $walkInWinnerArea2[4] = $cat5Area2->unitCategory->coeficient;
+            $walkInWinnerArea2[4] = isset($cat5Area2->unitCategory->coeficient) ? $cat5Area2->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea2[4] = 0;
         }
@@ -939,27 +1013,27 @@ class UnitScoreController extends Controller
 
         /* AREA 3*/
         if ($nilaiCategori1[2] == 1) {
-            $walkInWinnerArea3[0] = $cat1Area3->unitCategory->coeficient;
+            $walkInWinnerArea3[0] = isset($cat1Area3->unitCategory->coeficient) ? $cat1Area3->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea3[0] = 0;
         }
         if ($nilaiCategori2[2] == 1) {
-            $walkInWinnerArea3[1] = $cat2Area3->unitCategory->coeficient;
+            $walkInWinnerArea3[1] = isset($cat2Area3->unitCategory->coeficient) ? $cat2Area3->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea3[1] = 0;
         }
         if ($nilaiCategori3[2] == 1) {
-            $walkInWinnerArea3[2] = $cat3Area3->unitCategory->coeficient;
+            $walkInWinnerArea3[2] = isset($cat3Area3->unitCategory->coeficient) ? $cat3Area3->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea3[2] = 0;
         }
         if ($nilaiCategori4[2] == 1) {
-            $walkInWinnerArea3[3] = $cat4Area3->unitCategory->coeficient;
+            $walkInWinnerArea3[3] = isset($cat4Area3->unitCategory->coeficient) ? $cat4Area3->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea3[3] = 0;
         }
         if ($nilaiCategori5[2] == 1) {
-            $walkInWinnerArea3[4] = $cat5Area3->unitCategory->coeficient;
+            $walkInWinnerArea3[4] = isset($cat5Area3->unitCategory->coeficient) ? $cat5Area3->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea3[4] = 0;
         }
@@ -967,27 +1041,27 @@ class UnitScoreController extends Controller
 
         /* AREA 3*/
         if ($nilaiCategori1[3] == 1) {
-            $walkInWinnerArea4[0] = $cat1Area4->unitCategory->coeficient;
+            $walkInWinnerArea4[0] = isset($cat1Area4->unitCategory->coeficient) ? $cat1Area4->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea4[0] = 0;
         }
         if ($nilaiCategori2[3] == 1) {
-            $walkInWinnerArea4[1] = $cat2Area4->unitCategory->coeficient;
+            $walkInWinnerArea4[1] = isset($cat2Area4->unitCategory->coeficient) ? $cat2Area4->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea4[1] = 0;
         }
         if ($nilaiCategori3[3] == 1) {
-            $walkInWinnerArea4[2] = $cat3Area4->unitCategory->coeficient;
+            $walkInWinnerArea4[2] = isset($cat3Area4->unitCategory->coeficient) ? $cat3Area4->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea4[2] = 0;
         }
         if ($nilaiCategori4[3] == 1) {
-            $walkInWinnerArea4[3] = $cat4Area4->unitCategory->coeficient;
+            $walkInWinnerArea4[3] = isset($cat4Area4->unitCategory->coeficient) ? $cat4Area4->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea4[3] = 0;
         }
         if ($nilaiCategori5[3] == 1) {
-            $walkInWinnerArea4[4] = $cat5Area4->unitCategory->coeficient;
+            $walkInWinnerArea4[4] = isset($cat5Area4->unitCategory->coeficient) ? $cat5Area4->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea4[4] = 0;
         }
@@ -1009,88 +1083,88 @@ class UnitScoreController extends Controller
         /* CALL CENTER */
         /* AREA 1*/
         if ($nilaiCategori6[0] == 1) {
-            $callCenterWinnerArea1[0] = $cat6Area1->unitCategory->coeficient;
+            $callCenterWinnerArea1[0] = isset($cat6Area1->unitCategory->coeficient) ? $cat6Area1->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea1[0] = 0;
         }
         if ($nilaiCategori7[0] == 1) {
-            $callCenterWinnerArea1[1] = $cat7Area1->unitCategory->coeficient;
+            $callCenterWinnerArea1[1] = isset($cat7Area1->unitCategory->coeficient) ? $cat7Area1->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea1[1] = 0;
         }
         if ($nilaiCategori8[0] == 1) {
-            $callCenterWinnerArea1[2] = $cat8Area1->unitCategory->coeficient;
+            $callCenterWinnerArea1[2] = isset($cat8Area1->unitCategory->coeficient) ? $cat8Area1->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea1[2] = 0;
         }
         if ($nilaiCategori9[0] == 1) {
-            $callCenterWinnerArea1[3] = $cat9Area1->unitCategory->coeficient;
+            $callCenterWinnerArea1[3] = isset($cat9Area1->unitCategory->coeficient) ? $cat9Area1->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea1[3] = 0;
         }
         $callCenterWinnerResult[0] = array_sum($callCenterWinnerArea1);
         /* AREA 2*/
         if ($nilaiCategori6[1] == 1) {
-            $callCenterWinnerArea2[0] = $cat6Area2->unitCategory->coeficient;
+            $callCenterWinnerArea2[0] = isset($cat6Area2->unitCategory->coeficient) ? $cat6Area2->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea2[0] = 0;
         }
         if ($nilaiCategori7[1] == 1) {
-            $callCenterWinnerArea2[1] = $cat7Area2->unitCategory->coeficient;
+            $callCenterWinnerArea2[1] = isset($cat7Area2->unitCategory->coeficient) ? $cat7Area2->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea2[1] = 0;
         }
         if ($nilaiCategori8[1] == 1) {
-            $callCenterWinnerArea2[2] = $cat8Area2->unitCategory->coeficient;
+            $callCenterWinnerArea2[2] = isset($cat8Area2->unitCategory->coeficient) ? $cat8Area2->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea2[2] = 0;
         }
         if ($nilaiCategori9[1] == 1) {
-            $callCenterWinnerArea2[3] = $cat9Area2->unitCategory->coeficient;
+            $callCenterWinnerArea2[3] = isset($cat9Area2->unitCategory->coeficient) ? $cat9Area2->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea2[3] = 0;
         }
         $callCenterWinnerResult[1] = array_sum($callCenterWinnerArea2);
         /* AREA 2*/
         if ($nilaiCategori6[2] == 1) {
-            $callCenterWinnerArea3[0] = $cat6Area3->unitCategory->coeficient;
+            $callCenterWinnerArea3[0] = isset($cat6Area3->unitCategory->coeficient) ? $cat6Area3->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea3[0] = 0;
         }
         if ($nilaiCategori7[2] == 1) {
-            $callCenterWinnerArea3[1] = $cat7Area3->unitCategory->coeficient;
+            $callCenterWinnerArea3[1] = isset($cat7Area3->unitCategory->coeficient) ? $cat7Area3->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea3[1] = 0;
         }
         if ($nilaiCategori8[2] == 1) {
-            $callCenterWinnerArea3[2] = $cat8Area3->unitCategory->coeficient;
+            $callCenterWinnerArea3[2] = isset($cat8Area3->unitCategory->coeficient) ? $cat8Area3->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea3[2] = 0;
         }
         if ($nilaiCategori9[2] == 1) {
-            $callCenterWinnerArea3[3] = $cat9Area3->unitCategory->coeficient;
+            $callCenterWinnerArea3[3] = isset($cat9Area3->unitCategory->coeficient) ? $cat9Area3->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea3[3] = 0;
         }
         $callCenterWinnerResult[2] = array_sum($callCenterWinnerArea3);
         /* AREA 2*/
         if ($nilaiCategori6[3] == 1) {
-            $callCenterWinnerArea4[0] = $cat6Area4->unitCategory->coeficient;
+            $callCenterWinnerArea4[0] = isset($cat6Area4->unitCategory->coeficient) ? $cat6Area4->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea4[0] = 0;
         }
         if ($nilaiCategori7[3] == 1) {
-            $callCenterWinnerArea4[1] = $cat7Area4->unitCategory->coeficient;
+            $callCenterWinnerArea4[1] = isset($cat7Area4->unitCategory->coeficient) ? $cat7Area4->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea4[1] = 0;
         }
         if ($nilaiCategori8[3] == 1) {
-            $callCenterWinnerArea4[2] = $cat8Area4->unitCategory->coeficient;
+            $callCenterWinnerArea4[2] = isset($cat8Area4->unitCategory->coeficient) ? $cat8Area4->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea4[2] = 0;
         }
         if ($nilaiCategori9[3] == 1) {
-            $callCenterWinnerArea4[3] = $cat9Area4->unitCategory->coeficient;
+            $callCenterWinnerArea4[3] = isset($cat9Area4->unitCategory->coeficient) ? $cat9Area4->unitCategory->coeficient : 0;
         }else{
             $callCenterWinnerArea4[3] = 0;
         }
@@ -1383,7 +1457,6 @@ class UnitScoreController extends Controller
         }else{
             $bestAreaWinnerName = 0;
         }
-
         /*echo "WALK IN ";
         echo "<br>";
         print_r($nilaiCategori1);
@@ -1490,6 +1563,7 @@ class UnitScoreController extends Controller
             'bestAreaWinnerResultValue' => $bestAreaWinnerResultValue,
             'bestAreaWinnerName' => $bestAreaWinnerName
         );
+
         return view('backend.pages.unit-score.index',
             compact(
                 'unitScore',
