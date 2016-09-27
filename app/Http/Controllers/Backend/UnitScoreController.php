@@ -691,7 +691,7 @@ class UnitScoreController extends Controller
                     $nilaiCategori7[3] = 1;
                 }
             }
-            
+
         } catch (Exception $e) {
             $nilaiCategori7[0] = 0;
             $nilaiCategori7[1] = 0;
@@ -957,7 +957,7 @@ class UnitScoreController extends Controller
         /* WALK IN */
         /* AREA 1*/
         if ($nilaiCategori1[0] == 1) {
-            $walkInWinnerArea1[0] = isset($cat1Area1->unitCategory->coeficien) ? $cat1Area1->unitCategory->coeficien : 0 ;
+            $walkInWinnerArea1[0] = isset($cat1Area1->unitCategory->coeficient) ? $cat1Area1->unitCategory->coeficient : 0 ;
         }else{
             $walkInWinnerArea1[0] = 0;
         }
@@ -982,7 +982,7 @@ class UnitScoreController extends Controller
             $walkInWinnerArea1[4] = 0;
         }
         $walkInWinnerResult[0] = array_sum($walkInWinnerArea1);
-
+        //return $walkInWinnerArea1[0];
         /* AREA 2*/
         if ($nilaiCategori1[1] == 1) {
             $walkInWinnerArea2[0] = isset($cat1Area2->unitCategory->coeficient) ? $cat1Area2->unitCategory->coeficient : 0;
