@@ -14,17 +14,7 @@
     </td>
     <td><h4>{{ $participant->category->presentation_material }}%</h4></td>
     <td>
-     1: {!! Form::radio('presentation_material', 1, true); !!}
-     2: {!! Form::radio('presentation_material', 2); !!}
-     3: {!! Form::radio('presentation_material', 3); !!}
-     4: {!! Form::radio('presentation_material', 4); !!}
-     5: {!! Form::radio('presentation_material', 5); !!}
-     6: {!! Form::radio('presentation_material', 6); !!}
-     7: {!! Form::radio('presentation_material', 7); !!}
-     8: {!! Form::radio('presentation_material', 8); !!}
-     9: {!! Form::radio('presentation_material', 9); !!}
-     10: {!! Form::radio('presentation_material', 10); !!}
-
+        {!!Form::select('presentation_material', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
     </td>
 </tr>
 <tr>
