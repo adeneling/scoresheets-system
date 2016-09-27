@@ -9,6 +9,7 @@
 		<div class="x_panel">
 			<div class="x_title">
 				<h2>User List</h2>
+				<a href="{{ url('notification/create') }}" class="btn btn-danger pull-right"> Send notification to all</a>
 				<a href="{{ url('users/create') }}" class="btn btn-primary pull-right"> Create user</a>
 				<div class="clearfix"></div>
 			</div>
@@ -19,7 +20,7 @@
 							<th>No</th>
 							<th>Name</th>
 							<th>E-Mail</th>
-							<th width="30%">Aksi</th>
+							<th width="50%">Aksi</th>
 						</tr>
 					</thead>
 
@@ -33,8 +34,10 @@
 							<td>
 								<center>
 									{!! Form::model($user, ['route' => ['users.destroy', $user], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
-	                                <a href = "{{ route('users.show', encrypt($user->id))}}" class="btn btn-primary">Show</a> | 
-	                                <a href = "{{ route('users.edit', encrypt($user->id))}}" class="btn btn-warning">Edit</a> | 
+	                                <a href = "{{ route('notification.createnotification', encrypt($user->id))}}" class="btn btn-danger">Notification</a>
+	                                <a href = "{{ route('itinerary.createitinerary', encrypt($user->id))}}" class="btn btn-danger">Itinerary</a> |
+	                                <a href = "{{ route('users.show', encrypt($user->id))}}" class="btn btn-primary">Show</a> 
+	                                <a href = "{{ route('users.edit', encrypt($user->id))}}" class="btn btn-warning">Edit</a> 
 	                                <button type="submit" class="btn btn-danger js-submit-confirm">Delete</button>
 	                                {!! Form::close()!!}
 									

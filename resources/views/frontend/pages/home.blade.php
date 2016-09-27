@@ -97,7 +97,7 @@
 
                         <!-- copyright -->
                         <div class="copyrights ac anim fadeInUp s01 delay-1s">
-                            <span><i class="fa fa-copyright"></i></span>2016 All Rights Reserved
+                            THE BEST CUSTOMER SERVICE AWARD 2016
                         </div>
                         <!-- end copyright -->
                     </div>

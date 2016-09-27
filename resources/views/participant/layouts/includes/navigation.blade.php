@@ -16,9 +16,7 @@
 					<li><a href="{{ url('bestcs/profile') }}" class="{{ Request::is('bestcs/profile') ? 'selected' : '' }}">Profile</a></li>
 					<li><a href="{{ route('bestcs-upload.edit', encrypt(Auth::user()->id ))}}" class="{{ Request::is('bestcs-upload/*') ? 'selected' : '' }}">Upload File</a></li>
 					<li><a href="{{ url('bestcs/itinerary') }}" class="{{ Request::is('bestcs/itinerary') ? 'selected' : '' }}">Itinerary</a></li>
-					<li><a href="{{ url('bestcs/schedules') }}" class="{{ Request::is('bestcs/schedules') ? 'selected' : '' }}">Schedules</a></li>
-					<li><a href="{{ url('bestcs/dodonts') }}" class="{{ Request::is('bestcs/dodonts') ? 'selected' : '' }}">Do's &amp; Dont's</a></li>
-					<li><a href="{{ url('bestcs/feedback') }}" class="{{ Request::is('bestcs/feedback') ? 'selected' : '' }}">Feedback</a></li>
+					<li><a href="{{ url('bestcs/notifications') }}" class="{{ Request::is('bestcs/notifications') ? 'selected' : '' }}">Notifications</a></li>
 					<li>
 						<a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
 						<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">

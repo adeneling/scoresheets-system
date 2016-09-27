@@ -68,4 +68,11 @@ class User extends Authenticatable
     public function scoresheet() {
         return $this->hasOne('App\Scoresheet', 'participant_id');
     }
+    public function itinerary() {
+        return $this->hasOne('App\Itinerary', 'user_id');
+    }
+    public function notification() {
+        return $this->hasMany('App\Notification', 'user_id');
+    }
+
 }

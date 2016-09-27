@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Http\UploadedFile;
 use Input;
 use Image;
-
 use Illuminate\Support\Facades\Session;
 use Illuminate\Http\Request;
 use App\Http\Requests;

@@ -23,6 +23,8 @@ Route::group(['namespace' => 'Participant'], function(){
 	Route::resource('bestcs-upload', 'UploadController');
 	/* ITINERARY */
 	Route::get('bestcs/itinerary', 'ParticipantPageController@itinerary');
+	/* NOTIFICATION */
+	Route::get('bestcs/notifications', 'ParticipantPageController@notifications');
 	/* PROFILE */
 	Route::get('bestcs/profile', 'ParticipantPageController@profile');
 	/* SCHEDULES */
@@ -57,6 +59,14 @@ Route::group(['namespace' => 'Backend'], function(){
 	Route::resource('master-data', 'MasterDataController');
 	/* USERS */
 	Route::resource('users', 'UsersController');
+	/* NOTIFICATIONS */
+	Route::resource('notification', 'NotificationController');
+	Route::get('notification/create/{notification}', 'NotificationController@createNotification')->name('notification.createnotification');
+	Route::put('notification/create/{notification}', 'NotificationController@postNotification')->name('notification.postnotification');
+	/* ITINERARY */
+	Route::resource('itinerary', 'ItineraryController');
+	Route::get('itinerary/create/{itinerary}', 'ItineraryController@createItinerary')->name('itinerary.createitinerary');
+	Route::put('itinerary/create/{itinerary}', 'ItineraryController@postItinerary')->name('itinerary.createitinerary');
 	/* UNIT MODULE */
 	Route::resource('unit-score', 'UnitScoreController');
 	Route::resource('unit-category', 'UnitCategoryController');

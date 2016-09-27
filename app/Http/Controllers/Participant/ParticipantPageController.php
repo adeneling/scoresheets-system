@@ -10,6 +10,8 @@ use Illuminate\Http\UploadedFile;
 use Input;
 use Image;
 use App\Http\Requests;
+use App\Notification;
+use App\Itinerary;
 use App\Http\Controllers\Controller;
 
 class ParticipantPageController extends Controller
@@ -41,7 +43,13 @@ class ParticipantPageController extends Controller
     }
     public function itinerary()
     {
-        return view('participant.pages.itinerary');
+        $itinerarys = Itinerary::where('user_id', Auth::user()->id)->get();
+        return view('participant.pages.itinerary',compact('itinerarys'));
+    }
+    public function notifications()
+    {
+        $notifications = Notification::where('user_id', Auth::user()->id)->get();
+        return view('participant.pages.notifications',compact('notifications'));
     }
     public function index()
     {
