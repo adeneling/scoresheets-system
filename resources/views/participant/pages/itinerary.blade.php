@@ -12,7 +12,7 @@
 				<div class="panel-body">
 					NIK: {{ $itinerary->user_nik }}<br>
 					Booking Code: {{ $itinerary->booking_id }}<br>
-					Detail: {{ $itinerary->booking_id }}<br>
+					Detail: {{ $itinerary->booking_id }} <br>
 					URL: {{ $itinerary->booking_id }}<br>
 				</div>
 			</div>
