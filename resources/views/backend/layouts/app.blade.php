@@ -5,7 +5,6 @@
   .red {
     background-color: #DF2D3C;
   }
-
   </style>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <!-- Meta, title, CSS, favicons, etc. -->
@@ -29,8 +28,6 @@
   <link href="{{ asset('backend/build/css/custom.min.css') }}" rel="stylesheet">
   <!-- Sweetalert -->
   <link href="{{ asset('backend/sweetalert/sweetalert.css') }}" rel="stylesheet">
-  <!-- icheck -->
-  <link href="{{ asset('backend/icheck/red.css') }}" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -113,11 +110,10 @@
 
   <!-- jQuery -->
   <script src="{{ asset('backend/vendors/jquery/dist/jquery.min.js') }}"></script>
-  <!-- iCheck -->
-  <script src="{{ asset('backend/icheck/icheck.min.js') }}"></script>
   <!-- Bootstrap -->
   <script src="{{ asset('backend/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-  
+  <!-- iCheck -->
+  <script src="{{ asset('backend/vendors/iCheck/icheck.min.js') }}"></script>
   <!-- Datatables -->
   <script src="{{ asset('backend/vendors/datatables.net/js/jquery.dataTables.min.js') }}"></script>
   <script src="{{ asset('backend/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
@@ -237,6 +233,11 @@
           { orderable: false, targets: [0] }
           ]
         });
+        $datatable.on('draw.dt', function() {
+          $('input').iCheck({
+            checkboxClass: 'icheckbox_flat-green'
+          });
+        });
 
         TableManageButtons.init();
       });
@@ -265,22 +266,6 @@ $(document).ready(function () {
     })
   })
 })
-</script>
-<script>
-$(document).ready(function(){
-  $('input').each(function(){
-    var self = $(this),
-      label = self.next(),
-      label_text = label.text();
-
-    label.remove();
-    self.iCheck({
-      checkboxClass: 'icheckbox_line-red',
-      radioClass: 'iradio_line-red',
-      insert: '<div class="icheck_line-icon"></div>' + label_text
-    });
-  });
-});
 </script>
 </body>
 </html>
