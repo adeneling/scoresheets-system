@@ -90,10 +90,10 @@
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
-				<table class="table table-hover">
+				<table class="table">
 					<thead>
 						<tr>
-							<th width="40%">ASPEK</th>
+							<th width="50%">ASPEK</th>
 							<th>BOBOT</th>
 							<th width="50%">NILAI</th>
 						</tr>

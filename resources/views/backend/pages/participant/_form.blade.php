@@ -14,7 +14,49 @@
     </td>
     <td><h4>{{ $participant->category->presentation_material }}%</h4></td>
     <td>
-        {!!Form::select('presentation_material', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
+        <div class="funkyradio">
+            <div class="funkyradio-danger">
+                <input type="radio" name="presentation_material" value="1" id="radio1" checked/>
+                <label for="radio1">1</label>
+            </div>
+            <div class="funkyradio-danger">
+                <input type="radio" name="presentation_material" value="2" id="radio3" />
+                <label for="radio3">2</label>
+            </div>
+            <div class="funkyradio-danger">
+                <input type="radio" name="presentation_material" value="3" id="radio3" />
+                <label for="radio3">3</label>
+            </div>
+            <div class="funkyradio-danger">
+                <input type="radio" name="presentation_material" value="4" id="radio4" />
+                <label for="radio4">4</label>
+            </div>
+            <div class="funkyradio-danger">
+                <input type="radio" name="presentation_material" value="5" id="radio5" />
+                <label for="radio5">5</label>
+            </div>
+            <div class="funkyradio-danger">
+                <input type="radio" name="presentation_material" value="6" id="radio6" />
+                <label for="radio6">6</label>
+            </div>
+            <div class="funkyradio-danger">
+                <input type="radio" name="presentation_material" value="7" id="radio7" />
+                <label for="radio7">7</label>
+            </div>
+            <div class="funkyradio-danger">
+                <input type="radio" name="presentation_material" value="8" id="radio8" />
+                <label for="radio8">8</label>
+            </div>
+            <div class="funkyradio-danger">
+                <input type="radio" name="presentation_material" value="9" id="radio9" />
+                <label for="radio9">9</label>
+            </div>
+            <div class="funkyradio-danger">
+                <input type="radio" name="presentation_material" value="10" id="radio10" />
+                <label for="radio10">10</label>
+            </div>
+        </div>
+
     </td>
 </tr>
 <tr>
@@ -38,6 +80,7 @@
     <td><h4>{{ $participant->category->achievement }}%</h4></td>
     <td>
         {!!Form::select('achievement', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
+
     </td>
 </tr>
 <tr>
