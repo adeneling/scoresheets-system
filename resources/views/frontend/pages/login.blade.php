@@ -27,7 +27,8 @@
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
                     <center>
-                        <h1>Best Customer Service Awards 2016<br>Telkomsel</h1>
+                        <h1><font color="red">Telkomsel</font></h1>
+                        <img src="{{ asset('img/logo.png') }}" class="img-responsive">
                     </center>
                     <hr>
                     <div class="panel-body">

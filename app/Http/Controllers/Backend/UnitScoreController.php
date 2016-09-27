@@ -186,7 +186,8 @@ class UnitScoreController extends Controller
         $cat2Area1 = UnitScore::where('area', 1)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
         $cat2Area2 = UnitScore::where('area', 2)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
         $cat2Area3 = UnitScore::where('area', 3)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
-        $cat2Area4 = UnitScore::where('area', 4)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();        
+        $cat2Area4 = UnitScore::where('area', 4)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
+        
         try {
             if (isset($cat2Area1)) {
                 if ($cat2Area1->total_score >= $topCategory2->total_score) {
@@ -258,6 +259,7 @@ class UnitScoreController extends Controller
                     $nilaiCategori2[3] = 1;
                 }
             }
+            //return $nilaiCategori2;
             
             
         } catch (Exception $e) {

@@ -14,7 +14,7 @@
 				<ul class="cd-primary-nav">
 					<li><a href="{{ url('/home') }}" class="{{ Request::is('/home') ? 'selected' : '' }}">Home</a></li>
 					<li><a href="{{ url('bestcs/profile') }}" class="{{ Request::is('bestcs/profile') ? 'selected' : '' }}">Profile</a></li>
-					<li><a href="{{ url('bestcs/upload-file') }}" class="{{ Request::is('bestcs/upload-file') ? 'selected' : '' }}">Upload File</a></li>
+					<li><a href="{{ route('bestcs-upload.edit', encrypt(Auth::user()->id ))}}" class="{{ Request::is('bestcs-upload/*') ? 'selected' : '' }}">Upload File</a></li>
 					<li><a href="{{ url('bestcs/itinerary') }}" class="{{ Request::is('bestcs/itinerary') ? 'selected' : '' }}">Itinerary</a></li>
 					<li><a href="{{ url('bestcs/schedules') }}" class="{{ Request::is('bestcs/schedules') ? 'selected' : '' }}">Schedules</a></li>
 					<li><a href="{{ url('bestcs/dodonts') }}" class="{{ Request::is('bestcs/dodonts') ? 'selected' : '' }}">Do's &amp; Dont's</a></li>

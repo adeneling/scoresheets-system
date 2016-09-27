@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
         $this->call(CategorySeeder::class);
         /* USERS */
         $this->call(UsersSeeder::class);        
-        /* MASTER DATA - PARTICIPANT */
-        $this->call(MasterData::class);
+        /* PARTICIPANT */
+        $this->call(ParticipantSeeder::class);
         /* SESSION */
         $this->call(SessionDataSeeder::class);
         /* UNIT CATEGORY PARENT */
@@ -24,6 +24,6 @@ class DatabaseSeeder extends Seeder
         /* UNIT CATEGORY */
         $this->call(UnitCategorySeeder::class);
         /* UNIT SCORE */
-        $this->call(UnitScoreSeeder::class);
+        //$this->call(UnitScoreSeeder::class);
     }
 }

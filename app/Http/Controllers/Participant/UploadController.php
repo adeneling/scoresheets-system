@@ -1,13 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Backend;
+namespace App\Http\Controllers\Participant;
 
 use Illuminate\Http\Request;
 use App\User;
+use Auth;
+use Illuminate\Support\Facades\File;
+use Illuminate\Http\UploadedFile;
+use Input;
+use Image;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-class UsersController extends Controller
+class UploadController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +21,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy('created_at','desc')->get();
-        return view('backend.pages.users.index', compact('users'));
+        //
     }
 
     /**
@@ -27,7 +31,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('backend.pages.users.create');
+        //
     }
 
     /**
@@ -38,27 +42,7 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'name' => 'required',
-            'nik' => 'required',
-            'email' => 'required',
-            'password' => 'required',
-            'role' => 'required',
-
-        ]);
-        $user = new User();
-        $user->name = $request->input('name');
-        $user->nik = $request->input('nik');
-        $user->email = $request->input('email');
-        $user->activated = 1;
-        if ($request->input('role') == 'participant') {
-            $user->judged = 0;
-        }        
-        $user->password = bcrypt($request->input('password'));
-        $user->attachRole($request->input('role'));
-        $user->save();
-        \Flash::success('New account with Email: ' . $request->get('name') .  ' Added.');
-        return redirect('users');
+        //
     }
 
     /**
@@ -81,7 +65,7 @@ class UsersController extends Controller
     public function edit($id)
     {
         $user = User::findOrFail(decrypt($id));
-        return view('backend.pages.users.edit', compact('user'));
+        return view('participant.pages.upload-file', compact('user'));
     }
 
     /**
@@ -95,15 +79,35 @@ class UsersController extends Controller
     {
         $user = User::findOrFail($id);
         $this->validate($request, [
-            'name' => 'required',
-            'nik' => 'required',
-            'email' => 'required',
+            'presentation_file' => 'required|mimes:pdf',
         ]);
-        $user->password = bcrypt($request->input('password'));
-        $user->attachRole($request->input('role'));
+
+        if ($request->hasFile('presentation_file')) {
+            // menambil cover yang diupload berikut ekstensinya
+            $filename = null;
+            $upload_file = $request->file('presentation_file');
+            $extension = $upload_file->getClientOriginalExtension();
+            // membuat nama file random dengan extension
+            $filename = str_random(10) . '.' . $extension;
+            $destinationPath = public_path() . DIRECTORY_SEPARATOR . 'files';
+
+            // memindahkan file ke folder public/img
+            $upload_file->move($destinationPath, $filename);
+            // hapus cover lama, jika ada
+            if ($user->presentation_file) {
+                $old_file = $user->presentation_file;
+                $filepath = public_path() . DIRECTORY_SEPARATOR . 'files'. DIRECTORY_SEPARATOR . $user->presentation_file;
+                try {
+                    File::delete($filepath);
+                } catch (FileNotFoundException $e) {
+                // File sudah dihapus/tidak ada
+                }
+            }
+        }
+        $user->presentation_file = $filename;
         $user->save();
-        \Flash::success('ID with email: '. $user->id . ' Edited.');
-        return redirect('users');
+        \Flash::success('File presentation uploaded');
+        return redirect('bestcs/profile');
     }
 
     /**
@@ -114,9 +118,6 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $user = User::find($id);
-        User::find($id)->delete();
-        \Flash::success('E-Mail: '. $user->email .' Deleted.');
-        return redirect('users');
+        //
     }
 }

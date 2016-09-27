@@ -108,9 +108,9 @@ class UploadPresentationController extends Controller
                 // File sudah dihapus/tidak ada
                 }
             }
-            $user->presentation_file = $filename;
-            $user->save();
         }
+        $user->presentation_file = $filename;
+        $user->save();
         
         \Flash::success('Data uploaded');
         return redirect('/home');

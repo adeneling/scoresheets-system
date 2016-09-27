@@ -18,7 +18,9 @@ Route::group(['namespace' => 'Frontend'], function(){
 /* PARTICIPANT */
 Route::group(['namespace' => 'Participant'], function(){
 	/* BEST CS */
-	Route::resource('bestcs/', 'ParticipantPageController');
+	Route::resource('bestcs-participant', 'ParticipantPageController');
+	/* UPLOAD FILE */
+	Route::resource('bestcs-upload', 'UploadController');
 	/* ITINERARY */
 	Route::get('bestcs/itinerary', 'ParticipantPageController@itinerary');
 	/* PROFILE */
@@ -29,8 +31,6 @@ Route::group(['namespace' => 'Participant'], function(){
 	Route::get('bestcs/dodonts', 'ParticipantPageController@dodonts');
 	/* FEEDBACK */
 	Route::get('bestcs/feedback', 'ParticipantPageController@feedback');
-	/* UPLOAD FILE */
-	Route::get('bestcs/upload-file', 'ParticipantPageController@uploadFile');
 });
 /* BACKEND */
 Route::group(['namespace' => 'Backend'], function(){

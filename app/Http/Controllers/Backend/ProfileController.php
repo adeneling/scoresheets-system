@@ -101,8 +101,6 @@ class ProfileController extends Controller
         $user->notes = $request->input('notes');
         $user->presentation_file = $request->input('presentation_file');
         $user->qrfield = $request->input('qrfield');
-        $user->checking = 1;
-        //$user->has_checked_in = $request->input('');
         $user->activated = 1;
         $user->save();
         \Flash::success('Data updated');

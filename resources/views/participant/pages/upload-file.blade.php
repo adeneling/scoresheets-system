@@ -7,7 +7,14 @@
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="x_panel">
             <div class="x_content">
-        		<center><a href="" class="btn btn-danger btn-lg"><h4>Upload File</h4></a></center>
+            	{!! Form::model($user, ['route' => ['bestcs-upload.update', $user],'method' =>'put', 'files' => true,'role'=>'form','class'=>'form-horizontal form-label-left'])!!}
+                    {!! csrf_field() !!}
+        		<center>
+        			{!! Form::file('presentation_file', null, ['class'=>'btn btn-danger btn-lg']) !!}
+        			<br>
+        			<button type="submit" class="btn btn-danger">SUBMIT</button>
+        		</center>
+        		{!! Form::close() !!}
             </div>
         </div>
     </div>

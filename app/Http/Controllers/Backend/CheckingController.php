@@ -46,28 +46,14 @@ class CheckingController extends Controller
         $nik = $request->input('nik');
         $email = $request->input('email');
         $password = str_random(8);       
-        if (MasterData::where('nik',$nik)->where('email',$email)->exists()) {
-            if(User::where('email',$email)->exists()){
-                return redirect('/')->with('status', 'Anda sudah melakukan pendaftaran, silahkan login');
+        if (User::where('nik',$nik)->where('email',$email)->exists()) {
+            if(User::where('activated', 1)->exists()){
+                return redirect('/')->with('status', 'Your account already activated, please check your email.');
             }else{
-                $memberRole = Role::where('name', 'participant')->first();
-                $masterData = MasterData::where('nik', $nik)->where('email', $email)->first();
-                /* CREATE DATA TO TABLE USER */
-                $user = new User();
-                $user->category_id = $masterData->category_id;
-                $user->name = $masterData->name;
-                $user->nik = $masterData->nik;
-                $user->selection_date = $masterData->selection_date;
-                $user->mobile_phone = $masterData->no_telp;
-                $user->gender = $masterData->gender;
-                $user->region = $masterData->region;
-                $user->area = $masterData->area;
-                $user->email = $masterData->email;
-                $user->picture = $masterData->picture;
+                $user = User::where('nik', $nik)->where('email', $email)->first();
                 $user->activated = 1;
                 $user->password = bcrypt($password);
                 $user->save();
-                $user->attachRole($memberRole);
                 /* KIRIM EMAIL */
                 $mail = array( 'email' => $email, 'password' => $password);
                 Mail::send('mails.mail', $mail, function($message) use ($mail) {
