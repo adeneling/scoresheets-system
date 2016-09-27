@@ -138,14 +138,14 @@ class ParticipantController extends Controller
         $scoresheet->session_id = $request->input('session_id');
         $scoresheet->time = Carbon::now();
         /* note */
-        $scoresheet->presentation_material_note = $request->input('presentation_material_note');
+        /*$scoresheet->presentation_material_note = $request->input('presentation_material_note');
         $scoresheet->communication_skill_note = $request->input('communication_skill_note');
         $scoresheet->achievement_note = $request->input('achievement_note');
         $scoresheet->personal_value_note = $request->input('personal_value_note');
         $scoresheet->customer_care_knowledge_note = $request->input('customer_care_knowledge_note');
         $scoresheet->solution_skill_note = $request->input('solution_skill_note');
         $scoresheet->inspirational_story_note = $request->input('inspirational_story_note');
-        $scoresheet->leadership_note = $request->input('leadership_note');
+        $scoresheet->leadership_note = $request->input('leadership_note');*/
         /* calculate result */
         $scoresheet->presentation_material = $presentation_material;
         $scoresheet->communication_skill = $communication_skill;
