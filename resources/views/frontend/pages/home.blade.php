@@ -62,7 +62,7 @@
                             </div>
                             <!-- Counter -->
                             <div class="counter-container">
-                                <h2>CHECK ID</h2>                                   
+                                <img src="{{ asset('frontend/images/logo.png') }}">
                             </div>                 
                         </div>
                         <!-- end tagline -->
