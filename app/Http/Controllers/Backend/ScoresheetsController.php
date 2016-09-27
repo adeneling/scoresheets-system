@@ -160,7 +160,7 @@ class ScoresheetsController extends Controller
         $scoresheet->save();
         /* user judged */
         $user = User::where('id', $request->input('participant_id') )->first();
-        $user->judged = 1;
+        $user->judged = 0;
         $user->save();
         \Flash::success('Success');
         return redirect('/scoresheets');

@@ -24,7 +24,7 @@ class ParticipantController extends Controller
         if (isset($q)) {
             $category = Category::where('id',$q)->first();
         }        
-        $participants = User::where('category_id', 'LIKE', '%'.$q.'%')->where('judged', 0)->orderBy('created_at','asc')->get();
+        $participants = User::where('category_id', 'LIKE', '%'.$q.'%')->where('judged','!=',Auth::user()->id)->orderBy('created_at','asc')->get();
         return view('backend.pages.participant.index', compact('participants', 'q', 'category'));
     }
 
@@ -161,7 +161,7 @@ class ParticipantController extends Controller
         $scoresheet->save();
         /* user judged */
         $user = User::where('id', $request->input('participant_id') )->first();
-        $user->judged = 1;
+        $user->judged = Auth::user()->id;
         $user->save();
         \Flash::success($request->input('participant_name') . ' Scored');
         return redirect('scoresheets');
