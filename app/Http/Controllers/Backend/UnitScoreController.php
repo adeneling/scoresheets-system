@@ -134,7 +134,7 @@ class UnitScoreController extends Controller
             if (isset($cat1Area4)) {
                 if ($cat1Area4->total_score >= $topCategory1->total_score) {
                     $tempNilaiArea4Temp = $cat1Area4->total_score;
-                }elseif ($dataCat1Area4->total_score < $topCategory1->total_score) {
+                }elseif ($cat1Area4->total_score < $topCategory1->total_score) {
                     $tempNilaiArea4Temp = 0;   
                 }
             }else{
