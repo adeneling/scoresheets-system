@@ -1607,10 +1607,19 @@ class UnitScoreController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-
-
+            'category_id' => 'required',
+            'type' => 'required',
+            'area' => 'required',
+            'location' => 'required',
+            'total_score' => 'required',
         ]);
-        UnitScore::create($request->all());
+        $unit = new UnitScore();
+        $unit->category_id = $request->input('category_id');
+        $unit->type = $request->input('type');
+        $unit->area = $request->input('area');
+        $unit->location = $request->input('location');
+        $unit->total_score = $request->input('category_id');
+        $unit->save();
         \Flash::success('Unit score with category ID: ' . $request->get('category_id') .  ' Added.');
         return redirect('unit-score');
     }
@@ -1648,10 +1657,20 @@ class UnitScoreController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-
+            'category_id' => 'required',
+            'type' => 'required',
+            'area' => 'required',
+            'location' => 'required',
+            'total_score' => 'required',
+            
         ]);
         $unit = UnitScore::findOrFail($id);
-        $unit->update($request->all());
+        $unit->category_id = $request->input('category_id');
+        $unit->type = $request->input('type');
+        $unit->area = $request->input('area');
+        $unit->location = $request->input('location');
+        $unit->total_score = $request->input('category_id');
+        $unit->save();
         \Flash::success('Unit ID: '. $unit->id . ' Edited.');
         return redirect('unit-score');
     }

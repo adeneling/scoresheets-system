@@ -23,7 +23,7 @@
 							@if($participant->presentation_file != null)
                                 <a href="{{ asset('files/'. $participant->presentation_file) }}" class="btn btn-danger" target="_blank">Presentation File</a>
                             @else
-                                <a href="#" class="btn btn-danger" >Presentasi belum ada</a>
+                                <a href="#" class="btn btn-primary" >Presentasi belum ada</a>
                             @endif
                         </center>
 					</div>
