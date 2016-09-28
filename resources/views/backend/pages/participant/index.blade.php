@@ -42,7 +42,7 @@
 				<a href="{{ route('participant.edit', encrypt($participant->id))}}">
 					<div class="col-md-3">
 						<center>
-							<img class="img-responsive" src="{{ asset('img/' . ($participant->picture != null ? $participant->picture : 'picture.png' )) }}" alt="Avatar" title="Participant">
+							<img class="img-responsive" height="200" width="200" src="{{ asset('img/' . ($participant->picture != null ? $participant->picture : 'picture.png' )) }}" alt="Avatar" title="Participant">
 						</center>
 						<center><h5>{{ $participant->name }}</h5></center>
 						<ul class="list-unstyled user_data">
