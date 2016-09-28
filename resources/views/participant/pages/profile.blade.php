@@ -110,7 +110,7 @@
                                     <td>Presentation File</td>
                                     @if(Auth::user()->presentation_file != null)
                                         <td>
-                                            <a href="{{ asset('files/'. Auth::user()->presentation_file) }}" class="btn btn-danger" target="_blank">{{ Auth::user()->presentation_file }}</a>
+                                            <a href="{{ asset('files/'. Auth::user()->presentation_file) }}" class="btn btn-danger" target="framename">{{ Auth::user()->presentation_file }}</a>
                                         </td>
                                     @else
                                         <td>
