@@ -179,31 +179,9 @@ class UsersController extends Controller
             'name' => 'required',
             'nik' => 'required',
             'category_id' => 'required',
+            'area' => 'required',
         ]);
-        if ($request->hasFile('presentation_file')) {
-            // menambil cover yang diupload berikut ekstensinya
-            $filename = null;
-            $upload_file_presentation = $request->file('presentation_file');
-            $extensionFile = $upload_file_presentation->getClientOriginalExtension();
-            // membuat nama file random dengan extension
-            $filename = str_random(10) . '.' . $extensionFile;
-            $destinationPathFile = public_path() . DIRECTORY_SEPARATOR . 'files';
-
-            // memindahkan file ke folder public/img
-            $upload_file_presentation->move($destinationPathFile, $filename);
-            // hapus cover lama, jika ada
-            if ($user->presentation_file) {
-                $old_file_presentation = $user->presentation_file;
-                $filepath = public_path() . DIRECTORY_SEPARATOR . 'files'. DIRECTORY_SEPARATOR . $user->presentation_file;
-                try {
-                    //File::delete($filepath);
-                } catch (FileNotFoundException $e) {
-                // File sudah dihapus/tidak ada
-                }
-            }
-            $user->presentation_file = $filename; 
-            
-        }
+        
         
         $user = User::findOrFail($id);
         $user->name = $request->input('name');
@@ -228,6 +206,31 @@ class UsersController extends Controller
         $user->unit_type = $request->input('unit_type');
         $user->unit_name = $request->input('unit_name');        
         $user->activated = 1;               
+
+        if ($request->hasFile('presentation_file')) {
+            // menambil cover yang diupload berikut ekstensinya
+            $filename = null;
+            $upload_file_presentation = $request->file('presentation_file');
+            $extensionFile = $upload_file_presentation->getClientOriginalExtension();
+            // membuat nama file random dengan extension
+            $filename = str_random(10) . '.' . $extensionFile;
+            $destinationPathFile = public_path() . DIRECTORY_SEPARATOR . 'files';
+
+            // memindahkan file ke folder public/img
+            $upload_file_presentation->move($destinationPathFile, $filename);
+            // hapus cover lama, jika ada
+            if ($user->presentation_file) {
+                $old_file_presentation = $user->presentation_file;
+                $filepath = public_path() . DIRECTORY_SEPARATOR . 'files'. DIRECTORY_SEPARATOR . $user->presentation_file;
+                try {
+                    //File::delete($filepath);
+                } catch (FileNotFoundException $e) {
+                // File sudah dihapus/tidak ada
+                }
+            }
+            $user->presentation_file = $filename; 
+            
+        }
 
         if ($request->hasFile('picture')) {
             // menambil cover yang diupload berikut ekstensinya
@@ -255,7 +258,7 @@ class UsersController extends Controller
         
         
         $user->save();
-        \Flash::success('ID with email: '. $user->id . ' Edited.');
+        \Flash::success('ID with email: '. $user->email . ' Edited.');
         return redirect('users');
     }
 

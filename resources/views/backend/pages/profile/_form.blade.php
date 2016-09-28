@@ -1,7 +1,7 @@
 <div class="form-group{{ $errors->has('nik') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">NIK</label>
     <div class="col-md-2">
-        {!! Form::text('nik', Auth::user()->nik, ['class'=>'form-control','placeholder'=>'NIK']) !!}
+        {!! Form::text('nik', null, ['class'=>'form-control','placeholder'=>'NIK']) !!}
     </div>
     @if($errors->has('nik'))
         <span class="help-block">
@@ -10,11 +10,10 @@
     @endif
 </div>
 
-
 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Nama Lengkap</label>
+    <label class="control-label col-md-3">Full Name</label>
     <div class="col-md-4">
-        {!! Form::text('name', Auth::user()->name, ['class'=>'form-control','placeholder'=>'Nama lengkap']) !!}
+        {!! Form::text('name', null, ['class'=>'form-control','placeholder'=>'Enter your name']) !!}
     </div>
     @if($errors->has('name'))
         <span class="help-block">
@@ -23,22 +22,10 @@
     @endif
 </div>
 
-<div class="form-group{{ $errors->has('birthday') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Tanggal Lahir</label>
-    <div class="col-md-3">
-        {!! Form::date('birthday', null, ['class'=>'form-control','placeholder'=>'Tanggal lahir']) !!}
-    </div>
-    @if($errors->has('birthday'))
-        <span class="help-block">
-            <strong>{{ $errors->first('birthday') }}</strong>
-        </span>
-    @endif
-</div>
-
 <div class="form-group{{ $errors->has('about_me') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Tentang Saya</label>
+    <label class="control-label col-md-3">About Me</label>
     <div class="col-md-6">
-        {!! Form::textarea('about_me', null, ['class'=>'form-control','placeholder'=>'Tentang saya','rows'=>'3']) !!}
+        {!! Form::textarea('about_me', null, ['class'=>'form-control','placeholder'=>'About Me','rows'=>'3']) !!}
     </div>
     @if($errors->has('about_me'))
         <span class="help-block">
@@ -48,7 +35,7 @@
 </div>
 
 <div class="form-group{{ $errors->has('picture') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Foto</label>
+    <label class="control-label col-md-3">Profile Picture</label>
     <div class="col-md-2">
         {!! Form::file('picture', null, ['class'=>'form-control']) !!}
     </div>
@@ -60,7 +47,7 @@
 </div>
 
 <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Jenis Kelamin</label>
+    <label class="control-label col-md-3">Gender</label>
     <div class="col-md-2">
         {!!Form::select('gender', ['L'=>'Laki-Laki','P'=>'Perempuan'], null, ['class'=>'select2_single form-control']) !!}
       </select>
@@ -72,20 +59,8 @@
     @endif
 </div>
 
-<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">E-Mail</label>
-    <div class="col-md-5">
-        {!! Form::text('email', Auth::user()->email, ['class'=>'form-control','placeholder'=>'Email']) !!}
-    </div>
-    @if($errors->has('email'))
-        <span class="help-block">
-            <strong>{{ $errors->first('email') }}</strong>
-        </span>
-    @endif
-</div>
-
 <div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Kategori</label>
+    <label class="control-label col-md-3">Category</label>
     <div class="col-md-3">
         {!!Form::select('category_id', [''=>'']+App\Category::pluck('name','id')->all(), null, ['class'=>'select2_single form-control']) !!}
       </select>
@@ -98,9 +73,9 @@
 </div>
 
 <div class="form-group{{ $errors->has('work_location') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Lokasi Kerja</label>
+    <label class="control-label col-md-3">Work location</label>
     <div class="col-md-4">
-        {!! Form::text('work_location', null, ['class'=>'form-control','placeholder'=>'Lokasi Kerja']) !!}
+        {!! Form::text('work_location', null, ['class'=>'form-control','placeholder'=>'Work location']) !!}
     </div>
     @if($errors->has('work_location'))
         <span class="help-block">
@@ -124,7 +99,7 @@
 <div class="form-group{{ $errors->has('area') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">Area</label>
     <div class="col-md-4">
-        {!! Form::text('area', null, ['class'=>'form-control','placeholder'=>'Area']) !!}
+        {!!Form::select('area', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5'], null, ['class'=>'form-control']) !!}
     </div>
     @if($errors->has('area'))
         <span class="help-block">
@@ -134,9 +109,9 @@
 </div>
 
 <div class="form-group{{ $errors->has('job_function') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Jabatan</label>
+    <label class="control-label col-md-3">Job</label>
     <div class="col-md-4">
-        {!! Form::text('job_function', null, ['class'=>'form-control','placeholder'=>'Jabatan']) !!}
+        {!! Form::text('job_function', null, ['class'=>'form-control','placeholder'=>'Job']) !!}
     </div>
     @if($errors->has('job_function'))
         <span class="help-block">
@@ -153,6 +128,42 @@
     @if($errors->has('mobile_phone'))
         <span class="help-block">
             <strong>{{ $errors->first('mobile_phone') }}</strong>
+        </span>
+    @endif
+</div>
+
+<div class="form-group{{ $errors->has('selection_date') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Selection Date</label>
+    <div class="col-md-3">
+        {!! Form::date('selection_date', null, ['class'=>'form-control','placeholder'=>'Selection Date']) !!}
+    </div>
+    @if($errors->has('selection_date'))
+        <span class="help-block">
+            <strong>{{ $errors->first('selection_date') }}</strong>
+        </span>
+    @endif
+</div>
+
+<div class="form-group{{ $errors->has('birthday') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Birthday</label>
+    <div class="col-md-3">
+        {!! Form::date('birthday', null, ['class'=>'form-control','placeholder'=>'Birthday']) !!}
+    </div>
+    @if($errors->has('birthday'))
+        <span class="help-block">
+            <strong>{{ $errors->first('birthday') }}</strong>
+        </span>
+    @endif
+</div>
+
+<div class="form-group{{ $errors->has('birth_place') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Birth Place</label>
+    <div class="col-md-3">
+        {!! Form::text('birth_place', null, ['class'=>'form-control','placeholder'=>'Birth Place']) !!}
+    </div>
+    @if($errors->has('birth_place'))
+        <span class="help-block">
+            <strong>{{ $errors->first('birth_place') }}</strong>
         </span>
     @endif
 </div>
@@ -228,48 +239,6 @@
         </span>
     @endif
 </div>
-
-
-<div class="form-group{{ $errors->has('checking') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Checking</label>
-    <div class="col-md-2">
-        {!! Form::text('checking', Auth::user()->checking == 1 ? 'Checked' : 'Unchecked', ['class'=>'form-control','readonly']) !!}
-      </select>
-    </div>
-    @if($errors->has('checking'))
-        <span class="help-block">
-            <strong>{{ $errors->first('checking') }}</strong>
-        </span>
-    @endif
-</div>
-
-@if(isset($order))
-    <div class="form-group{{ $errors->has('has_checked_in') ? ' has-error' : '' }}">
-        <label class="control-label col-md-3">Has Checked In</label>
-        <div class="col-md-5">
-            {!!Form::select('has_checked_in', ['true'=>'true','false'=>'false'], null, ['class'=>'select2_single form-control','placeholder' => 'Pilih account coordinator']) !!}
-          </select>
-        </div>
-        @if($errors->has('has_checked_in'))
-            <span class="help-block">
-                <strong>{{ $errors->first('has_checked_in') }}</strong>
-            </span>
-        @endif
-    </div>
-
-    <div class="form-group{{ $errors->has('activated') ? ' has-error' : '' }}">
-        <label class="control-label col-md-3">Activated</label>
-        <div class="col-md-5">
-            {!!Form::select('activated', ['true'=>'true','false'=>'false'], null, ['class'=>'select2_single form-control','placeholder' => 'Pilih account coordinator']) !!}
-          </select>
-        </div>
-        @if($errors->has('activated'))
-            <span class="help-block">
-                <strong>{{ $errors->first('activated') }}</strong>
-            </span>
-        @endif
-    </div>
-@endif
 
 <hr>
 

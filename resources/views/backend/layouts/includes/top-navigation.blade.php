@@ -13,11 +13,6 @@
           <ul class="dropdown-menu dropdown-usermenu pull-right">
             <li><a href="{{ route('profile.show', encrypt(Auth::user()->id ))}}"> Profile</a></li>
             <li>
-              <a href="javascript:;">
-                <span>Settings</span>
-              </a>
-            </li>
-            <li>
               <a href="{{ url('/logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-sign-out pull-right"></i> Log Out
               </a>
               <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">

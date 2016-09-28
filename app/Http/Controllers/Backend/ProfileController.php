@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-
 use Auth;
 use App\User;
+use App\Role;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\File;
+use Illuminate\Http\UploadedFile;
+use Input;
+use Image;
 
 class ProfileController extends Controller
 {
@@ -76,35 +79,91 @@ class ProfileController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = User::findOrFail($id);
         $this->validate($request, [
+            'name' => 'required',
             'nik' => 'required',
-            'email' => 'required',
+            'category_id' => 'required',
+            'area' => 'required',
         ]);
-        $user->nik = $request->input('nik');
+        
+        
+        $user = User::findOrFail($id);
         $user->name = $request->input('name');
-        $user->birthday = $request->input('birthday');
+        $user->nik = $request->input('nik');
         $user->about_me = $request->input('about_me');
-        $user->picture = $request->input('picture');
         $user->gender = $request->input('gender');
-        $user->email = $request->input('email');
         $user->category_id = $request->input('category_id');
         $user->work_location = $request->input('work_location');
         $user->city = $request->input('city');
         $user->area = $request->input('area');
+        $user->region = $request->input('region');
         $user->job_function = $request->input('job_function');
         $user->mobile_phone = $request->input('mobile_phone');
+        $user->selection_date = $request->input('selection_date');
+        $user->birthday = $request->input('birthday');
+        $user->birth_place = $request->input('birth_place');
         $user->bank_account = $request->input('bank_account');
         $user->twitter = $request->input('twitter');
         $user->facebook = $request->input('facebook');
         $user->instagram = $request->input('instagram');
         $user->notes = $request->input('notes');
-        $user->presentation_file = $request->input('presentation_file');
-        $user->qrfield = $request->input('qrfield');
-        $user->activated = 1;
+        $user->unit_type = $request->input('unit_type');
+        $user->unit_name = $request->input('unit_name');        
+        $user->activated = 1;               
+
+        if ($request->hasFile('presentation_file')) {
+            // menambil cover yang diupload berikut ekstensinya
+            $filename = null;
+            $upload_file_presentation = $request->file('presentation_file');
+            $extensionFile = $upload_file_presentation->getClientOriginalExtension();
+            // membuat nama file random dengan extension
+            $filename = str_random(10) . '.' . $extensionFile;
+            $destinationPathFile = public_path() . DIRECTORY_SEPARATOR . 'files';
+
+            // memindahkan file ke folder public/img
+            $upload_file_presentation->move($destinationPathFile, $filename);
+            // hapus cover lama, jika ada
+            if ($user->presentation_file) {
+                $old_file_presentation = $user->presentation_file;
+                $filepath = public_path() . DIRECTORY_SEPARATOR . 'files'. DIRECTORY_SEPARATOR . $user->presentation_file;
+                try {
+                    //File::delete($filepath);
+                } catch (FileNotFoundException $e) {
+                // File sudah dihapus/tidak ada
+                }
+            }
+            $user->presentation_file = $filename; 
+            
+        }
+        
+        if ($request->hasFile('picture')) {
+            // menambil cover yang diupload berikut ekstensinya
+            $picturename = null;
+            $upload_file = $request->file('picture');
+            $extension = $upload_file->getClientOriginalExtension();
+            // membuat nama file random dengan extension
+            $picturename = str_random(10) . '.' . $extension;
+            $destinationPath = public_path() . DIRECTORY_SEPARATOR . 'img';
+
+            // memindahkan file ke folder public/img
+            $upload_file->move($destinationPath, $picturename);
+            // hapus cover lama, jika ada
+            if ($user->picture) {
+                $old_file = $user->picture;
+                $filepath = public_path() . DIRECTORY_SEPARATOR . 'img'. DIRECTORY_SEPARATOR . $user->picture;
+                try {
+                    //File::delete($filepath);
+                } catch (FileNotFoundException $e) {
+                // File sudah dihapus/tidak ada
+                }
+            }
+            $user->picture = $picturename;
+        }
+        
+        
         $user->save();
-        \Flash::success('Data updated');
-        return redirect('/home');
+        \Flash::success('Profile updated');
+        return redirect('home');
     }
 
     /**
