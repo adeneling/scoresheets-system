@@ -331,6 +331,7 @@
     </td>
 
 </tr>
+@if($scoresheet->category->tier == 3)
 <tr>
     <th colspan="4" class="red"><font color="white">TEAM LEADER AND SUPERVISOR CATEGORY ONLY ({{ $scoresheet->category->leadership }}%)</font></th>
 </tr>
@@ -377,6 +378,7 @@
         </div>
     </td>
 </tr>
+@endif
 <tr>
     <td colspan="4">
         <div class="form-group{{ $errors->has('notes') ? ' has-error' : '' }}">
