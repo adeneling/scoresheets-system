@@ -55,7 +55,7 @@ return [
     |
     */
 
-    'from' => ['address' => 'outboksmedia@gmail.com', 'name' => 'Outboksmedia'],
+    'from' => ['address' => 'info@bestcsawards.com', 'name' => 'BestCSAwards'],
 
     /*
     |--------------------------------------------------------------------------

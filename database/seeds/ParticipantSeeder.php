@@ -362,7 +362,7 @@ class ParticipantSeeder extends Seeder
     $participant->region = 'Jatim';
     $participant->area = 3;
     $participant->judged = 0;
-    $participant->email = 'sri_wulandari@telkomsel.co.id; wulan2010@gmail.com';
+    $participant->email = 'sri_wulandari@telkomsel.co.id';
     $participant->picture = 'picture.png';
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
