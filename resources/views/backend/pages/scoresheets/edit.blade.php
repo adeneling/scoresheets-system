@@ -98,9 +98,9 @@
 				<table class="table table-hover">
 					<thead>
 						<tr>
-							<th width="60%">ASPEK</th>
+							<th width="45%">ASPEK</th>
 							<th>BOBOT</th>
-							<th width="40%">NILAI</th>
+							<th width="55%">NILAI</th>
 						</tr>
 					</thead>
 					<tbody>

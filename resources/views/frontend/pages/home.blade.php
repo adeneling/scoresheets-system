@@ -7,7 +7,7 @@
     <meta name="description" content="Paradox Coming-Soon Page ">
     <meta name="keywords" content="coming-soon,bootstrap,youtube background,slideshow background">
     <meta name="author" content="">
-    <title>Scoresheets System</title>    
+    <title>Best Customer Service Awards 2016 | Telkomsel</title>    
     <!-- font-awesome -->
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/lib/font-awesome-4.3.0/css/font-awesome.min.css') }}">
     <!-- plugin stylesheet -->
@@ -30,7 +30,7 @@
     <!-- main section -->
     <div id="main-wrapper">
         <!-- page section -->
-        <main id="main" class="background vd-bg" data-image="{{ asset('frontend/images/main-bg.jpg') }}">
+        <main id="main" class="background vd-bg" data-image="{{ asset('frontend/images/background.png') }}">
             <!-- Overlay -->  
             <div class="overlay">
                 <div class="gradient-overlay background-blue-dark opacity-60">
@@ -47,19 +47,6 @@
                     <div class="container">
                         <!-- tagline -->
                         <div class="tagline ac anim fadeInUp s01 delay-0-6s">
-                            <!-- text animation -->
-                            <div class="carousel-widget text-carousel" data-itemrange="false" data-in="zoomIn" data-out="slideOutDown" data-autoplay="true" data-loop="true" data-items="1" data-mouseDrag="false" data-touchDrag="false">
-                                <div class="carousel">                                  
-                                    <div class="owl-carousel owl-theme">
-                                        <div class="item">
-                                            <h1>SCORESHEETS<font color="red">SYSTEM</font></h1>
-                                        </div>
-                                        <div class="item">
-                                            <h1>BEST<font color="red">CS</font></h1>
-                                        </div>
-                                    </div>                        
-                                </div>
-                            </div>
                             <!-- Counter -->
                             <div class="counter-container">
                                 <img src="{{ asset('frontend-new/img/logo.png') }}" class="img-responsive">
@@ -124,8 +111,6 @@
     <script src="{{ asset('frontend/js/vegas.min.js') }}"></script>
     <script src="{{ asset('frontend/js/jquery.mb.YTPlayer.min.js') }}"></script>
     <script src="{{ asset('frontend/js/video-bg.js') }}"></script>        
-    <!-- Particles effects -->
-    <script type='text/javascript' src="{{ asset('frontend/js/jquery.particleground.js') }}"></script> 
     <!-- common script -->
     <script src="{{ asset('frontend/js/common.js') }}"></script>
     </body>
