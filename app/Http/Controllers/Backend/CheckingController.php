@@ -16,6 +16,7 @@ class CheckingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    protected $email = '';
     public function index()
     {
         //
@@ -45,29 +46,34 @@ class CheckingController extends Controller
         ]);
         $nik = $request->input('nik');
         $email = $request->input('email');
-        $password = str_random(8);       
+        $password = str_random(8);
+        
         if (User::where('nik',$nik)->where('email',$email)->exists()) {
-            if(User::where('activated', 1)->exists()){
-                return redirect('/')->with('status', 'Your account already activated, please check your email.');
-            }else{
+            if(User::where('nik', $nik)->where('email', $email)->where('activated','!=',1)->first()){
                 $user = User::where('nik', $nik)->where('email', $email)->first();
                 $user->activated = 1;
                 $user->password = bcrypt($password);
                 $user->save();
                 /* KIRIM EMAIL */
-                $mail = array( 'email' => $email, 'password' => $password);
-                Mail::send('mails.mail', $mail, function($message) use ($mail) {
-                    $message->to('maulanayusupp@gmail.com');
+                $mail = array( 'email' => $email, 'password' => $password, 'user' => $user->email);
+                Mail::send('mails.mail', compact('mail', 'email', 'password'), function($message) use ($mail, $email, $password) {
+                    $message->to($email);
                     $message->subject('User Account - Scoresheets');
                 });
                 /* MESSAGE SUCCESS */
-                return redirect('/')->with('status', 'Data sesuai, silahkan cek email anda untuk login');                           
+                return redirect('/')->with('status', 'Data sesuai, silahkan cek email anda untuk login');                
+            }else{
+                return redirect('/')->with('status', 'Your account already activated, please check your email.');
             }
             
         }else{
             return redirect('/')->with('status', 'Data tidak cocok');
         }
 
+    }
+    public function sendActivation(Request $request){
+
+        
     }
 
     /**
@@ -89,7 +95,7 @@ class CheckingController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -101,7 +107,7 @@ class CheckingController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**

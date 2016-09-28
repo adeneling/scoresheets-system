@@ -7,7 +7,7 @@
 	<center><img src="{{ asset('frontend-new/img/logo.png') }}"></center>
 </div>
 <br><br>
-<h1>Welcome [{{ Auth::user()->name }}]</h1>
+<h1>Welcome {{ Auth::user()->name }}</h1>
 
 <p>
 	We welcome you to your personalized site, as a participant of <strong>Telkomsel Best Customer Service Awards 2016</strong>.
@@ -21,6 +21,7 @@
 	Please use this QR Code for your check-in process
 <p><br>
 <div class="col-sm-12 text-center">
-	<img src="{{ asset('frontend-new/img/qr.jpg') }}" class="displayed" alt="{{ Auth::user()->name }}"/>
+	<?php DNS2D::getBarcodeHTML("asdfsdf", "QRCODE"); ?>
+	
 </div>
 @stop

@@ -10,13 +10,16 @@
 | to using a Closure or controller method. Build something great!
 |
 */
+
 /* FRONTEND */
 Route::group(['namespace' => 'Frontend'], function(){
 	Route::get('/', 'HomeController@index');
 	Route::get('bestcs/login', 'FrontendController@login');
+
 });
 /* PARTICIPANT */
 Route::group(['namespace' => 'Participant'], function(){
+
 	/* BEST CS */
 	Route::resource('bestcs-participant', 'ParticipantPageController');
 	/* UPLOAD FILE */
@@ -38,6 +41,7 @@ Route::group(['namespace' => 'Participant'], function(){
 Route::group(['namespace' => 'Backend'], function(){
 	/* AUTHENTICATION */
 	Auth::routes();
+	Route::post('activation', 'CheckingController@sendActivation');
 	Route::get('home', 'HomeController@index');	
 	/* UPLOAD PRESENTATOIN */
 	Route::resource('upload', 'UploadPresentationController');

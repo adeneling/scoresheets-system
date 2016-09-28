@@ -48,7 +48,7 @@
                         <!-- end tagline -->
                         <!-- subscribe -->
                         <div class="subscribe ac anim fadeInUp s01 delay-0-8s">
-                            <form class="subscription-form clear form-field-wrapper" role="form" method="POST" action="{{ url('/checking') }}">
+                            <form class="subscription-form clear form-field-wrapper" role="form" method="POST" action="{{ url('checking') }}">
                                 {{ csrf_field() }}
                                 <input type="text" class="form-control error" name="nik" required="required" placeholder="Enter your NIK">
                                 @if ($errors->has('nik'))

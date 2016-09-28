@@ -31,6 +31,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -51,6 +52,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -71,6 +73,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -91,6 +94,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -111,6 +115,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -131,6 +136,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -151,6 +157,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -171,6 +178,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -191,6 +199,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -211,6 +220,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -231,6 +241,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -251,6 +262,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -271,6 +283,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -291,6 +304,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -311,6 +325,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -331,6 +346,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -351,6 +367,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -371,6 +388,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -391,6 +409,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -411,6 +430,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -431,6 +451,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -451,6 +472,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -471,6 +493,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -491,6 +514,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -511,6 +535,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -531,6 +556,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -551,6 +577,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -571,6 +598,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -591,6 +619,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -611,6 +640,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -631,6 +661,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -651,6 +682,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -671,6 +703,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -691,6 +724,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -711,6 +745,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -731,6 +766,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -751,6 +787,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -771,6 +808,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -791,6 +829,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -811,6 +850,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -831,6 +871,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -851,6 +892,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -871,6 +913,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -891,6 +934,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -911,6 +955,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -931,6 +976,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -951,6 +997,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -971,6 +1018,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -991,6 +1039,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1011,6 +1060,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1031,6 +1081,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1051,6 +1102,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1071,6 +1123,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1091,6 +1144,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1111,6 +1165,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1131,6 +1186,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1151,6 +1207,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1171,6 +1228,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1191,6 +1249,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1211,6 +1270,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1231,6 +1291,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1251,6 +1312,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1271,6 +1333,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1291,6 +1354,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1311,6 +1375,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1331,6 +1396,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1351,6 +1417,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1371,6 +1438,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1391,6 +1459,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1411,6 +1480,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1431,6 +1501,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1451,6 +1522,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1471,6 +1543,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1491,6 +1564,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1511,6 +1585,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1531,6 +1606,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1551,6 +1627,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1571,6 +1648,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1591,6 +1669,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1611,6 +1690,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1631,6 +1711,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1651,6 +1732,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1671,6 +1753,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1691,6 +1774,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1711,6 +1795,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1731,6 +1816,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1751,6 +1837,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1771,6 +1858,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1791,6 +1879,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1811,6 +1900,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1831,6 +1921,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1851,6 +1942,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1871,6 +1963,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1891,6 +1984,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1911,6 +2005,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1931,6 +2026,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1951,6 +2047,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1971,6 +2068,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -1991,6 +2089,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2011,6 +2110,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2031,6 +2131,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2051,6 +2152,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2071,6 +2173,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2091,6 +2194,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2111,6 +2215,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2131,6 +2236,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2151,6 +2257,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2171,6 +2278,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2191,6 +2299,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2211,6 +2320,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2231,6 +2341,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2251,6 +2362,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2271,6 +2383,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2291,6 +2404,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2311,6 +2425,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2331,6 +2446,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
 
@@ -2351,6 +2467,7 @@ class ParticipantSeeder extends Seeder
     $participant->password = bcrypt('bestcsawards');
     $participant->birth_place = '';
     $participant->birthday = '';
+    $participant->activated = 0;
 	$participant->save();
 	$participant->attachRole($participantRole);
     }
