@@ -76,7 +76,7 @@ class UsersController extends Controller
         $user->notes = $request->input('notes');
         $user->unit_type = $request->input('unit_type');
         $user->unit_name = $request->input('unit_name');        
-        $user->activated = 1;
+        $user->activated = 0;
         $user->email = $request->input('email');
         $user->password = bcrypt($request->input('password'));
         
