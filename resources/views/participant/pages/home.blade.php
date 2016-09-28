@@ -21,7 +21,6 @@
 	Please use this QR Code for your check-in process
 <p><br>
 <div class="col-sm-12 text-center">
-	<?php DNS2D::getBarcodeHTML("asdfsdf", "QRCODE"); ?>
-	
+	<img src="{{ asset('frontend-new/img/qr.jpg') }}" class="displayed" alt="[Participant Name]"/>	
 </div>
 @stop
