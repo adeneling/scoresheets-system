@@ -98,7 +98,7 @@ class UploadController extends Controller
                 $old_file = $user->presentation_file;
                 $filepath = public_path() . DIRECTORY_SEPARATOR . 'files'. DIRECTORY_SEPARATOR . $user->presentation_file;
                 try {
-                    File::delete($filepath);
+                    //File::delete($filepath);
                 } catch (FileNotFoundException $e) {
                 // File sudah dihapus/tidak ada
                 }

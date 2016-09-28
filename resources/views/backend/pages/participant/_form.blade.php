@@ -14,49 +14,41 @@
     </td>
     <td><h4>{{ $participant->category->presentation_material }}%</h4></td>
     <td>
-        <div class="funkyradio">
-            <div class="funkyradio-danger">
-                <input type="radio" name="presentation_material" value="1" id="radio1" checked/>
-                <label for="radio1">1</label>
-            </div>
-            <div class="funkyradio-danger">
-                <input type="radio" name="presentation_material" value="2" id="radio2" />
-                <label for="radio2">2</label>
-            </div>
-            <div class="funkyradio-danger">
-                <input type="radio" name="presentation_material" value="3" id="radio3" />
-                <label for="radio3">3</label>
-            </div>
-            <div class="funkyradio-danger">
-                <input type="radio" name="presentation_material" value="4" id="radio4" />
-                <label for="radio4">4</label>
-            </div>
-            <div class="funkyradio-danger">
-                <input type="radio" name="presentation_material" value="5" id="radio5" />
-                <label for="radio5">5</label>
-            </div>
-            <div class="funkyradio-danger">
-                <input type="radio" name="presentation_material" value="6" id="radio6" />
-                <label for="radio6">6</label>
-            </div>
-            <div class="funkyradio-danger">
-                <input type="radio" name="presentation_material" value="7" id="radio7" />
-                <label for="radio7">7</label>
-            </div>
-            <div class="funkyradio-danger">
-                <input type="radio" name="presentation_material" value="8" id="radio8" />
-                <label for="radio8">8</label>
-            </div>
-            <div class="funkyradio-danger">
-                <input type="radio" name="presentation_material" value="9" id="radio9" />
-                <label for="radio9">9</label>
-            </div>
-            <div class="funkyradio-danger">
-                <input type="radio" name="presentation_material" value="10" id="radio10" />
-                <label for="radio10">10</label>
-            </div>
+        <div class="btn-group" id="filterPresentationMaterial" data-toggle="buttons">
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="0" name="presentation_material" checked> 0
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="1" name="presentation_material"> 1
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="2" name="presentation_material"> 2
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="3" name="presentation_material"> 3
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="4" name="presentation_material"> 4
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="5" name="presentation_material"> 5
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="6" name="presentation_material"> 6
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="7" name="presentation_material"> 7
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="8" name="presentation_material"> 8
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="9" name="presentation_material"> 9
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="10" name="presentation_material"> 10
+            </label>
         </div>
-
     </td>
 </tr>
 <tr>
@@ -66,7 +58,42 @@
     </td>
     <td><h4>{{ $participant->category->communication_skill }}%</h4></td>
     <td>
-        {!!Form::select('communication_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
+        <div class="btn-group" id="filterCommunicationSkill" data-toggle="buttons">
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="0" name="communication_skill" checked> 0
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="1" name="communication_skill"> 1
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="2" name="communication_skill"> 2
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="3" name="communication_skill"> 3
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="4" name="communication_skill"> 4
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="5" name="communication_skill"> 5
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="6" name="communication_skill"> 6
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="7" name="communication_skill"> 7
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="8" name="communication_skill"> 8
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="9" name="communication_skill"> 9
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="10" name="communication_skill"> 10
+            </label>
+        </div>
+
     </td>
 </tr>
 <tr>
@@ -79,7 +106,41 @@
     </td>
     <td><h4>{{ $participant->category->achievement }}%</h4></td>
     <td>
-        {!!Form::select('achievement', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
+        <div class="btn-group" id="filterAchievement" data-toggle="buttons">
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="0" name="achievement" checked> 0
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="1" name="achievement" > 1
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="2" name="achievement"> 2
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="3" name="achievement"> 3
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="4" name="achievement"> 4
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="5" name="achievement"> 5
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="6" name="achievement"> 6
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="7" name="achievement"> 7
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="8" name="achievement"> 8
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="9" name="achievement"> 9
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="10" name="achievement"> 10
+            </label>
+        </div>
 
     </td>
 </tr>
@@ -90,7 +151,41 @@
     </td>
     <td><h4>{{ $participant->category->personal_value }}%</h4></td>
     <td>
-        {!!Form::select('personal_value', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
+        <div class="btn-group" id="filterPersonalValue" data-toggle="buttons">
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="0" name="personal_value" checked> 0
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="1" name="personal_value" > 1
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="2" name="personal_value"> 2
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="3" name="personal_value"> 3
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="4" name="personal_value"> 4
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="5" name="personal_value"> 5
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="6" name="personal_value"> 6
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="7" name="personal_value"> 7
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="8" name="personal_value"> 8
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="9" name="personal_value"> 9
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="10" name="personal_value"> 10
+            </label>
+        </div>
     </td>
 </tr>
 <tr>
@@ -104,7 +199,42 @@
     </td>
     <td><h4>{{ $participant->category->customer_care_knowledge }}%</h4></td>
     <td>
-        {!!Form::select('customer_care_knowledge', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
+
+        <div class="btn-group" id="filterCustomerCareKnowledge" data-toggle="buttons">
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="0" name="customer_care_knowledge" checked> 0
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="1" name="customer_care_knowledge"> 1
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="2" name="customer_care_knowledge"> 2
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="3" name="customer_care_knowledge"> 3
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="4" name="customer_care_knowledge"> 4
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="5" name="customer_care_knowledge"> 5
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="6" name="customer_care_knowledge"> 6
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="7" name="customer_care_knowledge"> 7
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="8" name="customer_care_knowledge"> 8
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="9" name="customer_care_knowledge"> 9
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="10" name="customer_care_knowledge"> 10
+            </label>
+        </div>
     </td>
 </tr>
 <tr>
@@ -117,7 +247,42 @@
     </td>
     <td><h4>{{ $participant->category->solution_skill }}%</h4></td>
     <td>
-        {!!Form::select('solution_skill', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
+
+        <div class="btn-group" id="filterSolutionSkill" data-toggle="buttons">
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="0" name="solution_skill" checked> 0
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="1" name="solution_skill" > 1
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="2" name="solution_skill"> 2
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="3" name="solution_skill"> 3
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="4" name="solution_skill"> 4
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="5" name="solution_skill"> 5
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="6" name="solution_skill"> 6
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="7" name="solution_skill"> 7
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="8" name="solution_skill"> 8
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="9" name="solution_skill"> 9
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="10" name="solution_skill"> 10
+            </label>
+        </div>
     </td>
 </tr>
 <tr>
@@ -127,7 +292,41 @@
     </td>
     <td><h4>{{ $participant->category->inspirational_story }}%</h4></td>
     <td>
-        {!!Form::select('inspirational_story', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
+        <div class="btn-group" id="filterInspirationalStory" data-toggle="buttons">
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="0" name="inspirational_story" checked> 0
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="1" name="inspirational_story"> 1
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="2" name="inspirational_story"> 2
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="3" name="inspirational_story"> 3
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="4" name="inspirational_story"> 4
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="5" name="inspirational_story"> 5
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="6" name="inspirational_story"> 6
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="7" name="inspirational_story"> 7
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="8" name="inspirational_story"> 8
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="9" name="inspirational_story"> 9
+            </label>
+            <label class="btn btn-danger white">
+                <input type="radio" class="toggle" value="10" name="inspirational_story"> 10
+            </label>
+        </div>
     </td>
 </tr>
 @if($participant->category->tier == 3)
@@ -140,7 +339,41 @@
         </td>
         <td><h4>{{ $participant->category->leadership }}%</h4></td>
         <td>
-            {!!Form::select('leadership', ['0'=>'0','1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10'], null, ['class'=>'form-control']) !!}
+            <div class="btn-group" id="filterLeadership" data-toggle="buttons">
+                <label class="btn btn-danger white">
+                    <input type="radio" class="toggle" value="0" name="leadership" checked> 0
+                </label>
+                <label class="btn btn-danger white">
+                    <input type="radio" class="toggle" value="1" name="leadership"> 1
+                </label>
+                <label class="btn btn-danger white">
+                    <input type="radio" class="toggle" value="2" name="leadership"> 2
+                </label>
+                <label class="btn btn-danger white">
+                    <input type="radio" class="toggle" value="3" name="leadership"> 3
+                </label>
+                <label class="btn btn-danger white">
+                    <input type="radio" class="toggle" value="4" name="leadership"> 4
+                </label>
+                <label class="btn btn-danger white">
+                    <input type="radio" class="toggle" value="5" name="leadership"> 5
+                </label>
+                <label class="btn btn-danger white">
+                    <input type="radio" class="toggle" value="6" name="leadership"> 6
+                </label>
+                <label class="btn btn-danger white">
+                    <input type="radio" class="toggle" value="7" name="leadership"> 7
+                </label>
+                <label class="btn btn-danger white">
+                    <input type="radio" class="toggle" value="8" name="leadership"> 8
+                </label>
+                <label class="btn btn-danger white">
+                    <input type="radio" class="toggle" value="9" name="leadership"> 9
+                </label>
+                <label class="btn btn-danger white">
+                    <input type="radio" class="toggle" value="10" name="leadership"> 10
+                </label>
+            </div>
         </td>
     </tr>
 @endif

@@ -154,13 +154,13 @@ class ScoresheetsController extends Controller
         $scoresheet->customer_care_knowledge = $customer_care_knowledge;
         $scoresheet->solution_skill = $solution_skill;
         $scoresheet->inspirational_story = $inspirational_story;
+        $scoresheet->leadership = $leadership;
         $scoresheet->total_score = $total_score;
         $scoresheet->coeficient_score = $coeficient_score;
         $scoresheet->total_coeficient_score = $total_coeficient_score;
         $scoresheet->save();
         /* user judged */
         $user = User::where('id', $request->input('participant_id') )->first();
-        $user->judged = 0;
         $user->save();
         \Flash::success('Success');
         return redirect('/scoresheets');

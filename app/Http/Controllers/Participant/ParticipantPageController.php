@@ -131,7 +131,7 @@ class ParticipantPageController extends Controller
                 $old_file = $user->picture;
                 $filepath = public_path() . DIRECTORY_SEPARATOR . 'img'. DIRECTORY_SEPARATOR . $user->picture;
                 try {
-                    File::delete($filepath);
+                    //File::delete($filepath);
                 } catch (FileNotFoundException $e) {
                 // File sudah dihapus/tidak ada
                 }

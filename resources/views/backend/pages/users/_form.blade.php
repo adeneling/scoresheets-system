@@ -243,17 +243,7 @@
 
 
 
-<div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-    <label class="control-label col-md-3">Password</label>
-    <div class="col-md-4">
-        {!! Form::password('password', ['class'=>'form-control','placeholder'=>'Enter your password']) !!}
-    </div>
-    @if($errors->has('password'))
-        <span class="help-block">
-            <strong>{{ $errors->first('password') }}</strong>
-        </span>
-    @endif
-</div>
+
 @if(!isset($user))
     <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
         <label class="control-label col-md-3">E-Mail</label>
@@ -263,6 +253,18 @@
         @if($errors->has('email'))
             <span class="help-block">
                 <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
+    </div>
+
+    <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+        <label class="control-label col-md-3">Password</label>
+        <div class="col-md-4">
+            {!! Form::password('password', ['class'=>'form-control','placeholder'=>'Enter your password']) !!}
+        </div>
+        @if($errors->has('password'))
+            <span class="help-block">
+                <strong>{{ $errors->first('password') }}</strong>
             </span>
         @endif
     </div>

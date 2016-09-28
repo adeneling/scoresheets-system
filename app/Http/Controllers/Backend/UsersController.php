@@ -100,7 +100,7 @@ class UsersController extends Controller
                 $old_file = $user->presentation_file;
                 $filepath = public_path() . DIRECTORY_SEPARATOR . 'files'. DIRECTORY_SEPARATOR . $user->presentation_file;
                 try {
-                    File::delete($filepath);
+                    //File::delete($filepath);
                 } catch (FileNotFoundException $e) {
                 // File sudah dihapus/tidak ada
                 }
@@ -126,7 +126,7 @@ class UsersController extends Controller
                 $old_file = $user->picture;
                 $filepath = public_path() . DIRECTORY_SEPARATOR . 'img'. DIRECTORY_SEPARATOR . $user->picture;
                 try {
-                    File::delete($filepath);
+                    //File::delete($filepath);
                 } catch (FileNotFoundException $e) {
                 // File sudah dihapus/tidak ada
                 }
@@ -178,7 +178,6 @@ class UsersController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'nik' => 'required',
-            'password' => 'required',
             'category_id' => 'required',
         ]);
         if ($request->hasFile('presentation_file')) {
@@ -197,7 +196,7 @@ class UsersController extends Controller
                 $old_file_presentation = $user->presentation_file;
                 $filepath = public_path() . DIRECTORY_SEPARATOR . 'files'. DIRECTORY_SEPARATOR . $user->presentation_file;
                 try {
-                    File::delete($filepath);
+                    //File::delete($filepath);
                 } catch (FileNotFoundException $e) {
                 // File sudah dihapus/tidak ada
                 }
@@ -228,10 +227,7 @@ class UsersController extends Controller
         $user->notes = $request->input('notes');
         $user->unit_type = $request->input('unit_type');
         $user->unit_name = $request->input('unit_name');        
-        $user->activated = 1;
-        $user->password = bcrypt($request->input('password'));
-
-               
+        $user->activated = 1;               
 
         if ($request->hasFile('picture')) {
             // menambil cover yang diupload berikut ekstensinya
@@ -249,7 +245,7 @@ class UsersController extends Controller
                 $old_file = $user->picture;
                 $filepath = public_path() . DIRECTORY_SEPARATOR . 'img'. DIRECTORY_SEPARATOR . $user->picture;
                 try {
-                    File::delete($filepath);
+                    //File::delete($filepath);
                 } catch (FileNotFoundException $e) {
                 // File sudah dihapus/tidak ada
                 }
