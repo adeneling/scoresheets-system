@@ -23,8 +23,12 @@ class ParticipantController extends Controller
         $q = $request->get('q');
         if (isset($q)) {
             $category = Category::where('id',$q)->first();
-        }        
-        $participants = User::where('category_id', 'LIKE', '%'.$q.'%')->where('judged','!=',Auth::user()->id)->orderBy('created_at','asc')->get();
+            $participants = User::where('category_id', $q)->where('judged','!=',Auth::user()->id)->orderBy('created_at','asc')->get();
+        }else{
+            $participants = User::where('category_id', 'LIKE', '%'.$q.'%')->where('judged','!=',Auth::user()->id)->orderBy('created_at','asc')->get();    
+        }
+        
+
         return view('backend.pages.participant.index', compact('participants', 'q', 'category'));
     }
 
