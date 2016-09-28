@@ -3,7 +3,10 @@
 {!! Form::hidden('participant_area', $scoresheet->user->area) !!}
 {!! Form::hidden('jury_id', Auth::user()->id) !!}
 {!! Form::hidden('category_id', $scoresheet->user->category_id ) !!}
-
+<style>
+.btn-danger{border:none;}
+.btn-group-lg>.btn, .btn-lg {background-color:#eee;color:#333;}
+</style>
 <tr>
     <th colspan="4" class="red"><font color="white">DECK AND DELIVERY ({{ $scoresheet->category->presentation_material + $scoresheet->category->communication_skill }}%)</font></th>
 </tr>
@@ -15,9 +18,6 @@
     <td><h4>{{ $scoresheet->category->presentation_material }}%</h4></td>
     <td>
         <div class="btn-group" id="filterPresentationMaterial" data-toggle="buttons">
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="presentation_material"> 0
-            </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="presentation_material"> 1
             </label>
@@ -65,9 +65,6 @@
     <td><h4>{{ $scoresheet->category->communication_skill }}%</h4></td>
     <td>
         <div class="btn-group" id="filterCommunicationSkill" data-toggle="buttons">
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="communication_skill"> 0
-            </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="communication_skill"> 1
             </label>
@@ -119,9 +116,6 @@
     <td>
         <div class="btn-group" id="filterAchievement" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="achievement"> 0
-            </label>
-            <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="achievement" > 1
             </label>
             <label class="btn btn-lg btn-danger white">
@@ -168,9 +162,6 @@
     <td><h4>{{ $scoresheet->category->personal_value }}%</h4></td>
     <td>
         <div class="btn-group" id="filterPersonalValue" data-toggle="buttons">
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="personal_value"> 0
-            </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="personal_value" > 1
             </label>
@@ -223,9 +214,6 @@
     <td>
         <div class="btn-group" id="filterCustomerCareKnowledge" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="customer_care_knowledge"> 0
-            </label>
-            <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="customer_care_knowledge"> 1
             </label>
             <label class="btn btn-lg btn-danger white">
@@ -276,9 +264,6 @@
     <td>
         <div class="btn-group" id="filterSolutionSkill" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="solution_skill"> 0
-            </label>
-            <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="solution_skill" > 1
             </label>
             <label class="btn btn-lg btn-danger white">
@@ -325,9 +310,6 @@
     <td><h4>{{ $scoresheet->category->inspirational_story }}%</h4></td>
     <td>
         <div class="btn-group" id="filterInspirationalStory" data-toggle="buttons">
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="inspirational_story"> 0
-            </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="inspirational_story"> 1
             </label>
@@ -378,9 +360,6 @@
     <td><h4>{{ $scoresheet->category->leadership }}%</h4></td>
     <td>
         <div class="btn-group" id="filterLeadership" data-toggle="buttons">
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="leadership"> 0
-            </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="leadership"> 1
             </label>
@@ -438,7 +417,7 @@
 <tr>
     <th colspan="4">
         <center>
-            <button type="submit" class="btn btn-danger">{{ isset($scoresheet) ? 'SUBMIT' : 'SUBMIT' }}</button> 
+            <button type="submit" class="btn btn-success">{{ isset($scoresheet) ? 'SUBMIT' : 'SUBMIT' }}</button> 
             @if(isset($scoresheet)) | 
                 <a href="{{ url('scoresheets') }}" class="btn btn-warning">Back</a>
             @endif
