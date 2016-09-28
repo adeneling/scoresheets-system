@@ -30,14 +30,7 @@
     <!-- main section -->
     <div id="main-wrapper">
         <!-- page section -->
-        <main id="main" class="background vd-bg" data-image="{{ asset('frontend/images/background.png') }}">
-            <!-- Overlay -->  
-            <div class="overlay">
-                <div class="gradient-overlay background-blue-dark opacity-60">
-                </div>
-            </div>
-            <!-- image overlay -->
-            <div class="overlay" style="background-color: rgba(0,0,0,0.6)"></div>
+        <main id="main" class="background" data-image="{{ asset('frontend/images/background.png') }}">
             <!-- end images overlay -->
             <div class="nc-content-section index nc-active vhm">
                 <!-- particles effects -->
@@ -49,7 +42,7 @@
                         <div class="tagline ac anim fadeInUp s01 delay-0-6s">
                             <!-- Counter -->
                             <div class="counter-container">
-                                <img src="{{ asset('frontend-new/img/logo.png') }}" class="img-responsive">
+                                <img src="{{ asset('frontend/images/logo_main.png') }}" class="img-responsive">
                             </div>                 
                         </div>
                         <!-- end tagline -->

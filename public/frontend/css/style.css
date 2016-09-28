@@ -1041,8 +1041,8 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .single-image .background {
      background-position: center center;
-     background-repeat: no-repeat;
-     background-size: cover;
+     /*background-repeat: no-repeat;
+     background-size: cover;*/
 }
 
 .logo {
