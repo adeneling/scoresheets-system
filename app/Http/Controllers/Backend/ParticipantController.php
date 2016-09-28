@@ -95,14 +95,14 @@ class ParticipantController extends Controller
         $leadership = $request->input('leadership');        
         /* calculate with formula */
         $category = Category::where('id', $request->input('category_id') )->first();        
-        $presentation_material_result = $presentation_material * $category->presentation_material / 100;
-        $communication_skill_result = $communication_skill * $category->communication_skill / 100;
-        $achievement_result = $achievement * $category->achievement / 100;
-        $personal_value_result = $personal_value * $category->personal_value / 100;
-        $customer_care_knowledge_result = $customer_care_knowledge * $category->customer_care_knowledge / 100;
+        $presentation_material_result = $presentation_material * $category->presentation_material;
+        $communication_skill_result = $communication_skill * $category->communication_skill;
+        $achievement_result = $achievement * $category->achievement;
+        $personal_value_result = $personal_value * $category->personal_value;
+        $customer_care_knowledge_result = $customer_care_knowledge * $category->customer_care_knowledge;
         $solution_skill_result = $solution_skill * $category->solution_skill;
-        $inspirational_story_result = $inspirational_story * $category->inspirational_story / 100;
-        $leadership_result = $leadership * $category->leadership / 100;
+        $inspirational_story_result = $inspirational_story * $category->inspirational_story;
+        $leadership_result = $leadership * $category->leadership;
         /* result */
         $total_score = 
             $presentation_material_result + 
@@ -125,7 +125,7 @@ class ParticipantController extends Controller
             $leadership
         ;
         //$total_coeficient_score = $total_score / $coeficient_score;
-        $total_coeficient_score = $total_score;
+        $total_coeficient_score = $total_score / 100;
         /* request */
         $scoresheet = new Scoresheet();
         $scoresheet->participant_id = $request->input('participant_id');
