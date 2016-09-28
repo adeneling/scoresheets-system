@@ -204,8 +204,7 @@ class UsersController extends Controller
         $user->instagram = $request->input('instagram');
         $user->notes = $request->input('notes');
         $user->unit_type = $request->input('unit_type');
-        $user->unit_name = $request->input('unit_name');        
-        $user->activated = 1;               
+        $user->unit_name = $request->input('unit_name');                     
 
         if ($request->hasFile('presentation_file')) {
             // menambil cover yang diupload berikut ekstensinya
