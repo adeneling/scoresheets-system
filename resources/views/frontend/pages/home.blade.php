@@ -62,7 +62,7 @@
                             </div>
                             <!-- Counter -->
                             <div class="counter-container">
-                                <img src="{{ asset('frontend/images/logo.png') }}">
+                                <img src="{{ asset('frontend-new/img/logo.png') }}" class="img-responsive">
                             </div>                 
                         </div>
                         <!-- end tagline -->
