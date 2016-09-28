@@ -77,7 +77,7 @@
 
                         <!-- copyright -->
                         <div class="copyrights ac anim fadeInUp s01 delay-1s">
-                            THE BEST CUSTOMER SERVICE AWARD 2016
+                            <font color="white">THE BEST CUSTOMER SERVICE AWARD 2016</font>
                         </div>
                         <!-- end copyright -->
                     </div>

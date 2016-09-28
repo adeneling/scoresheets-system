@@ -180,6 +180,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
         Laratrust\LaratrustServiceProvider::class,
+        Milon\Barcode\BarcodeServiceProvider::class,
     ],
 
     /*
@@ -232,6 +233,8 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Flash' => 'Laracasts\Flash\Flash',
         'Laratrust' => Laratrust\LaratrustFacade::class,
+        'DNS1D' => Milon\Barcode\Facades\DNS1DFacade::class,
+        'DNS2D' => Milon\Barcode\Facades\DNS2DFacade::class,
 
     ],
 
