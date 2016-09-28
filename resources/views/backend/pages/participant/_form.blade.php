@@ -49,6 +49,11 @@
                 <input type="radio" class="toggle" value="10" name="presentation_material"> 10
             </label>
         </div>
+        @if($errors->has('presentation_material'))
+            <span class="help-block">
+                <strong>{{ $errors->first('presentation_material') }}</strong>
+            </span>
+        @endif
     </td>
 </tr>
 <tr>
@@ -93,7 +98,11 @@
                 <input type="radio" class="toggle" value="10" name="communication_skill"> 10
             </label>
         </div>
-
+        @if($errors->has('communication_skill'))
+            <span class="help-block">
+                <strong>{{ $errors->first('communication_skill') }}</strong>
+            </span>
+        @endif
     </td>
 </tr>
 <tr>
@@ -141,7 +150,11 @@
                 <input type="radio" class="toggle" value="10" name="achievement"> 10
             </label>
         </div>
-
+        @if($errors->has('achievement'))
+            <span class="help-block">
+                <strong>{{ $errors->first('achievement') }}</strong>
+            </span>
+        @endif
     </td>
 </tr>
 <tr>
@@ -186,6 +199,11 @@
                 <input type="radio" class="toggle" value="10" name="personal_value"> 10
             </label>
         </div>
+        @if($errors->has('personal_value'))
+            <span class="help-block">
+                <strong>{{ $errors->first('personal_value') }}</strong>
+            </span>
+        @endif
     </td>
 </tr>
 <tr>
@@ -235,6 +253,11 @@
                 <input type="radio" class="toggle" value="10" name="customer_care_knowledge"> 10
             </label>
         </div>
+        @if($errors->has('customer_care_knowledge'))
+            <span class="help-block">
+                <strong>{{ $errors->first('customer_care_knowledge') }}</strong>
+            </span>
+        @endif
     </td>
 </tr>
 <tr>
@@ -283,6 +306,11 @@
                 <input type="radio" class="toggle" value="10" name="solution_skill"> 10
             </label>
         </div>
+        @if($errors->has('solution_skill'))
+            <span class="help-block">
+                <strong>{{ $errors->first('solution_skill') }}</strong>
+            </span>
+        @endif
     </td>
 </tr>
 <tr>
@@ -327,6 +355,11 @@
                 <input type="radio" class="toggle" value="10" name="inspirational_story"> 10
             </label>
         </div>
+        @if($errors->has('inspirational_story'))
+            <span class="help-block">
+                <strong>{{ $errors->first('inspirational_story') }}</strong>
+            </span>
+        @endif
     </td>
 </tr>
 @if($participant->category->tier == 3)
@@ -374,6 +407,11 @@
                     <input type="radio" class="toggle" value="10" name="leadership"> 10
                 </label>
             </div>
+            @if($errors->has('leadership'))
+                <span class="help-block">
+                    <strong>{{ $errors->first('leadership') }}</strong>
+                </span>
+            @endif
         </td>
     </tr>
 @endif

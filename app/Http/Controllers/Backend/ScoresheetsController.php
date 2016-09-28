@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Backend;
 
 use Illuminate\Http\Request;
+use Auth;
 use App\Scoresheet;
 use App\User;
 use App\Category;
@@ -22,8 +23,11 @@ class ScoresheetsController extends Controller
         $q = $request->get('q');
         if (isset($q)) {
             $category = Category::where('id',$q)->first();
-        }        
-        $scoresheets = Scoresheet::where('category_id', 'LIKE', '%'.$q.'%')->orderBy('created_at','desc')->get();
+            $scoresheets = Scoresheet::where('jury_id', Auth::user()->id)->where('category_id', $q)->orderBy('created_at','desc')->get();
+        }else{
+            $scoresheets = Scoresheet::where('jury_id', Auth::user()->id)->orderBy('created_at','desc')->get();
+        }
+        
         return view('backend.pages.scoresheets.index', compact('scoresheets', 'q', 'category'));
     }
 
@@ -82,7 +86,14 @@ class ScoresheetsController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-            
+            'presentation_material' => 'required',
+            'communication_skill' => 'required',
+            'achievement' => 'required',
+            'personal_value' => 'required',
+            'customer_care_knowledge' => 'required',
+            'solution_skill' => 'required',
+            'inspirational_story' => 'required',
+            'leadership' => 'required',
         ]);
         /* scoresheet */
         $presentation_material = $request->input('presentation_material');

@@ -16,7 +16,7 @@
     <td>
         <div class="btn-group" id="filterPresentationMaterial" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="presentation_material" checked> 0
+                <input type="radio" class="toggle" value="0" name="presentation_material"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="presentation_material"> 1
@@ -49,6 +49,12 @@
                 <input type="radio" class="toggle" value="10" name="presentation_material"> 10
             </label>
         </div>
+        @if($errors->has('presentation_material'))
+            <span class="help-block">
+                <strong>{{ $errors->first('presentation_material') }}</strong>
+            </span>
+        @endif
+    
     </td>
 </tr>
 <tr>
@@ -60,7 +66,7 @@
     <td>
         <div class="btn-group" id="filterCommunicationSkill" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="communication_skill" checked> 0
+                <input type="radio" class="toggle" value="0" name="communication_skill"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="communication_skill"> 1
@@ -93,6 +99,11 @@
                 <input type="radio" class="toggle" value="10" name="communication_skill"> 10
             </label>
         </div>
+        @if($errors->has('communication_skill'))
+            <span class="help-block">
+                <strong>{{ $errors->first('communication_skill') }}</strong>
+            </span>
+        @endif
     </td>
 
 </tr>
@@ -108,7 +119,7 @@
     <td>
         <div class="btn-group" id="filterAchievement" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="achievement" checked> 0
+                <input type="radio" class="toggle" value="0" name="achievement"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="achievement" > 1
@@ -141,6 +152,11 @@
                 <input type="radio" class="toggle" value="10" name="achievement"> 10
             </label>
         </div>
+        @if($errors->has('achievement'))
+            <span class="help-block">
+                <strong>{{ $errors->first('achievement') }}</strong>
+            </span>
+        @endif
     </td>
 
 </tr>
@@ -153,7 +169,7 @@
     <td>
         <div class="btn-group" id="filterPersonalValue" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="personal_value" checked> 0
+                <input type="radio" class="toggle" value="0" name="personal_value"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="personal_value" > 1
@@ -186,6 +202,11 @@
                 <input type="radio" class="toggle" value="10" name="personal_value"> 10
             </label>
         </div>
+        @if($errors->has('personal_value'))
+            <span class="help-block">
+                <strong>{{ $errors->first('personal_value') }}</strong>
+            </span>
+        @endif
     </td>
 
 </tr>
@@ -202,7 +223,7 @@
     <td>
         <div class="btn-group" id="filterCustomerCareKnowledge" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="customer_care_knowledge" checked> 0
+                <input type="radio" class="toggle" value="0" name="customer_care_knowledge"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="customer_care_knowledge"> 1
@@ -235,6 +256,11 @@
                 <input type="radio" class="toggle" value="10" name="customer_care_knowledge"> 10
             </label>
         </div>
+        @if($errors->has('customer_care_knowledge'))
+            <span class="help-block">
+                <strong>{{ $errors->first('customer_care_knowledge') }}</strong>
+            </span>
+        @endif
     </td>
 
 </tr>
@@ -250,7 +276,7 @@
     <td>
         <div class="btn-group" id="filterSolutionSkill" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="solution_skill" checked> 0
+                <input type="radio" class="toggle" value="0" name="solution_skill"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="solution_skill" > 1
@@ -283,6 +309,11 @@
                 <input type="radio" class="toggle" value="10" name="solution_skill"> 10
             </label>
         </div>
+        @if($errors->has('solution_skill'))
+            <span class="help-block">
+                <strong>{{ $errors->first('solution_skill') }}</strong>
+            </span>
+        @endif
     </td>
 
 </tr>
@@ -295,7 +326,7 @@
     <td>
         <div class="btn-group" id="filterInspirationalStory" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="inspirational_story" checked> 0
+                <input type="radio" class="toggle" value="0" name="inspirational_story"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="inspirational_story"> 1
@@ -328,6 +359,11 @@
                 <input type="radio" class="toggle" value="10" name="inspirational_story"> 10
             </label>
         </div>
+        @if($errors->has('inspirational_story'))
+            <span class="help-block">
+                <strong>{{ $errors->first('inspirational_story') }}</strong>
+            </span>
+        @endif
     </td>
 
 </tr>
@@ -343,7 +379,7 @@
     <td>
         <div class="btn-group" id="filterLeadership" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="leadership" checked> 0
+                <input type="radio" class="toggle" value="0" name="leadership"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="leadership"> 1
@@ -376,6 +412,11 @@
                 <input type="radio" class="toggle" value="10" name="leadership"> 10
             </label>
         </div>
+        @if($errors->has('leadership'))
+            <span class="help-block">
+                <strong>{{ $errors->first('leadership') }}</strong>
+            </span>
+        @endif
     </td>
 </tr>
 @endif

@@ -30,6 +30,7 @@
 
 <div class="clearfix"></div>
 
+@if(isset($scoresheets))
 <div class="row">
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
@@ -53,7 +54,7 @@
 
 					<tbody>
 						<?php $no = 1; ?>
-                		@foreach($scoresheets as $scoresheet)
+						@foreach($scoresheets as $scoresheet)
 						<tr>
 							<td>{{ $no++ }}</td>
 							<td>{{ $scoresheet->participant_name }}</td>
@@ -63,11 +64,11 @@
 							<td>
 								<center>
 									{!! Form::model($scoresheet, ['route' => ['scoresheets.destroy', $scoresheet], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
-	                                <a href = "{{ route('scoresheets.show', encrypt($scoresheet->id))}}" class="btn btn-primary">Check</a> | 
-	                                <a href = "{{ route('scoresheets.edit', encrypt($scoresheet->id))}}" class="btn btn-warning">Edit Score</a> | 
-	                                <button type="submit" class="btn btn-danger js-submit-confirm">Delete</button>
-	                                {!! Form::close()!!}
-									
+									<a href = "{{ route('scoresheets.show', encrypt($scoresheet->id))}}" class="btn btn-primary">Check</a> | 
+									<a href = "{{ route('scoresheets.edit', encrypt($scoresheet->id))}}" class="btn btn-warning">Edit Score</a> | 
+									<button type="submit" class="btn btn-danger js-submit-confirm">Delete</button>
+									{!! Form::close()!!}
+
 								</center>
 							</td>
 						</tr>
@@ -78,4 +79,8 @@
 		</div>
 	</div>
 </div>
+@else
+<center><H1><font color="red">EMPTY</font></H1></center>
+@endif
+
 @endsection
