@@ -49,7 +49,7 @@ class ScoresheetsTable extends Migration
             $table->string('notes')->nullable();
             $table->integer('room_id')->nullable();          
             $table->date('time')->nullable();
-            $table->decimal('total_score');
+            $table->integer('total_score');
             $table->integer('coeficient_score');
             $table->decimal('total_coeficient_score');
             $table->timestamps();
