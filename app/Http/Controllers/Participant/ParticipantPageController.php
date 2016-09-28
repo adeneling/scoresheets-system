@@ -43,12 +43,12 @@ class ParticipantPageController extends Controller
     }
     public function itinerary()
     {
-        $itinerarys = Itinerary::where('user_id', Auth::user()->id)->get();
+        $itinerarys = Itinerary::where('user_id', Auth::user()->id)->orderBy('created_at','desc')->get();
         return view('participant.pages.itinerary',compact('itinerarys'));
     }
     public function notifications()
     {
-        $notifications = Notification::where('user_id', Auth::user()->id)->get();
+        $notifications = Notification::where('user_id', Auth::user()->id)->orderBy('created_at','desc')->get();
         return view('participant.pages.notifications',compact('notifications'));
     }
     public function index()

@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="{{ asset('frontend-new/css/reset.css') }}"> <!-- CSS reset -->
 	<link rel="stylesheet" href="{{ asset('frontend-new/css/style.css') }}"> <!-- Resource style -->
 	<script src="{{ asset('frontend-new/js/modernizr.js') }}"></script> <!-- Modernizr -->
+	<link rel="stylesheet" href="{{ asset('frontend-new/css/component.css') }}"> <!-- CSS reset -->
 
 	
 	<title>Best Customer Service Awards 2016 | Telkomsel</title>
@@ -19,7 +20,6 @@
 <body>
 	{{-- main --}}
 	<main>
-		<h1>@yield('title')</h1>
 		{{-- notification --}}
 		@if (session()->has('flash_notification.message'))
 		<div class="container">

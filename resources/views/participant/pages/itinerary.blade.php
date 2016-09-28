@@ -5,18 +5,23 @@
 @section('content')
 
 @foreach($itinerarys as $itinerary)
-	<div class="row">
-		<div class="col-md-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">Booking Code: {{ $itinerary->booking_id }}</div>
-				<div class="panel-body">
-					NIK: {{ $itinerary->user_nik }}<br>
-					Booking Code: {{ $itinerary->booking_id }}<br>
-					Detail: {{ $itinerary->booking_id }} <br>
-					URL: {{ $itinerary->booking_id }}<br>
-				</div>
+
+<div class="main">
+	<ul class="cbp_tmtimeline" >
+		<li >
+			<div class="cbp_tmicon cbp_tmicon-clock"></div>
+			<div class="cbp_tmlabel">
+				<h2>Your Flight Detail</h2>
+				<p>BOOKING CODE</p>
+				<h3>[{{ $itinerary->booking_id }}]</h3>
+				<p>[DETAIL]<br>{{ $itinerary->detail }}</p>
+				<br>
+				<p>[URL]<br>{{ $itinerary->url }}</p>
 			</div>
-		</div>
-	</div>
+		</li>
+
+	</ul>
+</div>
+<p>Have a pleasant trip!</p>
 @endforeach
 @stop

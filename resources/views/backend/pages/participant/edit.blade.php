@@ -21,7 +21,7 @@
 						<h3><center>{{ $participant->name }}</center></h3>
 						<center>
 							@if($participant->presentation_file != null)
-                                <a href="{{ asset('files/'. Auth::user()->presentation_file) }}" class="btn btn-danger" target="_blank">Presentation File</a>
+                                <a href="{{ asset('files/'. $participant->presentation_file) }}" class="btn btn-danger" target="_blank">Presentation File</a>
                             @else
                                 <a href="#" class="btn btn-danger" >Presentasi belum ada</a>
                             @endif

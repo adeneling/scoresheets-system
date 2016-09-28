@@ -23,6 +23,7 @@ class CategorySeeder extends Seeder
 	        'customer_care_knowledge' => 30,
 	        'solution_skill' => 15,
 	        'inspirational_story' => 20,
+	        'leadership' => 0,
 	        'tier' => 1,
 		]);
 		App\Category::create([
@@ -36,6 +37,7 @@ class CategorySeeder extends Seeder
 	        'customer_care_knowledge' => 30,
 	        'solution_skill' => 15,
 	        'inspirational_story' => 20,
+	        'leadership' => 0,
 	        'tier' => 1,
 		]);
 		App\Category::create([
@@ -49,6 +51,7 @@ class CategorySeeder extends Seeder
 	        'customer_care_knowledge' => 30,
 	        'solution_skill' => 15,
 	        'inspirational_story' => 20,
+	        'leadership' => 0,
 	        'tier' => 1,
 		]);
 		App\Category::create([
@@ -62,6 +65,7 @@ class CategorySeeder extends Seeder
 	        'customer_care_knowledge' => 30,
 	        'solution_skill' => 15,
 	        'inspirational_story' => 20,
+	        'leadership' => 0,
 	        'tier' => 1,
 		]);
 		App\Category::create([
@@ -75,6 +79,7 @@ class CategorySeeder extends Seeder
 	        'customer_care_knowledge' => 30,
 	        'solution_skill' => 15,
 	        'inspirational_story' => 20,
+	        'leadership' => 0,
 	        'tier' => 1,
 		]);
 		
@@ -90,6 +95,7 @@ class CategorySeeder extends Seeder
 	        'customer_care_knowledge' => 25,
 	        'solution_skill' => 20,
 	        'inspirational_story' => 20,
+	        'leadership' => 0,
 	        'tier' => 2,
 		]);
 		App\Category::create([
@@ -103,6 +109,7 @@ class CategorySeeder extends Seeder
 	        'customer_care_knowledge' => 25,
 	        'solution_skill' => 20,
 	        'inspirational_story' => 20,
+	        'leadership' => 0,
 	        'tier' => 2,
 		]);				
 		App\Category::create([
@@ -116,6 +123,7 @@ class CategorySeeder extends Seeder
 	        'customer_care_knowledge' => 25,
 	        'solution_skill' => 20,
 	        'inspirational_story' => 20,
+	        'leadership' => 0,
 	        'tier' => 2,
 		]);
 		/* TIER 3 */

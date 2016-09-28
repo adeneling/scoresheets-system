@@ -1,4 +1,4 @@
-/* -------------------------------- 
+/* --------------------------------
 
 Primary style
 
@@ -20,7 +20,7 @@ html * {
 body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
-  color: #243040;
+  color: #404347;
   background-color: #ffffff;
 }
 
@@ -30,15 +30,34 @@ body, html {
 }
 
 a {
-  color: #9cb3a8;
+  color: #910000;
   text-decoration: none;
 }
 
-/* -------------------------------- 
+/* --------------------------------
 
-Main Components 
+Main Components
 
 -------------------------------- */
+img.displayed {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom:20px;
+}
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-left: auto;
+    margin-right: auto
+    padding: 0;
+    max-width: 60%
+}
+
 main {
   position: relative;
   z-index: 2;
@@ -46,8 +65,9 @@ main {
   height: 100vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 200px 5%;
-  background-color: #9cb3a8;
+  padding: 100px 5%;
+  background-color: #ffffff;
+  background-image: url("../img/background.png");
   /* Force Hardware Acceleration in WebKit */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -67,13 +87,15 @@ main h1, main p {
   text-align: center;
 }
 main h1 {
+  font-family: "Merriweather", serif;
   font-size: 2.6rem;
   margin-bottom: 1em;
+  color: #333;
 }
 main p {
-  font-family: "Merriweather", serif;
-  color: #d6dfdb;
-  max-width: 450px;
+  font-family: "Open Sans", sans-serif;
+  color: #404347;
+  max-width: 80%;
   margin: 0 auto;
   line-height: 1.6;
 }
@@ -86,7 +108,7 @@ main p {
 }
 @media only screen and (min-width: 768px) {
   main {
-    padding: 50px 10%;
+    padding: 100px 10%;
   }
   main h1 {
     font-size: 3.6rem;
@@ -94,6 +116,8 @@ main p {
   main p {
     font-size: 2rem;
   }
+
+
 }
 
 .cd-nav-trigger {
@@ -103,7 +127,7 @@ main p {
   top: 20px;
   height: 54px;
   width: 54px;
-  background-color: #243040;
+  background-color: #DF2D3C;
   border-radius: 50%;
   /* image replacement */
   overflow: hidden;
@@ -243,7 +267,7 @@ main p {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: #243040;
+  background-color: #DF2D3C;
   visibility: hidden;
   -webkit-transition: visibility 0s 0.7s;
   -moz-transition: visibility 0s 0.7s;
@@ -321,7 +345,7 @@ main p {
 .cd-nav .cd-primary-nav a {
   font-family: "Merriweather", serif;
   font-size: 2.4rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.5);
   display: inline-block;
 }
 .cd-nav .cd-primary-nav a.selected {
@@ -329,6 +353,7 @@ main p {
 }
 .no-touch .cd-nav .cd-primary-nav a:hover {
   color: #ffffff;
+  text-decoration:none;
 }
 .cd-nav .cd-contact-info {
   margin-top: 80px;

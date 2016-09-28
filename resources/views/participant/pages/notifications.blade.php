@@ -3,16 +3,20 @@
 @section('title')Notifications
 @stop
 @section('content')
-@foreach($notifications as $notification)
-	<div class="row">
-		<div class="col-md-12">
-			<div class="panel panel-default">
-				<div class="panel-heading">{{ $notification->title }} - {{ date('d M Y', strtotime(Auth::user()->created_at)) }}</div>
-				<div class="panel-body">
-					{{ $notification->message }}
-				</div>
+
+<div class="main">
+	<ul class="cbp_tmtimeline">
+		@foreach($notifications as $notification)
+		<!-- IF DATA EXIST  - IF NOT - DO NOT PRINT -->
+		<li>
+			<div class="cbp_tmlabel">
+				<h2>[{{ $notification->title }} ] - {{ date('d M Y', strtotime($notification->created_at)) }}</h2>
+				<p>[{{ $notification->message }}]</p>
 			</div>
-		</div>
-	</div>
-@endforeach
+		</li>
+		<!--ENDIF-->
+		@endforeach
+	</ul>
+</div>
+
 @stop
