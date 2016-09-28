@@ -93,7 +93,7 @@ class ScoresheetsController extends Controller
             'customer_care_knowledge' => 'required',
             'solution_skill' => 'required',
             'inspirational_story' => 'required',
-            'leadership' => 'required',
+            
         ]);
         /* scoresheet */
         $presentation_material = $request->input('presentation_material');
