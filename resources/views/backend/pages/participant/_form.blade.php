@@ -16,7 +16,7 @@
     <td>
         <div class="btn-group" id="filterPresentationMaterial" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="presentation_material" checked> 0
+                <input type="radio" class="toggle" value="0" name="presentation_material"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="presentation_material"> 1
@@ -65,7 +65,7 @@
     <td>
         <div class="btn-group" id="filterCommunicationSkill" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="communication_skill" checked> 0
+                <input type="radio" class="toggle" value="0" name="communication_skill"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="communication_skill"> 1
@@ -117,7 +117,7 @@
     <td>
         <div class="btn-group" id="filterAchievement" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="achievement" checked> 0
+                <input type="radio" class="toggle" value="0" name="achievement"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="achievement" > 1
@@ -166,7 +166,7 @@
     <td>
         <div class="btn-group" id="filterPersonalValue" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="personal_value" checked> 0
+                <input type="radio" class="toggle" value="0" name="personal_value"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="personal_value" > 1
@@ -220,7 +220,7 @@
 
         <div class="btn-group" id="filterCustomerCareKnowledge" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="customer_care_knowledge" checked> 0
+                <input type="radio" class="toggle" value="0" name="customer_care_knowledge"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="customer_care_knowledge"> 1
@@ -273,7 +273,7 @@
 
         <div class="btn-group" id="filterSolutionSkill" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="solution_skill" checked> 0
+                <input type="radio" class="toggle" value="0" name="solution_skill"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="solution_skill" > 1
@@ -322,7 +322,7 @@
     <td>
         <div class="btn-group" id="filterInspirationalStory" data-toggle="buttons">
             <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="0" name="inspirational_story" checked> 0
+                <input type="radio" class="toggle" value="0" name="inspirational_story"> 0
             </label>
             <label class="btn btn-lg btn-danger white">
                 <input type="radio" class="toggle" value="1" name="inspirational_story"> 1
@@ -374,7 +374,7 @@
         <td>
             <div class="btn-group" id="filterLeadership" data-toggle="buttons">
                 <label class="btn btn-lg btn-danger white">
-                    <input type="radio" class="toggle" value="0" name="leadership" checked> 0
+                    <input type="radio" class="toggle" value="0" name="leadership"> 0
                 </label>
                 <label class="btn btn-lg btn-danger white">
                     <input type="radio" class="toggle" value="1" name="leadership"> 1
