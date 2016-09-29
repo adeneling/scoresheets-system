@@ -23,7 +23,7 @@
 							<th>E-Mail</th>
 							<th>Category</th>
 							<th>Area</th>
-							<th width="40%">Aksi</th>
+							<th width="50%">Aksi</th>
 						</tr>
 					</thead>
 

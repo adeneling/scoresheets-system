@@ -7,6 +7,7 @@ use Auth;
 use App\User;
 use App\Notification;
 use App\Http\Requests;
+use Mail;
 use App\Http\Controllers\Controller;
 
 class NotificationController extends Controller
@@ -41,7 +42,8 @@ class NotificationController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-
+            'title' => 'required',
+            'message' => 'required',
         ]);
         $users = User::all();
         foreach ($users as $user ) {
@@ -51,6 +53,14 @@ class NotificationController extends Controller
             $notification->title = $request->input('title');
             $notification->message = $request->input('message');
             $notification->save();
+
+            $title = $request->input('title');
+            $notificationMessage = $request->input('message');
+            Mail::send('mails.notification', compact('title', 'notificationMessage', 'user'), function($message) use ($title, $notificationMessage, $user) {
+                $message->to($user->email);
+                $message->subject('Notification - BestCSAwards');
+            });
+            
         }
         \Flash::success('Notification created for all participant');
         return redirect('notification');
@@ -90,7 +100,8 @@ class NotificationController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request, [
-
+            'title' => 'required',
+            'message' => 'required',
         ]);
 
         $notification = Notification::findOrFail($id);
@@ -123,7 +134,8 @@ class NotificationController extends Controller
     public function postNotification(Request $request,$id)
     {
         $this->validate($request, [
-
+            'title' => 'required',
+            'message' => 'required',
         ]);
 
         $user = User::findOrFail($id);
@@ -133,6 +145,14 @@ class NotificationController extends Controller
         $notification->title = $request->input('title');
         $notification->message = $request->input('message');       
         $notification->save();
+
+        $title = $request->input('title');
+        $notificationMessage = $request->input('message');
+        Mail::send('mails.notification', compact('title', 'notificationMessage', 'user'), function($message) use ($title, $notificationMessage, $user) {
+            $message->to($user->email);
+            $message->subject('Notification - BestCSAwards');
+        });
+
         \Flash::success('Notification Created');
         return redirect('notification');
     }
