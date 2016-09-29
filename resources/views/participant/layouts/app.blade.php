@@ -14,7 +14,7 @@
 	<script src="{{ asset('frontend-new/js/modernizr.js') }}"></script> <!-- Modernizr -->
 	<link rel="stylesheet" href="{{ asset('frontend-new/css/component.css') }}"> <!-- CSS reset -->
 
-	
+	<link rel="shortcut icon" href="{{ asset('favicon/favicon.png') }}">
 	<title>Best Customer Service Awards 2016 | Telkomsel</title>
 </head>
 <body>

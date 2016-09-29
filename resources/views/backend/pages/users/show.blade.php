@@ -1,6 +1,6 @@
 @extends('backend.layouts.app')
 
-@section('title')Profile
+@section('title')Data - {{ $user->name }}
 @stop
 
 @section('content')
@@ -20,13 +20,7 @@
                         </div>
                     </div>
                     <h3>{{ $user->name }}</h3>
-                    <ul class="list-unstyled user_data">
-                        <li><i class="fa fa-map-marker user-profile-icon"></i> Location: {{ $user->city }} </li>
-                        <li><i class="fa fa-child user-profile-icon"></i> NIK: {{ $user->nik }} </li>
-                        <li><i class="fa fa-briefcase user-profile-icon"></i> E-Mail: {{ $user->email }} </li>
-                    </ul>
-                    <a href="{{ route('profile.edit', encrypt(Auth::user()->id ))}}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
-                    <br />
+
                 </div>
                 <div class="col-md-9 col-sm-9 col-xs-12">
 
@@ -132,6 +126,7 @@
                                     </tbody>
                                 </table>
                                 <!-- end recent activity -->
+                                <center><a href="{{ url('users') }}" class="btn btn-primary">BACK</a></center>
                             </div>
                         </div>
                     </div>

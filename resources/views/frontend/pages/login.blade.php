@@ -19,6 +19,7 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
+    <link rel="shortcut icon" href="{{ asset('favicon/favicon.png') }}">
 </head>
 <body>
     <br>

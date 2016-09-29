@@ -150,7 +150,8 @@ class UsersController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::findOrFail(decrypt($id));
+        return view('backend.pages.users.show', compact('user'));
     }
 
     /**

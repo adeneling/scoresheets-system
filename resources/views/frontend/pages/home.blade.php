@@ -24,6 +24,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/structure.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('frontend/css/responsive.css') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon/favicon.png') }}">
 
 </head>
 <body class="single-image video-bg">

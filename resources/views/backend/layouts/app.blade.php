@@ -28,6 +28,8 @@
   <link href="{{ asset('backend/build/css/custom.min.css') }}" rel="stylesheet">
   <!-- Sweetalert -->
   <link href="{{ asset('backend/sweetalert/sweetalert.css') }}" rel="stylesheet">
+
+  <link rel="shortcut icon" href="{{ asset('favicon/favicon.png') }}">
 </head>
 
 <body class="nav-md">
