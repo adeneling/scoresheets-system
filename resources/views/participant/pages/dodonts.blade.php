@@ -7,5 +7,5 @@
 <img src="{{ asset('frontend-new/img/logo.png') }}" class="displayed" alt="Best Customer Service Awards 2016"/>
 </div>
 <br><br>
-<h1>Hello [{{ Auth::user()->name }}]</h1><p> Please check back later for Do's &amp; Dont's on this event</p>
+<h1>Hello {{ Auth::user()->name }}</h1><p> Please check back later for Do's &amp; Dont's on this event</p>
 @stop
