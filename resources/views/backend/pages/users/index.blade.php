@@ -20,8 +20,8 @@
 							<th>No</th>
 							<th>NIK</th>
 							<th>Name</th>
-							<th>Activated</th>
-							<th>Presentation File</th>
+							<th>Active</th>
+							<th>File</th>
 							<th>Category</th>
 							<th>Area</th>
 							<th width="50%">Aksi</th>
