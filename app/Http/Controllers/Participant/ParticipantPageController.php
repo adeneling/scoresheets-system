@@ -119,6 +119,8 @@ class ParticipantPageController extends Controller
             'area' => 'required',
             'work_location' => 'required',
             'mobile_phone' => 'required',
+            'picture' => 'mimes:jpeg,png',
+            'presentation_file' => 'mimes:pdf',
         ]);
 
         

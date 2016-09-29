@@ -86,6 +86,8 @@ class ProfileController extends Controller
             'area' => 'required',
             'selection_date' => 'required',
             'join_date' => 'required',
+            'picture' => 'mimes:jpeg,png',
+            'presentation_file' => 'mimes:pdf',
         ]);
         
         

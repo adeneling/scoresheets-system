@@ -51,6 +51,8 @@ class UsersController extends Controller
             'category_id' => 'required',
             'selection_date' => 'required',
             'join_date' => 'required',
+            'picture' => 'mimes:jpeg,png',
+            'presentation_file' => 'mimes:pdf',
 
         ]);
         $user = new User();
@@ -186,6 +188,8 @@ class UsersController extends Controller
             'area' => 'required',
             'selection_date' => 'required',
             'join_date' => 'required',
+            'picture' => 'mimes:jpeg,png',
+            'presentation_file' => 'mimes:pdf',
         ]);
         
         
