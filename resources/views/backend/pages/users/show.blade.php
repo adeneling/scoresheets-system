@@ -58,6 +58,10 @@
                                             <td>{{ $user->selection_date }}</td>
                                         </tr>
                                         <tr>
+                                            <td>Join Date</td>
+                                            <td>{{ $user->join_date }}</td>
+                                        </tr>
+                                        <tr>
                                             <td>Birth Place</td>
                                             <td>{{ $user->birth_place }}</td>
                                         </tr>

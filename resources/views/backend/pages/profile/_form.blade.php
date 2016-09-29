@@ -144,6 +144,18 @@
     @endif
 </div>
 
+<div class="form-group{{ $errors->has('join_date') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">Join Date</label>
+    <div class="col-md-3">
+        {!! Form::date('join_date', null, ['class'=>'form-control','placeholder'=>'Join Date']) !!}
+    </div>
+    @if($errors->has('join_date'))
+        <span class="help-block">
+            <strong>{{ $errors->first('join_date') }}</strong>
+        </span>
+    @endif
+</div>
+
 <div class="form-group{{ $errors->has('birthday') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">Birthday</label>
     <div class="col-md-3">

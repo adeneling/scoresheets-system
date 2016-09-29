@@ -51,6 +51,10 @@
                                     <td>{!! Form::date('selection_date', null, ['class'=>'form-control','placeholder'=>'Selection date']) !!}</td>
                                 </tr>
                                 <tr>
+                                    <td>Join Date</td>
+                                    <td>{!! Form::date('join_date', null, ['class'=>'form-control','placeholder'=>'Join date']) !!}</td>
+                                </tr>
+                                <tr>
                                     <td>Birth Place</td>
                                     <td>{!! Form::text('birth_place', null, ['class'=>'form-control','placeholder'=>'Birth place']) !!}</td>
                                 </tr>

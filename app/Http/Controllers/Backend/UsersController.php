@@ -49,6 +49,8 @@ class UsersController extends Controller
             'password' => 'required',
             'role' => 'required',
             'category_id' => 'required',
+            'selection_date' => 'required',
+            'join_date' => 'required',
 
         ]);
         $user = new User();
@@ -67,6 +69,7 @@ class UsersController extends Controller
         $user->job_function = $request->input('job_function');
         $user->mobile_phone = $request->input('mobile_phone');
         $user->selection_date = $request->input('selection_date');
+        $user->join_date = $request->input('join_date');
         $user->birthday = $request->input('birthday');
         $user->birth_place = $request->input('birth_place');
         $user->bank_account = $request->input('bank_account');
@@ -181,6 +184,8 @@ class UsersController extends Controller
             'nik' => 'required',
             'category_id' => 'required',
             'area' => 'required',
+            'selection_date' => 'required',
+            'join_date' => 'required',
         ]);
         
         
@@ -197,6 +202,7 @@ class UsersController extends Controller
         $user->job_function = $request->input('job_function');
         $user->mobile_phone = $request->input('mobile_phone');
         $user->selection_date = $request->input('selection_date');
+        $user->join_date = $request->input('join_date');
         $user->birthday = $request->input('birthday');
         $user->birth_place = $request->input('birth_place');
         $user->bank_account = $request->input('bank_account');

@@ -113,8 +113,38 @@ class ParticipantPageController extends Controller
         $this->validate($request, [
             'nik' => 'required',
             'email' => 'required',
+            'category_id' => 'required',
+            'selection_date' => 'required',
+            'join_date' => 'required',
+            'area' => 'required',
+            'work_location' => 'required',
+            'mobile_phone' => 'required',
         ]);
 
+        
+
+        $user->nik = $request->input('nik');
+        $user->name = $request->input('name');
+        $user->email = $request->input('email');
+        $user->category_id = $request->input('category_id');
+        $user->selection_date = $request->input('selection_date');
+        $user->join_date = $request->input('join_date');
+        $user->birth_place = $request->input('birth_place');
+        $user->birthday = $request->input('birthday');
+        $user->about_me = $request->input('about_me');
+        $user->picture = $request->input('picture');
+        $user->gender = $request->input('gender');
+        $user->work_location = $request->input('work_location');
+        $user->city = $request->input('city');
+        $user->area = $request->input('area');
+        $user->job_function = $request->input('job_function');
+        $user->mobile_phone = $request->input('mobile_phone');
+        $user->bank_account = $request->input('bank_account');
+        $user->twitter = $request->input('twitter');
+        $user->facebook = $request->input('facebook');
+        $user->instagram = $request->input('instagram');
+        $user->notes = $request->input('notes');
+        $user->activated = 1;
         if ($request->hasFile('picture')) {
             // menambil cover yang diupload berikut ekstensinya
             $filename = null;
@@ -136,29 +166,8 @@ class ParticipantPageController extends Controller
                 // File sudah dihapus/tidak ada
                 }
             }
+            $user->picture = $filename;
         }
-        $user->nik = $request->input('nik');
-        $user->name = $request->input('name');
-        $user->email = $request->input('email');
-        $user->category_id = $request->input('category_id');
-        $user->selection_date = $request->input('selection_date');
-        $user->birth_place = $request->input('birth_place');
-        $user->birthday = $request->input('birthday');
-        $user->about_me = $request->input('about_me');
-        $user->picture = $request->input('picture');
-        $user->gender = $request->input('gender');
-        $user->work_location = $request->input('work_location');
-        $user->city = $request->input('city');
-        $user->area = $request->input('area');
-        $user->job_function = $request->input('job_function');
-        $user->mobile_phone = $request->input('mobile_phone');
-        $user->bank_account = $request->input('bank_account');
-        $user->twitter = $request->input('twitter');
-        $user->facebook = $request->input('facebook');
-        $user->instagram = $request->input('instagram');
-        $user->notes = $request->input('notes');
-        $user->activated = 1;
-        $user->picture = $filename;
         $user->save();
         \Flash::success('Data Updated');
         return redirect('bestcs/profile');

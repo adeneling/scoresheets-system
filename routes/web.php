@@ -19,7 +19,6 @@ Route::group(['namespace' => 'Frontend'], function(){
 });
 /* PARTICIPANT */
 Route::group(['namespace' => 'Participant'], function(){
-
 	/* BEST CS */
 	Route::resource('bestcs-participant', 'ParticipantPageController');
 	/* UPLOAD FILE */

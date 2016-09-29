@@ -51,6 +51,10 @@
                                     <td>{{ Auth::user()->selection_date }}</td>
                                 </tr>
                                 <tr>
+                                    <td>Join Date</td>
+                                    <td>{{ Auth::user()->join_date }}</td>
+                                </tr>
+                                <tr>
                                     <td>Birth Place</td>
                                     <td>{{ Auth::user()->birth_place }}</td>
                                 </tr>
