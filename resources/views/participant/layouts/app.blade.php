@@ -30,6 +30,7 @@
 		</div>
 		@endif
 		@yield('content')
+		
 	</main>	
 	{{-- includes --}}
 	@include('participant.layouts.includes.navigation')
