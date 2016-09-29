@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         /* USERS */
         $this->call(UsersSeeder::class);        
         /* PARTICIPANT */
-        $this->call(TestingSendNotification::class);
+        $this->call(ParticipantSeeder::class);
         /* SESSION */
         $this->call(SessionDataSeeder::class);
         /* UNIT CATEGORY PARENT */

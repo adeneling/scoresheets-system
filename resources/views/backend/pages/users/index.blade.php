@@ -20,7 +20,8 @@
 							<th>No</th>
 							<th>NIK</th>
 							<th>Name</th>
-							<th>E-Mail</th>
+							<th>Activated</th>
+							<th>Presentation File</th>
 							<th>Category</th>
 							<th>Area</th>
 							<th width="50%">Aksi</th>
@@ -34,7 +35,16 @@
 							<td>{{ $no++ }}</td>
 							<td>{{ $user->nik }}</td>
 							<td>{{ $user->name }}</td>
-							<td>{{ $user->email }}</td>
+							<td>
+								@if($user->activated == 1)
+								<i class="fa fa-check"></i>
+								@endif
+							</td>
+							<td>
+								@if($user->presentation_file != null)
+									<i class="fa fa-check"></i>
+								@endif
+							</td>
 							<td>{{ isset($user->category->name)  ? $user->category->name : $user->category_id }}</td>
 							<td>{{ $user->area }}</td>
 							<td>
