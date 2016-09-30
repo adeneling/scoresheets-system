@@ -17,7 +17,7 @@
 					<div class="profile_img">
 						<div id="crop-avatar">
 							<!-- Current avatar -->
-							<img class="img-responsive avatar-view" src="{{ asset('backend/images/picture.png') }}" alt="Avatar" title="Change the avatar">
+							<img class="img-responsive avatar-view" src="{{ asset('img/' . ($notification->user->picture != null ? $notification->user->picture : 'picture.png' )) }}" alt="Avatar" title="Change the avatar">
 						</div>
 					</div>
 					<h3>{{ $notification->user->name }}</h3>
