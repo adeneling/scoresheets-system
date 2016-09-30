@@ -14,8 +14,11 @@
 /* FRONTEND */
 Route::group(['namespace' => 'Frontend'], function(){
 	Route::get('/', 'HomeController@index');
+	/* LOGIN */
 	Route::get('bestcs/login', 'FrontendController@login');
-
+	/* RESET PASSWORD */
+	Route::get('reset-password', 'FrontendController@resetPassword');
+	Route::post('reset-password', 'FrontendController@postPassword')->name('bestcs.resetpassword');
 });
 /* PARTICIPANT */
 Route::group(['namespace' => 'Participant'], function(){
@@ -35,6 +38,7 @@ Route::group(['namespace' => 'Participant'], function(){
 	Route::get('bestcs/dodonts', 'ParticipantPageController@dodonts');
 	/* FEEDBACK */
 	Route::get('bestcs/feedback', 'ParticipantPageController@feedback');
+	
 });
 /* BACKEND */
 Route::group(['namespace' => 'Backend'], function(){

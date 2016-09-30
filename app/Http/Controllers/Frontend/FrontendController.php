@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use Illuminate\Http\Request;
-
+use App\User;
+use Mail;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
@@ -22,6 +23,32 @@ class FrontendController extends Controller
     public function index()
     {
         //
+    }
+    public function resetPassword(){
+        return view('frontend.pages.reset-password');
+    }
+    public function postPassword(Request $request){
+        $this->validate($request, [
+            'email' => 'required',
+        ]);
+        $email = $request->input('email');
+        $password = str_random(8);        
+        if (User::where('email',$email)->exists()) {
+            $user = User::where('email', $email)->first();
+            $user->activated = 1;
+            $user->password = bcrypt($password);
+            $user->save();
+            /* KIRIM EMAIL */
+            $mail = array( 'email' => $email, 'password' => $password, 'user' => $user->email);
+            Mail::send('mails.mail', compact('mail', 'email', 'password'), function($message) use ($mail, $email, $password) {
+                $message->to($email);
+                $message->subject('User Account - Scoresheets');
+            });
+            /* MESSAGE SUCCESS */
+            return redirect('/reset-password')->with('status', 'password reset email has been sent to '. $email);   
+        }else{
+            return redirect('/reset-password')->with('status', 'Data did not match, please check again.');
+        }
     }
 
     /**

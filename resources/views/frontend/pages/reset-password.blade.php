@@ -43,21 +43,16 @@
                         <div class="tagline ac anim fadeInUp s01 delay-0-6s">
                             <!-- Counter -->
                             <div class="counter-container">
-                                <img src="{{ asset('frontend/images/logo_main.png') }}" class="img-responsive">
+                                <a href="{{ url('/') }}">
+                                    <img src="{{ asset('frontend/images/logo_main.png') }}" class="img-responsive">
+                                </a>
                             </div>                 
                         </div>
                         <!-- end tagline -->
                         <!-- subscribe -->
                         <div class="subscribe ac anim fadeInUp s01 delay-0-8s">
-                            <form class="subscription-form clear form-field-wrapper" role="form" method="POST" action="{{ url('checking') }}">
+                            <form class="subscription-form clear form-field-wrapper" role="form" method="POST" action="{{ url('reset-password') }}">
                                 {{ csrf_field() }}
-                                <input type="text" class="form-control error" name="nik" required="required" placeholder="Enter your NIK">
-                                @if ($errors->has('nik'))
-                                    <span class="help-block">
-                                        <strong><font color="red">{{ $errors->first('nik') }}</font></strong>
-                                    </span>
-                                @endif
-                                <br>
                                 <input type="text" class="form-control error" name="email" required="required" placeholder="Enter your E-Mail">
                                 @if ($errors->has('email'))
                                     <span class="help-block">
@@ -69,14 +64,9 @@
 								@endif 		
                                 <br><br>
                                 <center>
-                                    <div class="pull-right">
-                                        <h4>
-                                            <a href="{{ url('bestcs/login') }}"><font color="white">Login | </font></a>
-                                            <a href="{{ url('reset-password') }}"><font color="white">Reset Password</font></a>
-                                        </h4>                                        
-                                    </div>                                    
+                                    <button type="submit" id="submit" class="btn btn-warning"><i class="fa fa-check vhm-item"></i> RESET PASSWORD</button>
                                 </center>
-                                <button type="submit" id="submit" class="btn btn-primary"><i class="fa fa-check vhm-item"></i> Check</button>
+                                
                             </form>
                             <br>
                             
