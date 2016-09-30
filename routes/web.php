@@ -37,8 +37,7 @@ Route::group(['namespace' => 'Participant'], function(){
 	/* DO DONT */
 	Route::get('bestcs/dodonts', 'ParticipantPageController@dodonts');
 	/* FEEDBACK */
-	Route::get('bestcs/feedback', 'ParticipantPageController@feedback');
-	
+	Route::get('bestcs/feedback', 'ParticipantPageController@feedback');	
 });
 /* BACKEND */
 Route::group(['namespace' => 'Backend'], function(){
