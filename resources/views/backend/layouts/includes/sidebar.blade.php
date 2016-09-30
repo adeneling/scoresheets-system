@@ -35,10 +35,10 @@
         <a href="{{ url('category') }}"><i class="fa fa-tags"></i> Category</a>
       </li>
       <li class= {{ Request::is('itinerary') || Request::is('itinerary/*') ? 'active' : '' }}>
-        <a href="{{ url('itinerary') }}"><i class="fa fa-tags"></i> Itinerary</a>
+        <a href="{{ url('itinerary') }}"><i class="fa fa-plane"></i> Itinerary</a>
       </li>
       <li class= {{ Request::is('notification') || Request::is('notification/*') ? 'active' : '' }}>
-        <a href="{{ url('notification') }}"><i class="fa fa-tags"></i> Notification</a>
+        <a href="{{ url('notification') }}"><i class="fa fa-inbox"></i> Notification</a>
       </li>
       <li class= {{ Request::is('users') || Request::is('users/*') ? 'active' : '' }}>
         <a href="{{ url('users') }}"><i class="fa fa-users"></i> Users</a>

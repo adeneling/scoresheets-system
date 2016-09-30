@@ -45,7 +45,7 @@ class FrontendController extends Controller
                 $message->subject('User Account - Scoresheets');
             });
             /* MESSAGE SUCCESS */
-            return redirect('/reset-password')->with('status', 'password reset email has been sent to '. $email);   
+            return redirect('/')->with('status', 'password reset email has been sent to '. $email);   
         }else{
             return redirect('/reset-password')->with('status', 'Data did not match, please check again.');
         }

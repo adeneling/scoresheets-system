@@ -39,7 +39,6 @@
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
             <a href="{{ url('home') }}" class="site_title">
-              <i class="fa fa-desktop"></i> 
               <span>BEST<font color="red">CS</font></span>
             </a>
           </div>
@@ -78,7 +77,7 @@
         <div class="">
           <div class="page-title">
             <div class="title_left">
-              <h3><font color="red"> @yield('title') </font></h3>
+              <h3>@yield('title') </h3>
             </div>
           </div>
 
