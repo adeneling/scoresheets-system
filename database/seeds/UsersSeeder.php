@@ -39,6 +39,7 @@ class UsersSeeder extends Seeder
 		$admin->name = 'Admin SS';
 		$admin->email = 'admin@gmail.com';
 		$admin->password = bcrypt('ss');
+		$admin->category_handled = '1,2,3,4,5,6,7,8,9,10,11,12,13,14';
 		$admin->save();
 		$admin->attachRole($adminRole);
 
@@ -46,12 +47,15 @@ class UsersSeeder extends Seeder
 		$admin->name = 'Admin - 1';
 		$admin->email = 'admin01@bestcsawards.com';
 		$admin->password = bcrypt('admin01');
+		$admin->category_handled = '1,2,3,4,5,6,7,8,9,10,11,12,13,14';
 		$admin->save();
 		$admin->attachRole($adminRole);
+
 		$admin = new User();
 		$admin->name = 'Admin - 2';
 		$admin->email = 'admin02@bestcsawards.com';
 		$admin->password = bcrypt('admin02');
+		$admin->category_handled = '1,2,3,4,5,6,7,8,9,10,11,12,13,14';
 		$admin->save();
 		$admin->attachRole($adminRole);
     }
