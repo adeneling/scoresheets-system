@@ -8,6 +8,7 @@ use App\UnitCategory;
 use App\UnitCategoryParent;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use Session;
 
 class UnitScoreController extends Controller
 {
@@ -24,6 +25,7 @@ class UnitScoreController extends Controller
         $tempNilaiArea2 = 0;
         $tempNilaiArea3 = 0;
         $tempNilaiArea4 = 0;
+        /* value 1 per rows */
         $nilaiCategori1 = array();
         $nilaiCategori2 = array();
         $nilaiCategori3 = array();
@@ -34,6 +36,17 @@ class UnitScoreController extends Controller
         $nilaiCategori8 = array();
         $nilaiCategori9 = array();
         $nilaiCategori10 = array();
+        /* result value per rows */
+        $resultCategori1 = array();
+        $resultCategori2 = array();
+        $resultCategori3 = array();
+        $resultCategori4 = array();
+        $resultCategori5 = array();
+        $resultCategori6 = array();
+        $resultCategori7 = array();
+        $resultCategori8 = array();
+        $resultCategori9 = array();
+        $resultCategori10 = array();
         /* WALK IN*/
         $walkInWinnerArea1 = array();
         $walkInWinnerArea2 = array();
@@ -110,7 +123,6 @@ class UnitScoreController extends Controller
                 $tempNilaiArea1Temp = 0;
             }
             $nilaiCategori1[0] = $tempNilaiArea1Temp;
-
             if (isset($cat1Area2)) {
                 if ($cat1Area2->total_score >= $topCategory1->total_score) {
                     $tempNilaiArea2Temp = $cat1Area2->total_score;
@@ -141,7 +153,7 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori1[3] = $tempNilaiArea4Temp;
-
+            $resultCategori1 = $nilaiCategori1;
             if ($nilaiCategori1[0] == 0 && $nilaiCategori1[1] == 0 && $nilaiCategori1[2] == 0 && $nilaiCategori1[3] == 0) {
                 $nilaiCategori1[0] = 0;
                 $nilaiCategori1[1] = 0;
@@ -231,6 +243,7 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori2[3] = $tempNilaiArea4Temp;
+            $resultCategori2 = $nilaiCategori2;
             if ($nilaiCategori2[0] == 0 && $nilaiCategori2[1] == 0 && $nilaiCategori2[2] == 0 && $nilaiCategori2[3] == 0) {
                 $nilaiCategori2[0] = 0;
                 $nilaiCategori2[1] = 0;
@@ -320,6 +333,7 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori3[3] = $tempNilaiArea4Temp;
+            $resultCategori3 = $nilaiCategori3;
             if ($nilaiCategori3[0] == 0 && $nilaiCategori3[1] == 0 && $nilaiCategori3[2] == 0 && $nilaiCategori3[3] == 0) {
                 $nilaiCategori3[0] = 0;
                 $nilaiCategori3[1] = 0;
@@ -403,7 +417,7 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori4[3] = $tempNilaiArea4Temp;
-
+            $resultCategori4 = $nilaiCategori4;
             if ($nilaiCategori4[0] == 0 && $nilaiCategori4[1] == 0 && $nilaiCategori4[2] == 0 && $nilaiCategori4[3] == 0) {
                 $nilaiCategori4[0] = 0;
                 $nilaiCategori4[1] = 0;
@@ -479,7 +493,7 @@ class UnitScoreController extends Controller
                 $tempNilaiArea3Temp = 0;
             }
             $nilaiCategori5[2] = $tempNilaiArea3Temp;
-        
+            
             if (isset($cat5Area4)) {
                 if ($cat5Area4->total_score >= $topCategory5->total_score) {
                     $tempNilaiArea4Temp = $cat5Area4->total_score;
@@ -490,7 +504,7 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori5[3] = $tempNilaiArea4Temp;
-
+            $resultCategori5 = $nilaiCategori5;
             if ($nilaiCategori5[0] == 0 && $nilaiCategori5[1] == 0 && $nilaiCategori5[2] == 0 && $nilaiCategori5[3] == 0) {
                 $nilaiCategori5[0] = 0;
                 $nilaiCategori5[1] = 0;
@@ -576,7 +590,7 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori6[3] = $tempNilaiArea4Temp;
-
+            $resultCategori6 = $nilaiCategori6;
             if ($nilaiCategori6[0] == 0 && $nilaiCategori6[1] == 0 && $nilaiCategori6[2] == 0 && $nilaiCategori6[3] == 0) {
                 $nilaiCategori6[0] = 0;
                 $nilaiCategori6[1] = 0;
@@ -652,8 +666,7 @@ class UnitScoreController extends Controller
             }else{
                 $tempNilaiArea3Temp = 0;
             }
-            $nilaiCategori7[2] = $tempNilaiArea3Temp;
-        
+            $nilaiCategori7[2] = $tempNilaiArea3Temp;        
             if (isset($cat7Area4)) {
                 if ($cat7Area4->total_score >= $topCategory7->total_score) {
                     $tempNilaiArea4Temp = $cat7Area4->total_score;
@@ -664,7 +677,7 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori7[3] = $tempNilaiArea4Temp;
-
+            $resultCategori7 = $nilaiCategori7;
             if ($nilaiCategori7[0] == 0 && $nilaiCategori7[1] == 0 && $nilaiCategori7[2] == 0 && $nilaiCategori7[3] == 0) {
                 $nilaiCategori7[0] = 0;
                 $nilaiCategori7[1] = 0;
@@ -751,6 +764,7 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori8[3] = $tempNilaiArea4Temp;
+            $resultCategori8 = $nilaiCategori8;
             if ($nilaiCategori8[0] == 0 && $nilaiCategori8[1] == 0 && $nilaiCategori8[2] == 0 && $nilaiCategori8[3] == 0) {
                 $nilaiCategori8[0] = 0;
                 $nilaiCategori8[1] = 0;
@@ -825,7 +839,6 @@ class UnitScoreController extends Controller
                 $tempNilaiArea3Temp = 0;
             }
             $nilaiCategori9[2] = $tempNilaiArea3Temp;
-        
             if (isset($cat9Area4)) {
                 if ($cat9Area4->total_score >= $topCategory9->total_score) {
                     $tempNilaiArea4Temp = $cat9Area4->total_score;
@@ -836,6 +849,7 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori9[3] = $tempNilaiArea4Temp;
+            $resultCategori9 = $nilaiCategori9;
             if ($nilaiCategori9[0] == 0 && $nilaiCategori9[1] == 0 && $nilaiCategori9[2] == 0 && $nilaiCategori9[3] == 0) {
                 $nilaiCategori9[0] = 0;
                 $nilaiCategori9[1] = 0;
@@ -921,6 +935,7 @@ class UnitScoreController extends Controller
                 $tempNilaiArea4Temp = 0;
             }
             $nilaiCategori10[3] = $tempNilaiArea4Temp;
+            $resultCategori10 = $nilaiCategori10;
             if ($nilaiCategori10[0] == 0 && $nilaiCategori10[1] == 0 && $nilaiCategori10[2] == 0 && $nilaiCategori10[3] == 0) {
                 $nilaiCategori10[0] = 0;
                 $nilaiCategori10[1] = 0;
@@ -1581,6 +1596,16 @@ class UnitScoreController extends Controller
                 'nilaiCategori8',
                 'nilaiCategori9',
                 'nilaiCategori10',
+                'resultCategori1',
+                'resultCategori2',
+                'resultCategori3',
+                'resultCategori4',
+                'resultCategori5',
+                'resultCategori6',
+                'resultCategori7',
+                'resultCategori8',
+                'resultCategori9',
+                'resultCategori10',
                 'walkInWinnerResult','walkInWinnerName','walkInWinnerResultValue',
                 'callCenterWinnerResult','callCenterWinnerName','callCenterWinnerResultValue',
                 'bestAreaTier1Value','bestAreaTier2Value','bestAreaTier3Value','bestAreaTier4Value','bestAreaResult','bestAreaWinnerResultValue','bestAreaWinnerName'
@@ -1606,6 +1631,57 @@ class UnitScoreController extends Controller
      */
     public function store(Request $request)
     {
+        /* category 1 */
+        $cat1Area1 = UnitScore::where('area', 1)->where('category_id', 1)->first();
+        $cat1Area2 = UnitScore::where('area', 1)->where('category_id', 2)->first();
+        $cat1Area3 = UnitScore::where('area', 1)->where('category_id', 3)->first();
+        $cat1Area4 = UnitScore::where('area', 1)->where('category_id', 4)->first();
+        /* category 2 */
+        $cat2Area1 = UnitScore::where('area', 2)->where('category_id', 1)->first();
+        $cat2Area2 = UnitScore::where('area', 2)->where('category_id', 2)->first();
+        $cat2Area3 = UnitScore::where('area', 2)->where('category_id', 3)->first();
+        $cat2Area4 = UnitScore::where('area', 2)->where('category_id', 4)->first();
+        /* category 3 */
+        $cat3Area1 = UnitScore::where('area', 3)->where('category_id', 1)->first();
+        $cat3Area2 = UnitScore::where('area', 3)->where('category_id', 2)->first();
+        $cat3Area3 = UnitScore::where('area', 3)->where('category_id', 3)->first();
+        $cat3Area4 = UnitScore::where('area', 3)->where('category_id', 4)->first();
+        /* category 4 */
+        $cat4Area1 = UnitScore::where('area', 4)->where('category_id', 1)->first();
+        $cat4Area2 = UnitScore::where('area', 4)->where('category_id', 2)->first();
+        $cat4Area3 = UnitScore::where('area', 4)->where('category_id', 3)->first();
+        $cat4Area4 = UnitScore::where('area', 4)->where('category_id', 4)->first();
+        /* category 5 */
+        $cat5Area1 = UnitScore::where('area', 5)->where('category_id', 1)->first();
+        $cat5Area2 = UnitScore::where('area', 5)->where('category_id', 2)->first();
+        $cat5Area3 = UnitScore::where('area', 5)->where('category_id', 3)->first();
+        $cat5Area4 = UnitScore::where('area', 5)->where('category_id', 4)->first();
+        /* category 6 */
+        $cat6Area1 = UnitScore::where('area', 6)->where('category_id', 1)->first();
+        $cat6Area2 = UnitScore::where('area', 6)->where('category_id', 2)->first();
+        $cat6Area3 = UnitScore::where('area', 6)->where('category_id', 3)->first();
+        $cat6Area4 = UnitScore::where('area', 6)->where('category_id', 4)->first();
+        /* category 7 */
+        $cat7Area1 = UnitScore::where('area', 7)->where('category_id', 1)->first();
+        $cat7Area2 = UnitScore::where('area', 7)->where('category_id', 2)->first();
+        $cat7Area3 = UnitScore::where('area', 7)->where('category_id', 3)->first();
+        $cat7Area4 = UnitScore::where('area', 7)->where('category_id', 4)->first();
+        /* category 8 */
+        $cat8Area1 = UnitScore::where('area', 8)->where('category_id', 1)->first();
+        $cat8Area2 = UnitScore::where('area', 8)->where('category_id', 2)->first();
+        $cat8Area3 = UnitScore::where('area', 8)->where('category_id', 3)->first();
+        $cat8Area4 = UnitScore::where('area', 8)->where('category_id', 4)->first();
+        /* category 9 */
+        $cat9Area1 = UnitScore::where('area', 9)->where('category_id', 1)->first();
+        $cat9Area2 = UnitScore::where('area', 9)->where('category_id', 2)->first();
+        $cat9Area3 = UnitScore::where('area', 9)->where('category_id', 3)->first();
+        $cat9Area4 = UnitScore::where('area', 9)->where('category_id', 4)->first();
+        /* category 10 */
+        $cat10Area1 = UnitScore::where('area', 10)->where('category_id', 1)->first();
+        $cat10Area2 = UnitScore::where('area', 10)->where('category_id', 2)->first();
+        $cat10Area3 = UnitScore::where('area', 10)->where('category_id', 3)->first();
+        $cat10Area4 = UnitScore::where('area', 10)->where('category_id', 4)->first();
+
         $this->validate($request, [
             'category_id' => 'required',
             'type' => 'required',
@@ -1613,15 +1689,32 @@ class UnitScoreController extends Controller
             'location' => 'required',
             'total_score' => 'required',
         ]);
-        $unit = new UnitScore();
-        $unit->category_id = $request->input('category_id');
-        $unit->type = $request->input('type');
-        $unit->area = $request->input('area');
-        $unit->location = $request->input('location');
-        $unit->total_score = $request->input('category_id');
-        $unit->save();
-        \Flash::success('Unit score with category ID: ' . $request->get('category_id') .  ' Added.');
-        return redirect('unit-score');
+        if ($cat1Area1 != null || $cat1Area2 != null || $cat1Area3 != null || $cat1Area4 != null || 
+            $cat2Area1 != null || $cat2Area2 != null || $cat2Area3 != null || $cat2Area4 != null || 
+            $cat3Area1 != null || $cat3Area2 != null || $cat3Area3 != null || $cat3Area4 != null ||
+            $cat4Area1 != null || $cat4Area2 != null || $cat4Area3 != null || $cat4Area4 != null ||
+            $cat5Area1 != null || $cat5Area2 != null || $cat5Area3 != null || $cat5Area4 != null ||
+            $cat6Area1 != null || $cat6Area2 != null || $cat6Area3 != null || $cat6Area4 != null ||
+            $cat7Area1 != null || $cat7Area2 != null || $cat7Area3 != null || $cat7Area4 != null ||
+            $cat8Area1 != null || $cat8Area2 != null || $cat8Area3 != null || $cat8Area4 != null ||
+            $cat9Area1 != null || $cat9Area2 != null || $cat9Area3 != null || $cat9Area4 != null ||
+            $cat10Area1 != null || $cat10Area2 != null || $cat10Area3 != null || $cat10Area4 != null){
+            Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);
+            return redirect('unit-score');
+        }else{
+            $unit = new UnitScore();
+            $unit->category_id = $request->input('category_id');
+            $unit->type = $request->input('type');
+            $unit->area = $request->input('area');
+            $unit->location = $request->input('location');
+            $unit->total_score = $request->input('total_score');
+            $unit->save();
+            \Flash::success('Unit score with category ID: ' . $request->get('category_id') .  ' Added.');
+            return redirect('unit-score');
+        }        
     }
 
     /**
@@ -1669,7 +1762,7 @@ class UnitScoreController extends Controller
         $unit->type = $request->input('type');
         $unit->area = $request->input('area');
         $unit->location = $request->input('location');
-        $unit->total_score = $request->input('category_id');
+        $unit->total_score = $request->input('total_score');
         $unit->save();
         \Flash::success('Unit ID: '. $unit->id . ' Edited.');
         return redirect('unit-score');
