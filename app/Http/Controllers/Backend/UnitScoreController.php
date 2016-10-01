@@ -1580,7 +1580,7 @@ class UnitScoreController extends Controller
             'bestAreaWinnerResultValue' => $bestAreaWinnerResultValue,
             'bestAreaWinnerName' => $bestAreaWinnerName
         );
-
+    
         return view('backend.pages.unit-score.index',
             compact(
                 'unitScore',
@@ -1632,55 +1632,56 @@ class UnitScoreController extends Controller
     public function store(Request $request)
     {
         /* category 1 */
-        $cat1Area1 = UnitScore::where('area', 1)->where('category_id', 1)->first();
-        $cat1Area2 = UnitScore::where('area', 1)->where('category_id', 2)->first();
-        $cat1Area3 = UnitScore::where('area', 1)->where('category_id', 3)->first();
-        $cat1Area4 = UnitScore::where('area', 1)->where('category_id', 4)->first();
+        $cat1Area1 = UnitScore::where('area', 1)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
+        $cat1Area2 = UnitScore::where('area', 1)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
+        $cat1Area3 = UnitScore::where('area', 1)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();
+        $cat1Area4 = UnitScore::where('area', 1)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();
         /* category 2 */
-        $cat2Area1 = UnitScore::where('area', 2)->where('category_id', 1)->first();
-        $cat2Area2 = UnitScore::where('area', 2)->where('category_id', 2)->first();
-        $cat2Area3 = UnitScore::where('area', 2)->where('category_id', 3)->first();
-        $cat2Area4 = UnitScore::where('area', 2)->where('category_id', 4)->first();
+        $cat2Area1 = UnitScore::where('area', 2)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
+        $cat2Area2 = UnitScore::where('area', 2)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
+        $cat2Area3 = UnitScore::where('area', 2)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();
+        $cat2Area4 = UnitScore::where('area', 2)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();
         /* category 3 */
-        $cat3Area1 = UnitScore::where('area', 3)->where('category_id', 1)->first();
-        $cat3Area2 = UnitScore::where('area', 3)->where('category_id', 2)->first();
-        $cat3Area3 = UnitScore::where('area', 3)->where('category_id', 3)->first();
-        $cat3Area4 = UnitScore::where('area', 3)->where('category_id', 4)->first();
+        $cat3Area1 = UnitScore::where('area', 3)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
+        $cat3Area2 = UnitScore::where('area', 3)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
+        $cat3Area3 = UnitScore::where('area', 3)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();
+        $cat3Area4 = UnitScore::where('area', 3)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();
         /* category 4 */
-        $cat4Area1 = UnitScore::where('area', 4)->where('category_id', 1)->first();
-        $cat4Area2 = UnitScore::where('area', 4)->where('category_id', 2)->first();
-        $cat4Area3 = UnitScore::where('area', 4)->where('category_id', 3)->first();
-        $cat4Area4 = UnitScore::where('area', 4)->where('category_id', 4)->first();
+        $cat4Area1 = UnitScore::where('area', 4)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
+        $cat4Area2 = UnitScore::where('area', 4)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
+        $cat4Area3 = UnitScore::where('area', 4)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();
+        $cat4Area4 = UnitScore::where('area', 4)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();
         /* category 5 */
-        $cat5Area1 = UnitScore::where('area', 5)->where('category_id', 1)->first();
-        $cat5Area2 = UnitScore::where('area', 5)->where('category_id', 2)->first();
-        $cat5Area3 = UnitScore::where('area', 5)->where('category_id', 3)->first();
-        $cat5Area4 = UnitScore::where('area', 5)->where('category_id', 4)->first();
+        $cat5Area1 = UnitScore::where('area', 5)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
+        $cat5Area2 = UnitScore::where('area', 5)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
+        $cat5Area3 = UnitScore::where('area', 5)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();
+        $cat5Area4 = UnitScore::where('area', 5)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();
         /* category 6 */
-        $cat6Area1 = UnitScore::where('area', 6)->where('category_id', 1)->first();
-        $cat6Area2 = UnitScore::where('area', 6)->where('category_id', 2)->first();
-        $cat6Area3 = UnitScore::where('area', 6)->where('category_id', 3)->first();
-        $cat6Area4 = UnitScore::where('area', 6)->where('category_id', 4)->first();
+        $cat6Area1 = UnitScore::where('area', 6)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
+        $cat6Area2 = UnitScore::where('area', 6)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
+        $cat6Area3 = UnitScore::where('area', 6)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();
+        $cat6Area4 = UnitScore::where('area', 6)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();
         /* category 7 */
-        $cat7Area1 = UnitScore::where('area', 7)->where('category_id', 1)->first();
-        $cat7Area2 = UnitScore::where('area', 7)->where('category_id', 2)->first();
-        $cat7Area3 = UnitScore::where('area', 7)->where('category_id', 3)->first();
-        $cat7Area4 = UnitScore::where('area', 7)->where('category_id', 4)->first();
+        $cat7Area1 = UnitScore::where('area', 7)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
+        $cat7Area2 = UnitScore::where('area', 7)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
+        $cat7Area3 = UnitScore::where('area', 7)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();
+        $cat7Area4 = UnitScore::where('area', 7)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();
         /* category 8 */
-        $cat8Area1 = UnitScore::where('area', 8)->where('category_id', 1)->first();
-        $cat8Area2 = UnitScore::where('area', 8)->where('category_id', 2)->first();
-        $cat8Area3 = UnitScore::where('area', 8)->where('category_id', 3)->first();
-        $cat8Area4 = UnitScore::where('area', 8)->where('category_id', 4)->first();
+        $cat8Area1 = UnitScore::where('area', 8)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
+        $cat8Area2 = UnitScore::where('area', 8)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
+        $cat8Area3 = UnitScore::where('area', 8)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();
+        $cat8Area4 = UnitScore::where('area', 8)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();
         /* category 9 */
-        $cat9Area1 = UnitScore::where('area', 9)->where('category_id', 1)->first();
-        $cat9Area2 = UnitScore::where('area', 9)->where('category_id', 2)->first();
-        $cat9Area3 = UnitScore::where('area', 9)->where('category_id', 3)->first();
-        $cat9Area4 = UnitScore::where('area', 9)->where('category_id', 4)->first();
+        $cat9Area1 = UnitScore::where('area', 9)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
+        $cat9Area2 = UnitScore::where('area', 9)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
+        $cat9Area3 = UnitScore::where('area', 9)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();
+        $cat9Area4 = UnitScore::where('area', 9)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();
         /* category 10 */
-        $cat10Area1 = UnitScore::where('area', 10)->where('category_id', 1)->first();
-        $cat10Area2 = UnitScore::where('area', 10)->where('category_id', 2)->first();
-        $cat10Area3 = UnitScore::where('area', 10)->where('category_id', 3)->first();
-        $cat10Area4 = UnitScore::where('area', 10)->where('category_id', 4)->first();
+        $cat10Area1 = UnitScore::where('area', 10)->where('category_id', 1)->orderBy('total_score','desc')->take(1)->first();
+        $cat10Area2 = UnitScore::where('area', 10)->where('category_id', 2)->orderBy('total_score','desc')->take(1)->first();
+        $cat10Area3 = UnitScore::where('area', 10)->where('category_id', 3)->orderBy('total_score','desc')->take(1)->first();
+        $cat10Area4 = UnitScore::where('area', 10)->where('category_id', 4)->orderBy('total_score','desc')->take(1)->first();
+
 
         $this->validate($request, [
             'category_id' => 'required',
@@ -1689,20 +1690,245 @@ class UnitScoreController extends Controller
             'location' => 'required',
             'total_score' => 'required',
         ]);
-        if ($cat1Area1 != null || $cat1Area2 != null || $cat1Area3 != null || $cat1Area4 != null || 
-            $cat2Area1 != null || $cat2Area2 != null || $cat2Area3 != null || $cat2Area4 != null || 
-            $cat3Area1 != null || $cat3Area2 != null || $cat3Area3 != null || $cat3Area4 != null ||
-            $cat4Area1 != null || $cat4Area2 != null || $cat4Area3 != null || $cat4Area4 != null ||
-            $cat5Area1 != null || $cat5Area2 != null || $cat5Area3 != null || $cat5Area4 != null ||
-            $cat6Area1 != null || $cat6Area2 != null || $cat6Area3 != null || $cat6Area4 != null ||
-            $cat7Area1 != null || $cat7Area2 != null || $cat7Area3 != null || $cat7Area4 != null ||
-            $cat8Area1 != null || $cat8Area2 != null || $cat8Area3 != null || $cat8Area4 != null ||
-            $cat9Area1 != null || $cat9Area2 != null || $cat9Area3 != null || $cat9Area4 != null ||
-            $cat10Area1 != null || $cat10Area2 != null || $cat10Area3 != null || $cat10Area4 != null){
+        if (isset($cat1Area1)){
             Session::flash("flash_notification", [
                 "level" => "danger",
                 "message" => "Cant create new unit"
-            ]);
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat1Area2)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif(isset($cat1Area3)){
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif(isset($cat1Area4)){
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif(isset($cat2Area1)){
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat2Area2)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat2Area3)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat2Area4)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat3Area1)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat3Area2)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat3Area3)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat3Area4)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat4Area1)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat4Area2)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat4Area3)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat4Area4)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat5Area1)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat5Area2)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat5Area3)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat5Area4)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat6Area1)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat6Area2)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat6Area3)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat6Area4)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat7Area1)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat7Area2)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat7Area3)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif ($cat7Area4) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat8Area1)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat8Area2)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat8Area3)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat8Area4)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat9Area1)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat9Area2)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat9Area3)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat9Area4)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat10Area1)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat10Area2)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat10Area3)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
+            return redirect('unit-score');
+        }elseif (isset($cat10Area4)) {
+           Session::flash("flash_notification", [
+                "level" => "danger",
+                "message" => "Cant create new unit"
+            ]);   
             return redirect('unit-score');
         }else{
             $unit = new UnitScore();
@@ -1713,6 +1939,7 @@ class UnitScoreController extends Controller
             $unit->total_score = $request->input('total_score');
             $unit->save();
             \Flash::success('Unit score with category ID: ' . $request->get('category_id') .  ' Added.');
+            
             return redirect('unit-score');
         }        
     }
