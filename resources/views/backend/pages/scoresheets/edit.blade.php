@@ -37,7 +37,7 @@
 				</div>
 				<div class="col-md-2">
 					<ul class="list-unstyled user_data">
-						<li>Area: {{ $scoresheet->user->area }}</li>
+						<li>Area: {{ $scoresheet->user->area == 5 ? 'Headquarter' : $scoresheet->user->area}}</li>
 						<li>Region: {{ $scoresheet->user->region }}</li>
 						<li>About Me: {{ $scoresheet->user->about_me }}</li>
 						<li>Work Location: {{ $scoresheet->user->work_location }}</li>

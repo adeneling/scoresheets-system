@@ -38,7 +38,7 @@
 				</div>
 				<div class="col-md-2">
 					<ul class="list-unstyled user_data">
-						<li>Area: {{ $participant->area }}</li>
+						<li>Area: {{ $participant->area == 5 ? 'Headquarter' : $participant->area}}</li>
 						<li>Region: {{ $participant->region }}</li>
 						<li>About Me: {{ $participant->about_me }}</li>
 						<li>Work Location: {{ $participant->work_location }}</li>

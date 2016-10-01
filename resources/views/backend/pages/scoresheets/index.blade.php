@@ -59,7 +59,7 @@
 							<td>{{ $no++ }}</td>
 							<td>{{ $scoresheet->participant_name }}</td>
 							<td>{{ $scoresheet->category->name }}</td>
-							<td>{{ $scoresheet->user->area }}</td>
+							<td>{{ $scoresheet->user->area == 5 ? 'Headquarter' : $scoresheet->user->area}}</td>
 							<td>{{ $scoresheet->total_coeficient_score }}</td>
 							<td>
 								<center>

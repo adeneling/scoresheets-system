@@ -36,7 +36,7 @@
                         </li>
 						<li>City: {{ $scoresheet->user->city }}</li>
 						<li>Category: {{ $scoresheet->user->category->name }}</li>
-						<li>Area: {{ $scoresheet->user->area }}</li>
+						<li>Area: {{ $scoresheet->user->area == 5 ? 'Headquarter' : $scoresheet->user->area}}</li>
 						<li>Region: {{ $scoresheet->user->region }}</li>
 					</ul>
 					<br />
@@ -61,7 +61,7 @@
 							<div class="form-group">
 								<label class="control-label col-md-3">Participant Area</label>
 								<div class="col-md-4">
-									{{ $scoresheet->user->area }}
+									{{ $scoresheet->user->area == 5 ? 'Headquarter' : $scoresheet->user->area}}
 								</div>
 							</div>
 						</div>

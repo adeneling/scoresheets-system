@@ -92,7 +92,7 @@
 						</center>
 						<center><h5>{{ $participant->name }}</h5></center>
 						<ul class="list-unstyled user_data">
-							<li><center>Area: {{ $participant->area }}</center></li>
+							<li><center>Area: {{ $participant->area == 5 ? 'Headquarter' : $participant->area}}</center></li>
 							<li><center>Region: {{ $participant->region }}</center></li>
 						</ul>
 					</div>
