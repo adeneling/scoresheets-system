@@ -35,20 +35,13 @@
 <body class="nav-md">
   <div class="container body">
     <div class="main_container">
-      <div class="col-md-3 left_col menu_fixed">
+      <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
-          <div class="navbar nav_title" style="border: 0;">
-            <a href="{{ url('home') }}" class="site_title">
-              <span>BEST<font color="red">CS</font></span>
-            </a>
-          </div>
-
           <div class="clearfix"></div>
-
           <!-- menu profile quick info -->
           <div class="profile">
             <div class="profile_pic">
-              <img src="{{ asset('backend/images/img.png') }}" alt="..." class="img-circle profile_img">
+              <img src="{{ asset('backend/images/img.png') }}" alt="" class="img-circle profile_img">
             </div>
             <div class="profile_info">
               <span>Welcome,</span>
@@ -62,12 +55,9 @@
           @include('backend.layouts.includes.sidebar')
           <!-- /sidebar menu -->
 
-          <!-- /menu footer buttons -->
-          @include('backend.layouts.includes.footer-menu')
-          <!-- /menu footer buttons -->
         </div>
       </div>
-
+      
       <!-- top navigation -->
       @include('backend.layouts.includes.top-navigation')
       <!-- /top navigation -->
@@ -82,6 +72,7 @@
           </div>
 
           <div class="clearfix"></div>
+          
           {{-- notification --}}
           @if (session()->has('flash_notification.message'))
           <div class="container">
@@ -91,9 +82,11 @@
             </div>
           </div>
           @endif
+          {{-- end notification --}}
+
           {{-- content --}}
           @yield('content')
-
+          {{-- end content --}}
         </div>
       </div>
       <!-- /page content -->

@@ -47,7 +47,7 @@ class CreateUsersTable extends Migration
             /* FOREIGN KEY */
             $table->integer('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on('category');
-            $table->integer('category_handled')->nullable();
+            $table->string('category_handled')->nullable();
             $table->rememberToken();
             $table->timestamps();
 

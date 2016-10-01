@@ -3,6 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Role;
 use App\User;
+use App\Permission;
 class UsersSeeder extends Seeder
 {
     /**
@@ -53,32 +54,5 @@ class UsersSeeder extends Seeder
 		$admin->password = bcrypt('admin02');
 		$admin->save();
 		$admin->attachRole($adminRole);
-		// Membuat sample jury
-		$admin = new User();
-		$admin->name = 'Andri Wibawanto';
-		$admin->email = 'jury@gmail.com';
-		$admin->password = bcrypt('ss');
-		$admin->save();
-		$admin->attachRole($juryRole);
-		$admin = new User();
-		$admin->name = 'Juri - 1';
-		$admin->email = 'juri01@bestcsawards.com';
-		$admin->password = bcrypt('juri01');
-		$admin->save();
-		$admin->attachRole($juryRole);
-		$admin = new User();
-		$admin->name = 'Juri - 2';
-		$admin->email = 'juri02@bestcsawards.com';
-		$admin->password = bcrypt('juri02');
-		$admin->save();
-		$admin->attachRole($juryRole);
-		
-		// Membuat sample guest
-		$guest = new User();
-		$guest->name = "Guest";
-		$guest->email = 'guest@gmail.com';
-		$guest->password = bcrypt('ss');
-		$guest->save();
-		$guest->attachRole($guestRole);
     }
 }

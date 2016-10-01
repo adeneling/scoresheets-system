@@ -1,6 +1,6 @@
 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
   <div class="menu_section">
-    <br><h3>Navigation</h3>
+    <br><h3>-</h3>
     <ul class="nav side-menu">      
       <li class= {{ Request::is('home') ? 'active' : '' }}>
         <a href="{{ url('home') }}"><i class="fa fa-home"></i> Home</a>
@@ -42,6 +42,9 @@
       </li>
       <li class= {{ Request::is('users') || Request::is('users/*') ? 'active' : '' }}>
         <a href="{{ url('users') }}"><i class="fa fa-users"></i> Users</a>
+      </li>
+      <li class= {{ Request::is('judges') || Request::is('judges/*') ? 'active' : '' }}>
+        <a href="{{ url('judges') }}"><i class="fa fa-beer"></i> Judges</a>
       </li>
       @endrole
     </ul>

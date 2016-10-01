@@ -252,23 +252,19 @@
     @endif
 </div>
 
-
-
-
+<div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+    <label class="control-label col-md-3">E-Mail</label>
+    <div class="col-md-4">
+        {!! Form::text('email', null, ['class'=>'form-control','placeholder'=>'E-Mail']) !!}
+    </div>
+    @if($errors->has('email'))
+        <span class="help-block">
+            <strong>{{ $errors->first('email') }}</strong>
+        </span>
+    @endif
+</div>
 
 @if(!isset($user))
-    <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-        <label class="control-label col-md-3">E-Mail</label>
-        <div class="col-md-4">
-            {!! Form::text('email', null, ['class'=>'form-control','placeholder'=>'E-Mail']) !!}
-        </div>
-        @if($errors->has('email'))
-            <span class="help-block">
-                <strong>{{ $errors->first('email') }}</strong>
-            </span>
-        @endif
-    </div>
-
     <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
         <label class="control-label col-md-3">Password</label>
         <div class="col-md-4">
