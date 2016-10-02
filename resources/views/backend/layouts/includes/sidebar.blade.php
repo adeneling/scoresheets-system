@@ -49,7 +49,7 @@
         <a href="{{ url('users') }}"><i class="fa fa-users"></i> Users</a>
       </li>
       <li class= {{ Request::is('judges') || Request::is('judges/*') ? 'active' : '' }}>
-        <a href="{{ url('judges') }}"><i class="fa fa-beer"></i> Judges</a>
+        <a href="{{ url('judges') }}"><i class="fa fa-certificate"></i> Judges</a>
       </li>
       @endrole
     </ul>

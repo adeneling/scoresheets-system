@@ -66,7 +66,7 @@
 	<div class="col-md-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>WALK IN</h2>
+				<h2>THE BEST WALK IN</h2>
 				<ul class="nav navbar-right panel_toolbox">
 					<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 				</ul>
@@ -94,21 +94,14 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th class="red"><font color="white">BEST GRAPARI 30%</font></th>
+							<th class="red"><font color="white">BEST GRAPARI 40%</font></th>
 							<td>{{ $nilaiCategori1[0]==1 ? 'JUARA 1 ('.$resultCategori1[0].')' : ''}}</td>
 							<td>{{ $nilaiCategori1[1]==1 ? 'JUARA 1 ('.$resultCategori1[1].')' : ''}}</td>
 							<td>{{ $nilaiCategori1[2]==1 ? 'JUARA 1 ('.$resultCategori1[2].')' : ''}}</td>
 							<td>{{ $nilaiCategori1[3]==1 ? 'JUARA 1 ('.$resultCategori1[3].')' : ''}}</td>
 						</tr>
 						<tr>
-							<th class="red"><font color="white">BEST SERVICE DIFFERENTIATION CE ACROSS CHANNEL 20%</font></th>
-							<td>{{ $nilaiCategori2[0]==1 ? 'JUARA 1 (' .$resultCategori2[0].')': ''}}</td>
-							<td>{{ $nilaiCategori2[1]==1 ? 'JUARA 1 (' .$resultCategori2[1].')': ''}}</td>
-							<td>{{ $nilaiCategori2[2]==1 ? 'JUARA 1 (' .$resultCategori2[2].')': ''}}</td>
-							<td>{{ $nilaiCategori2[3]==1 ? 'JUARA 1 (' .$resultCategori2[3].')': ''}}</td>
-						</tr>
-						<tr>
-							<th class="red"><font color="white">BEST GRAPARI MITRA 30%</font></th>
+							<th class="red"><font color="white">BEST GRAPARI MITRA 40%</font></th>
 							<td>{{ $nilaiCategori3[0]==1 ? 'JUARA 1 (' .$resultCategori3[0].')': ''}}</td>
 							<td>{{ $nilaiCategori3[1]==1 ? 'JUARA 1 (' .$resultCategori3[1].')': ''}}</td>
 							<td>{{ $nilaiCategori3[2]==1 ? 'JUARA 1 (' .$resultCategori3[2].')': ''}}</td>
@@ -134,11 +127,48 @@
 		</div>
 	</div>
 </div>
+
 <div class="row">
 	<div class="col-md-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>CALL CENTER</h2>
+				<h2>THE BEST SERVICE DIFFERENTIATION ACROSS CHANNEL</h2>
+				<ul class="nav navbar-right panel_toolbox">
+					<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_content">
+				<table class="table">
+					<thead>
+						<tr>
+							<th width="40%">Category</th>
+							<th>AREA 1</th>
+							<th>AREA 2</th>
+							<th>AREA 3</th>
+							<th>AREA 4</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="red"><font color="white">BEST SERVICE DIFFERENTIATION ACROSS CHANNEL</font></th>
+							<td>{{ $nilaiCategori2[0]==1 ? 'JUARA 1 (' .$resultCategori2[0].')': ''}}</td>
+							<td>{{ $nilaiCategori2[1]==1 ? 'JUARA 1 (' .$resultCategori2[1].')': ''}}</td>
+							<td>{{ $nilaiCategori2[2]==1 ? 'JUARA 1 (' .$resultCategori2[2].')': ''}}</td>
+							<td>{{ $nilaiCategori2[3]==1 ? 'JUARA 1 (' .$resultCategori2[3].')': ''}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="x_panel">
+			<div class="x_title">
+				<h2>THE BEST CALL CENTER</h2>
 				<ul class="nav navbar-right panel_toolbox">
 					<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 				</ul>

@@ -974,27 +974,31 @@ class UnitScoreController extends Controller
         /* WALK IN */
         /* AREA 1*/
         if ($nilaiCategori1[0] == 1) {
-            $walkInWinnerArea1[0] = isset($resultCategori1[0]) ? $resultCategori1[0] * 40 : 0 ;
+            $walkInWinnerArea1[0] = isset($cat1Area1->unitCategory->coeficient) ? $cat1Area1->unitCategory->coeficient : 0 ;
         }else{
             $walkInWinnerArea1[0] = 0;
         }
-        if ($nilaiCategori3[0] == 1) {
-            $walkInWinnerArea1[1] = isset($resultCategori3[0]) ? $resultCategori3[0] * 40 : 0;
+        if ($nilaiCategori2[0] == 1) {
+            $walkInWinnerArea1[1] = isset($cat2Area1->unitCategory->coeficient) ? $cat2Area1->unitCategory->coeficient : 0 ;
         }else{
             $walkInWinnerArea1[1] = 0;
         }
-        if ($nilaiCategori4[0] == 1) {
-            $walkInWinnerArea1[2] = isset($resultCategori4[0]) ? $resultCategori4[0] * 10 : 0;
+        if ($nilaiCategori3[0] == 1) {
+            $walkInWinnerArea1[2] = isset($cat3Area1->unitCategory->coeficient) ? $cat3Area1->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea1[2] = 0;
         }
-        if ($nilaiCategori5[0] == 1) {
-            $walkInWinnerArea1[3] = isset($resultCategori5[0]) ? $resultCategori5[0] * 10 : 0;
+        if ($nilaiCategori4[0] == 1) {
+            $walkInWinnerArea1[3] = isset($cat4Area1->unitCategory->coeficient) ? $cat4Area1->unitCategory->coeficient : 0;
         }else{
             $walkInWinnerArea1[3] = 0;
         }
-        $walkInWinnerResult[0] = array_sum($walkInWinnerArea1) / 100;
-        
+        if ($nilaiCategori5[0] == 1) {
+            $walkInWinnerArea1[4] = isset($cat5Area1->unitCategory->coeficient) ? $cat5Area1->unitCategory->coeficient : 0;
+        }else{
+            $walkInWinnerArea1[4] = 0;
+        }
+        $walkInWinnerResult[0] = array_sum($walkInWinnerArea1);
         /* AREA 2*/
         if ($nilaiCategori1[1] == 1) {
             $walkInWinnerArea2[0] = isset($cat1Area2->unitCategory->coeficient) ? $cat1Area2->unitCategory->coeficient : 0;
