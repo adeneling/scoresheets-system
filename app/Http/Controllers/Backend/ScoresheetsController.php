@@ -23,12 +23,17 @@ class ScoresheetsController extends Controller
         $q = $request->get('q');
         if (isset($q)) {
             $category = Category::where('id',$q)->first();
+            
             if (Laratrust::hasRole('jury')){
                 $scoresheets = Scoresheet::where('jury_id', Auth::user()->id)->where('category_id', $q)->orderBy('created_at','desc')->get();    
             }
-            if (Laratrust::hasRole('coordinator') || Laratrust::hasRole('admin') ){
+            if (Laratrust::hasRole('coordinator')){
                 $scoresheets = Scoresheet::where('category_id', $q)->orderBy('created_at','desc')->get();
-            }  
+            }
+            if (Laratrust::hasRole('admin') ){
+                $scoresheets = Scoresheet::where('category_id', $q)->orderBy('created_at','desc')->get();
+                $topParticipants = Scoresheet::where('category_id', $q)->orderBy('total_coeficient_score','desc')->take(3)->get();
+            }
         }else{
             if (Laratrust::hasRole('jury')){
                 $scoresheets = Scoresheet::where('jury_id', Auth::user()->id)->orderBy('created_at','desc')->get();
@@ -38,7 +43,7 @@ class ScoresheetsController extends Controller
             }
         }
         
-        return view('backend.pages.scoresheets.index', compact('scoresheets', 'q', 'category'));
+        return view('backend.pages.scoresheets.index', compact('scoresheets', 'q', 'category', 'topParticipants'));
     }
 
     /**

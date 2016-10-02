@@ -27,6 +27,41 @@
 		</div>
 	</div>
 </div>
+{{-- only admin can see top 3 from each category --}}
+@role('admin')	
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_title">
+					<h2>TOP 3 {{ isset($category) ? '- '. $category->name : '-' }}</h2>
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					@if(isset($topParticipants))
+						<?php $no = 1; ?>
+						@foreach($topParticipants as $top)
+							<div class="animated flipInY col-lg-4">
+								<div class="tile-stats">
+									<center>
+										<h5>
+											<i class="fa fa-trophy"></i> {{ $no++ }}
+											<br>
+											{{ $top->user->name }}
+											<br>
+											Area {{ $top->area == 5 ? 'Headquarter' : $top->area }}
+											<br>
+											{{ $top->total_coeficient_score }}
+										</h5>
+									</center>
+								</div>
+							</div>
+						@endforeach
+					@endif
+				</div>
+			</div>
+		</div>
+	</div>	
+@endif
 
 <div class="clearfix"></div>
 
