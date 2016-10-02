@@ -24,7 +24,7 @@
 
 <div class="form-group{{ $errors->has('area') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">Area</label>
-    <div class="col-md-1">
+    <div class="col-md-2">
         {!!Form::select('area', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'Headquarter'], null, ['class'=>'form-control','required']) !!}
     </div>
     @if($errors->has('area'))
