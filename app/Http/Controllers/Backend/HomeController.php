@@ -18,7 +18,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        if (Laratrust::hasRole('admin') || Laratrust::hasRole('jury')) return $this->adminDashboard();
+        if (Laratrust::hasRole('admin') || Laratrust::hasRole('jury') || Laratrust::hasRole('coordinator') ) return $this->adminDashboard();
         if (Laratrust::hasRole('participant') || Laratrust::hasRole('guest')) return $this->participantDashboard();
         return view('backend.pages.home');
     }

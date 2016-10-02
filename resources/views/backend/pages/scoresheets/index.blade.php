@@ -36,7 +36,12 @@
 		<div class="x_panel">
 			<div class="x_title">
 				<h2><font color="red">Scoresheets {{ isset($category) ? '- '. $category->name : '-' }}</font></h2>
-				<a href="{{ url('participant') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
+				@role('jury')
+					<a href="{{ url('participant') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
+				@endrole
+				@role('admin')
+					<a href="{{ url('participant') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
+				@endrole
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -48,6 +53,7 @@
 							<th>Category</th>
 							<th>Area</th>
 							<th>Final Score</th>
+							<th>Judged By</th>
 							<th width="30%">Aksi</th>
 						</tr>
 					</thead>
@@ -61,12 +67,19 @@
 							<td>{{ $scoresheet->category->name }}</td>
 							<td>{{ $scoresheet->user->area == 5 ? 'Headquarter' : $scoresheet->user->area}}</td>
 							<td>{{ $scoresheet->total_coeficient_score }}</td>
+							<td>{{ $scoresheet->userJudgedBy->name }}</td>
 							<td>
 								<center>
 									{!! Form::model($scoresheet, ['route' => ['scoresheets.destroy', $scoresheet], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
-									<a href = "{{ route('scoresheets.show', encrypt($scoresheet->id))}}" class="btn btn-primary">Check</a> | 
-									<a href = "{{ route('scoresheets.edit', encrypt($scoresheet->id))}}" class="btn btn-warning">Edit Score</a> | 
-									<button type="submit" class="btn btn-danger js-submit-confirm">Delete</button>
+									<a href = "{{ route('scoresheets.show', encrypt($scoresheet->id))}}" class="btn btn-primary">Check</a>
+									@role('jury')
+									 | <a href = "{{ route('scoresheets.edit', encrypt($scoresheet->id))}}" class="btn btn-warning">Edit Score</a>
+									 | <button type="submit" class="btn btn-danger js-submit-confirm">Delete</button>
+									@endrole
+									@role('admin')
+									 | <a href = "{{ route('scoresheets.edit', encrypt($scoresheet->id))}}" class="btn btn-warning">Edit Score</a>
+									 | <button type="submit" class="btn btn-danger js-submit-confirm">Delete</button>
+									@endrole
 									{!! Form::close()!!}
 
 								</center>

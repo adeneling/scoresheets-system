@@ -10,7 +10,7 @@ use App\Category;
 use Carbon\Carbon;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Laratrust\LaratrustFacade as Laratrust;
 class ScoresheetsController extends Controller
 {
     /**
@@ -23,9 +23,19 @@ class ScoresheetsController extends Controller
         $q = $request->get('q');
         if (isset($q)) {
             $category = Category::where('id',$q)->first();
-            $scoresheets = Scoresheet::where('jury_id', Auth::user()->id)->where('category_id', $q)->orderBy('created_at','desc')->get();
+            if (Laratrust::hasRole('jury')){
+                $scoresheets = Scoresheet::where('jury_id', Auth::user()->id)->where('category_id', $q)->orderBy('created_at','desc')->get();    
+            }
+            if (Laratrust::hasRole('coordinator') || Laratrust::hasRole('admin') ){
+                $scoresheets = Scoresheet::where('category_id', $q)->orderBy('created_at','desc')->get();    
+            }  
         }else{
-            $scoresheets = Scoresheet::where('jury_id', Auth::user()->id)->orderBy('created_at','desc')->get();
+            if (Laratrust::hasRole('jury')){
+                $scoresheets = Scoresheet::where('jury_id', Auth::user()->id)->orderBy('created_at','desc')->get();
+            }
+            if (Laratrust::hasRole('coordinator') || Laratrust::hasRole('admin') ){
+                $scoresheets = Scoresheet::orderBy('created_at','desc')->get();
+            }
         }
         
         return view('backend.pages.scoresheets.index', compact('scoresheets', 'q', 'category'));

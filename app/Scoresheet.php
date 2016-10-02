@@ -35,4 +35,7 @@ class Scoresheet extends Model
     public function user() {
         return $this->belongsTo('App\User', 'participant_id');
     }
+    public function userJudgedBy() {
+        return $this->belongsTo('App\User', 'jury_id');
+    }
 }

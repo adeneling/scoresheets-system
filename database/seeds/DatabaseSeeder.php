@@ -12,17 +12,17 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         /* CATEGORY */
-        $this->call(CategorySeeder::class);
+        //$this->call(CategorySeeder::class);
         /* USERS */
-        $this->call(UsersSeeder::class);        
+        //$this->call(UsersSeeder::class);
         /* PARTICIPANT */
-        $this->call(ParticipantSeeder::class);
+        //$this->call(ParticipantSeeder::class);
         /* SESSION */
-        $this->call(SessionDataSeeder::class);
+        //$this->call(SessionDataSeeder::class);
         /* UNIT CATEGORY PARENT */
-        $this->call(UnitCategoryParentSeeder::class);
+        //$this->call(UnitCategoryParentSeeder::class);
         /* UNIT CATEGORY */
-        $this->call(UnitCategorySeeder::class);
+        //$this->call(UnitCategorySeeder::class);
         /* UNIT SCORE */
         //$this->call(UnitScoreSeeder::class);
     }

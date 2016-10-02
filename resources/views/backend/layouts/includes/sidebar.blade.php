@@ -18,6 +18,11 @@
         <a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a>
       </li>
       @endrole
+      @role('coordinator')
+      <li class= {{ Request::is('scoresheets') || Request::is('scoresheets/*') ? 'active' : '' }}>
+        <a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a>
+      </li>
+      @endrole
       @role('admin')
       <li class= {{ Request::is('participant') || Request::is('participant/*') ? 'active' : '' }}>
         <a href="{{ url('participant') }}"><i class="fa fa-user-md"></i> Participant</a>
