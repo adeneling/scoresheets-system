@@ -163,26 +163,6 @@
 						</div>
 						<div class="row">
 							<div class="form-group">
-								<label class="control-label col-md-3">Score</label>
-								<div class="col-md-4">
-									<div class="label label-info">
-										{{ $scoresheet->total_score }}
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="form-group">
-								<label class="control-label col-md-3">Coeficient Score</label>
-								<div class="col-md-4">
-									<div class="label label-success">
-										{{ $scoresheet->coeficient_score }}
-									</div>	
-								</div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="form-group">
 								<label class="control-label col-md-3">Total Coeficient Score</label>
 								<div class="col-md-4">
 									<div class="label label-primary">

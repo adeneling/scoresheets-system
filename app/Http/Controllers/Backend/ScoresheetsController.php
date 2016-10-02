@@ -27,7 +27,7 @@ class ScoresheetsController extends Controller
                 $scoresheets = Scoresheet::where('jury_id', Auth::user()->id)->where('category_id', $q)->orderBy('created_at','desc')->get();    
             }
             if (Laratrust::hasRole('coordinator') || Laratrust::hasRole('admin') ){
-                $scoresheets = Scoresheet::where('category_id', $q)->orderBy('created_at','desc')->get();    
+                $scoresheets = Scoresheet::where('category_id', $q)->orderBy('created_at','desc')->get();
             }  
         }else{
             if (Laratrust::hasRole('jury')){
