@@ -9,6 +9,7 @@
 		<div class="x_panel">
 			<div class="x_title">
 				<h2>User List</h2>
+				<a href="{{ url('download-users/xls') }}" class="btn btn-success pull-right"> Download Excel</a>
 				<a href="{{ url('notification/create') }}" class="btn btn-danger pull-right"> Send notification to all</a>
 				<a href="{{ url('users/create') }}" class="btn btn-primary pull-right"> Create user</a>
 				<div class="clearfix"></div>

@@ -44,7 +44,7 @@ Route::group(['namespace' => 'Backend'], function(){
 	/* AUTHENTICATION */
 	Auth::routes();
 	Route::post('activation', 'CheckingController@sendActivation');
-	Route::get('home', 'HomeController@index');	
+	Route::get('home', 'HomeController@index');
 	/* UPLOAD PRESENTATOIN */
 	Route::resource('upload', 'UploadPresentationController');
 	/* CHECK NIK AND EMAIL */
@@ -81,4 +81,6 @@ Route::group(['namespace' => 'Backend'], function(){
 	Route::resource('users', 'UsersController');
 	/* JUDGES */
 	Route::resource('judges', 'JudgesController');
+	/* DOWNLOAD FILE */
+	Route::get('download-users/{type}','DownloadController@downloadUsers');
 });
