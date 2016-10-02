@@ -55,14 +55,14 @@
 
 </style>
 <tr>
-    <th colspan="4" class="red"><font color="white">DECK AND DELIVERY </font></th>
+    <th colspan="4" class="red"><font color="white">DECK AND DELIVERY ({{ $scoresheet->category->presentation_material + $scoresheet->category->communication_skill }}%)</font></th>
 </tr>
 <tr>
     <td>
         <h4>Presentation Material</h4>
         Content Compliance, Layout Design, Attractiveness, Innovative
     </td>
-    
+    <td><h4>{{ $scoresheet->category->presentation_material }}%</h4></td>
     <td>
         <ul class="donate-now">
             <li>
@@ -119,7 +119,7 @@
         <h4>Communication Skill</h4>
         Friendly, Attitude, Self-Confident, Body Language, Eye Contact
     </td>
-    
+    <td><h4>{{ $scoresheet->category->communication_skill }}%</h4></td>
     <td>
         <ul class="donate-now">
             <li>
@@ -172,14 +172,14 @@
 
 </tr>
 <tr>
-    <th colspan="4" class="red"><font color="white">SELF DRIVER </font></th>
+    <th colspan="4" class="red"><font color="white">SELF DRIVER ({{ $scoresheet->category->achievement + $scoresheet->category->personal_value }}%)</font></th>
 </tr>
 <tr>
     <td>
         <h4>Achievement</h4>
         Personal achievement in Region or Area
     </td>
-    
+    <td><h4>{{ $scoresheet->category->achievement }}%</h4></td>
     <td>
         <ul class="donate-now">
             <li>
@@ -236,7 +236,7 @@
         <h4>Personal Value</h4>
         Integrity, Respect, Enthusiasm, Loyalty, Totality
     </td>
-    
+    <td><h4>{{ $scoresheet->category->personal_value }}%</h4></td>
     <td>
         <ul class="donate-now">
             <li>
@@ -289,7 +289,7 @@
 
 </tr>
 <tr>
-    <th colspan="4" class="red"><font color="white">KNOW HOW </font></th>
+    <th colspan="4" class="red"><font color="white">KNOW HOW ({{ $scoresheet->category->customer_care_knowledge }}%)</font></th>
 </tr>
 <tr>
     <td>
@@ -297,7 +297,7 @@
         Jury Internal: 5 Core Process, Custmer Type-Service Differentition, Operation Excellence<br>
         Jury External: Basic Customer Care Knowledge
     </td>
-    
+    <td><h4>{{ $scoresheet->category->customer_care_knowledge }}%</h4></td>
     <td>
         <ul class="donate-now">
             <li>
@@ -350,14 +350,14 @@
 
 </tr>
 <tr>
-    <th colspan="4" class="red"><font color="white">ACTUALIZATION </font></th>
+    <th colspan="4" class="red"><font color="white">ACTUALIZATION ({{ $scoresheet->category->solution_skill +  $scoresheet->category->inspirational_story }}%)</font></th>
 </tr>
 <tr>
     <td>
         <h4>Solution Skill</h4>
         Customer Need Identification, Customer Handling, Problem Solving, Decision Skill, Innovation
     </td>
-    
+    <td><h4>{{ $scoresheet->category->solution_skill }}%</h4></td>
     <td>
         <ul class="donate-now">
             <li>
@@ -414,7 +414,7 @@
         <h4>Inspirational Story</h4>
         How to handle operational issue with inspirational solution
     </td>
-    
+    <td><h4>{{ $scoresheet->category->inspirational_story }}%</h4></td>
     <td>
         <ul class="donate-now">
             <li>
@@ -468,13 +468,13 @@
 </tr>
 @if($scoresheet->category->tier == 3)
 <tr>
-    <th colspan="4" class="red"><font color="white">TEAM LEADER AND SUPERVISOR CATEGORY ONLY </font></th>
+    <th colspan="4" class="red"><font color="white">TEAM LEADER AND SUPERVISOR CATEGORY ONLY ({{ $participant->category->leadership }}%)</font></th>
 </tr>
 <tr>
     <td>
         <h4>Leadership</h4>
     </td>
-    
+    <td><h4>{{ $scoresheet->category->leadership }}%</h4></td>
     <td>
         <ul class="donate-now">
             <li>
