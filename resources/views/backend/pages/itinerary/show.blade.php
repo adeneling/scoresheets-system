@@ -24,7 +24,7 @@
 
 					<ul class="list-unstyled user_data">
 						<li>Category: {{ $itinerary->user->category->name }}</li>
-						<li>Area: {{ $itinerary->user->area }}</li>
+						<li>Area: {{ $itinerary->user->area == 5 ? 'Headquarter' : $itinerary->user->area }}</li>
 						<li>Region: {{ $itinerary->user->region }}</li>
 						<li><center>
 								<a href="{{ url('itinerary') }}" class="btn btn-primary">Kembali</a>

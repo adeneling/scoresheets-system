@@ -49,7 +49,7 @@
 									<br>
 									{{ $top->type }}
 									<br>
-									Area {{ $top->area }}
+									Area {{ $top->area == 5 ? 'Headquarter' : $top->area }}
 									<br>
 									{{ $top->total_score }}
 								</h5>
@@ -354,7 +354,7 @@
 							<td>{{ $no++ }}</td>
 							<td>{{ $unit->unitCategory->name }}</td>
 							<td>{{ $unit->type }}</td>
-							<td>{{ $unit->area }}</td>
+							<td>{{ $unit->area == 5 ? 'Headquarter' : $unit->area }}</td>
 							<td>{{ $unit->location }}</td>
 							<td>{{ $unit->total_score }}</td>
 							<td>

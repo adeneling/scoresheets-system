@@ -24,7 +24,7 @@
 
 					<ul class="list-unstyled user_data">
 						<li>Category: {{ $notification->user->category->name }}</li>
-						<li>Area: {{ $notification->user->area }}</li>
+						<li>Area: {{ $notification->user->area == 5 ? 'Headquarter' : $notification->user->area }}</li>
 						<li>Region: {{ $notification->user->region }}</li>
 						<li><center>
 								<a href="{{ url('notification') }}" class="btn btn-primary">Kembali</a>

@@ -87,7 +87,7 @@
                                         </tr>
                                         <tr>
                                             <td>Area</td>
-                                            <td>{{ $user->area }}</td>
+                                            <td>{{ $user->area == 5 ? 'Headquarter' : $user->area }}</td>
                                         </tr>
                                         <tr>
                                             <td>Job Function</td>

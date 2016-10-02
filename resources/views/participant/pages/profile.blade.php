@@ -80,7 +80,7 @@
                                 </tr>
                                 <tr>
                                     <td>Area</td>
-                                    <td>{{ Auth::user()->area }}</td>
+                                    <td>{{ Auth::user()->area == 5 ? 'Headquarter' : Auth::user()->area}}</td>
                                 </tr>
                                 <tr>
                                     <td>Job Function</td>
