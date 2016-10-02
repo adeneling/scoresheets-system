@@ -54,7 +54,16 @@
 							<th>Area</th>
 							<th>Final Score</th>
 							<th>Judged By</th>
+							@role('jury')
 							<th width="30%">Aksi</th>
+							@endrole
+							@role('admin')
+								<th width="30%">Aksi</th>
+							@endrole
+							@role('coordinator')
+								<th width="10%">Aksi</th>
+							@endrole
+							
 						</tr>
 					</thead>
 

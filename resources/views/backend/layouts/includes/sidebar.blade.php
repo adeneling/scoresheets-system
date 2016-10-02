@@ -33,7 +33,7 @@
       <li class= {{ Request::is('unit-score') || Request::is('unit-score/*') ? 'active' : '' }}>
         <a href="{{ url('unit-score') }}"><i class="fa fa-align-center"></i> Unit Score</a>
       </li>
-      <li class= {{ Request::is('unit-category') || Request::is('unit-category/*') ? 'active' : '' }}>
+      <li class= {{ Request::is('unit-category') || Request::is('unit-category/*') || Request::is('best-area')|| Request::is('best-of-the-best') ? 'active' : '' }}>
         <a href="{{ url('unit-category') }}"><i class="fa fa-list-ul"></i> Unit Category</a>
       </li>
       <li class= {{ Request::is('category') || Request::is('category/*') ? 'active' : '' }}>

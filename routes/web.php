@@ -74,6 +74,8 @@ Route::group(['namespace' => 'Backend'], function(){
 	/* UNIT MODULE */
 	Route::resource('unit-score', 'UnitScoreController');
 	Route::resource('unit-category', 'UnitCategoryController');
+	Route::get('best-area', 'UnitCategoryController@bestArea');
+	Route::get('best-of-the-best', 'UnitCategoryController@bestOfTheBest');
 	Route::resource('unit-category-parent', 'UnitCategoryParentController');
 	/* USERS */
 	Route::resource('users', 'UsersController');

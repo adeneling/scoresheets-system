@@ -10,6 +10,12 @@ use App\Http\Controllers\Controller;
 
 class UnitCategoryController extends Controller
 {
+    public function bestArea(){
+        return view('backend.pages.unit-category.best-area');
+    }
+    public function bestOfTheBest(){
+        return view('backend.pages.unit-category.best-of-the-best');
+    }
     /**
      * Display a listing of the resource.
      *
