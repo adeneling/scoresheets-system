@@ -136,7 +136,7 @@ class ParticipantController extends Controller
             $leadership
         ;
         //$total_coeficient_score = $total_score / $coeficient_score;
-        $total_coeficient_score = $total_score / 100;
+        $total_coeficient_score = $total_score;
         /* request */
         $scoresheet = new Scoresheet();
         $scoresheet->participant_id = $request->input('participant_id');

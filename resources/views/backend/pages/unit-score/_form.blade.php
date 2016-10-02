@@ -1,7 +1,7 @@
 <div class="form-group{{ $errors->has('category_id') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">Category</label>
     <div class="col-md-5">
-        {!!Form::select('category_id', [''=>'']+App\UnitCategory::pluck('name','id')->all(), null, ['class'=>'select2_single form-control']) !!}
+        {!!Form::select('category_id', [''=>'']+App\UnitCategory::pluck('name','id')->all(), null, ['class'=>'select2_single form-control','required']) !!}
     </div>
     @if($errors->has('category_id'))
         <span class="help-block">
@@ -25,7 +25,7 @@
 <div class="form-group{{ $errors->has('area') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">Area</label>
     <div class="col-md-1">
-        {!!Form::select('area', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4'], null, ['class'=>'select2_single form-control']) !!}
+        {!!Form::select('area', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4'], null, ['class'=>'select2_single form-control','required']) !!}
     </div>
     @if($errors->has('area'))
         <span class="help-block">
@@ -49,7 +49,7 @@
 <div class="form-group{{ $errors->has('total_score') ? ' has-error' : '' }}">
     <label class="control-label col-md-3">Score</label>
     <div class="col-md-2">
-        {!! Form::number('total_score', null, ['class'=>'form-control','placeholder'=>'Score','step'=>'any']) !!}
+        {!! Form::number('total_score', null, ['class'=>'form-control','placeholder'=>'Score','step'=>'any', 'required']) !!}
     </div>
     @if($errors->has('total_score'))
         <span class="help-block">
