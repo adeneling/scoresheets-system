@@ -13,8 +13,8 @@ class DownloadController extends Controller
     public function downloadUsers(Request $request, $type)
 	{
 		$data = User::where('category_id', '!=', null)->get()->toArray();
-		return Excel::create('users', function($excel) use ($data) {
-			$excel->sheet('Users-List-Scoresheets-System', function($sheet) use ($data)
+		return Excel::create('Users-List-Scoresheets-System', function($excel) use ($data) {
+			$excel->sheet('List-Participant', function($sheet) use ($data)
 	        {
 				$sheet->fromArray($data);
 	        });
