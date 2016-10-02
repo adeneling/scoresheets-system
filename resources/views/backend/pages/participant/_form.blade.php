@@ -67,7 +67,43 @@
         <ul class="donate-now">
             <li>
                 {{ Form::radio('presentation_material', 1, null, ['id' => '1']) }}
-                <label for="1">$1</label>
+                <label for="1">1</label>
+            </li>
+            <li>
+                {{ Form::radio('presentation_material', 2, null, ['id' => '2']) }}
+                <label for="2">2</label>
+            </li>
+            <li>
+                {{ Form::radio('presentation_material', 3, null, ['id' => '3']) }}
+                <label for="3">3</label>
+            </li>
+            <li>
+                {{ Form::radio('presentation_material', 4, null, ['id' => '4']) }}
+                <label for="4">4</label>
+            </li>
+            <li>
+                {{ Form::radio('presentation_material', 5, null, ['id' => '5']) }}
+                <label for="5">5</label>
+            </li>
+            <li>
+                {{ Form::radio('presentation_material', 6, null, ['id' => '6']) }}
+                <label for="6">6</label>
+            </li>
+            <li>
+                {{ Form::radio('presentation_material', 7, null, ['id' => '7']) }}
+                <label for="7">7</label>
+            </li>
+            <li>
+                {{ Form::radio('presentation_material', 8, null, ['id' => '8']) }}
+                <label for="8">8</label>
+            </li>
+            <li>
+                {{ Form::radio('presentation_material', 9, null, ['id' => '9']) }}
+                <label for="9">9</label>
+            </li>
+            <li>
+                {{ Form::radio('presentation_material', 10, null, ['id' => '10']) }}
+                <label for="10">10</label>
             </li>
             
         </ul>
