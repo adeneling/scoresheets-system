@@ -17,9 +17,9 @@
 					<thead>
 						<tr>
 							<th width="5%">No</th>
-							<th width="10%">Name</th>
+							<th width="20%">Name</th>
 							<th width="20%">E-Mail</th>
-							<th width="20%">Category Handled</th>
+							<th width="10%">Handled</th>
 							<th width="20%">Aksi</th>
 						</tr>
 					</thead>
