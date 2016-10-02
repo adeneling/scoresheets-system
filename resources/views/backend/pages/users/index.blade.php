@@ -46,7 +46,7 @@
 								@endif
 							</td>
 							<td>{{ isset($user->category->name)  ? $user->category->name : $user->category_id }}</td>
-							<td>{{ $user->area }}</td>
+							<td>{{ $user->area == 5 ? 'Headquarter' : $user->area }}</td>
 							<td>
 								<center>
 									{!! Form::model($user, ['route' => ['users.destroy', $user], 'method' => 'delete', 'class' => 'form-inline'] ) !!}
