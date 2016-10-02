@@ -997,88 +997,73 @@ class UnitScoreController extends Controller
         
         /* AREA 2*/
         if ($nilaiCategori1[1] == 1) {
-            $walkInWinnerArea2[0] = isset($cat1Area2->unitCategory->coeficient) ? $cat1Area2->unitCategory->coeficient : 0;
+            $walkInWinnerArea2[0] = isset($resultCategori1[1]) ? $resultCategori1[1] * 40 : 0 ;
         }else{
             $walkInWinnerArea2[0] = 0;
         }
-        if ($nilaiCategori2[1] == 1) {
-            $walkInWinnerArea2[1] = isset($cat2Area2->unitCategory->coeficient) ? $cat2Area2->unitCategory->coeficient : 0;
-        }else{
-            $walkInWinnerArea2[1] = 0;
-        }
         if ($nilaiCategori3[1] == 1) {
-            $walkInWinnerArea2[2] = isset($cat3Area2->unitCategory->coeficient) ? $cat3Area2->unitCategory->coeficient : 0;
+            $walkInWinnerArea2[2] = isset($resultCategori3[1]) ? $resultCategori3[1] * 40 : 0;
         }else{
             $walkInWinnerArea2[2] = 0;
         }
         if ($nilaiCategori4[1] == 1) {
-            $walkInWinnerArea2[3] = isset($cat4Area2->unitCategory->coeficient) ? $cat4Area2->unitCategory->coeficient : 0;
+            $walkInWinnerArea2[3] = isset($resultCategori4[1]) ? $resultCategori4[1] * 10 : 0;
         }else{
             $walkInWinnerArea2[3] = 0;
         }
         if ($nilaiCategori5[1] == 1) {
-            $walkInWinnerArea2[4] = isset($cat5Area2->unitCategory->coeficient) ? $cat5Area2->unitCategory->coeficient : 0;
+            $walkInWinnerArea2[4] = isset($resultCategori5[1]) ? $resultCategori5[1] * 10 : 0;
         }else{
             $walkInWinnerArea2[4] = 0;
         }
-        $walkInWinnerResult[1] = array_sum($walkInWinnerArea2);
+        $walkInWinnerResult[1] = array_sum($walkInWinnerArea2) / 100;
 
         /* AREA 3*/
         if ($nilaiCategori1[2] == 1) {
-            $walkInWinnerArea3[0] = isset($cat1Area3->unitCategory->coeficient) ? $cat1Area3->unitCategory->coeficient : 0;
+            $walkInWinnerArea3[0] = isset($resultCategori1[2]) ? $resultCategori1[2] * 40 : 0 ;
         }else{
             $walkInWinnerArea3[0] = 0;
         }
-        if ($nilaiCategori2[2] == 1) {
-            $walkInWinnerArea3[1] = isset($cat2Area3->unitCategory->coeficient) ? $cat2Area3->unitCategory->coeficient : 0;
-        }else{
-            $walkInWinnerArea3[1] = 0;
-        }
         if ($nilaiCategori3[2] == 1) {
-            $walkInWinnerArea3[2] = isset($cat3Area3->unitCategory->coeficient) ? $cat3Area3->unitCategory->coeficient : 0;
+            $walkInWinnerArea3[2] = isset($resultCategori3[2]) ? $resultCategori3[2] * 40 : 0;
         }else{
             $walkInWinnerArea3[2] = 0;
         }
         if ($nilaiCategori4[2] == 1) {
-            $walkInWinnerArea3[3] = isset($cat4Area3->unitCategory->coeficient) ? $cat4Area3->unitCategory->coeficient : 0;
+            $walkInWinnerArea3[3] = isset($resultCategori4[2]) ? $resultCategori4[2] * 10 : 0;
         }else{
             $walkInWinnerArea3[3] = 0;
         }
         if ($nilaiCategori5[2] == 1) {
-            $walkInWinnerArea3[4] = isset($cat5Area3->unitCategory->coeficient) ? $cat5Area3->unitCategory->coeficient : 0;
+            $walkInWinnerArea3[4] = isset($resultCategori5[2]) ? $resultCategori5[2] * 10 : 0;
         }else{
             $walkInWinnerArea3[4] = 0;
         }
-        $walkInWinnerResult[2] = array_sum($walkInWinnerArea3);
+        $walkInWinnerResult[2] = array_sum($walkInWinnerArea3) / 100;
 
-        /* AREA 3*/
+        /* AREA 4*/
         if ($nilaiCategori1[3] == 1) {
-            $walkInWinnerArea4[0] = isset($cat1Area4->unitCategory->coeficient) ? $cat1Area4->unitCategory->coeficient : 0;
+            $walkInWinnerArea4[0] = isset($resultCategori1[3]) ? $resultCategori1[3] * 40 : 0 ;
         }else{
             $walkInWinnerArea4[0] = 0;
         }
-        if ($nilaiCategori2[3] == 1) {
-            $walkInWinnerArea4[1] = isset($cat2Area4->unitCategory->coeficient) ? $cat2Area4->unitCategory->coeficient : 0;
-        }else{
-            $walkInWinnerArea4[1] = 0;
-        }
         if ($nilaiCategori3[3] == 1) {
-            $walkInWinnerArea4[2] = isset($cat3Area4->unitCategory->coeficient) ? $cat3Area4->unitCategory->coeficient : 0;
+            $walkInWinnerArea4[2] = isset($resultCategori3[3]) ? $resultCategori3[3] * 40 : 0;
         }else{
             $walkInWinnerArea4[2] = 0;
         }
         if ($nilaiCategori4[3] == 1) {
-            $walkInWinnerArea4[3] = isset($cat4Area4->unitCategory->coeficient) ? $cat4Area4->unitCategory->coeficient : 0;
+            $walkInWinnerArea4[3] = isset($resultCategori4[3]) ? $resultCategori4[3] * 10 : 0;
         }else{
             $walkInWinnerArea4[3] = 0;
         }
         if ($nilaiCategori5[3] == 1) {
-            $walkInWinnerArea4[4] = isset($cat5Area4->unitCategory->coeficient) ? $cat5Area4->unitCategory->coeficient : 0;
+            $walkInWinnerArea4[4] = isset($resultCategori5[3]) ? $resultCategori5[3] * 10 : 0;
         }else{
             $walkInWinnerArea4[4] = 0;
         }
-        $walkInWinnerResult[3] = array_sum($walkInWinnerArea4);        
-        //return $walkInWinnerResult;
+        $walkInWinnerResult[3] = array_sum($walkInWinnerArea4) / 100;        
+        
         $walkInWinnerResultValue = max($walkInWinnerResult);
         if (array_search(max($walkInWinnerResult), $walkInWinnerResult) == 0) {
             $walkInWinnerName = 1;
@@ -1095,92 +1080,94 @@ class UnitScoreController extends Controller
         /* CALL CENTER */
         /* AREA 1*/
         if ($nilaiCategori6[0] == 1) {
-            $callCenterWinnerArea1[0] = isset($cat6Area1->unitCategory->coeficient) ? $cat6Area1->unitCategory->coeficient : 0;
+            $callCenterWinnerArea1[0] = isset($resultCategori6[0]) ? $resultCategori6[0] * 30 : 0 ;
         }else{
             $callCenterWinnerArea1[0] = 0;
         }
         if ($nilaiCategori7[0] == 1) {
-            $callCenterWinnerArea1[1] = isset($cat7Area1->unitCategory->coeficient) ? $cat7Area1->unitCategory->coeficient : 0;
+            $callCenterWinnerArea1[1] = isset($resultCategori7[0]) ? $resultCategori7[0] * 40 : 0;
         }else{
             $callCenterWinnerArea1[1] = 0;
         }
         if ($nilaiCategori8[0] == 1) {
-            $callCenterWinnerArea1[2] = isset($cat8Area1->unitCategory->coeficient) ? $cat8Area1->unitCategory->coeficient : 0;
+            $callCenterWinnerArea1[2] = isset($resultCategori8[0]) ? $resultCategori8[0] * 15 : 0;
         }else{
             $callCenterWinnerArea1[2] = 0;
         }
         if ($nilaiCategori9[0] == 1) {
-            $callCenterWinnerArea1[3] = isset($cat9Area1->unitCategory->coeficient) ? $cat9Area1->unitCategory->coeficient : 0;
+            $callCenterWinnerArea1[3] = isset($resultCategori9[0]) ? $resultCategori9[0] * 15 : 0;
         }else{
             $callCenterWinnerArea1[3] = 0;
         }
-        $callCenterWinnerResult[0] = array_sum($callCenterWinnerArea1);
+        $callCenterWinnerResult[0] = array_sum($callCenterWinnerArea1) / 100;
+
         /* AREA 2*/
         if ($nilaiCategori6[1] == 1) {
-            $callCenterWinnerArea2[0] = isset($cat6Area2->unitCategory->coeficient) ? $cat6Area2->unitCategory->coeficient : 0;
+            $callCenterWinnerArea2[0] = isset($resultCategori6[1]) ? $resultCategori6[1] * 30 : 0 ;
         }else{
             $callCenterWinnerArea2[0] = 0;
         }
         if ($nilaiCategori7[1] == 1) {
-            $callCenterWinnerArea2[1] = isset($cat7Area2->unitCategory->coeficient) ? $cat7Area2->unitCategory->coeficient : 0;
+            $callCenterWinnerArea2[1] = isset($resultCategori7[1]) ? $resultCategori7[1] * 40 : 0;
         }else{
             $callCenterWinnerArea2[1] = 0;
         }
         if ($nilaiCategori8[1] == 1) {
-            $callCenterWinnerArea2[2] = isset($cat8Area2->unitCategory->coeficient) ? $cat8Area2->unitCategory->coeficient : 0;
+            $callCenterWinnerArea2[2] = isset($resultCategori8[1]) ? $resultCategori8[1] * 15 : 0;
         }else{
             $callCenterWinnerArea2[2] = 0;
         }
         if ($nilaiCategori9[1] == 1) {
-            $callCenterWinnerArea2[3] = isset($cat9Area2->unitCategory->coeficient) ? $cat9Area2->unitCategory->coeficient : 0;
+            $callCenterWinnerArea2[3] = isset($resultCategori9[1]) ? $resultCategori9[1] * 15 : 0;
         }else{
             $callCenterWinnerArea2[3] = 0;
         }
-        $callCenterWinnerResult[1] = array_sum($callCenterWinnerArea2);
+        $callCenterWinnerResult[1] = array_sum($callCenterWinnerArea2) / 100;
+
         /* AREA 2*/
         if ($nilaiCategori6[2] == 1) {
-            $callCenterWinnerArea3[0] = isset($cat6Area3->unitCategory->coeficient) ? $cat6Area3->unitCategory->coeficient : 0;
+            $callCenterWinnerArea3[0] = isset($resultCategori6[2]) ? $resultCategori6[2] * 30 : 0 ;
         }else{
             $callCenterWinnerArea3[0] = 0;
         }
         if ($nilaiCategori7[2] == 1) {
-            $callCenterWinnerArea3[1] = isset($cat7Area3->unitCategory->coeficient) ? $cat7Area3->unitCategory->coeficient : 0;
+            $callCenterWinnerArea3[1] = isset($resultCategori7[2]) ? $resultCategori7[2] * 40 : 0;
         }else{
             $callCenterWinnerArea3[1] = 0;
         }
         if ($nilaiCategori8[2] == 1) {
-            $callCenterWinnerArea3[2] = isset($cat8Area3->unitCategory->coeficient) ? $cat8Area3->unitCategory->coeficient : 0;
+            $callCenterWinnerArea3[2] = isset($resultCategori8[2]) ? $resultCategori8[2] * 15 : 0;
         }else{
             $callCenterWinnerArea3[2] = 0;
         }
         if ($nilaiCategori9[2] == 1) {
-            $callCenterWinnerArea3[3] = isset($cat9Area3->unitCategory->coeficient) ? $cat9Area3->unitCategory->coeficient : 0;
+            $callCenterWinnerArea3[3] = isset($resultCategori9[2]) ? $resultCategori9[2] * 15 : 0;
         }else{
             $callCenterWinnerArea3[3] = 0;
         }
-        $callCenterWinnerResult[2] = array_sum($callCenterWinnerArea3);
+        $callCenterWinnerResult[2] = array_sum($callCenterWinnerArea3) / 100;
         /* AREA 2*/
         if ($nilaiCategori6[3] == 1) {
-            $callCenterWinnerArea4[0] = isset($cat6Area4->unitCategory->coeficient) ? $cat6Area4->unitCategory->coeficient : 0;
+            $callCenterWinnerArea4[0] = isset($resultCategori6[3]) ? $resultCategori6[3] * 30 : 0 ;
         }else{
             $callCenterWinnerArea4[0] = 0;
         }
         if ($nilaiCategori7[3] == 1) {
-            $callCenterWinnerArea4[1] = isset($cat7Area4->unitCategory->coeficient) ? $cat7Area4->unitCategory->coeficient : 0;
+            $callCenterWinnerArea4[1] = isset($resultCategori7[3]) ? $resultCategori7[3] * 40 : 0;
         }else{
             $callCenterWinnerArea4[1] = 0;
         }
         if ($nilaiCategori8[3] == 1) {
-            $callCenterWinnerArea4[2] = isset($cat8Area4->unitCategory->coeficient) ? $cat8Area4->unitCategory->coeficient : 0;
+            $callCenterWinnerArea4[2] = isset($resultCategori8[3]) ? $resultCategori8[3] * 15 : 0;
         }else{
             $callCenterWinnerArea4[2] = 0;
         }
         if ($nilaiCategori9[3] == 1) {
-            $callCenterWinnerArea4[3] = isset($cat9Area4->unitCategory->coeficient) ? $cat9Area4->unitCategory->coeficient : 0;
+            $callCenterWinnerArea4[3] = isset($resultCategori9[3]) ? $resultCategori9[3] * 15 : 0;
         }else{
             $callCenterWinnerArea4[3] = 0;
         }
-        $callCenterWinnerResult[3] = array_sum($callCenterWinnerArea4);
+        $callCenterWinnerResult[3] = array_sum($callCenterWinnerArea4) / 100;
         $callCenterWinnerResultValue = max($callCenterWinnerResult);
         if (array_search(max($callCenterWinnerResult), $callCenterWinnerResult) == 0) {
             $callCenterWinnerName = 1;
