@@ -329,8 +329,8 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>List all unit score</h2>
-				<a href="{{ url('unit-score/create') }}" class="btn btn-primary pull-right"> New unit</a>
+				<h2>LIST ALL UNIT</h2>
+				<a href="{{ url('unit-score/create') }}" class="btn btn-primary pull-right"> New Unit</a>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">

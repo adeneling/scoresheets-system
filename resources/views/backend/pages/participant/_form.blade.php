@@ -6,7 +6,54 @@
 <style>
 .btn-danger{border:none;}
 .btn-group-lg>.btn, .btn-lg {background-color:#eee;color:#333;}
+
+.donate-now {
+     list-style-type:none;
+     margin:25px 0 0 0;
+     padding:0;
+}
+
+.donate-now li {
+    float:left;
+    margin:0 5px 0 0;
+    width:40px;
+    height:50px;
+    position:relative;
+}
+
+.donate-now label, .donate-now input {
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:20;
+}
+
+.donate-now input[type="radio"] {
+    opacity:0.011;
+    z-index:100;
+}
+
+.donate-now input[type="radio"]:checked + label {
+    background:red;
+    color: white;
+}
+
+.donate-now label {
+    padding:5px;
+    border:1px solid #CCC; 
+    cursor:pointer;
+    z-index:90;
+}
+
+.donate-now label:hover {
+     background:#DDD;
+}
+
 </style>
+
+
 <tr>
     <th colspan="4" class="red"><font color="white">DECK AND DELIVERY ({{ $participant->category->presentation_material + $participant->category->communication_skill }}%)</font></th>
 </tr>
@@ -17,38 +64,13 @@
     </td>
     <td><h4>{{ $participant->category->presentation_material }}%</h4></td>
     <td>
-        <div class="btn-group" id="filterPresentationMaterial" data-toggle="buttons">
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="1" name="presentation_material"> 1
-            </label>
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="2" name="presentation_material"> 2
-            </label>
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="3" name="presentation_material"> 3
-            </label>
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="4" name="presentation_material"> 4
-            </label>
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="5" name="presentation_material"> 5
-            </label>
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="6" name="presentation_material"> 6
-            </label>
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="7" name="presentation_material"> 7
-            </label>
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="8" name="presentation_material"> 8
-            </label>
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="9" name="presentation_material"> 9
-            </label>
-            <label class="btn btn-lg btn-danger white">
-                <input type="radio" class="toggle" value="10" name="presentation_material"> 10
-            </label>
-        </div>
+        <ul class="donate-now">
+            <li>
+                {{ Form::radio('presentation_material', 1, null, ['id' => '1']) }}
+                <label for="1">$1</label>
+            </li>
+            
+        </ul>
         @if($errors->has('presentation_material'))
             <span class="help-block">
                 <strong>{{ $errors->first('presentation_material') }}</strong>
