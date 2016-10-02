@@ -76,6 +76,7 @@
 				@endrole
 				@role('admin')
 					<a href="{{ url('participant') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
+					<a href="{{ url('download-scoresheets/xls') }}" class="btn btn-success pull-right"> Download Excel</a>
 				@endrole
 				<div class="clearfix"></div>
 			</div>

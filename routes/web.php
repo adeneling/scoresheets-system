@@ -83,4 +83,5 @@ Route::group(['namespace' => 'Backend'], function(){
 	Route::resource('judges', 'JudgesController');
 	/* DOWNLOAD FILE */
 	Route::get('download-users/{type}','DownloadController@downloadUsers');
+	Route::get('download-scoresheets/{type}','DownloadController@downloadScoresheets');
 });
