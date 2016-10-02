@@ -20,7 +20,7 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::orderBy('created_at','desc')->get();
+        $users = User::orderBy('created_at','desc')->where('category_id','!=',null)->get();
         return view('backend.pages.users.index', compact('users'));
     }
 
