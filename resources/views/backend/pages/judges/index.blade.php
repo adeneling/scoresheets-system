@@ -32,7 +32,13 @@
 							<td>{{ $user->name }}</td>
 							<td>{{ $user->email }}</td>
 							<td>
-								{{ $user->category_handled }}
+								<?php $handle = explode(',', $user->category_handled); ?>
+								@foreach($handle as $category)
+                                    @if($category != 0)
+                                        Category {{ $category }}
+                                        <br>
+                                    @endif
+                                @endforeach
 							</td>
 							<td>
 								<center>
