@@ -261,30 +261,5 @@ $(document).ready(function () {
   })
 })
 </script>
-
-<script>
-  var filterPresentationMaterial = $('#filterPresentationMaterial input:radio:checked').val()
-  var filterCommunicationSkill = $('#filterCommunicationSkill input:radio:checked').val()
-  var filterAchievement = $('#filterAchievement input:radio:checked').val()
-  var filterPersonalValue = $('#filterPersonalValue input:radio:checked').val()
-  var filterCustomerCareKnowledge = $('#filterCustomerCareKnowledge input:radio:checked').val()
-  var filterSolutionSkill = $('#filterSolutionSkill input:radio:checked').val()
-  var filterLeadership = $('#filterLeadership input:radio:checked').val()
-  var filterInspirationalStory = $('#filterInspirationalStory input:radio:checked').val()
-</script>
-<script>
-    $(function(){           
-        if (!Modernizr.inputtypes.date) {
-        // If not native HTML5 support, fallback to jQuery datePicker
-            $('input[type=date]').datepicker({
-                // Consistent format with the HTML5 picker
-                    dateFormat : 'yy-mm-dd'
-                },
-                // Localization
-                $.datepicker.regional['it']
-            );
-        }
-    });
-</script>
 </body>
 </html>
