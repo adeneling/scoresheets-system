@@ -26,7 +26,7 @@
 						<li>
 							@if($scoresheet->user->presentation_file != null)
                                 <td>
-                                    <a href="{{ asset('files/'. Auth::user()->presentation_file) }}" class="btn btn-danger" target="_blank">File Presentation</a>
+                                    <a href="{{ asset('files/'. $scoresheet->user->presentation_file) }}" class="btn btn-danger" target="_blank">File Presentation</a>
                                 </td>
                             @else
                                 <td>
