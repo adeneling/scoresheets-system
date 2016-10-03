@@ -53,29 +53,29 @@
 							<table style="background-color:rgba(0, 0, 0, 0);">
 				                <thead>
 				                    <tr>
-				                        <td width="13%" class="text-right"><b>9 - 10 </b></td>
-				                        <td width="2%" class="text-center">:</td>
-				                        <td>SANGAT BAIK - Extraordinary</td>
+				                        <td width="15%" class="text-right"><b>9 - 10 </b></td>
+				                        <td width="5%" class="text-center">:</td>
+				                        <td>ISTIMEWA - Extraordinary</td>
 				                    </tr>
 				                    <tr>
 				                        <td class="text-right"><b>7 - 8 </b></td>
 				                        <td class="text-center">:</td>
-				                        <td>BAIK - Lebih dari 3 Parameter terpenuhi</td>
+				                        <td>BAIK - Lebih dari 3 Kriteria terpenuhi dalam sub parameter</td>
 				                    </tr>
 				                    <tr>
 				                        <td class="text-right"><b>6 </b></td>
 				                        <td class="text-center">:</td>
-				                        <td>BAIK - 3 Parameter terpenuhi</td>
+				                        <td>CUKUP - 3 Kriteria terpenuhi dalam sub parameter</td>
 				                    </tr>
 				                    <tr>
 				                        <td class="text-right"><b>4 - 5 </b></td>
 				                        <td class="text-center">:</td>
-				                        <td>BAIK - Hanya 2 Parameter terpenuhi</td>
+				                        <td>KURANG - Hanya 2 Kriteria terpenuhi dalam sub parameter</td>
 				                    </tr>
 				                    <tr>
 				                        <td class="text-right"><b>1 - 3 </b></td>
 				                        <td class="text-center">:</td>
-				                        <td>TIDAK MEMENUHI SYARAT - Hanya 1 Parameter terpenuhi</td>
+				                        <td>BURUK - Hanya 1 Kriteria terpenuhi dalam sub parameter</td>
 				                    </tr>
 				                </thead>
 				            </table>
@@ -99,7 +99,7 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th width="50%">ASPEK</th>
+							<th width="50%">PARAMETER</th>
 							<th width="3%">BOBOT</th>
 							<th width="47%">NILAI</th>
 						</tr>

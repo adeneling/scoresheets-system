@@ -25,7 +25,7 @@ class ParticipantController extends Controller
             $category = Category::where('id',$q)->first();
             $participants = User::where('category_id', $q)->where('judged','!=',Auth::user()->id)->orderBy('created_at','asc')->get();
         }else{
-            $participants = User::where('category_id', 'LIKE', '%'.$q.'%')->where('judged','!=',Auth::user()->id)->orderBy('created_at','asc')->get();    
+            $participants = User::where('category_id', $q)->where('judged','!=',Auth::user()->id)->orderBy('created_at','asc')->get();    
         }
         
 

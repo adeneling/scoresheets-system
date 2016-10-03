@@ -75,34 +75,33 @@
 </div>
 
 <div class="clearfix"></div>
-
-<div class="row">
-	<div class="col-md-12">
-		<div class="x_panel">
-			<div class="x_title">
-				<h2><font color="red">Participant {{ isset($category) ? '- '. $category->name : '-' }}</font></h2>
-				<div class="clearfix"></div>
-			</div>
-			<div class="x_content">
-				@foreach($participants as $participant)
-				<a href="{{ route('participant.edit', encrypt($participant->id))}}">
-					<div class="col-md-3">
-						<center>
-							<img class="img-responsive" height="200" width="200" src="{{ asset('img/' . ($participant->picture != null ? $participant->picture : 'picture.png' )) }}" alt="Avatar" title="Participant">
-						</center>
-						<center><h5>{{ $participant->name }}</h5></center>
-						<ul class="list-unstyled user_data">
-							<li><center>Area: {{ $participant->area == 5 ? 'Headquarter' : $participant->area}}</center></li>
-							<li><center>Region: {{ $participant->region }}</center></li>
-						</ul>
-					</div>
-				</a>
-				@endforeach
-				{{-- $participants->appends(compact('q'))->links() --}} 
+@if(isset($participants))
+	<div class="row">
+		<div class="col-md-12">
+			<div class="x_panel">
+				<div class="x_title">
+					<h2><font color="red">Participant {{ isset($category) ? '- '. $category->name : '-' }}</font></h2>
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">					
+					@foreach($participants as $participant)
+					<a href="{{ route('participant.edit', encrypt($participant->id))}}">
+						<div class="col-md-3">
+							<center>
+								<img class="img-responsive" height="200" width="200" src="{{ asset('img/' . ($participant->picture != null ? $participant->picture : 'picture.png' )) }}" alt="Avatar" title="Participant">
+							</center>
+							<center><h5>{{ $participant->name }}</h5></center>
+							<ul class="list-unstyled user_data">
+								<li><center>Area: {{ $participant->area == 5 ? 'Headquarter' : $participant->area}}</center></li>
+								<li><center>Region: {{ $participant->region }}</center></li>
+							</ul>
+						</div>
+					</a>
+					@endforeach
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
+@endif
 <!-- /page content -->
 @endsection
