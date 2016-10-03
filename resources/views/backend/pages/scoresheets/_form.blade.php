@@ -177,7 +177,11 @@
 <tr>
     <td>
         <h4>Achievement</h4>
-        Personal achievement in Region or Area
+        <ul>
+            <li>Coverage (Regional, Area, Nasional)</li>
+            <li>Benefit (Service Oriented, Revenue Oriented, Cost Efficiency)</li>
+            <li>Realisasi (Channel Digital atau Channel Legacy)</li>
+        </ul>
     </td>
     <td><h4>{{ $scoresheet->category->achievement }}%</h4></td>
     <td>
