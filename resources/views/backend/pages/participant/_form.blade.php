@@ -110,7 +110,7 @@
         </ul>
         @if($errors->has('presentation_material'))
             <span class="help-block">
-                <strong>{{ $errors->first('presentation_material') }}</strong>
+                <strong><font color="red">{{ $errors->first('presentation_material') }}</font</strong>
             </span>
         @endif
     </td>
@@ -166,7 +166,7 @@
         </ul>
         @if($errors->has('communication_skill'))
             <span class="help-block">
-                <strong>{{ $errors->first('communication_skill') }}</strong>
+                <strong><font color="red">{{ $errors->first('communication_skill') }}</font></strong>
             </span>
         @endif
     </td>
@@ -225,7 +225,7 @@
         </ul>
         @if($errors->has('achievement'))
             <span class="help-block">
-                <strong>{{ $errors->first('achievement') }}</strong>
+                <strong><font color="red">{{ $errors->first('achievement') }}</font></strong>
             </span>
         @endif
     </td>
@@ -281,7 +281,7 @@
         </ul>
         @if($errors->has('personal_value'))
             <span class="help-block">
-                <strong>{{ $errors->first('personal_value') }}</strong>
+                <strong><font color="red">{{ $errors->first('personal_value') }}</font></strong>
             </span>
         @endif
     </td>
@@ -341,7 +341,7 @@
         </ul>
         @if($errors->has('customer_care_knowledge'))
             <span class="help-block">
-                <strong>{{ $errors->first('customer_care_knowledge') }}</strong>
+                <strong><font color="red">{{ $errors->first('customer_care_knowledge') }}</font></strong>
             </span>
         @endif
     </td>
@@ -400,7 +400,7 @@
         </ul>
         @if($errors->has('solution_skill'))
             <span class="help-block">
-                <strong>{{ $errors->first('solution_skill') }}</strong>
+                <strong><font color="red">{{ $errors->first('solution_skill') }}</font></strong>
             </span>
         @endif
     </td>
@@ -457,7 +457,7 @@
 
         @if($errors->has('inspirational_story'))
             <span class="help-block">
-                <strong>{{ $errors->first('inspirational_story') }}</strong>
+                <strong><font color="red">{{ $errors->first('inspirational_story') }}</font></strong>
             </span>
         @endif
     </td>
@@ -516,7 +516,7 @@
             </ul>
             @if($errors->has('leadership'))
                 <span class="help-block">
-                    <strong>{{ $errors->first('leadership') }}</strong>
+                    <strong><font color="red">{{ $errors->first('leadership') }}</font></strong>
                 </span>
             @endif
         </td>

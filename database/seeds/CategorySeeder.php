@@ -167,6 +167,7 @@ class CategorySeeder extends Seeder
 	        'solution_skill' => 15,
 	        'inspirational_story' => 10,
 	        'leadership' => 20,
+	        'tier' => 3,
 		]);
 		App\Category::create([
 		    'name' => 'Spv GraPARI Mitra',

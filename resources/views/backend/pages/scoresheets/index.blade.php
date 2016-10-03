@@ -44,6 +44,7 @@
 								<div class="tile-stats">
 									<center>
 										<h5>
+											<img class="img-responsive avatar-view" src="{{ asset('img/' . ($top->user->picture != null ? $top->user->picture : 'picture.png' )) }}" alt="Avatar" title="{{ $top->user->name }}">
 											<i class="fa fa-trophy"></i> {{ $no++ }}
 											<br>
 											{{ $top->user->name }}
