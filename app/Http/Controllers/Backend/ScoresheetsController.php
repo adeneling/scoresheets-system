@@ -151,7 +151,7 @@ class ScoresheetsController extends Controller
             $leadership
         ;
         //$total_coeficient_score = $total_score / $coeficient_score;
-        $total_coeficient_score = $total_score;
+        $total_coeficient_score = $total_score / 100;
         /*REQUEST*/
         $scoresheet = Scoresheet::findOrFail($id);
         $scoresheet->participant_id = $request->input('participant_id');
