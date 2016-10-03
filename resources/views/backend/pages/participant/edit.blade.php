@@ -99,9 +99,8 @@
 				<table class="table">
 					<thead>
 						<tr>
-							<th width="45%">ASPEK</th>
-							<th>BOBOT</th>
-							<th width="55%">NILAI</th>
+							<th width="53%">ASPEK</th>
+							<th width="47%">NILAI</th>
 						</tr>
 					</thead>
 					<tbody>

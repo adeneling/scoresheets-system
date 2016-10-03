@@ -196,14 +196,14 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th class="red"><font color="white">BEST CALL CENTER OUTBOUND 30%</font></th>
+							<th class="red"><font color="white">BEST OUTBOUND CALL CENTER 30%</font></th>
 							<td>{{ $nilaiCategori6[0]==1 ? 'JUARA 1 (' .$resultCategori6[0].')' : ''}}</td>
 							<td>{{ $nilaiCategori6[1]==1 ? 'JUARA 1 (' .$resultCategori6[1].')' : ''}}</td>
 							<td>{{ $nilaiCategori6[2]==1 ? 'JUARA 1 (' .$resultCategori6[2].')' : ''}}</td>
 							<td>{{ $nilaiCategori6[3]==1 ? 'JUARA 1 (' .$resultCategori6[3].')' : ''}}</td>
 						</tr>
 						<tr>
-							<th class="red"><font color="white">BEST CALL CENTER INBOUND 40%</font></th>
+							<th class="red"><font color="white">BEST INBOUND CALL CENTER 40%</font></th>
 							<td>{{ $nilaiCategori7[0]==1 ? 'JUARA 1 (' .$resultCategori7[0].')' : ''}}</td>
 							<td>{{ $nilaiCategori7[1]==1 ? 'JUARA 1 (' .$resultCategori7[1].')' : ''}}</td>
 							<td>{{ $nilaiCategori7[2]==1 ? 'JUARA 1 (' .$resultCategori7[2].')' : ''}}</td>
@@ -217,7 +217,7 @@
 							<td>{{ $nilaiCategori8[3]==1 ? 'JUARA 1 (' .$resultCategori8[3].')' : ''}}</td>
 						</tr>
 						<tr>
-							<th class="red"><font color="white">BEST TRAINER 15%</font></th>
+							<th class="red"><font color="white">BEST TRAINED 15%</font></th>
 							<td>{{ $nilaiCategori9[0]==1 ? 'JUARA 1 (' .$resultCategori9[0].')' : ''}}</td>
 							<td>{{ $nilaiCategori9[1]==1 ? 'JUARA 1 (' .$resultCategori9[1].')' : ''}}</td>
 							<td>{{ $nilaiCategori9[2]==1 ? 'JUARA 1 (' .$resultCategori9[2].')' : ''}}</td>
