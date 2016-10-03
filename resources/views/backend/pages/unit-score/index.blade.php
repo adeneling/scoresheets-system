@@ -282,14 +282,14 @@
 							<td>{{ $nilaiCategori3[3]==1 ? 'JUARA 1' : ''}}</td>
 						</tr>
 						<tr>
-							<th class="red"><font color="white">BEST CALL CENTER OUTBOUND</font></th>
+							<th class="red"><font color="white">BEST OUTBOUND CALL CENTER</font></th>
 							<td>{{ $nilaiCategori6[0]==1 ? 'JUARA 1' : ''}}</td>
 							<td>{{ $nilaiCategori6[1]==1 ? 'JUARA 1' : ''}}</td>
 							<td>{{ $nilaiCategori6[2]==1 ? 'JUARA 1' : ''}}</td>
 							<td>{{ $nilaiCategori6[3]==1 ? 'JUARA 1' : ''}}</td>
 						</tr>
 						<tr>
-							<th class="red"><font color="white">BEST CALL CENTER INBOUND</font></th>
+							<th class="red"><font color="white">BEST INBOUND CALL CENTER</font></th>
 							<td>{{ $nilaiCategori7[0]==1 ? 'JUARA 1' : ''}}</td>
 							<td>{{ $nilaiCategori7[1]==1 ? 'JUARA 1' : ''}}</td>
 							<td>{{ $nilaiCategori7[2]==1 ? 'JUARA 1' : ''}}</td>
@@ -312,7 +312,7 @@
 							<td>{{ $nilaiCategori8[3]==1 ? 'JUARA 1' : ''}}</td>
 						</tr>
 						<tr>
-							<th class="red"><font color="white">BEST TRAINER</font></th>
+							<th class="red"><font color="white">BEST TRAINED</font></th>
 							<td>{{ $nilaiCategori9[0]==1 ? 'JUARA 1' : ''}}</td>
 							<td>{{ $nilaiCategori9[1]==1 ? 'JUARA 1' : ''}}</td>
 							<td>{{ $nilaiCategori9[2]==1 ? 'JUARA 1' : ''}}</td>
