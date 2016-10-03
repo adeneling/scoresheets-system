@@ -10,15 +10,10 @@
 			<div class="x_title">
 				<h2>User List</h2>
 				<a href="{{ url('users/create') }}" class="btn btn-primary pull-right"> Create user</a>
-<<<<<<< HEAD
 				<a href="{{ url('notification/create') }}" class="btn btn-danger pull-right"> Send notification to all</a>	
 				@role('admin')
 					<a href="{{ url('download-users/xls') }}" class="btn btn-success pull-right"> Download Users to Excel</a>
 				@endrole
-=======
-				<a href="{{ url('notification/create') }}" class="btn btn-danger pull-right"> Send notification to all</a>				
-				<a href="{{ url('download-users/xls') }}" class="btn btn-success pull-right"> Download Users to Excel</a>
->>>>>>> ddea577... update button download
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">

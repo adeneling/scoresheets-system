@@ -325,8 +325,7 @@
 							<td>{{ $nilaiCategori5[1]==1 ? 'JUARA 1' : ''}}</td>
 							<td>{{ $nilaiCategori5[2]==1 ? 'JUARA 1' : ''}}</td>
 							<td>{{ $nilaiCategori5[3]==1 ? 'JUARA 1' : ''}}</td>
-						</tr>
-						
+						</tr>						
 						
 						<tr>
 							<th class="red"><font color="white">BEST BILLING COLLECTION</font></th>

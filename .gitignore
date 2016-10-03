@@ -3,6 +3,7 @@
 /public/files/
 /public/files/*
 /public/img
+/public/img/*
 /vendor
 /.idea
 Homestead.json
