@@ -41,12 +41,12 @@ class UnitCategorySeeder extends Seeder
 	    /* CATEGORY PARENT 2 */
 	    App\UnitCategory::create([
 		    'parent_id' => 2,
-		    'name' => 'BEST CALL CENTER OUTBOUND',
+		    'name' => 'BEST OUTBOUND CALL CENTER',
 		    'coeficient' => 30,
 	    ]);
 	    App\UnitCategory::create([
 		    'parent_id' => 2,
-		    'name' => 'BEST CALL CENTER INBOUND',
+		    'name' => 'BEST INBOUND CALL CENTER',
 		    'coeficient' => 40,
 	    ]);
 	    App\UnitCategory::create([
@@ -56,7 +56,7 @@ class UnitCategorySeeder extends Seeder
 	    ]);
 	    App\UnitCategory::create([
 		    'parent_id' => 2,
-		    'name' => 'BEST TRAINER',
+		    'name' => 'BEST TRAINED',
 		    'coeficient' => 15,
 	    ]);
 	    
