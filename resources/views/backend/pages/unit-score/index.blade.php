@@ -77,7 +77,9 @@
 					<div class="tile-stats">
 						<center>
 							@if($bestAreaWinnerResultValue != 0)
-								<h1>{{ 'AREA ' . $bestAreaWinnerName . ' IS THE BEST AREA WINNER'}}</h1>
+								<h1>{{ 'AREA ' . $bestAreaWinnerName}}</h1>
+								<br>
+								<h1>{{ 'IS THE BEST AREA WINNER'}}</h1>
 							@endif
 						</center>
 					</div>
@@ -202,7 +204,9 @@
 					<div class="tile-stats">
 						<center>
 							@if($callCenterWinnerResultValue != 0)
-								<h1>{{ 'AREA ' . $callCenterWinnerName . ' IS THE CALL CENTER WINNER'}}</h1>
+								<h1>{{ 'AREA ' . $callCenterWinnerName}}</h1>
+								<br>
+								<h1>{{ 'IS THE BEST CALL CENTER WINNER'}}</h1>
 							@endif
 						</center>
 					</div>
