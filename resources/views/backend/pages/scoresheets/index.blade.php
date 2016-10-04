@@ -49,7 +49,44 @@
 											<br>
 											{{ $top->user->name }}
 											<br>
-											Area {{ $top->area == 5 ? 'Headquarter' : $top->area }}
+											Area {{ $top->user->area == 5 ? 'Headquarter' : $top->user->area }}
+											<br>
+											{{ $top->total_coeficient_score }}
+										</h5>
+									</center>
+								</div>
+							</div>
+						@endforeach
+					@endif
+				</div>
+			</div>
+		</div>
+	</div>	
+@endif
+
+{{-- only coordinator can see top 3 from each category --}}
+@role('coordinator')	
+	<div class="row">
+		<div class="col-md-12 col-sm-12 col-xs-12">
+			<div class="x_panel">
+				<div class="x_title">
+					<h2>TOP 3 {{ isset($category) ? '- '. $category->name : '-' }}</h2>
+					<div class="clearfix"></div>
+				</div>
+				<div class="x_content">
+					@if(isset($topParticipants))
+						<?php $no = 1; ?>
+						@foreach($topParticipants as $top)
+							<div class="animated flipInY col-lg-4">
+								<div class="tile-stats">
+									<center>
+										<h5>
+											<img class="img-responsive avatar-view" src="{{ asset('img/' . ($top->user->picture != null ? $top->user->picture : 'picture.png' )) }}" alt="Avatar" title="{{ $top->user->name }}">
+											<i class="fa fa-trophy"></i> {{ $no++ }}
+											<br>
+											{{ $top->user->name }}
+											<br>
+											Area {{ $top->user->area == 5 ? 'Headquarter' : $top->user->area }}
 											<br>
 											{{ $top->total_coeficient_score }}
 										</h5>
@@ -78,6 +115,8 @@
 				@role('admin')
 					<a href="{{ url('participant') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
 					<a href="{{ url('download-scoresheets/xls') }}" class="btn btn-success pull-right"> Download Scoresheets to Excel</a>
+					<a href="{{ url('winner-participant') }}" class="btn btn-danger pull-right"> The Best Participant</a>
+					<a href="{{ url('winner-area') }}" class="btn btn-danger pull-right"> The Best Participant by Area</a>
 				@endrole
 				<div class="clearfix"></div>
 			</div>

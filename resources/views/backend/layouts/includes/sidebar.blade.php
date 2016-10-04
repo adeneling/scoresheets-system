@@ -14,12 +14,12 @@
       <li class= {{ Request::is('participant') || Request::is('participant/*') ? 'active' : '' }}>
         <a href="{{ url('participant') }}"><i class="fa fa-user-md"></i> Participant</a>
       </li>
-      <li class= {{ Request::is('scoresheets') || Request::is('scoresheets/*') ? 'active' : '' }}>
+      <li class= {{ Request::is('scoresheets') || Request::is('scoresheets/*') || Request::is('winner-participant') || Request::is('winner-area') ? 'active' : '' }}>
         <a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a>
       </li>
       @endrole
       @role('coordinator')
-      <li class= {{ Request::is('scoresheets') || Request::is('scoresheets/*') ? 'active' : '' }}>
+      <li class= {{ Request::is('scoresheets') || Request::is('scoresheets/*') || Request::is('winner-participant') || Request::is('winner-area') ? 'active' : '' }}>
         <a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a>
       </li>
       @endrole
@@ -27,13 +27,13 @@
       <li class= {{ Request::is('participant') || Request::is('participant/*') ? 'active' : '' }}>
         <a href="{{ url('participant') }}"><i class="fa fa-user-md"></i> Participant</a>
       </li>
-      <li class= {{ Request::is('scoresheets') || Request::is('scoresheets/*') ? 'active' : '' }}>
+      <li class= {{ Request::is('scoresheets') || Request::is('scoresheets/*') || Request::is('winner-participant') || Request::is('winner-area') ? 'active' : '' }}>
         <a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a>
       </li>
       <li class= {{ Request::is('unit-score') || Request::is('unit-score/*') ? 'active' : '' }}>
         <a href="{{ url('unit-score') }}"><i class="fa fa-align-center"></i> Unit Score</a>
       </li>
-      <li class= {{ Request::is('unit-category') || Request::is('unit-category/*') || Request::is('best-area')|| Request::is('best-of-the-best') ? 'active' : '' }}>
+      <li class= {{ Request::is('unit-category') || Request::is('unit-category/*') || Request::is('best-area') || Request::is('best-of-the-best') ? 'active' : '' }}>
         <a href="{{ url('unit-category') }}"><i class="fa fa-list-ul"></i> Unit Category</a>
       </li>
       <li class= {{ Request::is('category') || Request::is('category/*') ? 'active' : '' }}>

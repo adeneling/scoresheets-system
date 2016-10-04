@@ -18,8 +18,27 @@ class ScoresheetsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function winnerByParticipant(){
+        $scoresheets = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->get();
+
+        return view('backend.pages.scoresheets.winner-participant', compact('scoresheets'));
+    }
+    public function winnerByArea(){
+
+        return view('backend.pages.scoresheets.winner-area');
+    }
     public function index(Request $request)
     {   
+        /* TAKE 3 WINNER */
+        /*$top = Scoresheet::groupBy('participant_id')
+            ->selectRaw('SUM(total_coeficient_score) as sumOfRateValues')
+            ->orderBy('sumOfRateValues', 'DESC')
+            ->take(3)
+            ->get();*/
+        /* END WINNER */
         $q = $request->get('q');
         if (isset($q)) {
             $category = Category::where('id',$q)->first();
@@ -32,7 +51,15 @@ class ScoresheetsController extends Controller
             }
             if (Laratrust::hasRole('admin') ){
                 $scoresheets = Scoresheet::where('category_id', $q)->orderBy('created_at','desc')->get();
-                $topParticipants = Scoresheet::where('category_id', $q)->orderBy('total_coeficient_score','desc')->take(3)->get();
+                /* take 3 winner */
+                $topParticipants = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', $q)
+                        ->take(3)
+                        ->get();
+                //$topParticipants = Scoresheet::groupBy('participant_id')->sum('total_coeficient_score')->get();
+
             }
         }else{
             if (Laratrust::hasRole('jury')){
