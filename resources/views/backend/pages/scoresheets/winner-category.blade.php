@@ -4,12 +4,12 @@
 @stop
 
 @section('content')
-
+{{-- CS GRAPARI --}}
 <div class="row">
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - CS GRAPARI</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -40,11 +40,12 @@
 	</div>
 </div>
 
+{{-- CS GRAPARI MITRA --}}
 <div class="row">
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - CS GRAPARI MITRA</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -74,12 +75,12 @@
 		</div>
 	</div>
 </div>
-{{--  --}}
+{{-- E CARE OFFICER --}}
 <div class="row">
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - E-CARE OFFICER</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -114,7 +115,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - AGENT INBOUND</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -149,7 +150,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - AGENT OUTBOUND</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -184,7 +185,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - FRONT OFFICE SUPPORT (FOS)</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -219,7 +220,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - COMPLAINT HANDLING OFFICER (CHO)</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -254,7 +255,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - BACK END SUPPORT</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -289,7 +290,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - TEAM LEADER CONTACT CENTER AND E-CARE</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -324,7 +325,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - TEAM LEADER GRAPARI</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -359,7 +360,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - SPV GRAPARI</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -394,7 +395,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - SPV GRAPARI MITRA</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -429,7 +430,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - SPV BES</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
@@ -464,7 +465,7 @@
 	<div class="col-md-12 col-sm-12 col-xs-12">
 		<div class="x_panel">
 			<div class="x_title">
-				<h2>TOP 3 FROM CATEGORY</h2>
+				<h2>TOP 3 - SPV CONTACT CENTER AND E-CARE</h2>
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
