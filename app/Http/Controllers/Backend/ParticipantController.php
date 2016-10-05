@@ -25,19 +25,6 @@ class ParticipantController extends Controller
         if (isset($q)) {
             $category = Category::where('id',$q)->first();
             $participants = User::where('category_id', $q)->where('judged','!=',Auth::user()->id)->orderBy('created_at','asc')->get();
-            /*$participants = DB::table('users')
-                        ->join('scoresheets', 'users.id', '=', 'scoresheets.participant_id')
-                        ->where('users.category_id','=', $q)
-                        ->where('scoresheets.jury_id','!=',Auth::user()->id)
-                        ->select('users.*')
-                        ->get();*/
-            /*$participants = DB::table('users')
-            ->whereNotExists(function ($query) {
-                $query->select(DB::raw(1))
-                      ->from('scoresheets')
-                      ->whereRaw('scoresheets.user_id ','!=',Auth::user()->id);
-            })
-            ->get();*/
         }else{
             $participants = User::where('category_id', $q)->where('judged','!=',Auth::user()->id)->orderBy('created_at','asc')->get();    
         }

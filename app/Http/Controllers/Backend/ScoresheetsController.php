@@ -214,6 +214,7 @@ class ScoresheetsController extends Controller
                         ->where('category_id', 14)
                         ->take(3)
                         ->get();
+        /* best individu formula */
         
         return view('backend.pages.scoresheets.winner-area',compact(
             'category1',
