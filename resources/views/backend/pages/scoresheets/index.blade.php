@@ -120,6 +120,7 @@
 					<a href="{{ url('download-scoresheets/xls') }}" class="btn btn-success pull-right"> Download Scoresheets to Excel</a>
 					<a href="{{ url('winner-participant') }}" class="btn btn-danger pull-right"> The Best Participant</a>
 					<a href="{{ url('winner-category') }}" class="btn btn-danger pull-right"> The Best Participant by Category</a>
+					<a href="{{ url('winner-area') }}" class="btn btn-danger pull-right"> The Best Category by Area</a>
 				@endrole
 				<div class="clearfix"></div>
 			</div>
