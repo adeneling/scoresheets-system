@@ -9,8 +9,8 @@
 		<div class="x_panel">
 			<div class="x_title">
 				<h2>Parent Category</h2>
-				<a href="{{ url('best-area') }}" class="btn btn-success pull-right"> Best Area</a>
-				<a href="{{ url('best-of-the-best') }}" class="btn btn-success pull-right"> Best of the Best</a>
+				{{-- <a href="{{ url('best-area') }}" class="btn btn-success pull-right"> Best Area</a>
+				<a href="{{ url('best-of-the-best') }}" class="btn btn-success pull-right"> Best of the Best</a> --}}
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
