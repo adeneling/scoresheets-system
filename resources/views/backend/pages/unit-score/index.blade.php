@@ -111,7 +111,7 @@
 							<td>{{ $nilaiCategori3[3]==1 ? 'JUARA 1 (' .$resultCategori3[3].')' : ''}}</td>
 						</tr>
 						<tr>
-							<th class="red"><font color="white">THE BEST SERVICE DIFFERENTIATION CE ACROSS CHANNEL</font></th>
+							<th class="red"><font color="white">THE BEST SERVICE DIFFERENTIATION CUSTOMER EXPERIENCE</font></th>
 							<td>{{ $nilaiCategori2[0]==1 ? 'JUARA 1 (' .$resultCategori2[0].')' : ''}}</td>
 							<td>{{ $nilaiCategori2[1]==1 ? 'JUARA 1 (' .$resultCategori2[1].')' : ''}}</td>
 							<td>{{ $nilaiCategori2[2]==1 ? 'JUARA 1 (' .$resultCategori2[2].')' : ''}}</td>

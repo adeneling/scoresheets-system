@@ -1291,6 +1291,7 @@ class UnitScoreController extends Controller
             $bestAreaTier1Area4[4] = 0;
         }
         $bestAreaTier1Value[3] = (array_sum($bestAreaTier1Area4) * 70) / 100;
+        
         /*TIER 2*/
         /* AREA 1*/
         if ($nilaiCategori4[0] == 1) {
