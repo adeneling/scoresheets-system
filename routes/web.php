@@ -57,7 +57,7 @@ Route::group(['namespace' => 'Backend'], function(){
 	Route::resource('scoresheets-category', 'ScoresheetsCategoryController');
 	Route::resource('scoresheets', 'ScoresheetsController');
 	Route::get('winner-participant', 'ScoresheetsController@winnerByParticipant');
-	Route::get('winner-area', 'ScoresheetsController@winnerbyArea');
+	Route::get('winner-category', 'ScoresheetsController@winnerbyCategory');
 	/* SESSION */
 	Route::resource('session', 'SessionController');
 	/* CATEGORY */

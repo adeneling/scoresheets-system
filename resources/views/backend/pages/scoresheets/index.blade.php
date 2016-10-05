@@ -109,6 +109,9 @@
 		<div class="x_panel">
 			<div class="x_title">
 				<h2><font color="red">Scoresheets {{ isset($category) ? '- '. $category->name : '-' }}</font></h2>
+				<div class="clearfix"></div>
+			</div>
+			<div class="x_title">
 				@role('jury')
 					<a href="{{ url('participant') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
 				@endrole
@@ -116,7 +119,7 @@
 					<a href="{{ url('participant') }}" class="btn btn-primary pull-right"> New Scoresheets</a>
 					<a href="{{ url('download-scoresheets/xls') }}" class="btn btn-success pull-right"> Download Scoresheets to Excel</a>
 					<a href="{{ url('winner-participant') }}" class="btn btn-danger pull-right"> The Best Participant</a>
-					<a href="{{ url('winner-area') }}" class="btn btn-danger pull-right"> The Best Participant by Area</a>
+					<a href="{{ url('winner-category') }}" class="btn btn-danger pull-right"> The Best Participant by Category</a>
 				@endrole
 				<div class="clearfix"></div>
 			</div>

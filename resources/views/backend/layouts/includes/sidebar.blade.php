@@ -27,7 +27,7 @@
       <li class= {{ Request::is('participant') || Request::is('participant/*') ? 'active' : '' }}>
         <a href="{{ url('participant') }}"><i class="fa fa-user-md"></i> Participant</a>
       </li>
-      <li class= {{ Request::is('scoresheets') || Request::is('scoresheets/*') || Request::is('winner-participant') || Request::is('winner-area') ? 'active' : '' }}>
+      <li class= {{ Request::is('scoresheets') || Request::is('scoresheets/*') || Request::is('winner-participant') || Request::is('winner-category') ? 'active' : '' }}>
         <a href="{{ url('scoresheets') }}"><i class="fa fa-bar-chart"></i> Scoresheets</a>
       </li>
       <li class= {{ Request::is('unit-score') || Request::is('unit-score/*') ? 'active' : '' }}>

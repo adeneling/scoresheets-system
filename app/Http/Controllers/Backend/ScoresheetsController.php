@@ -26,19 +26,111 @@ class ScoresheetsController extends Controller
 
         return view('backend.pages.scoresheets.winner-participant', compact('scoresheets'));
     }
-    public function winnerByArea(){
+    public function winnerByCategory(){
+        $category1 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 1)
+                        ->take(3)
+                        ->get();
+        $category2 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 2)
+                        ->take(3)
+                        ->get();
+        $category3 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 3)
+                        ->take(3)
+                        ->get();
+        $category4 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 4)
+                        ->take(3)
+                        ->get();
+        $category5 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 5)
+                        ->take(3)
+                        ->get();
+        $category6 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 6)
+                        ->take(3)
+                        ->get();
+        $category7 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 7)
+                        ->take(3)
+                        ->get();
+        $category8 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 8)
+                        ->take(3)
+                        ->get();
+        $category9 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 9)
+                        ->take(3)
+                        ->get();
+        $category10 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 10)
+                        ->take(3)
+                        ->get();
+        $category11 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 11)
+                        ->take(3)
+                        ->get();
+        $category12 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 12)
+                        ->take(3)
+                        ->get();
+        $category13 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 13)
+                        ->take(3)
+                        ->get();
+        $category14 = Scoresheet::groupBy('participant_id')
+                        ->selectRaw('SUM(total_coeficient_score) as total_coeficient_score, participant_id')
+                        ->orderBy('total_coeficient_score', 'DESC')
+                        ->where('category_id', 14)
+                        ->take(3)
+                        ->get();
 
-        return view('backend.pages.scoresheets.winner-area');
+        return view('backend.pages.scoresheets.winner-category',compact(
+            'category1',
+            'category2',
+            'category3',
+            'category4',
+            'category5',
+            'category6',
+            'category7',
+            'category8',
+            'category9',
+            'category10',
+            'category11',
+            'category12',
+            'category13',
+            'category14'
+        ));
     }
     public function index(Request $request)
     {   
-        /* TAKE 3 WINNER */
-        /*$top = Scoresheet::groupBy('participant_id')
-            ->selectRaw('SUM(total_coeficient_score) as sumOfRateValues')
-            ->orderBy('sumOfRateValues', 'DESC')
-            ->take(3)
-            ->get();*/
-        /* END WINNER */
         $q = $request->get('q');
         if (isset($q)) {
             $category = Category::where('id',$q)->first();
