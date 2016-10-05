@@ -1185,240 +1185,242 @@ class UnitScoreController extends Controller
         /*TIER 1*/
         /* AREA 1*/
         if ($nilaiCategori1[0] == 1) {
-            $bestAreaTier1Area1[0] = 1;
+            $bestAreaTier1Area1[0] = $resultCategori1[0];
         }else{
             $bestAreaTier1Area1[0] = 0;
         }
         if ($nilaiCategori2[0] == 1) {
-            $bestAreaTier1Area1[1] = 1;
+            $bestAreaTier1Area1[1] = $resultCategori2[0];
         }else{
             $bestAreaTier1Area1[1] = 0;
         }
         if ($nilaiCategori3[0] == 1) {
-            $bestAreaTier1Area1[2] = 1;
+            $bestAreaTier1Area1[2] = $resultCategori3[0];
         }else{
             $bestAreaTier1Area1[2] = 0;
         }
         if ($nilaiCategori6[0] == 1) {
-            $bestAreaTier1Area1[3] = 1;
+            $bestAreaTier1Area1[3] = $resultCategori6[0];
         }else{
             $bestAreaTier1Area1[3] = 0;
         }
         if ($nilaiCategori7[0] == 1) {
-            $bestAreaTier1Area1[4] = 1;
+            $bestAreaTier1Area1[4] = $resultCategori7[0];
         }else{
             $bestAreaTier1Area1[4] = 0;
         }
-        $bestAreaTier1Value[0] = (array_sum($bestAreaTier1Area1) * 70) / 100;
+        $bestAreaTier1Value[0] = (array_sum($bestAreaTier1Area1) * 70 / 100);
         /* AREA 2*/
         if ($nilaiCategori1[1] == 1) {
-            $bestAreaTier1Area2[0] = 1;
+            $bestAreaTier1Area2[0] = $resultCategori1[1];
         }else{
             $bestAreaTier1Area2[0] = 0;
         }
         if ($nilaiCategori2[1] == 1) {
-            $bestAreaTier1Area2[1] = 1;
+            $bestAreaTier1Area2[1] = $resultCategori2[1];
         }else{
             $bestAreaTier1Area2[1] = 0;
         }
         if ($nilaiCategori3[1] == 1) {
-            $bestAreaTier1Area2[2] = 1;
+            $bestAreaTier1Area2[2] = $resultCategori3[1];
         }else{
             $bestAreaTier1Area2[2] = 0;
         }
         if ($nilaiCategori6[1] == 1) {
-            $bestAreaTier1Area2[3] = 1;
+            $bestAreaTier1Area2[3] = $resultCategori6[1];
         }else{
             $bestAreaTier1Area2[3] = 0;
         }
         if ($nilaiCategori7[1] == 1) {
-            $bestAreaTier1Area2[4] = 1;
+            $bestAreaTier1Area2[4] = $resultCategori7[1];
         }else{
             $bestAreaTier1Area2[4] = 0;
         }
-        $bestAreaTier1Value[1] = (array_sum($bestAreaTier1Area2) * 70) / 100;
+        $bestAreaTier1Value[1] = (array_sum($bestAreaTier1Area2) * 70 / 100);
         /* AREA 3*/
         if ($nilaiCategori1[2] == 1) {
-            $bestAreaTier1Area3[0] = 1;
+            $bestAreaTier1Area3[0] = $resultCategori1[2];
         }else{
             $bestAreaTier1Area3[0] = 0;
         }
         if ($nilaiCategori2[2] == 1) {
-            $bestAreaTier1Area3[1] = 1;
+            $bestAreaTier1Area3[1] = $resultCategori2[2];
         }else{
             $bestAreaTier1Area3[1] = 0;
         }
         if ($nilaiCategori3[2] == 1) {
-            $bestAreaTier1Area3[2] = 1;
+            $bestAreaTier1Area3[2] = $resultCategori3[2];
         }else{
             $bestAreaTier1Area3[2] = 0;
         }
         if ($nilaiCategori6[2] == 1) {
-            $bestAreaTier1Area3[3] = 1;
+            $bestAreaTier1Area3[3] = $resultCategori6[2];
         }else{
             $bestAreaTier1Area3[3] = 0;
         }
         if ($nilaiCategori7[2] == 1) {
-            $bestAreaTier1Area3[4] = 1;
+            $bestAreaTier1Area3[4] = $resultCategori7[2];
         }else{
             $bestAreaTier1Area3[4] = 0;
         }
-        $bestAreaTier1Value[2] = (array_sum($bestAreaTier1Area3) * 70) / 100;
+        $bestAreaTier1Value[2] = (array_sum($bestAreaTier1Area3) * 70 / 100);
         /* AREA 4*/
         if ($nilaiCategori1[3] == 1) {
-            $bestAreaTier1Area4[0] = 1;
+            $bestAreaTier1Area4[0] = $resultCategori1[3];
         }else{
             $bestAreaTier1Area4[0] = 0;
         }
         if ($nilaiCategori2[3] == 1) {
-            $bestAreaTier1Area4[1] = 1;
+            $bestAreaTier1Area4[1] = $resultCategori2[3];
         }else{
             $bestAreaTier1Area4[1] = 0;
         }
         if ($nilaiCategori3[3] == 1) {
-            $bestAreaTier1Area4[2] = 1;
+            $bestAreaTier1Area4[2] = $resultCategori3[3];
         }else{
             $bestAreaTier1Area4[2] = 0;
         }
         if ($nilaiCategori6[3] == 1) {
-            $bestAreaTier1Area4[3] = 1;
+            $bestAreaTier1Area4[3] = $resultCategori6[3];
         }else{
             $bestAreaTier1Area4[3] = 0;
         }
         if ($nilaiCategori7[3] == 1) {
-            $bestAreaTier1Area4[4] = 1;
+            $bestAreaTier1Area4[4] = $resultCategori7[3];
         }else{
             $bestAreaTier1Area4[4] = 0;
         }
-        $bestAreaTier1Value[3] = (array_sum($bestAreaTier1Area4) * 70) / 100;
-        
+        $bestAreaTier1Value[3] = (array_sum($bestAreaTier1Area4) * 70 / 100);
+
         /*TIER 2*/
         /* AREA 1*/
         if ($nilaiCategori4[0] == 1) {
-            $bestAreaTier2Area1[0] = 1;
+            $bestAreaTier2Area1[0] = $resultCategori4[0];
         }else{
             $bestAreaTier2Area1[0] = 0;
         }
         if ($nilaiCategori8[0] == 1) {
-            $bestAreaTier2Area1[1] = 1;
+            $bestAreaTier2Area1[1] = $resultCategori8[0];
         }else{
             $bestAreaTier2Area1[1] = 0;
         }
         if ($nilaiCategori9[0] == 1) {
-            $bestAreaTier2Area1[2] = 1;
+            $bestAreaTier2Area1[2] = $resultCategori9[0];
         }else{
             $bestAreaTier2Area1[2] = 0;
         }
-        $bestAreaTier2Value[0] = (array_sum($bestAreaTier2Area1) * 15) / 100;
+        $bestAreaTier2Value[0] = (array_sum($bestAreaTier2Area1) * 15 / 100);
         /* AREA 2*/
         if ($nilaiCategori4[1] == 1) {
-            $bestAreaTier2Area2[0] = 1;
+            $bestAreaTier2Area2[0] = $resultCategori4[1];
         }else{
             $bestAreaTier2Area2[0] = 0;
         }
         if ($nilaiCategori8[1] == 1) {
-            $bestAreaTier2Area2[1] = 1;
+            $bestAreaTier2Area2[1] = $resultCategori8[1];
         }else{
             $bestAreaTier2Area2[1] = 0;
         }
         if ($nilaiCategori9[1] == 1) {
-            $bestAreaTier2Area2[2] = 1;
+            $bestAreaTier2Area2[2] = $resultCategori9[1];
         }else{
             $bestAreaTier2Area2[2] = 0;
         }
-        $bestAreaTier2Value[1] = (array_sum($bestAreaTier2Area2) * 15) / 100;
+        $bestAreaTier2Value[1] = (array_sum($bestAreaTier2Area2) * 15 / 100);
         /* AREA 3*/
         if ($nilaiCategori4[2] == 1) {
-            $bestAreaTier2Area3[0] = 1;
+            $bestAreaTier2Area3[0] = $resultCategori4[2];
         }else{
             $bestAreaTier2Area3[0] = 0;
         }
         if ($nilaiCategori8[2] == 1) {
-            $bestAreaTier2Area3[1] = 1;
+            $bestAreaTier2Area3[1] = $resultCategori8[2];
         }else{
             $bestAreaTier2Area3[1] = 0;
         }
         if ($nilaiCategori9[2] == 1) {
-            $bestAreaTier2Area3[2] = 1;
+            $bestAreaTier2Area3[2] = $resultCategori9[2];
         }else{
             $bestAreaTier2Area3[2] = 0;
         }
-        $bestAreaTier2Value[2] = (array_sum($bestAreaTier2Area3) * 15) / 100;
+        $bestAreaTier2Value[2] = (array_sum($bestAreaTier2Area3) * 15 / 100);
         /* AREA 4*/
         if ($nilaiCategori4[3] == 1) {
-            $bestAreaTier2Area4[0] = 1;
+            $bestAreaTier2Area4[0] = $resultCategori4[3];
         }else{
             $bestAreaTier2Area4[0] = 0;
         }
         if ($nilaiCategori8[3] == 1) {
-            $bestAreaTier2Area4[1] = 1;
+            $bestAreaTier2Area4[1] = $resultCategori8[3];
         }else{
             $bestAreaTier2Area4[1] = 0;
         }
         if ($nilaiCategori9[3] == 1) {
-            $bestAreaTier2Area4[2] = 1;
+            $bestAreaTier2Area4[2] = $resultCategori9[3];
         }else{
             $bestAreaTier2Area4[2] = 0;
         }
-        $bestAreaTier2Value[3] = (array_sum($bestAreaTier2Area4) * 15) / 100;
+        $bestAreaTier2Value[3] = (array_sum($bestAreaTier2Area4) * 15 / 100) ;
+
         /* TIER 3*/
         /* AREA 1*/
         if ($nilaiCategori10[0] == 1) {
-            $bestAreaTier3Area1[0] = 1;
+            $bestAreaTier3Area1[0] = $resultCategori10[0];
         }else{
             $bestAreaTier3Area1[0] = 0;
         }
-        $bestAreaTier3Value[0] = (array_sum($bestAreaTier3Area1) * 10) / 100;
+        $bestAreaTier3Value[0] = (array_sum($bestAreaTier3Area1) * 10 / 100);
         /* AREA 2*/
         if ($nilaiCategori10[1] == 1) {
-            $bestAreaTier3Area2[0] = 1;
+            $bestAreaTier3Area2[0] = $resultCategori10[1];
         }else{
             $bestAreaTier3Area2[0] = 0;
         }
-        $bestAreaTier3Value[1] = (array_sum($bestAreaTier3Area2) * 10) / 100;
+        $bestAreaTier3Value[1] = (array_sum($bestAreaTier3Area2) * 10 / 100);
         /* AREA 3*/
         if ($nilaiCategori10[2] == 1) {
-            $bestAreaTier3Area3[0] = 1;
+            $bestAreaTier3Area3[0] = $resultCategori10[2];
         }else{
             $bestAreaTier3Area3[0] = 0;
         }
-        $bestAreaTier3Value[2] = (array_sum($bestAreaTier3Area3) * 10) / 100;
+        $bestAreaTier3Value[2] = (array_sum($bestAreaTier3Area3) * 10 / 100);
         /* AREA 4*/
         if ($nilaiCategori10[3] == 1) {
-            $bestAreaTier3Area4[0] = 1;
+            $bestAreaTier3Area4[0] = $resultCategori10[3];
         }else{
             $bestAreaTier3Area4[0] = 0;
         }
-        $bestAreaTier3Value[3] = (array_sum($bestAreaTier3Area4) * 10) / 100;
+        $bestAreaTier3Value[3] = (array_sum($bestAreaTier3Area4) * 10 / 100);
+
         /* TIER 4*/
         /* AREA 1*/
         if ($nilaiCategori5[0] == 1) {
-            $bestAreaTier4Area1[0] = 1;
+            $bestAreaTier4Area1[0] = $resultCategori5[0];
         }else{
             $bestAreaTier4Area1[0] = 0;
         }
-        $bestAreaTier4Value[0] = (array_sum($bestAreaTier4Area1) * 5) / 100;
+        $bestAreaTier4Value[0] = (array_sum($bestAreaTier4Area1) * 5 / 100);
         /* AREA 2*/
         if ($nilaiCategori5[1] == 1) {
-            $bestAreaTier4Area2[0] = 1;
+            $bestAreaTier4Area2[0] = $resultCategori5[1];
         }else{
             $bestAreaTier4Area2[0] = 0;
         }
-        $bestAreaTier4Value[1] = (array_sum($bestAreaTier4Area2) * 5) / 100;
+        $bestAreaTier4Value[1] = (array_sum($bestAreaTier4Area2) * 5 / 100);
         /* AREA 3*/
         if ($nilaiCategori5[2] == 1) {
-            $bestAreaTier4Area3[0] = 1;
+            $bestAreaTier4Area3[0] = $resultCategori5[2];
         }else{
             $bestAreaTier4Area3[0] = 0;
         }
-        $bestAreaTier4Value[2] = (array_sum($bestAreaTier4Area3) * 5) / 100;
+        $bestAreaTier4Value[2] = (array_sum($bestAreaTier4Area3) * 5 / 100);
         /* AREA 4*/
         if ($nilaiCategori5[3] == 1) {
-            $bestAreaTier4Area4[0] = 1;
+            $bestAreaTier4Area4[0] = $resultCategori5[3];
         }else{
             $bestAreaTier4Area4[0] = 0;
         }
-        $bestAreaTier4Value[3] = (array_sum($bestAreaTier4Area4) * 5) / 100;
+        $bestAreaTier4Value[3] = (array_sum($bestAreaTier4Area4) * 5 / 100);
 
         $bestAreaResult[0] = 
             $bestAreaTier1Value[0] + 
@@ -1456,83 +1458,7 @@ class UnitScoreController extends Controller
             $bestAreaWinnerName = 4;
         }else{
             $bestAreaWinnerName = 0;
-        }
-        /*echo "WALK IN ";
-        echo "<br>";
-        print_r($nilaiCategori1);
-        echo "<br>";
-        print_r($nilaiCategori2);
-        echo "<br>";
-        print_r($nilaiCategori3);
-        echo "<br>";
-        print_r($nilaiCategori4);
-        echo "<br>";
-        print_r($nilaiCategori5);
-        echo "<br>";
-        print_r($walkInWinnerResult);
-        echo "<br>";
-        echo $walkInWinnerName . " IS THE WINNER - ". $walkInWinnerResultValue . "% COEFFICIENT";
-        echo "<br>";
-
-        echo "CALL CENTER ";
-        echo "<br>";
-        print_r($nilaiCategori6);
-        echo "<br>";
-        print_r($nilaiCategori7);
-        echo "<br>";
-        print_r($nilaiCategori8);
-        echo "<br>";
-        print_r($nilaiCategori9);
-        echo "<br>";
-        print_r($callCenterWinnerResult);
-        echo "<br>";
-        echo $callCenterWinnerName . " IS THE WINNER - ". $callCenterWinnerResultValue . "% COEFFICIENT";
-        echo "<br>";
-
-        echo "AREA TIER 1 ";
-        echo "<br>";
-        print_r($nilaiCategori1);
-        echo "<br>";
-        print_r($nilaiCategori2);
-        echo "<br>";
-        print_r($nilaiCategori3);
-        echo "<br>";
-        print_r($nilaiCategori6);
-        echo "<br>";
-        print_r($nilaiCategori7);
-        echo "<br>";
-        print_r($bestAreaTier1Value);
-        echo "<br>";
-
-        echo "AREA TIER 2 ";
-        echo "<br>";
-        print_r($nilaiCategori4);
-        echo "<br>";
-        print_r($nilaiCategori8);
-        echo "<br>";
-        print_r($nilaiCategori9);
-        echo "<br>";
-        print_r($bestAreaTier2Value);
-        echo "<br>";
-
-        echo "AREA TIER 3 ";
-        echo "<br>";
-        print_r($nilaiCategori10);
-        echo "<br>";
-        print_r($bestAreaTier3Value);
-        echo "<br>";
-
-        echo "AREA TIER 4 ";
-        echo "<br>";
-        print_r($nilaiCategori5);
-        echo "<br>";
-        print_r($bestAreaTier4Value);
-        echo "<br>";
-        echo "<br>";
-        print_r($bestAreaResult);
-        echo "<br>";
-        echo $bestAreaWinnerName . " IS THE WINNER - ". $bestAreaWinnerResultValue . "% VALUE";
-        echo "<br>";   */        
+        }   
 
         $data = array(
             /* data per rows */
