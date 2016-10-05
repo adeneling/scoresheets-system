@@ -14,19 +14,17 @@
 				<div class="clearfix"></div>
 			</div>
 			<div class="x_content">
-				<div class="row">					
-					<div class="animated flipInY col-lg-3">
-					</div>
+				<div class="row">
+					@foreach($unitCategoryParent as $unit)
 					<div class="animated flipInY col-lg-6">
 						<div class="tile-stats">
 							<div class="icon"><i class="fa fa-trophy"></i>
 							</div>
-							<div class="count">{{ $unitCategoryParent[1]->name }}</div>
-							<h3>THE BEST WINNER</h3>
+							<div class="count">{{ $unit->name }}</div>
+							<h3>Winner</h3>
 						</div>
-					</div>	
-					<div class="animated flipInY col-lg-3">
-					</div>						
+					</div>
+					@endforeach
 				</div>
 			</div>
 		</div>
